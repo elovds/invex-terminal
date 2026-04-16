@@ -1,0 +1,1130 @@
+<!DOCTYPE html>
+<html lang="ca">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>INVEX — Terminal Financer</title>
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;500;600;700&family=DM+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js"></script>
+<style>
+:root {
+  --bg-primary: #0a0e17;
+  --bg-secondary: #111827;
+  --bg-tertiary: #1a2235;
+  --bg-card: #151d2e;
+  --bg-hover: #1e2a42;
+  --border: rgba(255,255,255,0.06);
+  --border-active: rgba(255,255,255,0.15);
+  --text-primary: #e8ecf4;
+  --text-secondary: #8b95a8;
+  --text-tertiary: #5a6478;
+  --accent-green: #00e5a0;
+  --accent-green-dim: rgba(0,229,160,0.12);
+  --accent-red: #ff4d6a;
+  --accent-red-dim: rgba(255,77,106,0.12);
+  --accent-blue: #4da6ff;
+  --accent-blue-dim: rgba(77,166,255,0.12);
+  --accent-amber: #ffb84d;
+  --accent-amber-dim: rgba(255,184,77,0.12);
+  --accent-purple: #a78bfa;
+  --accent-purple-dim: rgba(167,139,250,0.12);
+  --font-mono: 'JetBrains Mono', monospace;
+  --font-sans: 'DM Sans', sans-serif;
+  --radius: 8px;
+  --radius-lg: 12px;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body {
+  font-family: var(--font-sans);
+  background: var(--bg-primary);
+  color: var(--text-primary);
+  min-height: 100vh;
+  -webkit-font-smoothing: antialiased;
+}
+
+::selection { background: var(--accent-blue); color: #000; }
+::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-track { background: var(--bg-primary); }
+::-webkit-scrollbar-thumb { background: var(--bg-tertiary); border-radius: 3px; }
+
+.topbar {
+  position: sticky; top: 0; z-index: 100;
+  background: rgba(10,14,23,0.85);
+  backdrop-filter: blur(20px);
+  border-bottom: 1px solid var(--border);
+  padding: 0 24px;
+  display: flex; align-items: center; justify-content: space-between;
+  height: 52px;
+}
+.topbar .logo {
+  font-family: var(--font-mono);
+  font-weight: 700; font-size: 16px;
+  letter-spacing: 3px;
+  color: var(--accent-green);
+}
+.topbar .logo span { color: var(--text-tertiary); font-weight: 400; font-size: 11px; letter-spacing: 1px; margin-left: 8px; }
+.topbar-nav { display: flex; gap: 4px; }
+.topbar-nav a {
+  font-family: var(--font-mono);
+  font-size: 11px; font-weight: 400;
+  color: var(--text-secondary);
+  text-decoration: none;
+  padding: 6px 14px;
+  border-radius: var(--radius);
+  transition: all 0.2s;
+  letter-spacing: 0.5px;
+}
+.topbar-nav a:hover, .topbar-nav a.active {
+  color: var(--text-primary);
+  background: var(--bg-tertiary);
+}
+.topbar-right {
+  display: flex; align-items: center; gap: 16px;
+}
+.topbar-clock {
+  font-family: var(--font-mono);
+  font-size: 12px; color: var(--text-tertiary);
+}
+.pulse-dot {
+  width: 6px; height: 6px; border-radius: 50%;
+  background: var(--accent-green);
+  animation: pulse 2s ease infinite;
+}
+@keyframes pulse {
+  0%,100% { opacity: 1; box-shadow: 0 0 0 0 rgba(0,229,160,0.4); }
+  50% { opacity: 0.7; box-shadow: 0 0 0 6px rgba(0,229,160,0); }
+}
+
+.ticker-strip {
+  background: var(--bg-secondary);
+  border-bottom: 1px solid var(--border);
+  overflow: hidden; height: 32px;
+  display: flex; align-items: center;
+}
+.ticker-scroll {
+  display: flex; gap: 32px;
+  animation: tickerScroll 30s linear infinite;
+  white-space: nowrap;
+}
+@keyframes tickerScroll {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+.ticker-item {
+  font-family: var(--font-mono);
+  font-size: 11px; display: flex; align-items: center; gap: 6px;
+}
+.ticker-item .t-sym { color: var(--text-primary); font-weight: 500; }
+.ticker-item .t-price { color: var(--text-secondary); }
+
+.main { max-width: 1400px; margin: 0 auto; padding: 20px 24px; }
+
+.section { margin-bottom: 32px; scroll-margin-top: 60px; }
+.section-header {
+  display: flex; align-items: center; justify-content: space-between;
+  margin-bottom: 16px;
+}
+.section-title {
+  font-family: var(--font-mono);
+  font-size: 11px; font-weight: 500;
+  letter-spacing: 2px; text-transform: uppercase;
+  color: var(--text-tertiary);
+  display: flex; align-items: center; gap: 8px;
+}
+.section-title::before {
+  content: ''; width: 3px; height: 14px;
+  background: var(--accent-green); border-radius: 2px;
+}
+
+.metrics-grid {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: 12px;
+}
+.metric-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: 16px 18px;
+  transition: all 0.25s;
+  position: relative; overflow: hidden;
+}
+.metric-card:hover {
+  border-color: var(--border-active);
+  transform: translateY(-1px);
+}
+.metric-card .mc-label {
+  font-family: var(--font-mono);
+  font-size: 10px; letter-spacing: 1px;
+  text-transform: uppercase;
+  color: var(--text-tertiary);
+  margin-bottom: 8px;
+}
+.metric-card .mc-value {
+  font-family: var(--font-mono);
+  font-size: 24px; font-weight: 600;
+  color: var(--text-primary);
+}
+.metric-card .mc-sub {
+  font-size: 12px; margin-top: 4px;
+}
+.metric-card .mc-glow {
+  position: absolute; top: -20px; right: -20px;
+  width: 60px; height: 60px; border-radius: 50%;
+  filter: blur(25px); opacity: 0.3;
+}
+
+.grid-2 { display: grid; grid-template-columns: 2fr 1fr; gap: 16px; }
+.grid-3 { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 12px; }
+.grid-4 { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 12px; }
+
+.card {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: 20px;
+  transition: border-color 0.25s;
+}
+.card:hover { border-color: var(--border-active); }
+.card-title {
+  font-family: var(--font-mono);
+  font-size: 11px; font-weight: 500;
+  letter-spacing: 1.5px; text-transform: uppercase;
+  color: var(--text-tertiary);
+  margin-bottom: 16px;
+}
+
+.holdings-table { width: 100%; border-collapse: collapse; }
+.holdings-table th {
+  font-family: var(--font-mono);
+  font-size: 10px; font-weight: 500;
+  letter-spacing: 1px; text-transform: uppercase;
+  color: var(--text-tertiary);
+  text-align: left;
+  padding: 8px 12px;
+  border-bottom: 1px solid var(--border);
+}
+.holdings-table td {
+  padding: 12px;
+  font-size: 13px;
+  border-bottom: 1px solid var(--border);
+  transition: background 0.15s;
+}
+.holdings-table tr:hover td { background: var(--bg-hover); }
+.holdings-table tr:last-child td { border-bottom: none; }
+.holdings-table .ht-ticker {
+  font-family: var(--font-mono);
+  font-weight: 600; font-size: 14px;
+}
+.holdings-table .ht-name { font-size: 11px; color: var(--text-tertiary); }
+
+.tag {
+  display: inline-flex; align-items: center;
+  font-family: var(--font-mono);
+  font-size: 10px; font-weight: 600;
+  padding: 3px 8px; border-radius: 4px;
+  letter-spacing: 0.5px;
+}
+.tag-green { background: var(--accent-green-dim); color: var(--accent-green); }
+.tag-red { background: var(--accent-red-dim); color: var(--accent-red); }
+.tag-blue { background: var(--accent-blue-dim); color: var(--accent-blue); }
+.tag-amber { background: var(--accent-amber-dim); color: var(--accent-amber); }
+.tag-purple { background: var(--accent-purple-dim); color: var(--accent-purple); }
+
+.val-pos { color: var(--accent-green); }
+.val-neg { color: var(--accent-red); }
+.val-neu { color: var(--text-secondary); }
+.mono { font-family: var(--font-mono); }
+
+.chart-container {
+  position: relative; width: 100%;
+  height: 300px;
+}
+
+.news-list { list-style: none; }
+.news-item {
+  padding: 14px 0;
+  border-bottom: 1px solid var(--border);
+  transition: background 0.15s;
+  cursor: default;
+}
+.news-item:last-child { border-bottom: none; }
+.news-item:hover { background: var(--bg-hover); margin: 0 -12px; padding: 14px 12px; border-radius: var(--radius); }
+.news-item .ni-top { display: flex; align-items: center; gap: 8px; margin-bottom: 4px; }
+.news-item .ni-text { font-size: 13px; color: var(--text-primary); line-height: 1.5; }
+.news-item .ni-date { font-family: var(--font-mono); font-size: 10px; color: var(--text-tertiary); margin-top: 4px; }
+
+.analyst-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: 16px; text-align: center;
+  transition: all 0.25s;
+}
+.analyst-card:hover { border-color: var(--border-active); transform: translateY(-1px); }
+.analyst-card .ac-ticker {
+  font-family: var(--font-mono);
+  font-size: 14px; font-weight: 600;
+  margin-bottom: 8px;
+}
+.analyst-card .ac-rating {
+  font-family: var(--font-mono);
+  font-size: 11px; font-weight: 500;
+  margin-bottom: 6px;
+}
+.analyst-card .ac-target {
+  font-size: 12px; color: var(--text-secondary);
+  margin-bottom: 4px;
+}
+.analyst-card .ac-upside {
+  font-family: var(--font-mono);
+  font-size: 18px; font-weight: 600;
+}
+
+.bench-bar {
+  display: flex; align-items: center; gap: 12px;
+  padding: 12px 0;
+  border-bottom: 1px solid var(--border);
+}
+.bench-bar:last-child { border-bottom: none; }
+.bench-bar .bb-name {
+  min-width: 100px;
+  font-family: var(--font-mono);
+  font-size: 12px; font-weight: 500;
+}
+.bench-bar .bb-bar {
+  flex: 1; height: 20px;
+  background: var(--bg-tertiary);
+  border-radius: 4px; overflow: hidden;
+  position: relative;
+}
+.bench-bar .bb-fill {
+  height: 100%; border-radius: 4px;
+  transition: width 1s ease;
+}
+.bench-bar .bb-val {
+  min-width: 60px; text-align: right;
+  font-family: var(--font-mono);
+  font-size: 13px; font-weight: 600;
+}
+
+.earnings-row {
+  display: flex; align-items: center; gap: 12px;
+  padding: 10px 0;
+  border-bottom: 1px solid var(--border);
+}
+.earnings-row:last-child { border-bottom: none; }
+.earnings-row .er-tick {
+  font-family: var(--font-mono);
+  font-size: 13px; font-weight: 600;
+  min-width: 60px;
+}
+.earnings-row .er-date { font-size: 12px; color: var(--text-secondary); flex: 1; }
+.earnings-row .er-countdown {
+  font-family: var(--font-mono);
+  font-size: 11px; color: var(--accent-amber);
+}
+
+.risk-badge {
+  display: inline-flex; align-items: center; gap: 4px;
+  font-family: var(--font-mono);
+  font-size: 10px; font-weight: 500;
+  padding: 4px 10px; border-radius: 4px;
+}
+
+.footer {
+  border-top: 1px solid var(--border);
+  padding: 24px;
+  text-align: center;
+  font-size: 11px; color: var(--text-tertiary);
+  font-family: var(--font-mono);
+}
+
+.tab-row { display: flex; gap: 4px; margin-bottom: 16px; }
+.tab-btn {
+  font-family: var(--font-mono);
+  font-size: 11px; font-weight: 400;
+  color: var(--text-tertiary);
+  background: transparent;
+  border: 1px solid var(--border);
+  padding: 6px 14px; border-radius: var(--radius);
+  cursor: pointer; transition: all 0.2s;
+  letter-spacing: 0.5px;
+}
+.tab-btn:hover { color: var(--text-secondary); border-color: var(--border-active); }
+.tab-btn.active { color: var(--accent-green); border-color: var(--accent-green); background: var(--accent-green-dim); }
+
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(12px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+.fade-up { animation: fadeUp 0.5s ease both; }
+.delay-1 { animation-delay: 0.05s; }
+.delay-2 { animation-delay: 0.1s; }
+.delay-3 { animation-delay: 0.15s; }
+.delay-4 { animation-delay: 0.2s; }
+.delay-5 { animation-delay: 0.25s; }
+
+@media (max-width: 900px) {
+  .metrics-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .grid-2 { grid-template-columns: 1fr; }
+  .grid-3 { grid-template-columns: 1fr; }
+  .grid-4 { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .topbar-nav { display: none; }
+}
+@media (max-width: 500px) {
+  .metrics-grid { grid-template-columns: 1fr; }
+  .main { padding: 12px; }
+}
+</style>
+</head>
+<body>
+
+<div class="topbar">
+  <div class="logo">INVEX<span>TERMINAL v3.0</span></div>
+  <div class="topbar-nav">
+    <a href="#overview" class="active">Overview</a>
+    <a href="#holdings">Posicions</a>
+    <a href="#analysis">Anàlisi</a>
+    <a href="#benchmarks">Benchmarks</a>
+    <a href="#news">Notícies</a>
+  </div>
+  <div class="topbar-right">
+    <div class="pulse-dot"></div>
+    <div class="topbar-clock" id="clock"></div>
+    <label id="excelBtnLabel" style="cursor:pointer;display:flex;align-items:center;gap:6px;font-family:var(--font-mono);font-size:11px;font-weight:500;color:var(--accent-green);background:var(--accent-green-dim);border:1px solid var(--accent-green);border-radius:var(--radius);padding:5px 12px;transition:all 0.2s;" onmouseenter="this.style.background='rgba(0,229,160,0.22)'" onmouseleave="this.style.background='var(--accent-green-dim)'">
+      <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="17 8 12 3 7 8"/><line x1="12" y1="3" x2="12" y2="15"/></svg>
+      Carregar Excel
+      <input type="file" id="excelInput" accept=".xlsx,.xls" style="display:none" onchange="loadExcel(this)">
+    </label>
+    <div id="excelStatus" style="font-family:var(--font-mono);font-size:10px;color:var(--text-tertiary);display:none;"></div>
+  </div>
+</div>
+
+<div class="ticker-strip">
+  <div class="ticker-scroll" id="ticker"></div>
+</div>
+
+<div class="main">
+
+  <!-- OVERVIEW -->
+  <div class="section fade-up" id="overview">
+    <div class="section-header">
+      <div class="section-title">Resum del portafoli</div>
+      <div style="font-family:var(--font-mono);font-size:11px;color:var(--text-tertiary);">Actualitzat: 13 abr 2026</div>
+    </div>
+    <div class="metrics-grid" id="metricsGrid"></div>
+  </div>
+
+  <!-- HOLDINGS -->
+  <div class="section fade-up delay-1" id="holdings">
+    <div class="section-header">
+      <div class="section-title">Posicions actives</div>
+    </div>
+    <div class="grid-2">
+      <div class="card" style="overflow-x:auto;">
+        <table class="holdings-table" id="holdingsTable">
+          <thead>
+            <tr>
+              <th>Actiu</th>
+              <th>Unitats</th>
+              <th>Preu</th>
+              <th>Valor (€)</th>
+              <th>Pes</th>
+              <th>YTD</th>
+              <th>Senyal</th>
+            </tr>
+          </thead>
+          <tbody id="holdingsBody"></tbody>
+        </table>
+      </div>
+      <div class="card">
+        <div class="card-title">Distribució</div>
+        <div class="chart-container" style="height:250px;">
+          <canvas id="allocChart"></canvas>
+        </div>
+        <div id="allocLegend" style="margin-top:12px;"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ANALYSIS -->
+  <div class="section fade-up delay-2" id="analysis">
+    <div class="section-header">
+      <div class="section-title">Anàlisi fonamental</div>
+    </div>
+    <div class="grid-2">
+      <div class="card">
+        <div class="card-title">Ràtios clau</div>
+        <table class="holdings-table">
+          <thead>
+            <tr><th>Ticker</th><th>P/E Fwd</th><th>Marge Op.</th><th>Div Yield</th><th>52w rang</th></tr>
+          </thead>
+          <tbody id="ratiosBody"></tbody>
+        </table>
+      </div>
+      <div class="card">
+        <div class="card-title">Consens analistes</div>
+        <div class="grid-4" id="analystGrid" style="gap:8px;"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- EARNINGS -->
+  <div class="section fade-up delay-3" id="earnings-section">
+    <div class="section-header">
+      <div class="section-title">Calendari de resultats</div>
+    </div>
+    <div class="card">
+      <div id="earningsRows"></div>
+    </div>
+  </div>
+
+  <!-- BENCHMARKS -->
+  <div class="section fade-up delay-3" id="benchmarks">
+    <div class="section-header">
+      <div class="section-title">Rendiment vs benchmarks</div>
+    </div>
+    <div class="grid-2">
+      <div class="card">
+        <div class="card-title">Comparativa YTD</div>
+        <div id="benchBars"></div>
+      </div>
+      <div class="card">
+        <div class="card-title">Evolució YTD</div>
+        <div class="chart-container" style="height:260px;">
+          <canvas id="benchChart"></canvas>
+        </div>
+        <div style="display:flex;gap:16px;margin-top:10px;">
+          <span style="display:flex;align-items:center;gap:4px;font-size:11px;color:var(--text-secondary)"><span style="width:10px;height:3px;border-radius:2px;background:var(--accent-purple);display:inline-block"></span>Portafoli</span>
+          <span style="display:flex;align-items:center;gap:4px;font-size:11px;color:var(--text-secondary)"><span style="width:10px;height:3px;border-radius:2px;background:var(--accent-blue);display:inline-block"></span>S&P 500</span>
+          <span style="display:flex;align-items:center;gap:4px;font-size:11px;color:var(--text-secondary)"><span style="width:10px;height:3px;border-radius:2px;background:var(--accent-green);display:inline-block"></span>IBEX 35</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- PER-STOCK CHARTS -->
+  <div class="section fade-up delay-4" id="stock-perf">
+    <div class="section-header">
+      <div class="section-title">Rendiment per acció</div>
+    </div>
+    <div class="card">
+      <div class="tab-row" id="stockTabs"></div>
+      <div class="chart-container" style="height:280px;">
+        <canvas id="stockChart"></canvas>
+      </div>
+      <div id="stockInfo" style="margin-top:16px;"></div>
+    </div>
+  </div>
+
+  <!-- NEWS -->
+  <div class="section fade-up delay-4" id="news">
+    <div class="section-header">
+      <div class="section-title">Notícies recents</div>
+    </div>
+    <div class="card">
+      <div class="tab-row" id="newsTabs"></div>
+      <ul class="news-list" id="newsList"></ul>
+    </div>
+  </div>
+
+</div>
+
+<div class="footer">
+  INVEX TERMINAL &mdash; Dades orientatives, no constitueixen consell financer &mdash; Actualitzat 13/04/2026
+</div>
+
+<script>
+(async function() {
+
+// ── Carrega data.json ────────────────────────────────────────────────────────
+var D = null;
+try {
+  var resp = await fetch('data.json');
+  if (!resp.ok) throw new Error('HTTP ' + resp.status);
+  D = await resp.json();
+} catch(e) {
+  console.warn('data.json no disponible, usant dades de demo:', e.message);
+}
+
+// Fallback si no hi ha data.json
+var FALLBACK = {
+  lastUpdate: '13/04/2026', eurusd: 1.095, cash: 237.91, capital: 6500, nMesos: 4,
+  benchmarks: { sp500Ytd: -1.4, ibexYtd: 5.1 },
+  holdings: [
+    { tick:'GOOGL', name:'Alphabet Inc.',   qty:6,   entrada:312.0,  price:316.96, cur:'USD', color:'4da6ff', pe:'24x',   margin:'32%', div:'0%',   lo52:146.10, hi52:349.00, rating:'Strong Buy', target:'$387',   analysts:30, buys:25, upside:19 },
+    { tick:'AAPL',  name:'Apple Inc.',       qty:5,   entrada:246.0,  price:261.00, cur:'USD', color:'8b95a8', pe:'33x',   margin:'34%', div:'0.4%', lo52:186.06, hi52:288.62, rating:'Buy',        target:'$310',   analysts:35, buys:28, upside:19 },
+    { tick:'MSFT',  name:'Microsoft Corp.',  qty:6,   entrada:477.0,  price:371.70, cur:'USD', color:'a78bfa', pe:'22x',   margin:'47%', div:'0.9%', lo52:355.67, hi52:555.45, rating:'Strong Buy', target:'$589',   analysts:49, buys:41, upside:58 },
+    { tick:'SAN',   name:'Banco Santander',  qty:150, entrada:7.70,   price:10.29,  cur:'EUR', color:'00e5a0', pe:'11.7x', margin:'25%', div:'3.5%', lo52:5.70,   hi52:11.26,  rating:'Buy',        target:'\u20ac11.90', analysts:18, buys:17, upside:16 }
+  ],
+  mensual: {
+    GOOGL:[0,3.5,5.2,1.6], AAPL:[0,2.8,1.5,6.1], MSFT:[0,-2.0,-15.0,-22.1], SAN:[0,8.5,18.0,33.6],
+    Portafoli:[0,1.2,-3.5,2.1], SP500:[0,1.3,-5.0,-1.4], IBEX35:[0,4.0,1.5,5.1]
+  },
+  earnings: [
+    {tick:'MSFT', date:'22/04/2026', days:6}, {tick:'GOOGL', date:'24/04/2026', days:8},
+    {tick:'SAN',  date:'29/04/2026', days:13}, {tick:'AAPL', date:'30/04/2026', days:14}
+  ],
+  news: [
+    {tick:'GOOGL', text:'Intel i Google amplien col\u00b7laboraci\u00f3 en xips AI \u2014 acord multi-any per processadors personalitzats', date:'11/04/2026'},
+    {tick:'GOOGL', text:'Alphabet lidera els Magnificent 7 en rendiment 2026 amb +1.5% YTD \u2014 Google Cloud creix 48%', date:'10/04/2026'},
+    {tick:'AAPL',  text:'Apple mant\u00e9 el llan\u00e7ament del iPhone plegable per setembre', date:'11/04/2026'},
+    {tick:'AAPL',  text:'Apple es suma a Project Glasswing, iniciativa de ciberseguretat per infraestructura AI cr\u00edtica', date:'10/04/2026'},
+    {tick:'MSFT',  text:'Microsoft llan\u00e7a Agent 365 per govern\u00e0ncia empresarial d\'agents AI \u2014 accions -22% YTD', date:'12/04/2026'},
+    {tick:'MSFT',  text:'Microsoft llan\u00e7a models AI propis \u2014 redu\u00ebix depend\u00e8ncia d\'OpenAI', date:'11/04/2026'},
+    {tick:'SAN',   text:'Santander presenta pla estrat\u00e8gic 2026-28: benefici >\u20ac20B per 2028, RoTE >20%', date:'09/04/2026'},
+    {tick:'SAN',   text:'Santander i Mastercard completen el primer pagament AI agentic a Europa', date:'08/04/2026'},
+    {tick:'MACRO', text:'JPMorgan i Netflix comencen temporada de resultats aquesta setmana', date:'13/04/2026'}
+  ]
+};
+
+D = D || FALLBACK;
+
+// ── Variables principals ─────────────────────────────────────────────────────
+var EURUSD     = D.eurusd   || 1.095;
+var cash       = D.cash     || 0;
+var capital    = D.capital  || 6500;
+var earnings   = D.earnings || [];
+var mensual    = D.mensual  || {};
+var sp500Ytd   = (D.benchmarks || {}).sp500Ytd || 0;
+var ibexYtd    = (D.benchmarks || {}).ibexYtd  || 0;
+var lastUpdate = D.lastUpdate || '';
+
+var TAG_MAP = {GOOGL:'tag-blue', AAPL:'tag-purple', MSFT:'tag-amber', SAN:'tag-green', MACRO:'tag-amber'};
+var news = (D.news || []).map(function(n) {
+  return { tick:n.tick, tag:TAG_MAP[n.tick]||'tag-blue', text:n.text, date:n.date };
+});
+
+var holdings = (D.holdings || []).map(function(h) {
+  return {
+    tick:h.tick, name:h.name, qty:h.qty, price:h.price, start:h.entrada,
+    cur:h.cur, color:'#'+h.color,
+    pe:h.pe||'—', margin:h.margin||'—', div:h.div||'—',
+    lo52:h.lo52||0, hi52:h.hi52||0,
+    rating:h.rating||'—', target:h.target||'—',
+    analysts:h.analysts||0, buys:h.buys||0, upside:h.upside||0
+  };
+});
+
+var MONTHS_CA = ['Gen','Feb','Mar','Abr','Mai','Jun','Jul','Ago','Set','Oct','Nov','Des'];
+var months = MONTHS_CA.slice(0, D.nMesos || 4);
+
+// ── Càlculs del portafoli ────────────────────────────────────────────────────
+var totalEUR = cash, startTotalEUR = cash;
+holdings.forEach(function(h) {
+  var v=h.qty*h.price, sv=h.qty*h.start;
+  h.valEUR   = h.cur==='USD' ? v/EURUSD  : v;
+  h.startEUR = h.cur==='USD' ? sv/EURUSD : sv;
+  h.ytd      = (h.price-h.start)/h.start*100;
+  totalEUR      += h.valEUR;
+  startTotalEUR += h.startEUR;
+});
+holdings.forEach(function(h){ h.weight = h.valEUR/totalEUR*100; });
+var pfPnl    = totalEUR - capital;
+var pfPnlPct = pfPnl / capital * 100;
+var pfYtd    = (totalEUR - startTotalEUR) / startTotalEUR * 100;
+
+// ── Rellotge ─────────────────────────────────────────────────────────────────
+function updateClock() {
+  var now = new Date();
+  document.getElementById('clock').textContent =
+    now.toLocaleDateString('ca-ES',{day:'2-digit',month:'short',year:'numeric'})+' '+
+    now.toLocaleTimeString('ca-ES',{hour:'2-digit',minute:'2-digit',second:'2-digit'});
+}
+setInterval(updateClock, 1000); updateClock();
+
+// ── Ticker strip ──────────────────────────────────────────────────────────────
+var tickerHTML='';
+for (var t=0;t<3;t++) {
+  holdings.forEach(function(h) {
+    tickerHTML+='<div class="ticker-item"><span class="t-sym">'+h.tick+'</span><span class="t-price">'+(h.cur==='USD'?'$':'€')+h.price.toFixed(2)+'</span><span style="color:'+(h.ytd>=0?'var(--accent-green)':'var(--accent-red)')+'">'+(h.ytd>=0?'+':'')+h.ytd.toFixed(1)+'%</span></div>';
+  });
+  tickerHTML+='<div class="ticker-item"><span class="t-sym">S&amp;P500</span><span class="t-price"></span><span style="color:'+(sp500Ytd>=0?'var(--accent-green)':'var(--accent-red)')+'">'+(sp500Ytd>=0?'+':'')+sp500Ytd.toFixed(1)+'%</span></div>';
+  tickerHTML+='<div class="ticker-item"><span class="t-sym">IBEX35</span><span class="t-price"></span><span style="color:'+(ibexYtd>=0?'var(--accent-green)':'var(--accent-red)')+'">'+(ibexYtd>=0?'+':'')+ibexYtd.toFixed(1)+'%</span></div>';
+  tickerHTML+='<div class="ticker-item"><span class="t-sym">EUR/USD</span><span class="t-price">'+EURUSD.toFixed(3)+'</span><span></span></div>';
+}
+document.getElementById('ticker').innerHTML = tickerHTML;
+
+// ── Data d'actualització ─────────────────────────────────────────────────────
+var dateEl = document.querySelector('.section-header div[style*="font-family"]');
+if (dateEl) dateEl.textContent = 'Actualitzat: ' + lastUpdate;
+
+// ── Mètriques ──────────────────────────────────────────────────────────────
+var metricsData = [
+  {label:'Valor total',   value:'\u20ac'+totalEUR.toLocaleString('ca-ES',{minimumFractionDigits:2,maximumFractionDigits:2}), sub:'Capital: \u20ac'+capital.toLocaleString('ca-ES'), color:'var(--accent-blue)'},
+  {label:'P&L total',     value:(pfPnl>=0?'+':'')+'\u20ac'+pfPnl.toFixed(2), sub:(pfPnlPct>=0?'+':'')+pfPnlPct.toFixed(2)+"% des d'inici", color:pfPnl>=0?'var(--accent-green)':'var(--accent-red)'},
+  {label:'Rendiment YTD', value:(pfYtd>=0?'+':'')+pfYtd.toFixed(1)+'%', sub:'vs S&P: '+(pfYtd-sp500Ytd>=0?'+':'')+(pfYtd-sp500Ytd).toFixed(1)+'pp', color:pfYtd>=0?'var(--accent-green)':'var(--accent-red)'},
+  {label:'Cash', value:'\u20ac'+cash.toFixed(2), sub:(cash/totalEUR*100).toFixed(1)+'% del portafoli', color:'var(--accent-amber)'},
+  {label:'Posicions', value:String(holdings.length), sub:holdings.filter(function(h){return h.cur==='USD';}).length+' USA + '+holdings.filter(function(h){return h.cur==='EUR';}).length+' EUR', color:'var(--accent-purple)'}
+];
+var mHTML='';
+metricsData.forEach(function(m){
+  mHTML+='<div class="metric-card"><div class="mc-glow" style="background:'+m.color+'"></div><div class="mc-label">'+m.label+'</div><div class="mc-value" style="color:'+m.color+'">'+m.value+'</div><div class="mc-sub val-neu">'+m.sub+'</div></div>';
+});
+document.getElementById('metricsGrid').innerHTML = mHTML;
+
+// ── Taula de posicions ────────────────────────────────────────────────────────
+var hbHTML='';
+holdings.forEach(function(h){
+  var sig=h.ytd>5?'<span class="tag tag-green">FORT</span>':(h.ytd<-5?'<span class="tag tag-red">FEBLE</span>':'<span class="tag tag-amber">NEUTRE</span>');
+  hbHTML+='<tr><td><div class="ht-ticker" style="color:'+h.color+'">'+h.tick+'</div><div class="ht-name">'+h.name+'</div></td>'+
+    '<td class="mono">'+h.qty+'</td>'+
+    '<td class="mono">'+(h.cur==='USD'?'$':'\u20ac')+h.price.toFixed(2)+'</td>'+
+    '<td class="mono">\u20ac'+h.valEUR.toLocaleString('ca-ES',{minimumFractionDigits:0,maximumFractionDigits:0})+'</td>'+
+    '<td class="mono">'+h.weight.toFixed(1)+'%</td>'+
+    '<td class="mono '+(h.ytd>=0?'val-pos':'val-neg')+'">'+(h.ytd>=0?'+':'')+h.ytd.toFixed(1)+'%</td>'+
+    '<td>'+sig+'</td></tr>';
+});
+hbHTML+='<tr style="font-weight:600"><td><div class="ht-ticker" style="color:var(--accent-amber)">CASH</div><div class="ht-name">Efectiu EUR</div></td><td class="mono">—</td><td class="mono">—</td><td class="mono">\u20ac'+cash.toFixed(0)+'</td><td class="mono">'+(cash/totalEUR*100).toFixed(1)+'%</td><td>—</td><td>—</td></tr>';
+document.getElementById('holdingsBody').innerHTML = hbHTML;
+
+// ── Gràfic de distribució ─────────────────────────────────────────────────────
+var allocColors=holdings.map(function(h){return h.color;}).concat(['#ffb84d']);
+var allocLabels=holdings.map(function(h){return h.tick;}).concat(['Cash']);
+var allocData=holdings.map(function(h){return Math.round(h.valEUR);}).concat([Math.round(cash)]);
+new Chart(document.getElementById('allocChart'),{type:'doughnut',data:{labels:allocLabels,datasets:[{data:allocData,backgroundColor:allocColors,borderWidth:0,borderRadius:3}]},options:{responsive:true,maintainAspectRatio:false,cutout:'65%',plugins:{legend:{display:false},tooltip:{backgroundColor:'#1a2235',titleColor:'#e8ecf4',bodyColor:'#8b95a8',borderColor:'rgba(255,255,255,0.1)',borderWidth:1,callbacks:{label:function(c){return c.label+': \u20ac'+c.parsed+' ('+(c.parsed/totalEUR*100).toFixed(1)+'%)';}}}}}});
+var legHTML='';
+allocLabels.forEach(function(l,i){legHTML+='<span style="display:inline-flex;align-items:center;gap:4px;margin-right:14px;margin-bottom:6px;font-size:11px;color:var(--text-secondary)"><span style="width:8px;height:8px;border-radius:2px;background:'+allocColors[i]+';display:inline-block"></span>'+l+' '+(allocData[i]/totalEUR*100).toFixed(0)+'%</span>';});
+document.getElementById('allocLegend').innerHTML = legHTML;
+
+// ── Ràtios fonamentals ────────────────────────────────────────────────────────
+var rbHTML='';
+holdings.forEach(function(h){rbHTML+='<tr><td class="mono" style="font-weight:600;color:'+h.color+'">'+h.tick+'</td><td class="mono">'+h.pe+'</td><td class="mono">'+h.margin+'</td><td class="mono">'+h.div+'</td><td class="mono" style="font-size:11px">'+(h.cur==='USD'?'$':'\u20ac')+h.lo52.toFixed(0)+' — '+(h.cur==='USD'?'$':'\u20ac')+h.hi52.toFixed(0)+'</td></tr>';});
+document.getElementById('ratiosBody').innerHTML = rbHTML;
+
+// ── Consens analistes ─────────────────────────────────────────────────────────
+var agHTML='';
+holdings.forEach(function(h){agHTML+='<div class="analyst-card"><div class="ac-ticker" style="color:'+h.color+'">'+h.tick+'</div><div class="ac-rating val-pos">'+h.rating+'</div><div class="ac-target">Target: '+h.target+'</div><div class="ac-upside val-pos">+'+h.upside+'%</div><div style="font-size:10px;color:var(--text-tertiary);margin-top:4px">'+h.buys+'/'+h.analysts+' buy</div></div>';});
+document.getElementById('analystGrid').innerHTML = agHTML;
+
+// ── Calendari de resultats ────────────────────────────────────────────────────
+var erHTML='';
+earnings.forEach(function(e){var col=holdings.find(function(h){return h.tick===e.tick;});erHTML+='<div class="earnings-row"><span class="er-tick" style="color:'+(col?col.color:'var(--text-primary)')+'">'+e.tick+'</span><span class="er-date">'+e.date+'</span><span class="er-countdown">'+e.days+' dies</span></div>';});
+document.getElementById('earningsRows').innerHTML = erHTML;
+
+// ── Benchmarks ────────────────────────────────────────────────────────────────
+var benchData=[{name:'Portafoli',val:pfYtd,color:'var(--accent-purple)'},{name:'S&P 500',val:sp500Ytd,color:'var(--accent-blue)'},{name:'IBEX 35',val:ibexYtd,color:'var(--accent-green)'}];
+var maxB=Math.max.apply(null,benchData.map(function(b){return Math.abs(b.val);}));
+if(maxB<2)maxB=10;
+var bbHTML='';
+benchData.forEach(function(b){var w=Math.abs(b.val)/(maxB*1.3)*100;bbHTML+='<div class="bench-bar"><span class="bb-name">'+b.name+'</span><div class="bb-bar"><div class="bb-fill" style="width:'+Math.max(w,4)+'%;background:'+b.color+';'+(b.val<0?'opacity:0.4;':'')+'"></div></div><span class="bb-val '+(b.val>=0?'val-pos':'val-neg')+'">'+(b.val>=0?'+':'')+b.val.toFixed(1)+'%</span></div>';});
+document.getElementById('benchBars').innerHTML = bbHTML;
+
+var pfHist=mensual['Portafoli']||[0], sp500Hist=mensual['SP500']||[0], ibexHist=mensual['IBEX35']||[0];
+var maxLen=Math.max(pfHist.length,sp500Hist.length,ibexHist.length);
+new Chart(document.getElementById('benchChart'),{type:'line',data:{labels:MONTHS_CA.slice(0,maxLen),datasets:[{label:'Portafoli',data:pfHist,borderColor:'#a78bfa',backgroundColor:'rgba(167,139,250,0.06)',fill:true,tension:0.35,pointRadius:4,pointBackgroundColor:'#a78bfa',borderWidth:2},{label:'S&P 500',data:sp500Hist,borderColor:'#4da6ff',fill:false,tension:0.35,pointRadius:3,borderWidth:2,borderDash:[6,3]},{label:'IBEX 35',data:ibexHist,borderColor:'#00e5a0',fill:false,tension:0.35,pointRadius:3,borderWidth:2,borderDash:[6,3]}]},options:{responsive:true,maintainAspectRatio:false,scales:{y:{ticks:{callback:function(v){return v+'%';},color:'#5a6478',font:{family:'JetBrains Mono',size:10}},grid:{color:'rgba(255,255,255,0.04)'}},x:{ticks:{color:'#5a6478',font:{family:'JetBrains Mono',size:10}},grid:{display:false}}},plugins:{legend:{display:false},tooltip:{backgroundColor:'#1a2235',titleColor:'#e8ecf4',bodyColor:'#8b95a8',borderColor:'rgba(255,255,255,0.1)',borderWidth:1}}}});
+
+// ── Per-stock chart (globals per a renderStockChartFromData) ──────────────────
+window._holdings=holdings; window._historial=mensual; window._allMonths=MONTHS_CA; window._news=news;
+var stHTML='';
+holdings.forEach(function(h,i){stHTML+='<button class="tab-btn'+(i===0?' active':'')+'" onclick="selectStock(\''+h.tick+'\',this)" style="color:'+(i===0?h.color:'')+';border-color:'+(i===0?h.color:'')+';background:'+(i===0?h.color+'18':'')+'">'+h.tick+'</button>';});
+document.getElementById('stockTabs').innerHTML=stHTML;
+if(holdings.length>0) renderStockChartFromData(holdings[0].tick);
+
+// ── Notícies ──────────────────────────────────────────────────────────────────
+var allTickers=['TOTS'].concat(holdings.map(function(h){return h.tick;})).concat(['MACRO']);
+var ntHTML='';
+allTickers.forEach(function(t,i){ntHTML+='<button class="tab-btn'+(i===0?' active':'')+'" onclick="filterNews2(\''+t+'\',this)">'+t+'</button>';});
+document.getElementById('newsTabs').innerHTML=ntHTML;
+renderNews2('TOTS');
+
+// ── Footer i nav ──────────────────────────────────────────────────────────────
+document.querySelector('.footer').innerHTML='INVEX TERMINAL &mdash; Dades orientatives, no constitueixen consell financer &mdash; Actualitzat '+lastUpdate;
+document.querySelectorAll('.topbar-nav a').forEach(function(a){a.addEventListener('click',function(){document.querySelectorAll('.topbar-nav a').forEach(function(x){x.classList.remove('active');});this.classList.add('active');});});
+
+})();
+
+// ===================== EXCEL LOADER =====================
+function loadExcel(input) {
+  var file = input.files[0];
+  if (!file) return;
+  var status = document.getElementById('excelStatus');
+  status.style.display = 'block';
+  status.style.color = 'var(--accent-amber)';
+  status.textContent = 'Llegint...';
+
+  var reader = new FileReader();
+  reader.onload = function(e) {
+    try {
+      var wb = XLSX.read(e.target.result, { type: 'array' });
+
+      // ---- CONFIG ----
+      var cfg = {};
+      var wsC = wb.Sheets['CONFIG'];
+      if (wsC) {
+        var cfgRows = XLSX.utils.sheet_to_json(wsC, { header: 1 });
+        cfgRows.slice(1).forEach(function(r) { if (r[0]) cfg[r[0]] = r[1]; });
+      }
+      var EURUSD_val   = parseFloat(cfg['EURUSD'])          || 1.095;
+      var cash_val     = parseFloat(cfg['Cash_EUR'])         || 0;
+      var capital_val  = parseFloat(cfg['Capital_Inicial'])  || 6500;
+      var sp500_val    = parseFloat(cfg['SP500_YTD'])        || 0;
+      var ibex_val     = parseFloat(cfg['IBEX_YTD'])         || 0;
+      var dataUpdate   = cfg['Data_Update']                  || '';
+
+      // ---- POSICIONS ----
+      var holdingsNew = [];
+      var wsP = wb.Sheets['POSICIONS'];
+      if (wsP) {
+        XLSX.utils.sheet_to_json(wsP).forEach(function(r) {
+          holdingsNew.push({
+            tick:  String(r['Ticker']   || '').trim(),
+            name:  String(r['Nom']      || '').trim(),
+            qty:   parseFloat(r['Quantitat']   || 0),
+            price: parseFloat(r['Preu_Actual'] || 0),
+            start: parseFloat(r['Preu_Inici']  || 0),
+            cur:   String(r['Moneda']   || 'EUR').trim().toUpperCase(),
+            color: '#' + String(r['Color_Hex'] || '4da6ff').replace('#','')
+          });
+        });
+      }
+
+      // ---- FONAMENTALS ----
+      var fonMap = {};
+      var wsF = wb.Sheets['FONAMENTALS'];
+      if (wsF) {
+        XLSX.utils.sheet_to_json(wsF).forEach(function(r) {
+          var tick = String(r['Ticker'] || '').trim();
+          fonMap[tick] = {
+            pe:       String(r['PE_Fwd']      || '—'),
+            margin:   (r['Marge_Op_%']  != null ? r['Marge_Op_%']  + '%' : '—'),
+            div:      (r['Div_Yield_%'] != null ? r['Div_Yield_%'] + '%' : '—'),
+            lo52:     parseFloat(r['Lo_52w']  || 0),
+            hi52:     parseFloat(r['Hi_52w']  || 0),
+            rating:   String(r['Rating']      || '—'),
+            target:   String(r['Target']      || '—').replace('E','€'),
+            analysts: parseInt(r['Analistes'] || 0),
+            buys:     parseInt(r['Buys']      || 0),
+            upside:   parseFloat(r['Upside_%']|| 0)
+          };
+        });
+      }
+      holdingsNew.forEach(function(h) {
+        var f = fonMap[h.tick] || {};
+        h.pe = f.pe || '—'; h.margin = f.margin || '—'; h.div = f.div || '—';
+        h.lo52 = f.lo52 || 0; h.hi52 = f.hi52 || 0;
+        h.rating = f.rating || '—'; h.target = f.target || '—';
+        h.analysts = f.analysts || 0; h.buys = f.buys || 0; h.upside = f.upside || 0;
+      });
+
+      // ---- NOTICIES ----
+      var newsNew = [];
+      var wsN = wb.Sheets['NOTICIES'];
+      if (wsN) {
+        var tagColors = { GOOGL:'tag-blue', AAPL:'tag-purple', MSFT:'tag-amber', SAN:'tag-green', MACRO:'tag-amber' };
+        XLSX.utils.sheet_to_json(wsN).forEach(function(r) {
+          var tick = String(r['Ticker'] || '').trim();
+          newsNew.push({
+            tick: tick,
+            tag:  tagColors[tick] || 'tag-blue',
+            text: String(r['Text_Noticia'] || ''),
+            date: String(r['Data'] || '')
+          });
+        });
+      }
+
+      // ---- RESULTATS ----
+      var earningsNew = [];
+      var wsR = wb.Sheets['RESULTATS'];
+      if (wsR) {
+        XLSX.utils.sheet_to_json(wsR).forEach(function(r) {
+          earningsNew.push({
+            tick: String(r['Ticker'] || '').trim(),
+            date: String(r['Data_Resultats'] || ''),
+            days: parseInt(r['Dies_Restants'] || 0)
+          });
+        });
+      }
+
+      // ---- HISTORIAL ----
+      var histNew = {};
+      var wsH = wb.Sheets['HISTORIAL'];
+      if (wsH) {
+        XLSX.utils.sheet_to_json(wsH).forEach(function(r) {
+          var tick = String(r['Ticker'] || '').trim();
+          var vals = [];
+          ['Gen (%)','Feb (%)','Mar (%)','Abr (%)','Mai (%)','Jun (%)','Jul (%)','Ago (%)','Set (%)','Oct (%)','Nov (%)','Des (%)'].forEach(function(m) {
+            var v = r[m];
+            vals.push(v !== undefined && v !== '' ? parseFloat(v) : null);
+          });
+          // trim trailing nulls but keep at least the non-null ones
+          while (vals.length > 1 && vals[vals.length-1] === null) vals.pop();
+          histNew[tick] = vals;
+        });
+      }
+
+      // ===================== RE-RENDER =====================
+      // Recalculate totals
+      var totalEUR2 = cash_val;
+      var startTotalEUR2 = cash_val;
+      holdingsNew.forEach(function(h) {
+        var v = h.qty * h.price;
+        var sv = h.qty * h.start;
+        h.valEUR  = h.cur === 'USD' ? v  / EURUSD_val : v;
+        h.startEUR = h.cur === 'USD' ? sv / EURUSD_val : sv;
+        h.ytd = ((h.price - h.start) / h.start * 100);
+        totalEUR2 += h.valEUR;
+        startTotalEUR2 += h.startEUR;
+      });
+      holdingsNew.forEach(function(h) { h.weight = (h.valEUR / totalEUR2 * 100); });
+
+      var pfPnl2     = totalEUR2 - capital_val;
+      var pfPnlPct2  = pfPnl2 / capital_val * 100;
+      var pfYtd2     = (totalEUR2 - startTotalEUR2) / startTotalEUR2 * 100;
+
+      // Update date label
+      document.querySelectorAll('.section-header div[style]').forEach(function(el) {
+        if (el.textContent.startsWith('Actualitzat')) el.textContent = 'Actualitzat: ' + dataUpdate;
+      });
+
+      // --- Ticker strip ---
+      var tickerHTML2 = '';
+      for (var t = 0; t < 3; t++) {
+        holdingsNew.forEach(function(h) {
+          var sym = h.tick;
+          var priceStr = (h.cur === 'USD' ? '$' : '€') + h.price.toFixed(2);
+          var ytdStr = (h.ytd >= 0 ? '+' : '') + h.ytd.toFixed(1) + '%';
+          tickerHTML2 += '<div class="ticker-item"><span class="t-sym">' + sym + '</span><span class="t-price">' + priceStr + '</span><span style="color:' + (h.ytd >= 0 ? 'var(--accent-green)' : 'var(--accent-red)') + '">' + ytdStr + '</span></div>';
+        });
+        tickerHTML2 += '<div class="ticker-item"><span class="t-sym">S&P500</span><span class="t-price"></span><span style="color:' + (sp500_val >= 0 ? 'var(--accent-green)' : 'var(--accent-red)') + '">' + (sp500_val >= 0 ? '+' : '') + sp500_val.toFixed(1) + '%</span></div>';
+        tickerHTML2 += '<div class="ticker-item"><span class="t-sym">IBEX35</span><span class="t-price"></span><span style="color:' + (ibex_val >= 0 ? 'var(--accent-green)' : 'var(--accent-red)') + '">' + (ibex_val >= 0 ? '+' : '') + ibex_val.toFixed(1) + '%</span></div>';
+        tickerHTML2 += '<div class="ticker-item"><span class="t-sym">EUR/USD</span><span class="t-price">' + EURUSD_val.toFixed(3) + '</span><span></span></div>';
+      }
+      document.getElementById('ticker').innerHTML = tickerHTML2;
+
+      // --- Metrics ---
+      var metricsData2 = [
+        { label: 'Valor total', value: '€' + totalEUR2.toLocaleString('ca-ES', {minimumFractionDigits:2, maximumFractionDigits:2}), sub: 'Capital: €' + capital_val.toLocaleString('ca-ES'), color: 'var(--accent-blue)' },
+        { label: 'P&L total', value: (pfPnl2 >= 0 ? '+' : '') + '€' + pfPnl2.toFixed(2), sub: (pfPnlPct2 >= 0 ? '+' : '') + pfPnlPct2.toFixed(2) + '% des d\'inici', color: pfPnl2 >= 0 ? 'var(--accent-green)' : 'var(--accent-red)' },
+        { label: 'Rendiment YTD', value: (pfYtd2 >= 0 ? '+' : '') + pfYtd2.toFixed(1) + '%', sub: 'vs S&P: ' + (pfYtd2 - sp500_val >= 0 ? '+' : '') + (pfYtd2 - sp500_val).toFixed(1) + 'pp', color: pfYtd2 >= 0 ? 'var(--accent-green)' : 'var(--accent-red)' },
+        { label: 'Cash', value: '€' + cash_val.toFixed(2), sub: (cash_val / totalEUR2 * 100).toFixed(1) + '% del portafoli', color: 'var(--accent-amber)' },
+        { label: 'Posicions', value: String(holdingsNew.length), sub: holdingsNew.filter(function(h){return h.cur==='USD';}).length + ' USA + ' + holdingsNew.filter(function(h){return h.cur==='EUR';}).length + ' EUR', color: 'var(--accent-purple)' }
+      ];
+      var mHTML = '';
+      metricsData2.forEach(function(m) {
+        mHTML += '<div class="metric-card"><div class="mc-glow" style="background:' + m.color + '"></div><div class="mc-label">' + m.label + '</div><div class="mc-value" style="color:' + m.color + '">' + m.value + '</div><div class="mc-sub val-neu">' + m.sub + '</div></div>';
+      });
+      document.getElementById('metricsGrid').innerHTML = mHTML;
+
+      // --- Holdings table ---
+      var hbHTML2 = '';
+      holdingsNew.forEach(function(h) {
+        var sig = h.ytd > 5 ? '<span class="tag tag-green">FORT</span>' : (h.ytd < -5 ? '<span class="tag tag-red">FEBLE</span>' : '<span class="tag tag-amber">NEUTRE</span>');
+        hbHTML2 += '<tr><td><div class="ht-ticker" style="color:' + h.color + '">' + h.tick + '</div><div class="ht-name">' + h.name + '</div></td>' +
+          '<td class="mono">' + h.qty + '</td>' +
+          '<td class="mono">' + (h.cur === 'USD' ? '$' : '€') + h.price.toFixed(2) + '</td>' +
+          '<td class="mono">€' + h.valEUR.toLocaleString('ca-ES', {minimumFractionDigits:0, maximumFractionDigits:0}) + '</td>' +
+          '<td class="mono">' + h.weight.toFixed(1) + '%</td>' +
+          '<td class="mono ' + (h.ytd >= 0 ? 'val-pos' : 'val-neg') + '">' + (h.ytd >= 0 ? '+' : '') + h.ytd.toFixed(1) + '%</td>' +
+          '<td>' + sig + '</td></tr>';
+      });
+      hbHTML2 += '<tr style="font-weight:600"><td><div class="ht-ticker" style="color:var(--accent-amber)">CASH</div><div class="ht-name">Efectiu EUR</div></td><td class="mono">—</td><td class="mono">—</td><td class="mono">€' + cash_val.toFixed(0) + '</td><td class="mono">' + (cash_val / totalEUR2 * 100).toFixed(1) + '%</td><td>—</td><td>—</td></tr>';
+      document.getElementById('holdingsBody').innerHTML = hbHTML2;
+
+      // --- Alloc chart ---
+      var allocColors2 = holdingsNew.map(function(h){return h.color;}).concat(['#ffb84d']);
+      var allocLabels2 = holdingsNew.map(function(h){return h.tick;}).concat(['Cash']);
+      var allocData2   = holdingsNew.map(function(h){return Math.round(h.valEUR);}).concat([Math.round(cash_val)]);
+      Chart.getChart('allocChart') && Chart.getChart('allocChart').destroy();
+      new Chart(document.getElementById('allocChart'), {
+        type: 'doughnut',
+        data: { labels: allocLabels2, datasets: [{ data: allocData2, backgroundColor: allocColors2, borderWidth: 0, borderRadius: 3 }] },
+        options: {
+          responsive: true, maintainAspectRatio: false, cutout: '65%',
+          plugins: { legend: { display: false }, tooltip: {
+            backgroundColor: '#1a2235', titleColor: '#e8ecf4', bodyColor: '#8b95a8', borderColor: 'rgba(255,255,255,0.1)', borderWidth: 1,
+            callbacks: { label: function(c) { return c.label + ': €' + c.parsed + ' (' + (c.parsed / totalEUR2 * 100).toFixed(1) + '%)'; } }
+          }}
+        }
+      });
+      var legHTML2 = '';
+      allocLabels2.forEach(function(l, i) {
+        legHTML2 += '<span style="display:inline-flex;align-items:center;gap:4px;margin-right:14px;margin-bottom:6px;font-size:11px;color:var(--text-secondary)"><span style="width:8px;height:8px;border-radius:2px;background:' + allocColors2[i] + ';display:inline-block"></span>' + l + ' ' + (allocData2[i] / totalEUR2 * 100).toFixed(0) + '%</span>';
+      });
+      document.getElementById('allocLegend').innerHTML = legHTML2;
+
+      // --- Ratios table ---
+      var rbHTML2 = '';
+      holdingsNew.forEach(function(h) {
+        rbHTML2 += '<tr><td class="mono" style="font-weight:600;color:' + h.color + '">' + h.tick + '</td><td class="mono">' + h.pe + '</td><td class="mono">' + h.margin + '</td><td class="mono">' + h.div + '</td><td class="mono" style="font-size:11px">' + (h.cur === 'USD' ? '$' : '€') + h.lo52.toFixed(0) + ' — ' + (h.cur === 'USD' ? '$' : '€') + h.hi52.toFixed(0) + '</td></tr>';
+      });
+      document.getElementById('ratiosBody').innerHTML = rbHTML2;
+
+      // --- Analyst cards ---
+      var agHTML2 = '';
+      holdingsNew.forEach(function(h) {
+        agHTML2 += '<div class="analyst-card"><div class="ac-ticker" style="color:' + h.color + '">' + h.tick + '</div><div class="ac-rating val-pos">' + h.rating + '</div><div class="ac-target">Target: ' + h.target + '</div><div class="ac-upside val-pos">+' + h.upside + '%</div><div style="font-size:10px;color:var(--text-tertiary);margin-top:4px">' + h.buys + '/' + h.analysts + ' buy</div></div>';
+      });
+      document.getElementById('analystGrid').innerHTML = agHTML2;
+
+      // --- Earnings ---
+      var erHTML2 = '';
+      earningsNew.forEach(function(e) {
+        var col = holdingsNew.find(function(h) { return h.tick === e.tick; });
+        erHTML2 += '<div class="earnings-row"><span class="er-tick" style="color:' + (col ? col.color : 'var(--text-primary)') + '">' + e.tick + '</span><span class="er-date">' + e.date + '</span><span class="er-countdown">' + e.days + ' dies</span></div>';
+      });
+      document.getElementById('earningsRows').innerHTML = erHTML2;
+
+      // --- Benchmarks ---
+      var benchData2 = [
+        { name: 'Portafoli', val: pfYtd2, color: 'var(--accent-purple)' },
+        { name: 'S&P 500',   val: sp500_val, color: 'var(--accent-blue)' },
+        { name: 'IBEX 35',   val: ibex_val,  color: 'var(--accent-green)' }
+      ];
+      var maxB = Math.max.apply(null, benchData2.map(function(b){return Math.abs(b.val);}));
+      if (maxB < 2) maxB = 10;
+      var bbHTML2 = '';
+      benchData2.forEach(function(b) {
+        var w = Math.abs(b.val) / (maxB * 1.3) * 100;
+        bbHTML2 += '<div class="bench-bar"><span class="bb-name">' + b.name + '</span><div class="bb-bar"><div class="bb-fill" style="width:' + Math.max(w, 4) + '%;background:' + b.color + ';' + (b.val < 0 ? 'opacity:0.4;' : '') + '"></div></div><span class="bb-val ' + (b.val >= 0 ? 'val-pos' : 'val-neg') + '">' + (b.val >= 0 ? '+' : '') + b.val.toFixed(1) + '%</span></div>';
+      });
+      document.getElementById('benchBars').innerHTML = bbHTML2;
+
+      // Bench chart
+      var allMonths = ['Gen','Feb','Mar','Abr','Mai','Jun','Jul','Ago','Set','Oct','Nov','Des'];
+      var pfHist    = histNew['Portafoli'] || [0];
+      var sp500Hist = histNew['SP500']     || [0];
+      var ibexHist  = histNew['IBEX35']    || [0];
+      var maxLen = Math.max(pfHist.length, sp500Hist.length, ibexHist.length);
+      var bLabels = allMonths.slice(0, maxLen);
+      Chart.getChart('benchChart') && Chart.getChart('benchChart').destroy();
+      new Chart(document.getElementById('benchChart'), {
+        type: 'line',
+        data: {
+          labels: bLabels,
+          datasets: [
+            { label: 'Portafoli', data: pfHist,    borderColor: '#a78bfa', backgroundColor: 'rgba(167,139,250,0.06)', fill: true,  tension: 0.35, pointRadius: 4, pointBackgroundColor: '#a78bfa', borderWidth: 2 },
+            { label: 'S&P 500',   data: sp500Hist, borderColor: '#4da6ff', fill: false, tension: 0.35, pointRadius: 3, borderWidth: 2, borderDash: [6,3] },
+            { label: 'IBEX 35',   data: ibexHist,  borderColor: '#00e5a0', fill: false, tension: 0.35, pointRadius: 3, borderWidth: 2, borderDash: [6,3] }
+          ]
+        },
+        options: {
+          responsive: true, maintainAspectRatio: false,
+          scales: {
+            y: { ticks: { callback: function(v){ return v+'%'; }, color:'#5a6478', font:{family:'JetBrains Mono',size:10} }, grid:{color:'rgba(255,255,255,0.04)'} },
+            x: { ticks: { color:'#5a6478', font:{family:'JetBrains Mono',size:10} }, grid:{display:false} }
+          },
+          plugins: { legend:{display:false}, tooltip:{backgroundColor:'#1a2235',titleColor:'#e8ecf4',bodyColor:'#8b95a8',borderColor:'rgba(255,255,255,0.1)',borderWidth:1} }
+        }
+      });
+
+      // --- Per-stock tabs & chart ---
+      var stHTML2 = '';
+      holdingsNew.forEach(function(h, i) {
+        stHTML2 += '<button class="tab-btn' + (i===0?' active':'') + '" onclick="selectStock(\'' + h.tick + '\',this)" style="color:' + (i===0?h.color:'') + ';border-color:' + (i===0?h.color:'') + ';background:' + (i===0?h.color+'18':'') + '">' + h.tick + '</button>';
+      });
+      document.getElementById('stockTabs').innerHTML = stHTML2;
+
+      // Update selectStock closure with new holdings + historial
+      window._holdings = holdingsNew;
+      window._historial = histNew;
+      window._allMonths = allMonths;
+      if (holdingsNew.length > 0) renderStockChartFromData(holdingsNew[0].tick);
+
+      // --- News tabs ---
+      var allTicksN = ['TOTS'].concat(holdingsNew.map(function(h){return h.tick;})).concat(['MACRO']);
+      var ntHTML2 = '';
+      allTicksN.forEach(function(t, i) {
+        ntHTML2 += '<button class="tab-btn' + (i===0?' active':'') + '" onclick="filterNews2(\'' + t + '\',this)">' + t + '</button>';
+      });
+      document.getElementById('newsTabs').innerHTML = ntHTML2;
+
+      window._news = newsNew;
+      renderNews2('TOTS');
+
+      // --- Footer ---
+      document.querySelector('.footer').innerHTML = 'INVEX TERMINAL &mdash; Dades orientatives, no constitueixen consell financer &mdash; Actualitzat ' + dataUpdate;
+
+      status.style.color = 'var(--accent-green)';
+      status.textContent = 'Carregat: ' + file.name;
+      document.getElementById('excelBtnLabel').style.borderColor = 'var(--accent-blue)';
+      document.getElementById('excelBtnLabel').style.color = 'var(--accent-blue)';
+      document.getElementById('excelBtnLabel').style.background = 'var(--accent-blue-dim)';
+      document.querySelector('#excelBtnLabel svg').setAttribute('stroke','var(--accent-blue)');
+      // swap icon to checkmark
+      document.querySelector('#excelBtnLabel svg').innerHTML = '<polyline points="20 6 9 17 4 12"/>';
+      document.querySelector('#excelBtnLabel').childNodes[2].textContent = ' ' + file.name.replace('.xlsx','').replace('.xls','');
+
+    } catch(err) {
+      status.style.color = 'var(--accent-red)';
+      status.textContent = 'Error: ' + err.message;
+      console.error(err);
+    }
+  };
+  reader.readAsArrayBuffer(file);
+}
+
+function renderStockChartFromData(tick) {
+  var holdings2  = window._holdings  || [];
+  var historial2 = window._historial  || {};
+  var allMonths2 = window._allMonths  || ['Gen','Feb','Mar','Abr'];
+  var h = holdings2.find(function(x){return x.tick===tick;});
+  if (!h) return;
+  var data = historial2[tick] || [0];
+  var labels = allMonths2.slice(0, data.length);
+  var inst = Chart.getChart('stockChart');
+  if (inst) inst.destroy();
+  new Chart(document.getElementById('stockChart'), {
+    type: 'line',
+    data: {
+      labels: labels,
+      datasets: [{ label: tick, data: data, borderColor: h.color, backgroundColor: h.color+'15', fill: true, tension: 0.35, pointRadius: 5, pointBackgroundColor: h.color, borderWidth: 2.5 }]
+    },
+    options: {
+      responsive: true, maintainAspectRatio: false,
+      scales: {
+        y: { ticks:{callback:function(v){return v+'%';},color:'#5a6478',font:{family:'JetBrains Mono',size:10}}, grid:{color:'rgba(255,255,255,0.04)'} },
+        x: { ticks:{color:'#5a6478',font:{family:'JetBrains Mono',size:10}}, grid:{display:false} }
+      },
+      plugins:{legend:{display:false},tooltip:{backgroundColor:'#1a2235',titleColor:'#e8ecf4',bodyColor:'#8b95a8',borderColor:'rgba(255,255,255,0.1)',borderWidth:1}}
+    }
+  });
+  var info = '<div style="display:flex;gap:16px;flex-wrap:wrap">';
+  info += '<div style="font-family:var(--font-mono);font-size:13px;color:var(--text-secondary)">Preu: <span style="color:' + h.color + ';font-weight:600">' + (h.cur==='USD'?'$':'€') + h.price.toFixed(2) + '</span></div>';
+  info += '<div style="font-family:var(--font-mono);font-size:13px;color:var(--text-secondary)">YTD: <span class="' + (h.ytd>=0?'val-pos':'val-neg') + '" style="font-weight:600">' + (h.ytd>=0?'+':'') + h.ytd.toFixed(1) + '%</span></div>';
+  info += '<div style="font-family:var(--font-mono);font-size:13px;color:var(--text-secondary)">Target: <span style="color:var(--accent-green);font-weight:600">' + h.target + '</span> (+' + h.upside + '%)</div>';
+  info += '<div style="font-family:var(--font-mono);font-size:13px;color:var(--text-secondary)">Rating: <span style="color:var(--accent-green);font-weight:600">' + h.rating + '</span></div>';
+  info += '</div>';
+  document.getElementById('stockInfo').innerHTML = info;
+}
+
+window.selectStock = function(tick, btn) {
+  var holdings2 = window._holdings || [];
+  var h = holdings2.find(function(x){return x.tick===tick;});
+  if (!h) return;
+  document.querySelectorAll('#stockTabs .tab-btn').forEach(function(b){
+    b.classList.remove('active'); b.style.color=''; b.style.borderColor=''; b.style.background='';
+  });
+  btn.classList.add('active');
+  btn.style.color = h.color; btn.style.borderColor = h.color; btn.style.background = h.color + '18';
+  renderStockChartFromData(tick);
+};
+
+function renderNews2(filter) {
+  var news2 = window._news || [];
+  var filtered = filter === 'TOTS' ? news2 : news2.filter(function(n){return n.tick===filter;});
+  var html = '';
+  filtered.forEach(function(n) {
+    html += '<li class="news-item"><div class="ni-top"><span class="tag ' + n.tag + '">' + n.tick + '</span></div><div class="ni-text">' + n.text + '</div><div class="ni-date">' + n.date + '</div></li>';
+  });
+  document.getElementById('newsList').innerHTML = html;
+}
+
+window.filterNews = function(t, btn) {
+  document.querySelectorAll('#newsTabs .tab-btn').forEach(function(b){b.classList.remove('active');});
+  btn.classList.add('active');
+  renderNews(t);
+};
+
+window.filterNews2 = function(t, btn) {
+  document.querySelectorAll('#newsTabs .tab-btn').forEach(function(b){b.classList.remove('active');});
+  btn.classList.add('active');
+  renderNews2(t);
+};
+</script>
+</body>
+</html>

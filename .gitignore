@@ -1,0 +1,6 @@
+*.bat
+files.zip
+__pycache__/
+*.pyc
+.claude/
+invex-terminal-live.html

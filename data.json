@@ -1,0 +1,204 @@
+{
+  "lastUpdate": "16/04/2026",
+  "eurusd": 1.1781,
+  "cash": 237.91,
+  "capital": 6500.0,
+  "nMesos": 5,
+  "benchmarks": {
+    "sp500Ytd": 2.4,
+    "ibexYtd": 4.11
+  },
+  "holdings": [
+    {
+      "tick": "GOOGL",
+      "name": "Alphabet Inc.",
+      "qty": 6,
+      "entrada": 312.0,
+      "price": 337.12,
+      "cur": "USD",
+      "color": "4da6ff",
+      "pe": "25.1x",
+      "margin": "31.6%",
+      "div": "25.0%",
+      "lo52": 146.1,
+      "hi52": 349.0,
+      "rating": "Strong Buy",
+      "target": "$376",
+      "analysts": 56,
+      "buys": 59,
+      "upside": 11.6
+    },
+    {
+      "tick": "AAPL",
+      "name": "Apple Inc.",
+      "qty": 5,
+      "entrada": 246.0,
+      "price": 266.43,
+      "cur": "USD",
+      "color": "8b95a8",
+      "pe": "28.6x",
+      "margin": "35.4%",
+      "div": "39.0%",
+      "lo52": 189.81,
+      "hi52": 288.62,
+      "rating": "Buy",
+      "target": "$296",
+      "analysts": 40,
+      "buys": 30,
+      "upside": 11.3
+    },
+    {
+      "tick": "MSFT",
+      "name": "Microsoft Corp.",
+      "qty": 6,
+      "entrada": 477.0,
+      "price": 411.22,
+      "cur": "USD",
+      "color": "a78bfa",
+      "pe": "21.8x",
+      "margin": "47.1%",
+      "div": "89.0%",
+      "lo52": 355.67,
+      "hi52": 555.45,
+      "rating": "Strong Buy",
+      "target": "$581",
+      "analysts": 54,
+      "buys": 57,
+      "upside": 41.3
+    },
+    {
+      "tick": "SAN",
+      "name": "Banco Santander",
+      "qty": 150,
+      "entrada": 7.7,
+      "price": 10.66,
+      "cur": "EUR",
+      "color": "00e5a0",
+      "pe": "9.0x",
+      "margin": "43.7%",
+      "div": "235.0%",
+      "lo52": 5.91,
+      "hi52": 11.26,
+      "rating": "Buy",
+      "target": "€12",
+      "analysts": 20,
+      "buys": 16,
+      "upside": 11.7
+    }
+  ],
+  "mensual": {
+    "GOOGL": [
+      0.0,
+      7.25,
+      -1.08,
+      -8.69,
+      7.05
+    ],
+    "AAPL": [
+      0.0,
+      -4.25,
+      -2.43,
+      -6.27,
+      -1.6
+    ],
+    "MSFT": [
+      0.0,
+      -9.02,
+      -16.77,
+      -21.55,
+      -12.85
+    ],
+    "SAN": [
+      0.0,
+      5.15,
+      5.25,
+      -7.43,
+      4.0
+    ],
+    "SP500": [
+      0.0,
+      1.17,
+      0.3,
+      -4.81,
+      2.4
+    ],
+    "IBEX35": [
+      0.0,
+      2.22,
+      4.96,
+      -2.53,
+      4.11
+    ],
+    "Portafoli": [
+      0.0,
+      -0.46,
+      -4.79,
+      -12.08,
+      -1.56
+    ]
+  },
+  "earnings": [
+    {
+      "tick": "GOOGL",
+      "date": "29/04/2026",
+      "days": 13
+    },
+    {
+      "tick": "MSFT",
+      "date": "29/04/2026",
+      "days": 13
+    },
+    {
+      "tick": "SAN",
+      "date": "29/04/2026",
+      "days": 13
+    },
+    {
+      "tick": "AAPL",
+      "date": "30/04/2026",
+      "days": 14
+    }
+  ],
+  "news": [
+    {
+      "tick": "GOOGL",
+      "text": "Allbirds stock soars nearly 600% as the shoemaker rebrands as an AI company",
+      "date": "15/04/2026"
+    },
+    {
+      "tick": "GOOGL",
+      "text": "Google should allow third-party search engines access to data, EU says",
+      "date": "16/04/2026"
+    },
+    {
+      "tick": "AAPL",
+      "text": "AI trade could be overdue for a rebound amid major stock rally",
+      "date": "15/04/2026"
+    },
+    {
+      "tick": "AAPL",
+      "text": "Chip Maker TSMC Is More Bullish Than Ever on AI, Despite Iran War",
+      "date": "16/04/2026"
+    },
+    {
+      "tick": "MSFT",
+      "text": "Stock market today: S&P 500 closes above 7,000 for first time, Nasdaq hits record as stocks erase Iran war losses",
+      "date": "14/04/2026"
+    },
+    {
+      "tick": "MSFT",
+      "text": "3 Reasons Microsoft Stock Is Back in Rally Mode",
+      "date": "16/04/2026"
+    },
+    {
+      "tick": "SAN",
+      "text": "‘Meaningful relief for borrowers’ as banks prepare to cut mortgage rates",
+      "date": "15/04/2026"
+    },
+    {
+      "tick": "SAN",
+      "text": "Jim Cramer Says ‘It Just Didn’t Happen’ — and That’s Why Many Americans Missed the Most Powerful Rally of 2026",
+      "date": "15/04/2026"
+    }
+  ]
+}
