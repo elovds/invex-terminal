@@ -513,11 +513,15 @@ body {
       <div class="section-title">Rendiment per acció</div>
     </div>
     <div class="card">
-      <div class="tab-row" id="stockTabs"></div>
+      <div style="display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:8px;">
+        <div class="tab-row" id="stockTabs" style="margin-bottom:0;"></div>
+        <div class="tab-row" id="periodTabs" style="margin-bottom:0;"></div>
+      </div>
+      <div id="stockPctBadge" style="margin:12px 0 4px;"></div>
       <div class="chart-container" style="height:280px;">
         <canvas id="stockChart"></canvas>
       </div>
-      <div id="stockInfo" style="margin-top:16px;"></div>
+      <div id="stockInfo" style="margin-top:12px;"></div>
     </div>
   </div>
 
@@ -720,10 +724,32 @@ new Chart(document.getElementById('benchChart'),{type:'line',data:{labels:MONTHS
 
 // ── Per-stock chart (globals per a renderStockChartFromData) ──────────────────
 window._holdings=holdings; window._historial=mensual; window._allMonths=MONTHS_CA; window._news=news;
+window._historialPrices = D.historial || {};
+window._currentPeriod   = '1M';
 var stHTML='';
 holdings.forEach(function(h,i){stHTML+='<button class="tab-btn'+(i===0?' active':'')+'" onclick="selectStock(\''+h.tick+'\',this)" style="color:'+(i===0?h.color:'')+';border-color:'+(i===0?h.color:'')+';background:'+(i===0?h.color+'18':'')+'">'+h.tick+'</button>';});
 document.getElementById('stockTabs').innerHTML=stHTML;
-if(holdings.length>0) renderStockChartFromData(holdings[0].tick);
+if(holdings.length>0) renderStockChartFromData(holdings[0].tick, '1M');
+
+// ── Botons de període ─────────────────────────────────────────────────────────
+var PERIODS_UI=[{k:'1D',l:'1D'},{k:'1S',l:'1S'},{k:'1M',l:'1M'},{k:'6M',l:'6M'},{k:'1A',l:'1A'},{k:'5A',l:'5A'},{k:'MAX',l:'M\u00c0X'}];
+var ptHTML2='';
+PERIODS_UI.forEach(function(p){
+  var isActive=p.k==='1M';
+  ptHTML2+='<button class="tab-btn" data-p="'+p.k+'" style="padding:4px 10px;font-size:10px;'+(isActive?'color:var(--accent-green);border-color:var(--accent-green);background:var(--accent-green-dim);':'')+'" onclick="selectPeriod(\''+p.k+'\',this)">'+p.l+'</button>';
+});
+document.getElementById('periodTabs').innerHTML=ptHTML2;
+
+window.selectPeriod=function(period,btn){
+  window._currentPeriod=period;
+  document.querySelectorAll('#periodTabs .tab-btn').forEach(function(b){
+    b.style.color='';b.style.borderColor='';b.style.background='';
+  });
+  btn.style.color='var(--accent-green)';btn.style.borderColor='var(--accent-green)';btn.style.background='var(--accent-green-dim)';
+  var actTick=document.querySelector('#stockTabs .tab-btn.active');
+  var tick=actTick?actTick.textContent.trim():(window._holdings&&window._holdings[0]?window._holdings[0].tick:'');
+  if(tick) renderStockChartFromData(tick,period);
+};
 
 // ── Notícies ──────────────────────────────────────────────────────────────────
 var allTickers=['TOTS'].concat(holdings.map(function(h){return h.tick;})).concat(['MACRO']);
@@ -1058,38 +1084,115 @@ function loadExcel(input) {
   reader.readAsArrayBuffer(file);
 }
 
-function renderStockChartFromData(tick) {
+function renderStockChartFromData(tick, period) {
+  period = period || window._currentPeriod || '1M';
+  window._currentPeriod = period;
+
   var holdings2  = window._holdings  || [];
-  var historial2 = window._historial  || {};
-  var allMonths2 = window._allMonths  || ['Gen','Feb','Mar','Abr'];
   var h = holdings2.find(function(x){return x.tick===tick;});
   if (!h) return;
-  var data = historial2[tick] || [0];
-  var labels = allMonths2.slice(0, data.length);
+
+  var histP  = (window._historialPrices || {})[tick];
+  var pData  = histP && histP[period] && histP[period].prices && histP[period].prices.length > 1 ? histP[period] : null;
+
+  var labels, prices, pct, openPrice, highPrice, lowPrice, usePrice;
+  if (pData) {
+    labels=pData.labels; prices=pData.prices; pct=pData.pct;
+    openPrice=pData.open; highPrice=pData.high; lowPrice=pData.low; usePrice=true;
+  } else {
+    // Fallback: historial mensual %
+    var historial2 = window._historial || {};
+    var allMonths2 = window._allMonths || ['Gen','Feb','Mar','Abr'];
+    var mData = historial2[tick] || [0];
+    labels=allMonths2.slice(0,mData.length); prices=mData;
+    pct = mData.length>0 ? mData[mData.length-1] : 0;
+    openPrice=null; highPrice=null; lowPrice=null; usePrice=false;
+  }
+
+  var curSym  = h.cur==='USD' ? '$' : '\u20ac';
+  var isPos   = pct >= 0;
+  var pctColor= isPos ? 'var(--accent-green)' : 'var(--accent-red)';
+  var pctDim  = isPos ? 'var(--accent-green-dim)' : 'var(--accent-red-dim)';
+
+  // % badge
+  var change = (openPrice!=null && h.price!=null) ? h.price - openPrice : null;
+  var badgeHTML = '<div style="display:flex;align-items:center;gap:12px;flex-wrap:wrap;">';
+  badgeHTML += '<span style="font-family:var(--font-mono);font-size:22px;font-weight:700;color:'+h.color+'">'+(usePrice ? curSym+h.price.toFixed(2) : '')+'</span>';
+  if (change!==null && usePrice) {
+    badgeHTML += '<span style="font-family:var(--font-mono);font-size:13px;color:'+pctColor+'">'+(change>=0?'+':'')+curSym+change.toFixed(2)+'</span>';
+  }
+  badgeHTML += '<span style="font-family:var(--font-mono);font-size:15px;font-weight:700;color:'+pctColor+';background:'+pctDim+';border:1px solid '+pctColor+';border-radius:6px;padding:4px 12px;">'+(isPos?'+':'')+pct.toFixed(2)+'%</span>';
+  if (highPrice!==null && lowPrice!==null && usePrice) {
+    badgeHTML += '<span style="font-family:var(--font-mono);font-size:11px;color:var(--text-tertiary)">\u2191 '+curSym+highPrice.toFixed(2)+'&nbsp;&nbsp;\u2193 '+curSym+lowPrice.toFixed(2)+'</span>';
+  }
+  badgeHTML += '</div>';
+  document.getElementById('stockPctBadge').innerHTML = badgeHTML;
+
+  // Chart
   var inst = Chart.getChart('stockChart');
   if (inst) inst.destroy();
+  var ctx = document.getElementById('stockChart').getContext('2d');
+  var grad = ctx.createLinearGradient(0,0,0,280);
+  if (isPos) {
+    grad.addColorStop(0, h.color+'55'); grad.addColorStop(1, h.color+'00');
+  } else {
+    grad.addColorStop(0, 'rgba(255,77,106,0.3)'); grad.addColorStop(1, 'rgba(255,77,106,0)');
+  }
+
   new Chart(document.getElementById('stockChart'), {
-    type: 'line',
-    data: {
-      labels: labels,
-      datasets: [{ label: tick, data: data, borderColor: h.color, backgroundColor: h.color+'15', fill: true, tension: 0.35, pointRadius: 5, pointBackgroundColor: h.color, borderWidth: 2.5 }]
-    },
-    options: {
-      responsive: true, maintainAspectRatio: false,
-      scales: {
-        y: { ticks:{callback:function(v){return v+'%';},color:'#5a6478',font:{family:'JetBrains Mono',size:10}}, grid:{color:'rgba(255,255,255,0.04)'} },
-        x: { ticks:{color:'#5a6478',font:{family:'JetBrains Mono',size:10}}, grid:{display:false} }
+    type:'line',
+    data:{labels:labels,datasets:[{
+      label:tick, data:prices,
+      borderColor: isPos ? h.color : 'var(--accent-red)',
+      backgroundColor: grad,
+      fill:true, tension:0.2,
+      pointRadius: prices.length > 60 ? 0 : (prices.length > 20 ? 2 : 4),
+      pointHoverRadius:5,
+      pointBackgroundColor: isPos ? h.color : '#ff4d6a',
+      borderWidth:2
+    }]},
+    options:{
+      responsive:true, maintainAspectRatio:false,
+      scales:{
+        y:{
+          ticks:{
+            callback:function(v){return usePrice ? curSym+v.toLocaleString('ca-ES',{minimumFractionDigits:2,maximumFractionDigits:2}) : v+'%';},
+            color:'#5a6478', font:{family:'JetBrains Mono',size:10}
+          },
+          grid:{color:'rgba(255,255,255,0.04)'}
+        },
+        x:{
+          ticks:{color:'#5a6478',font:{family:'JetBrains Mono',size:10},maxTicksLimit:8,maxRotation:0},
+          grid:{display:false}
+        }
       },
-      plugins:{legend:{display:false},tooltip:{backgroundColor:'#1a2235',titleColor:'#e8ecf4',bodyColor:'#8b95a8',borderColor:'rgba(255,255,255,0.1)',borderWidth:1}}
+      plugins:{
+        legend:{display:false},
+        tooltip:{
+          backgroundColor:'#1a2235',titleColor:'#e8ecf4',bodyColor:'#8b95a8',
+          borderColor:'rgba(255,255,255,0.1)',borderWidth:1,
+          callbacks:{label:function(c){return usePrice ? curSym+c.parsed.y.toFixed(2) : c.parsed.y.toFixed(2)+'%';}}
+        }
+      }
     }
   });
-  var info = '<div style="display:flex;gap:16px;flex-wrap:wrap">';
-  info += '<div style="font-family:var(--font-mono);font-size:13px;color:var(--text-secondary)">Preu: <span style="color:' + h.color + ';font-weight:600">' + (h.cur==='USD'?'$':'€') + h.price.toFixed(2) + '</span></div>';
-  info += '<div style="font-family:var(--font-mono);font-size:13px;color:var(--text-secondary)">YTD: <span class="' + (h.ytd>=0?'val-pos':'val-neg') + '" style="font-weight:600">' + (h.ytd>=0?'+':'') + h.ytd.toFixed(1) + '%</span></div>';
-  info += '<div style="font-family:var(--font-mono);font-size:13px;color:var(--text-secondary)">Target: <span style="color:var(--accent-green);font-weight:600">' + h.target + '</span> (+' + h.upside + '%)</div>';
-  info += '<div style="font-family:var(--font-mono);font-size:13px;color:var(--text-secondary)">Rating: <span style="color:var(--accent-green);font-weight:600">' + h.rating + '</span></div>';
-  info += '</div>';
-  document.getElementById('stockInfo').innerHTML = info;
+
+  // Info row
+  var info='<div style="display:flex;gap:20px;flex-wrap:wrap;padding-top:8px;border-top:1px solid var(--border)">';
+  info+='<div style="font-family:var(--font-mono);font-size:12px;color:var(--text-secondary)">Target: <span style="color:var(--accent-green);font-weight:600">'+h.target+'</span> (+'+h.upside+'%)</div>';
+  info+='<div style="font-family:var(--font-mono);font-size:12px;color:var(--text-secondary)">Rating: <span style="color:var(--accent-green);font-weight:600">'+h.rating+'</span></div>';
+  info+='<div style="font-family:var(--font-mono);font-size:12px;color:var(--text-secondary)">52w: <span style="color:var(--text-primary)">'+curSym+h.lo52.toFixed(0)+' \u2014 '+curSym+h.hi52.toFixed(0)+'</span></div>';
+  info+='<div style="font-family:var(--font-mono);font-size:12px;color:var(--text-secondary)">P/E fwd: <span style="color:var(--text-primary)">'+h.pe+'</span></div>';
+  info+='</div>';
+  document.getElementById('stockInfo').innerHTML=info;
+
+  // Sync period button highlight
+  document.querySelectorAll('#periodTabs .tab-btn').forEach(function(b){
+    var active = b.dataset&&b.dataset.p===period;
+    b.style.color      = active ? 'var(--accent-green)' : '';
+    b.style.borderColor= active ? 'var(--accent-green)' : '';
+    b.style.background = active ? 'var(--accent-green-dim)' : '';
+  });
 }
 
 window.selectStock = function(tick, btn) {
@@ -1101,7 +1204,7 @@ window.selectStock = function(tick, btn) {
   });
   btn.classList.add('active');
   btn.style.color = h.color; btn.style.borderColor = h.color; btn.style.background = h.color + '18';
-  renderStockChartFromData(tick);
+  renderStockChartFromData(tick, window._currentPeriod || '1M');
 };
 
 function renderNews2(filter) {

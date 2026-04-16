@@ -1,6 +1,7 @@
 """
 INVEX Terminal — fetch_data.py
-Obté preus, YTD i historial mensual via yfinance i guarda data.json.
+Obté preus, YTD, historial mensual i historial multi-període via yfinance.
+Guarda data.json.
 """
 import json
 import sys
@@ -8,6 +9,53 @@ from datetime import date, datetime
 
 import pandas as pd
 import yfinance as yf
+
+# ── Períodes per al gràfic de preus ──────────────────────────────────────────
+PERIODS_CONFIG = {
+    "1D":  ("1d",  "30m"),
+    "1S":  ("5d",  "1d"),
+    "1M":  ("1mo", "1d"),
+    "6M":  ("6mo", "1wk"),
+    "1A":  ("1y",  "1wk"),
+    "5A":  ("5y",  "1mo"),
+    "MAX": ("max", "3mo"),
+}
+MESOS_CA = ["gen","feb","mar","abr","mai","jun","jul","ago","set","oct","nov","des"]
+
+def _fmt_label(ts, period: str) -> str:
+    dt = ts.to_pydatetime()
+    if period == "1D":
+        return dt.strftime("%H:%M")
+    if period in ("1S", "1M", "6M"):
+        return dt.strftime("%d/%m")
+    if period in ("1A", "5A"):
+        return MESOS_CA[dt.month - 1] + " " + str(dt.year)[-2:]
+    return str(dt.year)  # MAX
+
+def fetch_historial(ticker_obj: yf.Ticker) -> dict:
+    """Retorna {periode: {labels, prices, pct, open, high, low}} per a cada període."""
+    result = {}
+    for period_name, (yf_period, yf_interval) in PERIODS_CONFIG.items():
+        try:
+            hist = ticker_obj.history(period=yf_period, interval=yf_interval, auto_adjust=True)
+            if hist.empty or len(hist) < 2:
+                result[period_name] = None
+                continue
+            prices = [round(float(p), 3) for p in hist["Close"].tolist()]
+            labels = [_fmt_label(ts, period_name) for ts in hist.index]
+            p0, p1 = prices[0], prices[-1]
+            result[period_name] = {
+                "labels": labels,
+                "prices": prices,
+                "pct":    round((p1 - p0) / p0 * 100, 2) if p0 else 0,
+                "open":   p0,
+                "high":   round(float(hist["High"].max()), 3),
+                "low":    round(float(hist["Low"].min()),  3),
+            }
+        except Exception as e:
+            print(f"    [{period_name}] {e}", file=sys.stderr)
+            result[period_name] = None
+    return result
 
 # ── Configuració del portafoli ────────────────────────────────────────────────
 PORTFOLIO = [
@@ -140,6 +188,7 @@ def main():
     mensual      = {}
     all_news     = []
     earnings_out = []
+    historial    = {}
 
     for cfg in PORTFOLIO:
         yf_tick = cfg["yf"]
@@ -195,6 +244,10 @@ def main():
                 "buys":     buys,
                 "upside":   upside,
             })
+
+            # Historial multi-període
+            print("historial...", end=" ", flush=True)
+            historial[cfg["tick"]] = fetch_historial(t)
 
             # Notícies
             all_news.extend(fetch_news(t, cfg["tick"], n=2))
@@ -277,6 +330,7 @@ def main():
         },
         "holdings": holdings_out,
         "mensual":  mensual,
+        "historial": historial,
         "earnings": earnings_out,
         "news":     all_news,
     }
