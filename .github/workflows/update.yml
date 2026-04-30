@@ -4,6 +4,9 @@ on:
   schedule:
     - cron: '0 8 * * 1-5'   # Dies laborables a les 8:00 UTC
   workflow_dispatch:           # Permet execució manual des de GitHub
+  push:
+    branches: [main]
+    paths: ['fetch_data.py', '.github/workflows/update.yml']
 
 permissions:
   contents: write
