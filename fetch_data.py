@@ -59,9 +59,9 @@ def fetch_historial(ticker_obj: yf.Ticker) -> dict:
 
 # ── Configuració del portafoli ────────────────────────────────────────────────
 PORTFOLIO = [
-    {"tick": "GOOGL", "name": "Alphabet Inc.",   "qty": 6,   "entrada": 312.0, "cur": "USD", "color": "4da6ff", "yf": "GOOGL"},
-    {"tick": "AAPL",  "name": "Apple Inc.",       "qty": 5,   "entrada": 246.0, "cur": "USD", "color": "8b95a8", "yf": "AAPL"},
-    {"tick": "MSFT",  "name": "Microsoft Corp.",  "qty": 6,   "entrada": 477.0, "cur": "USD", "color": "a78bfa", "yf": "MSFT"},
+    {"tick": "GOOGL", "name": "Alphabet Inc.",   "qty": 6,   "entrada": 307.53,  "cur": "USD", "color": "4da6ff", "yf": "GOOGL"},
+    {"tick": "AAPL",  "name": "Apple Inc.",       "qty": 5,   "entrada": 248.795, "cur": "USD", "color": "8b95a8", "yf": "AAPL"},
+    {"tick": "MSFT",  "name": "Microsoft Corp.",  "qty": 6,   "entrada": 388.335, "cur": "USD", "color": "a78bfa", "yf": "MSFT"},
     {"tick": "SAN",   "name": "Banco Santander",  "qty": 150, "entrada": 10.42, "cur": "EUR", "color": "00e5a0", "yf": "SAN.MC"},
 ]
 CASH    = 237.91
