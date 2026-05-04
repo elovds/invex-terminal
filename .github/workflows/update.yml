@@ -4,9 +4,6 @@ on:
   schedule:
     - cron: '0 8 * * 1-5'   # Dies laborables a les 8:00 UTC
   workflow_dispatch:           # Permet execució manual des de GitHub
-  push:
-    branches: [main]
-    paths: ['fetch_data.py', '.github/workflows/update.yml']
 
 permissions:
   contents: write
@@ -14,10 +11,13 @@ permissions:
 jobs:
   update-data:
     runs-on: ubuntu-latest
+    if: github.actor != 'github-actions[bot]'
 
     steps:
       - name: Checkout repo
         uses: actions/checkout@v4
+        with:
+          ref: main
 
       - name: Set up Python 3.11
         uses: actions/setup-python@v5
@@ -38,4 +38,4 @@ jobs:
           git add data.json
           git diff --cached --quiet || \
             git commit -m "data: update market data $(date -u +'%Y-%m-%d %H:%M UTC')"
-          git push
+          git push origin HEAD:main
