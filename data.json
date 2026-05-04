@@ -6,7 +6,7 @@
   "nMesos": 6,
   "benchmarks": {
     "sp500Ytd": 5.42,
-    "ibexYtd": 0.73
+    "ibexYtd": 0.69
   },
   "holdings": [
     {
@@ -71,7 +71,7 @@
       "name": "Banco Santander",
       "qty": 150,
       "entrada": 7.7,
-      "price": 10.2,
+      "price": 10.21,
       "cur": "EUR",
       "color": "00e5a0",
       "pe": "8.5x",
@@ -83,7 +83,7 @@
       "target": "€12",
       "analysts": 20,
       "buys": 16,
-      "upside": 17.7
+      "upside": 17.6
     }
   ],
   "mensual": {
@@ -117,7 +117,7 @@
       5.25,
       -7.43,
       2.47,
-      0.71
+      0.75
     ],
     "SP500": [
       0.0,
@@ -133,12 +133,12 @@
       4.96,
       -2.53,
       1.65,
-      0.73
+      0.69
     ],
     "Portafoli": [
       0.0,
-      -0.3,
-      -4.78,
+      -0.29,
+      -4.77,
       -11.98,
       2.79,
       3.49
@@ -727,7 +727,7 @@
           146.832,
           134.194,
           113.174,
-          115.366,
+          115.367,
           93.735,
           98.03,
           106.46,
@@ -1129,7 +1129,7 @@
           167.257,
           174.719,
           191.465,
-          193.912,
+          193.913,
           185.443,
           169.227,
           168.792,
@@ -1757,7 +1757,7 @@
           521.083,
           519.025,
           517.166,
-          504.301,
+          504.3,
           504.592,
           492.95,
           507.788,
@@ -1892,7 +1892,7 @@
           320.793,
           333.389,
           328.866,
-          320.877,
+          320.878,
           309.774,
           331.711,
           371.739,
@@ -2246,7 +2246,7 @@
           247.916,
           243.041,
           320.793,
-          320.877,
+          320.878,
           371.739,
           406.635,
           408.855,
@@ -2270,14 +2270,16 @@
         "labels": [
           "09:00",
           "09:30",
-          "10:00"
+          "10:00",
+          "10:30"
         ],
         "prices": [
           10.328,
           10.294,
-          10.202
+          10.22,
+          10.206
         ],
-        "pct": -1.22,
+        "pct": -1.18,
         "open": 10.328,
         "high": 10.42,
         "low": 10.196
@@ -2295,9 +2297,9 @@
           10.242,
           10.349,
           10.38,
-          10.202
+          10.206
         ],
-        "pct": 0.48,
+        "pct": 0.52,
         "open": 10.153,
         "high": 10.42,
         "low": 10.052
@@ -2343,9 +2345,9 @@
           10.242,
           10.349,
           10.38,
-          10.202
+          10.206
         ],
-        "pct": 6.22,
+        "pct": 6.26,
         "open": 9.605,
         "high": 10.938,
         "low": 9.563
@@ -2653,9 +2655,9 @@
           10.661,
           9.377,
           10.256,
-          10.202
+          10.206
         ],
-        "pct": 279.68,
+        "pct": 279.83,
         "open": 2.687,
         "high": 11.126,
         "low": 2.005
@@ -2875,9 +2877,9 @@
           8.656,
           9.822,
           9.377,
-          10.202
+          10.206
         ],
-        "pct": 298.52,
+        "pct": 298.67,
         "open": 2.56,
         "high": 11.126,
         "low": 1.191
@@ -2909,22 +2911,22 @@
   "news": [
     {
       "tick": "GOOGL",
-      "text": "Seoul, Taipei hit records as Asian stocks track Wall St tech rally",
+      "text": "Microsoft Is a Mess. Is the \"Magnificent Seven\" Stock a Buy in May or Better Avoided?",
       "date": "04/05/2026"
     },
     {
       "tick": "GOOGL",
-      "text": "Nicolas Sauvage is betting on the boring parts of AI",
-      "date": "04/05/2026"
-    },
-    {
-      "tick": "AAPL",
       "text": "Seoul, Taipei hit records as Asian stocks track Wall St tech rally",
       "date": "04/05/2026"
     },
     {
       "tick": "AAPL",
-      "text": "Apple says users are snapping up Macs faster than ever and created a supply shortage",
+      "text": "Microsoft Is a Mess. Is the \"Magnificent Seven\" Stock a Buy in May or Better Avoided?",
+      "date": "04/05/2026"
+    },
+    {
+      "tick": "AAPL",
+      "text": "Seoul, Taipei hit records as Asian stocks track Wall St tech rally",
       "date": "04/05/2026"
     },
     {
@@ -2934,7 +2936,7 @@
     },
     {
       "tick": "MSFT",
-      "text": "Seoul, Taipei hit records as Asian stocks track Wall St tech rally",
+      "text": "Microsoft Is a Mess. Is the \"Magnificent Seven\" Stock a Buy in May or Better Avoided?",
       "date": "04/05/2026"
     },
     {

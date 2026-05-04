@@ -434,7 +434,7 @@ body {
               <th>Preu</th>
               <th>Valor (€)</th>
               <th>Pes</th>
-              <th>YTD</th>
+              <th>Des d'entrada</th>
               <th>Senyal</th>
             </tr>
           </thead>
@@ -661,7 +661,7 @@ if (dateEl) dateEl.textContent = 'Actualitzat: ' + lastUpdate;
 var metricsData = [
   {label:'Valor total',   value:'\u20ac'+totalEUR.toLocaleString('ca-ES',{minimumFractionDigits:2,maximumFractionDigits:2}), sub:'Capital: \u20ac'+capital.toLocaleString('ca-ES'), color:'var(--accent-blue)'},
   {label:'P&L total',     value:(pfPnl>=0?'+':'')+'\u20ac'+pfPnl.toFixed(2), sub:(pfPnlPct>=0?'+':'')+pfPnlPct.toFixed(2)+"% des d'inici", color:pfPnl>=0?'var(--accent-green)':'var(--accent-red)'},
-  {label:'Rendiment YTD', value:(pfYtd>=0?'+':'')+pfYtd.toFixed(1)+'%', sub:'vs S&P: '+(pfYtd-sp500Ytd>=0?'+':'')+(pfYtd-sp500Ytd).toFixed(1)+'pp', color:pfYtd>=0?'var(--accent-green)':'var(--accent-red)'},
+  {label:'Rendiment', value:(pfYtd>=0?'+':'')+pfYtd.toFixed(1)+'%', sub:'vs S&P: '+(pfYtd-sp500Ytd>=0?'+':'')+(pfYtd-sp500Ytd).toFixed(1)+'pp', color:pfYtd>=0?'var(--accent-green)':'var(--accent-red)'},
   {label:'Cash', value:'\u20ac'+cash.toFixed(2), sub:(cash/totalEUR*100).toFixed(1)+'% del portafoli', color:'var(--accent-amber)'},
   {label:'Posicions', value:String(holdings.length), sub:holdings.filter(function(h){return h.cur==='USD';}).length+' USA + '+holdings.filter(function(h){return h.cur==='EUR';}).length+' EUR', color:'var(--accent-purple)'}
 ];
@@ -1125,6 +1125,10 @@ function renderStockChartFromData(tick, period) {
   if (highPrice!==null && lowPrice!==null && usePrice) {
     badgeHTML += '<span style="font-family:var(--font-mono);font-size:11px;color:var(--text-tertiary)">\u2191 '+curSym+highPrice.toFixed(2)+'&nbsp;&nbsp;\u2193 '+curSym+lowPrice.toFixed(2)+'</span>';
   }
+  if (usePrice) {
+    var totalValEUR = h.cur==='USD' ? (h.qty*h.price/EURUSD) : (h.qty*h.price);
+    badgeHTML += '<span style="font-family:var(--font-mono);font-size:12px;color:var(--text-secondary);margin-left:4px">'+h.qty+'\u00d7'+curSym+h.price.toFixed(2)+' \u2192 <span style="color:var(--text-primary);font-weight:600">\u20ac'+totalValEUR.toLocaleString('ca-ES',{minimumFractionDigits:0,maximumFractionDigits:0})+'</span></span>';
+  }
   badgeHTML += '</div>';
   document.getElementById('stockPctBadge').innerHTML = badgeHTML;
 
@@ -1171,7 +1175,12 @@ function renderStockChartFromData(tick, period) {
         tooltip:{
           backgroundColor:'#1a2235',titleColor:'#e8ecf4',bodyColor:'#8b95a8',
           borderColor:'rgba(255,255,255,0.1)',borderWidth:1,
-          callbacks:{label:function(c){return usePrice ? curSym+c.parsed.y.toFixed(2) : c.parsed.y.toFixed(2)+'%';}}
+          callbacks:{label:function(c){
+            if (!usePrice) return c.parsed.y.toFixed(2)+'%';
+            var p = c.parsed.y;
+            var totalV = h.cur==='USD' ? (h.qty*p/EURUSD) : (h.qty*p);
+            return [curSym+p.toFixed(2), '€'+totalV.toLocaleString('ca-ES',{minimumFractionDigits:0,maximumFractionDigits:0})+' ('+h.qty+' accions)'];
+          }}
         }
       }
     }
