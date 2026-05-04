@@ -423,6 +423,7 @@ body {
   <div class="section fade-up delay-1" id="holdings">
     <div class="section-header">
       <div class="section-title">Posicions actives</div>
+      <button id="currToggle" onclick="toggleCurrency()" style="font-family:var(--font-mono);font-size:11px;font-weight:600;background:var(--bg-tertiary);color:var(--text-secondary);border:1px solid var(--border-active);border-radius:6px;padding:4px 12px;cursor:pointer;transition:all 0.2s" onmouseenter="this.style.color='var(--accent-green)';this.style.borderColor='var(--accent-green)'" onmouseleave="this.style.color='var(--text-secondary)';this.style.borderColor='var(--border-active)'">$ → €</button>
     </div>
     <div class="grid-2">
       <div class="card" style="overflow-x:auto;">
@@ -672,19 +673,36 @@ metricsData.forEach(function(m){
 document.getElementById('metricsGrid').innerHTML = mHTML;
 
 // ── Taula de posicions ────────────────────────────────────────────────────────
-var hbHTML='';
-holdings.forEach(function(h){
-  var sig=h.ytd>5?'<span class="tag tag-green">FORT</span>':(h.ytd<-5?'<span class="tag tag-red">FEBLE</span>':'<span class="tag tag-amber">NEUTRE</span>');
-  hbHTML+='<tr><td><div class="ht-ticker" style="color:'+h.color+'">'+h.tick+'</div><div class="ht-name">'+h.name+'</div></td>'+
-    '<td class="mono">'+h.qty+'</td>'+
-    '<td class="mono">'+(h.cur==='USD'?'$':'\u20ac')+h.price.toFixed(2)+'</td>'+
-    '<td class="mono">\u20ac'+h.valEUR.toLocaleString('ca-ES',{minimumFractionDigits:0,maximumFractionDigits:0})+'</td>'+
-    '<td class="mono">'+h.weight.toFixed(1)+'%</td>'+
-    '<td class="mono '+(h.ytd>=0?'val-pos':'val-neg')+'">'+(h.ytd>=0?'+':'')+h.ytd.toFixed(1)+'%</td>'+
-    '<td>'+sig+'</td></tr>';
-});
-hbHTML+='<tr style="font-weight:600"><td><div class="ht-ticker" style="color:var(--accent-amber)">CASH</div><div class="ht-name">Efectiu EUR</div></td><td class="mono">—</td><td class="mono">—</td><td class="mono">\u20ac'+cash.toFixed(0)+'</td><td class="mono">'+(cash/totalEUR*100).toFixed(1)+'%</td><td>—</td><td>—</td></tr>';
-document.getElementById('holdingsBody').innerHTML = hbHTML;
+var _showEUR = false;
+function renderHoldings(showEUR) {
+  var hbHTML='';
+  holdings.forEach(function(h){
+    var sig=h.ytd>5?'<span class="tag tag-green">FORT</span>':(h.ytd<-5?'<span class="tag tag-red">FEBLE</span>':'<span class="tag tag-amber">NEUTRE</span>');
+    var preuDisplay, entradaDisplay;
+    if (showEUR && h.cur==='USD') {
+      preuDisplay    = '€'+(h.price/EURUSD).toFixed(2);
+      entradaDisplay = '€'+(h.start/EURUSD).toFixed(2);
+    } else {
+      preuDisplay    = (h.cur==='USD'?'$':'€')+h.price.toFixed(2);
+      entradaDisplay = (h.cur==='USD'?'$':'€')+h.start.toFixed(2);
+    }
+    hbHTML+='<tr><td><div class="ht-ticker" style="color:'+h.color+'">'+h.tick+'</div><div class="ht-name">'+h.name+'</div></td>'+
+      '<td class="mono">'+h.qty+'</td>'+
+      '<td class="mono" title="Entrada: '+entradaDisplay+'">'+preuDisplay+'</td>'+
+      '<td class="mono">€'+h.valEUR.toLocaleString('ca-ES',{minimumFractionDigits:0,maximumFractionDigits:0})+'</td>'+
+      '<td class="mono">'+h.weight.toFixed(1)+'%</td>'+
+      '<td class="mono '+(h.ytd>=0?'val-pos':'val-neg')+'">'+( h.ytd>=0?'+':'')+h.ytd.toFixed(1)+'%</td>'+
+      '<td>'+sig+'</td></tr>';
+  });
+  hbHTML+='<tr style="font-weight:600"><td><div class="ht-ticker" style="color:var(--accent-amber)">CASH</div><div class="ht-name">Efectiu EUR</div></td><td class="mono">—</td><td class="mono">—</td><td class="mono">€'+cash.toFixed(0)+'</td><td class="mono">'+(cash/totalEUR*100).toFixed(1)+'%</td><td>—</td><td>—</td></tr>';
+  document.getElementById('holdingsBody').innerHTML = hbHTML;
+  var th = document.querySelector('#holdingsTable thead th:nth-child(3)');
+  if (th) th.textContent = showEUR ? 'Preu (€)' : 'Preu';
+  var btn = document.getElementById('currToggle');
+  if (btn) btn.textContent = showEUR ? '€ → $' : '$ → €';
+}
+window.toggleCurrency = function() { _showEUR=!_showEUR; renderHoldings(_showEUR); };
+renderHoldings(false);
 
 // ── Gràfic de distribució ─────────────────────────────────────────────────────
 var allocColors=holdings.map(function(h){return h.color;}).concat(['#ffb84d']);
