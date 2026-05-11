@@ -233,6 +233,7 @@ def main():
                 "price":    price,
                 "cur":      cfg["cur"],
                 "color":    cfg["color"],
+                "yf":       cfg["yf"],
                 "pe":       f"{round(fpe,1)}x"           if fpe     else "—",
                 "margin":   f"{round(margins*100,1)}%"   if margins else "—",
                 "div":      f"{round(divy*100,2)}%"      if divy    else "0%",
