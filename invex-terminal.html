@@ -6,6 +6,7 @@
 <title>INVEX — Terminal Financer</title>
 <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;500;600;700&family=DM+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/lightweight-charts@4.2.0/dist/lightweight-charts.standalone.production.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js"></script>
 <style>
 :root {
@@ -519,9 +520,7 @@ body {
         <div class="tab-row" id="periodTabs" style="margin-bottom:0;"></div>
       </div>
       <div id="stockPctBadge" style="margin:12px 0 4px;"></div>
-      <div class="chart-container" style="height:280px;">
-        <canvas id="stockChart"></canvas>
-      </div>
+      <div id="stockChartLW" style="height:300px;position:relative;border-radius:6px;overflow:hidden;"></div>
       <div id="stockInfo" style="margin-top:12px;"></div>
     </div>
   </div>
@@ -549,7 +548,7 @@ body {
 // ── Carrega data.json ────────────────────────────────────────────────────────
 var D = null;
 try {
-  var resp = await fetch('data.json');
+  var resp = await fetch('data.json?t=' + Date.now(), { cache: 'no-store' });
   if (!resp.ok) throw new Error('HTTP ' + resp.status);
   D = await resp.json();
 } catch(e) {
@@ -743,6 +742,7 @@ new Chart(document.getElementById('benchChart'),{type:'line',data:{labels:MONTHS
 // ── Per-stock chart (globals per a renderStockChartFromData) ──────────────────
 window._holdings=holdings; window._historial=mensual; window._allMonths=MONTHS_CA; window._news=news;
 window._historialPrices = D.historial || {};
+window._eurusd = EURUSD;
 window._currentPeriod   = '1M';
 var stHTML='';
 holdings.forEach(function(h,i){stHTML+='<button class="tab-btn'+(i===0?' active':'')+'" onclick="selectStock(\''+h.tick+'\',this)" style="color:'+(i===0?h.color:'')+';border-color:'+(i===0?h.color:'')+';background:'+(i===0?h.color+'18':'')+'">'+h.tick+'</button>';});
@@ -1106,119 +1106,142 @@ function renderStockChartFromData(tick, period) {
   period = period || window._currentPeriod || '1M';
   window._currentPeriod = period;
 
-  var holdings2  = window._holdings  || [];
-  var h = holdings2.find(function(x){return x.tick===tick;});
+  var EURUSD    = window._eurusd || 1.095;
+  var holdings2 = window._holdings || [];
+  var h = holdings2.find(function(x){ return x.tick === tick; });
   if (!h) return;
 
-  var histP  = (window._historialPrices || {})[tick];
-  var pData  = histP && histP[period] && histP[period].prices && histP[period].prices.length > 1 ? histP[period] : null;
+  var histP = (window._historialPrices || {})[tick];
+  var pData = histP && histP[period] && histP[period].prices && histP[period].prices.length > 1 ? histP[period] : null;
 
-  var labels, prices, pct, openPrice, highPrice, lowPrice, usePrice;
-  if (pData) {
-    labels=pData.labels; prices=pData.prices; pct=pData.pct;
-    openPrice=pData.open; highPrice=pData.high; lowPrice=pData.low; usePrice=true;
-  } else {
-    // Fallback: historial mensual %
-    var historial2 = window._historial || {};
-    var allMonths2 = window._allMonths || ['Gen','Feb','Mar','Abr'];
-    var mData = historial2[tick] || [0];
-    labels=allMonths2.slice(0,mData.length); prices=mData;
-    pct = mData.length>0 ? mData[mData.length-1] : 0;
-    openPrice=null; highPrice=null; lowPrice=null; usePrice=false;
-  }
+  var prices    = pData ? pData.prices : [];
+  var pct       = pData ? pData.pct    : 0;
+  var openPrice = pData ? pData.open   : null;
+  var highPrice = pData ? pData.high   : null;
+  var lowPrice  = pData ? pData.low    : null;
+  var hasOHLC   = !!(pData && pData.opens && pData.times && pData.times.length > 1);
 
-  var curSym  = h.cur==='USD' ? '$' : '\u20ac';
-  var isPos   = pct >= 0;
-  var pctColor= isPos ? 'var(--accent-green)' : 'var(--accent-red)';
-  var pctDim  = isPos ? 'var(--accent-green-dim)' : 'var(--accent-red-dim)';
+  var curSym   = h.cur === 'USD' ? '$' : '€';
+  var isPos    = pct >= 0;
+  var pctColor = isPos ? 'var(--accent-green)' : 'var(--accent-red)';
+  var pctDim   = isPos ? 'var(--accent-green-dim)' : 'var(--accent-red-dim)';
 
-  // % badge
-  var change = (openPrice!=null && h.price!=null) ? h.price - openPrice : null;
+  // Badge
+  var change = (openPrice != null && h.price != null) ? h.price - openPrice : null;
+  var totalValEUR = h.cur === 'USD' ? (h.qty * h.price / EURUSD) : (h.qty * h.price);
   var badgeHTML = '<div style="display:flex;align-items:center;gap:12px;flex-wrap:wrap;">';
-  badgeHTML += '<span style="font-family:var(--font-mono);font-size:22px;font-weight:700;color:'+h.color+'">'+(usePrice ? curSym+h.price.toFixed(2) : '')+'</span>';
-  if (change!==null && usePrice) {
-    badgeHTML += '<span style="font-family:var(--font-mono);font-size:13px;color:'+pctColor+'">'+(change>=0?'+':'')+curSym+change.toFixed(2)+'</span>';
+  badgeHTML += '<span style="font-family:var(--font-mono);font-size:22px;font-weight:700;color:' + h.color + '">' + curSym + h.price.toFixed(2) + '</span>';
+  if (change !== null) {
+    badgeHTML += '<span style="font-family:var(--font-mono);font-size:13px;color:' + pctColor + '">' + (change >= 0 ? '+' : '') + curSym + change.toFixed(2) + '</span>';
   }
-  badgeHTML += '<span style="font-family:var(--font-mono);font-size:15px;font-weight:700;color:'+pctColor+';background:'+pctDim+';border:1px solid '+pctColor+';border-radius:6px;padding:4px 12px;">'+(isPos?'+':'')+pct.toFixed(2)+'%</span>';
-  if (highPrice!==null && lowPrice!==null && usePrice) {
-    badgeHTML += '<span style="font-family:var(--font-mono);font-size:11px;color:var(--text-tertiary)">\u2191 '+curSym+highPrice.toFixed(2)+'&nbsp;&nbsp;\u2193 '+curSym+lowPrice.toFixed(2)+'</span>';
+  badgeHTML += '<span style="font-family:var(--font-mono);font-size:15px;font-weight:700;color:' + pctColor + ';background:' + pctDim + ';border:1px solid ' + pctColor + ';border-radius:6px;padding:4px 12px;">' + (isPos ? '+' : '') + pct.toFixed(2) + '%</span>';
+  if (highPrice !== null && lowPrice !== null) {
+    badgeHTML += '<span style="font-family:var(--font-mono);font-size:11px;color:var(--text-tertiary)">↑ ' + curSym + highPrice.toFixed(2) + '&nbsp;&nbsp;↓ ' + curSym + lowPrice.toFixed(2) + '</span>';
   }
-  if (usePrice) {
-    var totalValEUR = h.cur==='USD' ? (h.qty*h.price/EURUSD) : (h.qty*h.price);
-    badgeHTML += '<span style="font-family:var(--font-mono);font-size:12px;color:var(--text-secondary);margin-left:4px">'+h.qty+'\u00d7'+curSym+h.price.toFixed(2)+' \u2192 <span style="color:var(--text-primary);font-weight:600">\u20ac'+totalValEUR.toLocaleString('ca-ES',{minimumFractionDigits:0,maximumFractionDigits:0})+'</span></span>';
-  }
+  badgeHTML += '<span style="font-family:var(--font-mono);font-size:12px;color:var(--text-secondary)">' + h.qty + '×' + curSym + h.price.toFixed(2) + ' → <span style="color:var(--text-primary);font-weight:600">€' + totalValEUR.toLocaleString('ca-ES', {minimumFractionDigits:0,maximumFractionDigits:0}) + '</span></span>';
   badgeHTML += '</div>';
   document.getElementById('stockPctBadge').innerHTML = badgeHTML;
 
-  // Chart
-  var inst = Chart.getChart('stockChart');
-  if (inst) inst.destroy();
-  var ctx = document.getElementById('stockChart').getContext('2d');
-  var grad = ctx.createLinearGradient(0,0,0,280);
-  if (isPos) {
-    grad.addColorStop(0, h.color+'55'); grad.addColorStop(1, h.color+'00');
-  } else {
-    grad.addColorStop(0, 'rgba(255,77,106,0.3)'); grad.addColorStop(1, 'rgba(255,77,106,0)');
+  // Destroy old chart
+  if (window._lwChart) { try { window._lwChart.remove(); } catch(e){} window._lwChart = null; }
+  if (window._lwResizeObs) { try { window._lwResizeObs.disconnect(); } catch(e){} window._lwResizeObs = null; }
+  var container = document.getElementById('stockChartLW');
+  container.innerHTML = '';
+
+  if (!pData || prices.length < 2) {
+    container.innerHTML = '<div style="display:flex;align-items:center;justify-content:center;height:100%;color:var(--text-tertiary);font-family:var(--font-mono);font-size:12px">Sense dades per a aquest període</div>';
+    return;
   }
 
-  new Chart(document.getElementById('stockChart'), {
-    type:'line',
-    data:{labels:labels,datasets:[{
-      label:tick, data:prices,
-      borderColor: isPos ? h.color : 'var(--accent-red)',
-      backgroundColor: grad,
-      fill:true, tension:0.2,
-      pointRadius: prices.length > 60 ? 0 : (prices.length > 20 ? 2 : 4),
-      pointHoverRadius:5,
-      pointBackgroundColor: isPos ? h.color : '#ff4d6a',
-      borderWidth:2
-    }]},
-    options:{
-      responsive:true, maintainAspectRatio:false,
-      scales:{
-        y:{
-          ticks:{
-            callback:function(v){return usePrice ? curSym+v.toLocaleString('ca-ES',{minimumFractionDigits:2,maximumFractionDigits:2}) : v+'%';},
-            color:'#5a6478', font:{family:'JetBrains Mono',size:10}
-          },
-          grid:{color:'rgba(255,255,255,0.04)'}
-        },
-        x:{
-          ticks:{color:'#5a6478',font:{family:'JetBrains Mono',size:10},maxTicksLimit:8,maxRotation:0},
-          grid:{display:false}
-        }
-      },
-      plugins:{
-        legend:{display:false},
-        tooltip:{
-          backgroundColor:'#1a2235',titleColor:'#e8ecf4',bodyColor:'#8b95a8',
-          borderColor:'rgba(255,255,255,0.1)',borderWidth:1,
-          callbacks:{label:function(c){
-            if (!usePrice) return c.parsed.y.toFixed(2)+'%';
-            var p = c.parsed.y;
-            var totalV = h.cur==='USD' ? (h.qty*p/EURUSD) : (h.qty*p);
-            return [curSym+p.toFixed(2), '€'+totalV.toLocaleString('ca-ES',{minimumFractionDigits:0,maximumFractionDigits:0})+' ('+h.qty+' accions)'];
-          }}
-        }
-      }
-    }
+  // Crear Lightweight Chart
+  var chart = LightweightCharts.createChart(container, {
+    width:  container.offsetWidth || 600,
+    height: 300,
+    layout: {
+      background: { type: 'solid', color: '#151d2e' },
+      textColor:  '#5a6478',
+      fontFamily: 'JetBrains Mono, monospace',
+      fontSize:   10,
+    },
+    grid: {
+      vertLines: { color: 'rgba(255,255,255,0.03)' },
+      horzLines: { color: 'rgba(255,255,255,0.05)' },
+    },
+    crosshair: { mode: 1 },
+    rightPriceScale: { borderColor: 'rgba(255,255,255,0.08)' },
+    timeScale: {
+      borderColor:    'rgba(255,255,255,0.08)',
+      timeVisible:    true,
+      secondsVisible: false,
+      fixLeftEdge:    true,
+      fixRightEdge:   true,
+    },
+    handleScroll: true,
+    handleScale:  true,
   });
+  window._lwChart = chart;
+
+  if (hasOHLC) {
+    // Grafic de candeles
+    var candleSeries = chart.addCandlestickSeries({
+      upColor:         '#00e5a0',
+      downColor:       '#ff4d6a',
+      borderUpColor:   '#00e5a0',
+      borderDownColor: '#ff4d6a',
+      wickUpColor:     '#00e5a0',
+      wickDownColor:   '#ff4d6a',
+    });
+    var candleData = pData.times.map(function(t, i) {
+      return { time: t, open: pData.opens[i], high: pData.highs[i], low: pData.lows[i], close: prices[i] };
+    });
+    candleSeries.setData(candleData);
+    // Linia preu d'entrada
+    if (h.start) {
+      candleSeries.createPriceLine({
+        price:            h.start,
+        color:            '#ffb84d',
+        lineWidth:        1,
+        lineStyle:        LightweightCharts.LineStyle.Dashed,
+        axisLabelVisible: true,
+        title:            'Entrada',
+      });
+    }
+  } else {
+    // Fallback: linia
+    var lineSeries = chart.addAreaSeries({
+      lineColor:   h.color,
+      topColor:    h.color + '44',
+      bottomColor: h.color + '00',
+      lineWidth:   2,
+    });
+    var lineData = prices.map(function(p, i) { return { time: i + 1, value: p }; });
+    lineSeries.setData(lineData);
+  }
+
+  chart.timeScale().fitContent();
+
+  // Responsive
+  var ro = new ResizeObserver(function(entries) {
+    if (entries[0]) chart.applyOptions({ width: entries[0].contentRect.width });
+  });
+  ro.observe(container);
+  window._lwResizeObs = ro;
 
   // Info row
-  var info='<div style="display:flex;gap:20px;flex-wrap:wrap;padding-top:8px;border-top:1px solid var(--border)">';
-  info+='<div style="font-family:var(--font-mono);font-size:12px;color:var(--text-secondary)">Target: <span style="color:var(--accent-green);font-weight:600">'+h.target+'</span> (+'+h.upside+'%)</div>';
-  info+='<div style="font-family:var(--font-mono);font-size:12px;color:var(--text-secondary)">Rating: <span style="color:var(--accent-green);font-weight:600">'+h.rating+'</span></div>';
-  info+='<div style="font-family:var(--font-mono);font-size:12px;color:var(--text-secondary)">52w: <span style="color:var(--text-primary)">'+curSym+h.lo52.toFixed(0)+' \u2014 '+curSym+h.hi52.toFixed(0)+'</span></div>';
-  info+='<div style="font-family:var(--font-mono);font-size:12px;color:var(--text-secondary)">P/E fwd: <span style="color:var(--text-primary)">'+h.pe+'</span></div>';
-  info+='</div>';
-  document.getElementById('stockInfo').innerHTML=info;
+  var info = '<div style="display:flex;gap:20px;flex-wrap:wrap;padding-top:8px;border-top:1px solid var(--border)">';
+  info += '<div style="font-family:var(--font-mono);font-size:12px;color:var(--text-secondary)">Target: <span style="color:var(--accent-green);font-weight:600">' + h.target + '</span> (+' + h.upside + '%)</div>';
+  info += '<div style="font-family:var(--font-mono);font-size:12px;color:var(--text-secondary)">Rating: <span style="color:var(--accent-green);font-weight:600">' + h.rating + '</span></div>';
+  info += '<div style="font-family:var(--font-mono);font-size:12px;color:var(--text-secondary)">52w: <span style="color:var(--text-primary)">' + curSym + h.lo52.toFixed(0) + ' — ' + curSym + h.hi52.toFixed(0) + '</span></div>';
+  info += '<div style="font-family:var(--font-mono);font-size:12px;color:var(--text-secondary)">P/E fwd: <span style="color:var(--text-primary)">' + h.pe + '</span></div>';
+  info += '</div>';
+  document.getElementById('stockInfo').innerHTML = info;
 
-  // Sync period button highlight
-  document.querySelectorAll('#periodTabs .tab-btn').forEach(function(b){
-    var active = b.dataset&&b.dataset.p===period;
-    b.style.color      = active ? 'var(--accent-green)' : '';
-    b.style.borderColor= active ? 'var(--accent-green)' : '';
-    b.style.background = active ? 'var(--accent-green-dim)' : '';
+  // Sync period buttons
+  document.querySelectorAll('#periodTabs .tab-btn').forEach(function(b) {
+    var active = b.dataset && b.dataset.p === period;
+    b.style.color       = active ? 'var(--accent-green)' : '';
+    b.style.borderColor = active ? 'var(--accent-green)' : '';
+    b.style.background  = active ? 'var(--accent-green-dim)' : '';
   });
 }
 

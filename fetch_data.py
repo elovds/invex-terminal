@@ -42,11 +42,19 @@ def fetch_historial(ticker_obj: yf.Ticker) -> dict:
                 result[period_name] = None
                 continue
             prices = [round(float(p), 3) for p in hist["Close"].tolist()]
+            opens  = [round(float(p), 3) for p in hist["Open"].tolist()]
+            highs  = [round(float(p), 3) for p in hist["High"].tolist()]
+            lows   = [round(float(p), 3) for p in hist["Low"].tolist()]
+            times  = [int(ts.timestamp()) for ts in hist.index]
             labels = [_fmt_label(ts, period_name) for ts in hist.index]
             p0, p1 = prices[0], prices[-1]
             result[period_name] = {
                 "labels": labels,
                 "prices": prices,
+                "opens":  opens,
+                "highs":  highs,
+                "lows":   lows,
+                "times":  times,
                 "pct":    round((p1 - p0) / p0 * 100, 2) if p0 else 0,
                 "open":   p0,
                 "high":   round(float(hist["High"].max()), 3),
