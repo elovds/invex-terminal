@@ -1,12 +1,12 @@
 {
   "generated": "11/05/2026",
   "lastUpdate": "11/05/2026",
-  "eurusd": 1.1786,
+  "eurusd": 1.1787,
   "portfolio_summary": {
-    "total_value_eur": 7121.8,
+    "total_value_eur": 7121.35,
     "total_capital": 6500.0,
-    "total_pnl_eur": 621.8,
-    "total_pnl_pct": 9.57,
+    "total_pnl_eur": 621.35,
+    "total_pnl_pct": 9.56,
     "cash": 237.91,
     "sp500_ytd": 8.08,
     "ibex_ytd": 2.06
@@ -37,8 +37,8 @@
       "signal": "VENDRE",
       "signal_reason": "RSI=82.2 sobrecomprat; per sobre MA20 i MA50",
       "pnl_pct": 26.37,
-      "pnl_eur": 412.91,
-      "value_eur": 1978.48
+      "pnl_eur": 412.88,
+      "value_eur": 1978.32
     },
     {
       "tick": "AAPL",
@@ -65,8 +65,8 @@
       "signal": "VENDRE",
       "signal_reason": "RSI=78.0 sobrecomprat; proper al màxim 52S; per sobre MA20 i MA50",
       "pnl_pct": 17.64,
-      "pnl_eur": 186.17,
-      "value_eur": 1241.64
+      "pnl_eur": 186.16,
+      "value_eur": 1241.54
     },
     {
       "tick": "MSFT",
@@ -93,8 +93,8 @@
       "signal": "VIGILAR ↑",
       "signal_reason": "upside analistes +36.1%",
       "pnl_pct": 6.26,
-      "pnl_eur": 123.83,
-      "value_eur": 2100.76
+      "pnl_eur": 123.82,
+      "value_eur": 2100.59
     },
     {
       "tick": "SAN",
@@ -129,22 +129,22 @@
     {
       "tick": "GOOGL",
       "priority": "ALTA",
-      "msg": "🔴 GOOGL (Alphabet Inc.): RSI=82.2 — zona de sobrecompra. Considera reduir posició."
+      "msg": "🔴 GOOGL — Alphabet Inc. | ZONA DE SOBRECOMPRA\nRSI actual: 82.2 (per sobre de 70 = sobrecomprat tècnicament).\nPreu actual: $388.64 | MA20: $360.89 | MA50: $325.25\nP&L posició actual: +26.4%\nAcció suggerida: Considera reduir posició o posar stop-loss per protegir guanys."
     },
     {
       "tick": "AAPL",
       "priority": "ALTA",
-      "msg": "🔴 AAPL (Apple Inc.): RSI=78.0 — zona de sobrecompra. Considera reduir posició."
+      "msg": "🔴 AAPL — Apple Inc. | ZONA DE SOBRECOMPRA\nRSI actual: 78.0 (per sobre de 70 = sobrecomprat tècnicament).\nPreu actual: $292.68 | MA20: $274.88 | MA50: $263.37\nP&L posició actual: +17.6%\nAcció suggerida: Considera reduir posició o posar stop-loss per protegir guanys."
     },
     {
       "tick": "AAPL",
       "priority": "MITJA",
-      "msg": "⚠️ AAPL (Apple Inc.): Proper al màxim de 52 setmanes (294.76). Resistència important."
+      "msg": "⚠️ AAPL — Apple Inc. | PROPER AL MÀXIM DE 52 SETMANES\nPreu: $292.68 | Màxim 52S: $294.76 (a 0.7% del màxim).\nAquesta zona és una resistència tècnica forta. El preu pot rebotar a la baixa.\nAcció suggerida: Vigila el volum. Si trenca el màxim amb força, pot continuar pujant. Si no, considera recollir beneficis parcialment."
     },
     {
       "tick": "MSFT",
       "priority": "MITJA",
-      "msg": "📈 MSFT (Microsoft Corp.): Upside dels analistes del +36.1%. Considera augmentar posició."
+      "msg": "📈 MSFT — Microsoft Corp. | UPSIDE ELEVAT SEGONS ANALISTES\nObjectiu de preu consens: upside del +36.1% respecte al preu actual.\nPreu actual: $412.66 | Rating consens: Strong Buy (54 analistes)\nRSI: 43.5 | MA20: $417.56 | MA50: $398.55\nAcció suggerida: Considera augmentar posició si el RSI no és sobrecomprat i els fonamentals ho suporten."
     }
   ],
   "news": [
