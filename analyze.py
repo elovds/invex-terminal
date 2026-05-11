@@ -69,35 +69,79 @@ def signal_and_reason(rsi: float, price: float, ma20: float, ma50: float,
 
 def build_alerts(tick: str, name: str, rsi: float, price: float,
                  lo52: float, hi52: float, pnl_pct: float,
-                 upside: float, earnings_days: int | None) -> list[dict]:
+                 upside: float, earnings_days: int | None,
+                 ma20: float = 0, ma50: float = 0,
+                 cur: str = "USD", rating: str = "", analysts: int = 0) -> list[dict]:
     alerts = []
+    cur_sym = "$" if cur == "USD" else "€"
+    dist_hi = round((price / hi52 - 1) * 100, 1) if hi52 > 0 else 0
+    dist_lo = round((price / lo52 - 1) * 100, 1) if lo52 > 0 else 0
 
     if rsi < 30:
-        alerts.append({"tick": tick, "priority": "ALTA",
-                        "msg": f"🟢 {tick} ({name}): RSI={rsi} — zona de sobrevendes. Possible oportunitat de compra."})
+        alerts.append({"tick": tick, "priority": "ALTA", "msg": (
+            f"🟢 {tick} — {name} | OPORTUNITAT DE COMPRA\n"
+            f"RSI actual: {rsi} (per sota de 30 = sobrevenut tècnicament).\n"
+            f"Preu actual: {cur_sym}{price:.2f} | MA20: {cur_sym}{ma20:.2f} | MA50: {cur_sym}{ma50:.2f}\n"
+            f"Rang 52S: {cur_sym}{lo52:.2f} – {cur_sym}{hi52:.2f}\n"
+            f"Consens analistes: {rating} ({analysts} analistes) | Upside: +{upside:.1f}%\n"
+            f"Acció suggerida: Considera obrir o augmentar posició. RSI<30 sovint precedeix recuperació."
+        )})
     elif rsi > 70:
-        alerts.append({"tick": tick, "priority": "ALTA",
-                        "msg": f"🔴 {tick} ({name}): RSI={rsi} — zona de sobrecompra. Considera reduir posició."})
+        alerts.append({"tick": tick, "priority": "ALTA", "msg": (
+            f"🔴 {tick} — {name} | ZONA DE SOBRECOMPRA\n"
+            f"RSI actual: {rsi} (per sobre de 70 = sobrecomprat tècnicament).\n"
+            f"Preu actual: {cur_sym}{price:.2f} | MA20: {cur_sym}{ma20:.2f} | MA50: {cur_sym}{ma50:.2f}\n"
+            f"P&L posició actual: {'+' if pnl_pct >= 0 else ''}{pnl_pct:.1f}%\n"
+            f"Acció suggerida: Considera reduir posició o posar stop-loss per protegir guanys."
+        )})
 
     if hi52 > 0 and price >= hi52 * 0.98:
-        alerts.append({"tick": tick, "priority": "MITJA",
-                        "msg": f"⚠️ {tick} ({name}): Proper al màxim de 52 setmanes ({hi52:.2f}). Resistència important."})
+        alerts.append({"tick": tick, "priority": "MITJA", "msg": (
+            f"⚠️ {tick} — {name} | PROPER AL MÀXIM DE 52 SETMANES\n"
+            f"Preu: {cur_sym}{price:.2f} | Màxim 52S: {cur_sym}{hi52:.2f} (a {abs(dist_hi):.1f}% del màxim).\n"
+            f"Aquesta zona és una resistència tècnica forta. El preu pot rebotar a la baixa.\n"
+            f"Acció suggerida: Vigila el volum. Si trenca el màxim amb força, pot continuar pujant. "
+            f"Si no, considera recollir beneficis parcialment."
+        )})
 
     if lo52 > 0 and price <= lo52 * 1.03:
-        alerts.append({"tick": tick, "priority": "ALTA",
-                        "msg": f"🟡 {tick} ({name}): Proper al mínim de 52 setmanes ({lo52:.2f}). Zona de suport clau."})
+        alerts.append({"tick": tick, "priority": "ALTA", "msg": (
+            f"🟡 {tick} — {name} | PROPER AL MÍNIM DE 52 SETMANES\n"
+            f"Preu: {cur_sym}{price:.2f} | Mínim 52S: {cur_sym}{lo52:.2f} (a {dist_lo:.1f}% del mínim).\n"
+            f"Zona de suport clau. Si el preu la trenca a la baixa, podria caure més.\n"
+            f"Acció suggerida: Revisa la tesi d'inversió. Si els fonamentals segueixen forts, "
+            f"pot ser una oportunitat. Si no, considera tallar pèrdues."
+        )})
 
     if pnl_pct < -15:
-        alerts.append({"tick": tick, "priority": "MITJA",
-                        "msg": f"📉 {tick} ({name}): Pèrdua acumulada del {pnl_pct:.1f}%. Revisa la tesi d'inversió."})
+        alerts.append({"tick": tick, "priority": "MITJA", "msg": (
+            f"📉 {tick} — {name} | PÈRDUA SIGNIFICATIVA\n"
+            f"P&L actual: {pnl_pct:.1f}% des del preu d'entrada.\n"
+            f"Preu actual: {cur_sym}{price:.2f} | Preu d'entrada: referència inicial\n"
+            f"Consens analistes: {rating} ({analysts} analistes) | Upside objectiu: +{upside:.1f}%\n"
+            f"Acció suggerida: Avalua si la raó original de la compra segueix vigent. "
+            f"Si els analistes mantenen target i els fonamentals no han canviat, pot ser paciència. "
+            f"Si no, considera limitar pèrdues."
+        )})
 
     if upside > 30:
-        alerts.append({"tick": tick, "priority": "MITJA",
-                        "msg": f"📈 {tick} ({name}): Upside dels analistes del +{upside:.1f}%. Considera augmentar posició."})
+        alerts.append({"tick": tick, "priority": "MITJA", "msg": (
+            f"📈 {tick} — {name} | UPSIDE ELEVAT SEGONS ANALISTES\n"
+            f"Objectiu de preu consens: upside del +{upside:.1f}% respecte al preu actual.\n"
+            f"Preu actual: {cur_sym}{price:.2f} | Rating consens: {rating} ({analysts} analistes)\n"
+            f"RSI: {rsi} | MA20: {cur_sym}{ma20:.2f} | MA50: {cur_sym}{ma50:.2f}\n"
+            f"Acció suggerida: Considera augmentar posició si el RSI no és sobrecomprat "
+            f"i els fonamentals ho suporten."
+        )})
 
     if earnings_days is not None and 0 <= earnings_days <= 7:
-        alerts.append({"tick": tick, "priority": "ALTA",
-                        "msg": f"📅 {tick} ({name}): Resultats en {earnings_days} dies. Alta volatilitat esperada."})
+        alerts.append({"tick": tick, "priority": "ALTA", "msg": (
+            f"📅 {tick} — {name} | RESULTATS TRIMESTRALS EN {earnings_days} DIES\n"
+            f"Preu actual: {cur_sym}{price:.2f} | P&L posició: {'+' if pnl_pct >= 0 else ''}{pnl_pct:.1f}%\n"
+            f"Els earnings poden generar moviments bruscos del ±5-15%.\n"
+            f"Acció suggerida: Decideix si vols mantenir la posició sencera durant els resultats "
+            f"o reduir parcialment per gestionar el risc de volatilitat."
+        )})
 
     return alerts
 
@@ -151,7 +195,9 @@ def main():
 
         signal, reason = signal_and_reason(rsi, price, ma20, ma50, lo52, hi52, upside)
         alerts = build_alerts(tick, h["name"], rsi, price, lo52, hi52,
-                              pnl_pct, upside, earn_map.get(tick))
+                              pnl_pct, upside, earn_map.get(tick),
+                              ma20=ma20, ma50=ma50, cur=cur,
+                              rating=h.get("rating", ""), analysts=h.get("analysts", 0))
         all_alerts.extend(alerts)
 
         analyzed.append({

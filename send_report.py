@@ -37,9 +37,9 @@ body{margin:0;padding:0;background:#0d1117;font-family:'Segoe UI',Arial,sans-ser
 table{width:100%;border-collapse:collapse}
 th{background:#161b22;color:#8b95a8;font-size:11px;padding:9px 10px;text-align:left}
 td{padding:9px 10px;border-bottom:1px solid #21262d;font-size:13px;vertical-align:top}
-.abox{padding:11px 14px;border-radius:6px;margin-bottom:9px;border-left:4px solid}
-.alta{background:#200a0a;border-color:#ff4d4d}
-.mitja{background:#1a1400;border-color:#ffd700}
+.abox{padding:14px 16px;border-radius:6px;margin-bottom:10px;border-left:5px solid;color:#e6edf3;white-space:pre-line;line-height:1.6;font-size:13px}
+.alta{background:#3d1010;border-color:#ff4d4d}
+.mitja{background:#2a2000;border-color:#ffd700}
 .kpi{display:inline-block;background:#161b22;border-radius:8px;padding:14px 20px;
   margin:5px;min-width:130px;text-align:center}
 .kv{font-size:22px;font-weight:700;margin:4px 0}
