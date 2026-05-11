@@ -1,0 +1,214 @@
+{
+  "generated": "11/05/2026",
+  "lastUpdate": "11/05/2026",
+  "eurusd": 1.1786,
+  "portfolio_summary": {
+    "total_value_eur": 7121.8,
+    "total_capital": 6500.0,
+    "total_pnl_eur": 621.8,
+    "total_pnl_pct": 9.57,
+    "cash": 237.91,
+    "sp500_ytd": 8.08,
+    "ibex_ytd": 2.06
+  },
+  "holdings": [
+    {
+      "tick": "GOOGL",
+      "name": "Alphabet Inc.",
+      "qty": 6,
+      "entrada": 307.53,
+      "price": 388.64,
+      "cur": "USD",
+      "color": "4da6ff",
+      "yf": "GOOGL",
+      "pe": "26.9x",
+      "margin": "36.1%",
+      "div": "22.0%",
+      "lo52": 156.16,
+      "hi52": 402.0,
+      "rating": "Strong Buy",
+      "target": "$428",
+      "analysts": 52,
+      "buys": 61,
+      "upside": 10.1,
+      "rsi": 82.2,
+      "ma20": 360.89,
+      "ma50": 325.25,
+      "signal": "VENDRE",
+      "signal_reason": "RSI=82.2 sobrecomprat; per sobre MA20 i MA50",
+      "pnl_pct": 26.37,
+      "pnl_eur": 412.91,
+      "value_eur": 1978.48
+    },
+    {
+      "tick": "AAPL",
+      "name": "Apple Inc.",
+      "qty": 5,
+      "entrada": 248.795,
+      "price": 292.68,
+      "cur": "USD",
+      "color": "8b95a8",
+      "yf": "AAPL",
+      "pe": "30.6x",
+      "margin": "32.3%",
+      "div": "37.0%",
+      "lo52": 193.46,
+      "hi52": 294.76,
+      "rating": "Buy",
+      "target": "$305",
+      "analysts": 42,
+      "buys": 30,
+      "upside": 4.3,
+      "rsi": 78.0,
+      "ma20": 274.88,
+      "ma50": 263.37,
+      "signal": "VENDRE",
+      "signal_reason": "RSI=78.0 sobrecomprat; proper al màxim 52S; per sobre MA20 i MA50",
+      "pnl_pct": 17.64,
+      "pnl_eur": 186.17,
+      "value_eur": 1241.64
+    },
+    {
+      "tick": "MSFT",
+      "name": "Microsoft Corp.",
+      "qty": 6,
+      "entrada": 388.335,
+      "price": 412.66,
+      "cur": "USD",
+      "color": "a78bfa",
+      "yf": "MSFT",
+      "pe": "21.3x",
+      "margin": "46.3%",
+      "div": "88.0%",
+      "lo52": 356.28,
+      "hi52": 555.45,
+      "rating": "Strong Buy",
+      "target": "$562",
+      "analysts": 54,
+      "buys": 54,
+      "upside": 36.1,
+      "rsi": 43.5,
+      "ma20": 417.56,
+      "ma50": 398.55,
+      "signal": "VIGILAR ↑",
+      "signal_reason": "upside analistes +36.1%",
+      "pnl_pct": 6.26,
+      "pnl_eur": 123.83,
+      "value_eur": 2100.76
+    },
+    {
+      "tick": "SAN",
+      "name": "Banco Santander",
+      "qty": 150,
+      "entrada": 10.42,
+      "price": 10.42,
+      "cur": "EUR",
+      "color": "00e5a0",
+      "yf": "SAN.MC",
+      "pe": "8.6x",
+      "margin": "43.3%",
+      "div": "239.0%",
+      "lo52": 6.68,
+      "hi52": 11.26,
+      "rating": "Buy",
+      "target": "€12",
+      "analysts": 20,
+      "buys": 16,
+      "upside": 15.7,
+      "rsi": 44.8,
+      "ma20": 10.39,
+      "ma50": 9.97,
+      "signal": "MANTENIR",
+      "signal_reason": "per sobre MA20 i MA50",
+      "pnl_pct": 0.0,
+      "pnl_eur": 0.0,
+      "value_eur": 1563.0
+    }
+  ],
+  "alerts": [
+    {
+      "tick": "GOOGL",
+      "priority": "ALTA",
+      "msg": "🔴 GOOGL (Alphabet Inc.): RSI=82.2 — zona de sobrecompra. Considera reduir posició."
+    },
+    {
+      "tick": "AAPL",
+      "priority": "ALTA",
+      "msg": "🔴 AAPL (Apple Inc.): RSI=78.0 — zona de sobrecompra. Considera reduir posició."
+    },
+    {
+      "tick": "AAPL",
+      "priority": "MITJA",
+      "msg": "⚠️ AAPL (Apple Inc.): Proper al màxim de 52 setmanes (294.76). Resistència important."
+    },
+    {
+      "tick": "MSFT",
+      "priority": "MITJA",
+      "msg": "📈 MSFT (Microsoft Corp.): Upside dels analistes del +36.1%. Considera augmentar posició."
+    }
+  ],
+  "news": [
+    {
+      "tick": "GOOGL",
+      "text": "By the numbers: Corporate profits haven't been this smoking hot in years",
+      "date": "11/05/2026"
+    },
+    {
+      "tick": "GOOGL",
+      "text": "The $1 trillion club's new members are powering the AI boom: Chart of the Day",
+      "date": "10/05/2026"
+    },
+    {
+      "tick": "AAPL",
+      "text": "Tesla's Elon Musk, Apple's Tim Cook among CEOs set to join Trump on China trip",
+      "date": "11/05/2026"
+    },
+    {
+      "tick": "AAPL",
+      "text": "Sector Update: Tech Stocks Rise Late Afternoon",
+      "date": "11/05/2026"
+    },
+    {
+      "tick": "MSFT",
+      "text": "Microsoft's Satya Nadella testifies in Elon Musk, OpenAI trial",
+      "date": "11/05/2026"
+    },
+    {
+      "tick": "MSFT",
+      "text": "Microsoft Retirement Buyout Highlights Evolving Workforce And AI Investment Priorities",
+      "date": "11/05/2026"
+    },
+    {
+      "tick": "SAN",
+      "text": "Jim Cramer Says “Buy Banco Santander”",
+      "date": "08/05/2026"
+    },
+    {
+      "tick": "SAN",
+      "text": "Is It Too Late To Consider Banco Santander (BME:SAN) After A 64% One-Year Rally?",
+      "date": "08/05/2026"
+    }
+  ],
+  "earnings": [
+    {
+      "tick": "SAN",
+      "date": "22/07/2026",
+      "days": 72
+    },
+    {
+      "tick": "GOOGL",
+      "date": "23/07/2026",
+      "days": 73
+    },
+    {
+      "tick": "MSFT",
+      "date": "29/07/2026",
+      "days": 79
+    },
+    {
+      "tick": "AAPL",
+      "date": "30/07/2026",
+      "days": 80
+    }
+  ]
+}
