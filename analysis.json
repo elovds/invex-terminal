@@ -1,15 +1,15 @@
 {
   "generated": "18/05/2026",
   "lastUpdate": "18/05/2026",
-  "eurusd": 1.1633,
+  "eurusd": 1.1639,
   "portfolio_summary": {
-    "total_value_eur": 7259.98,
+    "total_value_eur": 7252.63,
     "total_capital": 6500.0,
-    "total_pnl_eur": 759.98,
-    "total_pnl_pct": 11.69,
+    "total_pnl_eur": 752.63,
+    "total_pnl_pct": 11.58,
     "cash": 237.91,
     "sp500_ytd": 8.02,
-    "ibex_ytd": 0.29
+    "ibex_ytd": 0.13
   },
   "holdings": [
     {
@@ -37,8 +37,8 @@
       "signal": "VENDRE",
       "signal_reason": "RSI=75.5 sobrecomprat; proper al màxim 52S; per sobre MA20 i MA50",
       "pnl_pct": 29.02,
-      "pnl_eur": 460.33,
-      "value_eur": 2046.49
+      "pnl_eur": 460.09,
+      "value_eur": 2045.43
     },
     {
       "tick": "AAPL",
@@ -65,8 +65,8 @@
       "signal": "VENDRE",
       "signal_reason": "RSI=88.4 sobrecomprat; proper al màxim 52S; per sobre MA20 i MA50",
       "pnl_pct": 20.67,
-      "pnl_eur": 221.07,
-      "value_eur": 1290.42
+      "pnl_eur": 220.96,
+      "value_eur": 1289.76
     },
     {
       "tick": "MSFT",
@@ -93,15 +93,15 @@
       "signal": "VIGILAR ↑",
       "signal_reason": "per sobre MA20 i MA50; upside analistes +32.9%",
       "pnl_pct": 8.65,
-      "pnl_eur": 173.22,
-      "value_eur": 2176.15
+      "pnl_eur": 173.13,
+      "value_eur": 2175.03
     },
     {
       "tick": "SAN",
       "name": "Banco Santander",
       "qty": 150,
       "entrada": 10.42,
-      "price": 10.06,
+      "price": 10.03,
       "cur": "EUR",
       "color": "00e5a0",
       "yf": "SAN.MC",
@@ -114,15 +114,15 @@
       "target": "€12",
       "analysts": 20,
       "buys": 16,
-      "upside": 20.5,
-      "rsi": 47.6,
-      "ma20": 10.31,
+      "upside": 20.8,
+      "rsi": 46.9,
+      "ma20": 10.3,
       "ma50": 9.97,
       "signal": "MANTENIR",
       "signal_reason": "sense senyals especials",
-      "pnl_pct": -3.45,
-      "pnl_eur": -54.0,
-      "value_eur": 1509.0
+      "pnl_pct": -3.74,
+      "pnl_eur": -58.5,
+      "value_eur": 1504.5
     }
   ],
   "alerts": [
@@ -155,12 +155,12 @@
   "news": [
     {
       "tick": "GOOGL",
-      "text": "Warren Buffett's Successor, Greg Abel, Just Sold 16 Stocks, but Piled Into an AI Titan That's Now a Top-5 Position for Berkshire Hathaway",
+      "text": "Bill Ackman Explained Why He Just Bought Microsoft. But There Are Even More Reasons to Buy This \"Magnificent Seven\" Stalwart",
       "date": "18/05/2026"
     },
     {
       "tick": "GOOGL",
-      "text": "Baidu’s Profit Slides Again Amid Slow AI Payoff",
+      "text": "Warren Buffett's Successor, Greg Abel, Just Sold 16 Stocks, but Piled Into an AI Titan That's Now a Top-5 Position for Berkshire Hathaway",
       "date": "18/05/2026"
     },
     {
@@ -175,12 +175,12 @@
     },
     {
       "tick": "MSFT",
-      "text": "Social Buzz: Wallstreetbets Stocks Mostly Higher Premarket Monday; POET Technologies, Rocket Lab Advance",
+      "text": "The Kiplinger Letter Says Almost None of the GDP Growth Washington Is Celebrating Actually Came From AI and for Investors the Implications Are Uncomfortable",
       "date": "18/05/2026"
     },
     {
       "tick": "MSFT",
-      "text": "Commonwealth Bank of Australia names Mary-Anne Williams as chief AI scientist",
+      "text": "Bill Ackman Explained Why He Just Bought Microsoft. But There Are Even More Reasons to Buy This \"Magnificent Seven\" Stalwart",
       "date": "18/05/2026"
     },
     {
