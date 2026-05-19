@@ -1,15 +1,15 @@
 {
-  "generated": "18/05/2026",
-  "lastUpdate": "18/05/2026",
-  "eurusd": 1.1639,
+  "generated": "19/05/2026",
+  "lastUpdate": "19/05/2026",
+  "eurusd": 1.1621,
   "portfolio_summary": {
-    "total_value_eur": 7252.63,
+    "total_value_eur": 7299.08,
     "total_capital": 6500.0,
-    "total_pnl_eur": 752.63,
-    "total_pnl_pct": 11.58,
+    "total_pnl_eur": 799.08,
+    "total_pnl_pct": 12.29,
     "cash": 237.91,
-    "sp500_ytd": 8.02,
-    "ibex_ytd": 0.13
+    "sp500_ytd": 7.94,
+    "ibex_ytd": 2.04
   },
   "holdings": [
     {
@@ -17,7 +17,7 @@
       "name": "Alphabet Inc.",
       "qty": 6,
       "entrada": 307.53,
-      "price": 396.78,
+      "price": 396.94,
       "cur": "USD",
       "color": "4da6ff",
       "yf": "GOOGL",
@@ -25,31 +25,31 @@
       "margin": "36.1%",
       "div": "22.0%",
       "lo52": 162.0,
-      "hi52": 403.7,
+      "hi52": 408.61,
       "rating": "Strong Buy",
       "target": "$428",
       "analysts": 52,
       "buys": 61,
       "upside": 7.8,
-      "rsi": 75.5,
-      "ma20": 372.89,
-      "ma50": 332.74,
+      "rsi": 76.0,
+      "ma20": 375.87,
+      "ma50": 334.71,
       "signal": "VENDRE",
-      "signal_reason": "RSI=75.5 sobrecomprat; proper al màxim 52S; per sobre MA20 i MA50",
-      "pnl_pct": 29.02,
-      "pnl_eur": 460.09,
-      "value_eur": 2045.43
+      "signal_reason": "RSI=76.0 sobrecomprat; proper al màxim 52S; per sobre MA20 i MA50",
+      "pnl_pct": 29.07,
+      "pnl_eur": 461.63,
+      "value_eur": 2049.43
     },
     {
       "tick": "AAPL",
       "name": "Apple Inc.",
       "qty": 5,
       "entrada": 248.795,
-      "price": 300.23,
+      "price": 297.84,
       "cur": "USD",
       "color": "8b95a8",
       "yf": "AAPL",
-      "pe": "31.3x",
+      "pe": "31.1x",
       "margin": "32.3%",
       "div": "36.0%",
       "lo52": 193.46,
@@ -58,26 +58,26 @@
       "target": "$308",
       "analysts": 43,
       "buys": 30,
-      "upside": 2.6,
-      "rsi": 88.4,
-      "ma20": 281.36,
-      "ma50": 265.97,
+      "upside": 3.4,
+      "rsi": 82.6,
+      "ma20": 282.61,
+      "ma50": 266.78,
       "signal": "VENDRE",
-      "signal_reason": "RSI=88.4 sobrecomprat; proper al màxim 52S; per sobre MA20 i MA50",
-      "pnl_pct": 20.67,
-      "pnl_eur": 220.96,
-      "value_eur": 1289.76
+      "signal_reason": "RSI=82.6 sobrecomprat; proper al màxim 52S; per sobre MA20 i MA50",
+      "pnl_pct": 19.71,
+      "pnl_eur": 211.02,
+      "value_eur": 1281.47
     },
     {
       "tick": "MSFT",
       "name": "Microsoft Corp.",
       "qty": 6,
       "entrada": 388.335,
-      "price": 421.92,
+      "price": 423.54,
       "cur": "USD",
       "color": "a78bfa",
       "yf": "MSFT",
-      "pe": "21.8x",
+      "pe": "21.9x",
       "margin": "46.3%",
       "div": "86.0%",
       "lo52": 356.28,
@@ -86,134 +86,129 @@
       "target": "$561",
       "analysts": 54,
       "buys": 54,
-      "upside": 32.9,
-      "rsi": 48.1,
-      "ma20": 417.4,
-      "ma50": 399.06,
+      "upside": 32.4,
+      "rsi": 46.2,
+      "ma20": 417.68,
+      "ma50": 399.36,
       "signal": "VIGILAR ↑",
-      "signal_reason": "per sobre MA20 i MA50; upside analistes +32.9%",
-      "pnl_pct": 8.65,
-      "pnl_eur": 173.13,
-      "value_eur": 2175.03
+      "signal_reason": "per sobre MA20 i MA50; upside analistes +32.4%",
+      "pnl_pct": 9.07,
+      "pnl_eur": 181.77,
+      "value_eur": 2186.77
     },
     {
       "tick": "SAN",
       "name": "Banco Santander",
       "qty": 150,
       "entrada": 10.42,
-      "price": 10.03,
+      "price": 10.29,
       "cur": "EUR",
       "color": "00e5a0",
       "yf": "SAN.MC",
-      "pe": "8.3x",
+      "pe": "8.5x",
       "margin": "43.3%",
-      "div": "246.0%",
+      "div": "245.0%",
       "lo52": 6.75,
       "hi52": 11.26,
       "rating": "Buy",
       "target": "€12",
       "analysts": 20,
       "buys": 16,
-      "upside": 20.8,
-      "rsi": 46.9,
+      "upside": 17.8,
+      "rsi": 51.3,
       "ma20": 10.3,
-      "ma50": 9.97,
+      "ma50": 9.99,
       "signal": "MANTENIR",
       "signal_reason": "sense senyals especials",
-      "pnl_pct": -3.74,
-      "pnl_eur": -58.5,
-      "value_eur": 1504.5
+      "pnl_pct": -1.25,
+      "pnl_eur": -19.5,
+      "value_eur": 1543.5
     }
   ],
   "alerts": [
     {
       "tick": "GOOGL",
       "priority": "ALTA",
-      "msg": "🔴 GOOGL — Alphabet Inc. | ZONA DE SOBRECOMPRA\nRSI actual: 75.5 (per sobre de 70 = sobrecomprat tècnicament).\nPreu actual: $396.78 | MA20: $372.89 | MA50: $332.74\nP&L posició actual: +29.0%\nAcció suggerida: Considera reduir posició o posar stop-loss per protegir guanys."
+      "msg": "🔴 GOOGL — Alphabet Inc. | ZONA DE SOBRECOMPRA\nRSI actual: 76.0 (per sobre de 70 = sobrecomprat tècnicament).\nPreu actual: $396.94 | MA20: $375.87 | MA50: $334.71\nP&L posició actual: +29.1%\nAcció suggerida: Considera reduir posició o posar stop-loss per protegir guanys."
     },
     {
       "tick": "AAPL",
       "priority": "ALTA",
-      "msg": "🔴 AAPL — Apple Inc. | ZONA DE SOBRECOMPRA\nRSI actual: 88.4 (per sobre de 70 = sobrecomprat tècnicament).\nPreu actual: $300.23 | MA20: $281.36 | MA50: $265.97\nP&L posició actual: +20.7%\nAcció suggerida: Considera reduir posició o posar stop-loss per protegir guanys."
-    },
-    {
-      "tick": "GOOGL",
-      "priority": "MITJA",
-      "msg": "⚠️ GOOGL — Alphabet Inc. | PROPER AL MÀXIM DE 52 SETMANES\nPreu: $396.78 | Màxim 52S: $403.70 (a 1.7% del màxim).\nAquesta zona és una resistència tècnica forta. El preu pot rebotar a la baixa.\nAcció suggerida: Vigila el volum. Si trenca el màxim amb força, pot continuar pujant. Si no, considera recollir beneficis parcialment."
+      "msg": "🔴 AAPL — Apple Inc. | ZONA DE SOBRECOMPRA\nRSI actual: 82.6 (per sobre de 70 = sobrecomprat tècnicament).\nPreu actual: $297.84 | MA20: $282.61 | MA50: $266.78\nP&L posició actual: +19.7%\nAcció suggerida: Considera reduir posició o posar stop-loss per protegir guanys."
     },
     {
       "tick": "AAPL",
       "priority": "MITJA",
-      "msg": "⚠️ AAPL — Apple Inc. | PROPER AL MÀXIM DE 52 SETMANES\nPreu: $300.23 | Màxim 52S: $303.20 (a 1.0% del màxim).\nAquesta zona és una resistència tècnica forta. El preu pot rebotar a la baixa.\nAcció suggerida: Vigila el volum. Si trenca el màxim amb força, pot continuar pujant. Si no, considera recollir beneficis parcialment."
+      "msg": "⚠️ AAPL — Apple Inc. | PROPER AL MÀXIM DE 52 SETMANES\nPreu: $297.84 | Màxim 52S: $303.20 (a 1.8% del màxim).\nAquesta zona és una resistència tècnica forta. El preu pot rebotar a la baixa.\nAcció suggerida: Vigila el volum. Si trenca el màxim amb força, pot continuar pujant. Si no, considera recollir beneficis parcialment."
     },
     {
       "tick": "MSFT",
       "priority": "MITJA",
-      "msg": "📈 MSFT — Microsoft Corp. | UPSIDE ELEVAT SEGONS ANALISTES\nObjectiu de preu consens: upside del +32.9% respecte al preu actual.\nPreu actual: $421.92 | Rating consens: Strong Buy (54 analistes)\nRSI: 48.1 | MA20: $417.40 | MA50: $399.06\nAcció suggerida: Considera augmentar posició si el RSI no és sobrecomprat i els fonamentals ho suporten."
+      "msg": "📈 MSFT — Microsoft Corp. | UPSIDE ELEVAT SEGONS ANALISTES\nObjectiu de preu consens: upside del +32.4% respecte al preu actual.\nPreu actual: $423.54 | Rating consens: Strong Buy (54 analistes)\nRSI: 46.2 | MA20: $417.68 | MA50: $399.36\nAcció suggerida: Considera augmentar posició si el RSI no és sobrecomprat i els fonamentals ho suporten."
     }
   ],
   "news": [
     {
       "tick": "GOOGL",
-      "text": "Bill Ackman Explained Why He Just Bought Microsoft. But There Are Even More Reasons to Buy This \"Magnificent Seven\" Stalwart",
+      "text": "Earnings live updates: Home Depot beats earnings estimates as small DIY projects remain a 'real source of strength'",
       "date": "18/05/2026"
     },
     {
       "tick": "GOOGL",
-      "text": "Warren Buffett's Successor, Greg Abel, Just Sold 16 Stocks, but Piled Into an AI Titan That's Now a Top-5 Position for Berkshire Hathaway",
+      "text": "Why Nvidia earnings must deliver massively",
       "date": "18/05/2026"
     },
     {
       "tick": "AAPL",
-      "text": "What Tim Cook's Trip to China Could Mean for Apple Investors",
-      "date": "18/05/2026"
+      "text": "Trump traded over $50 million in 'Magnificent 7' stocks last quarter, loading up on Apple and Google and selling Tesla",
+      "date": "19/05/2026"
     },
     {
       "tick": "AAPL",
-      "text": "Indian court tells Apple to 'cooperate' in antitrust case",
-      "date": "18/05/2026"
+      "text": "Best Warren Buffett Stock to Buy Right Now: Apple vs Coca-Cola",
+      "date": "19/05/2026"
     },
     {
       "tick": "MSFT",
-      "text": "The Kiplinger Letter Says Almost None of the GDP Growth Washington Is Celebrating Actually Came From AI and for Investors the Implications Are Uncomfortable",
-      "date": "18/05/2026"
+      "text": "Trump traded over $50 million in 'Magnificent 7' stocks last quarter, loading up on Apple and Google and selling Tesla",
+      "date": "19/05/2026"
     },
     {
       "tick": "MSFT",
-      "text": "Bill Ackman Explained Why He Just Bought Microsoft. But There Are Even More Reasons to Buy This \"Magnificent Seven\" Stalwart",
+      "text": "Elon Musk loses court battle against OpenAI",
+      "date": "18/05/2026"
+    },
+    {
+      "tick": "SAN",
+      "text": "Treasury launches reforms to ease ring-fencing rules on banks",
       "date": "18/05/2026"
     },
     {
       "tick": "SAN",
       "text": "Fitch Upgrade Puts Banco Santander Funding And Risk Profile In Focus",
       "date": "15/05/2026"
-    },
-    {
-      "tick": "SAN",
-      "text": "European Equities Traded in the US as American Depositary Receipts Tracking Higher in Thursday Trading",
-      "date": "14/05/2026"
     }
   ],
   "earnings": [
     {
       "tick": "SAN",
       "date": "22/07/2026",
-      "days": 65
+      "days": 64
     },
     {
       "tick": "GOOGL",
       "date": "23/07/2026",
-      "days": 66
+      "days": 65
     },
     {
       "tick": "MSFT",
       "date": "29/07/2026",
-      "days": 72
+      "days": 71
     },
     {
       "tick": "AAPL",
       "date": "30/07/2026",
-      "days": 73
+      "days": 72
     }
   ]
 }
