@@ -1,15 +1,15 @@
 {
   "generated": "25/05/2026",
   "lastUpdate": "25/05/2026",
-  "eurusd": 1.1646,
+  "eurusd": 1.1652,
   "portfolio_summary": {
-    "total_value_eur": 7298.29,
+    "total_value_eur": 7296.98,
     "total_capital": 6500.0,
-    "total_pnl_eur": 798.29,
-    "total_pnl_pct": 12.28,
+    "total_pnl_eur": 796.98,
+    "total_pnl_pct": 12.26,
     "cash": 237.91,
     "sp500_ytd": 8.97,
-    "ibex_ytd": 4.74
+    "ibex_ytd": 4.76
   },
   "holdings": [
     {
@@ -37,8 +37,8 @@
       "signal": "MANTENIR",
       "signal_reason": "sense senyals especials",
       "pnl_pct": 24.53,
-      "pnl_eur": 388.67,
-      "value_eur": 1973.06
+      "pnl_eur": 388.47,
+      "value_eur": 1972.04
     },
     {
       "tick": "AAPL",
@@ -65,8 +65,8 @@
       "signal": "VENDRE",
       "signal_reason": "RSI=91.1 sobrecomprat; proper al màxim 52S; per sobre MA20 i MA50",
       "pnl_pct": 24.13,
-      "pnl_eur": 257.71,
-      "value_eur": 1325.86
+      "pnl_eur": 257.57,
+      "value_eur": 1325.18
     },
     {
       "tick": "MSFT",
@@ -93,19 +93,19 @@
       "signal": "VIGILAR ↑",
       "signal_reason": "per sobre MA20 i MA50; upside analistes +33.9%",
       "pnl_pct": 7.79,
-      "pnl_eur": 155.77,
-      "value_eur": 2156.47
+      "pnl_eur": 155.69,
+      "value_eur": 2155.36
     },
     {
       "tick": "SAN",
       "name": "Banco Santander",
       "qty": 150,
       "entrada": 10.42,
-      "price": 10.7,
+      "price": 10.71,
       "cur": "EUR",
       "color": "00e5a0",
       "yf": "SAN.MC",
-      "pe": "8.8x",
+      "pe": "8.9x",
       "margin": "43.3%",
       "div": "240.0%",
       "lo52": 6.79,
@@ -114,15 +114,15 @@
       "target": "€12",
       "analysts": 20,
       "buys": 16,
-      "upside": 13.3,
-      "rsi": 64.0,
+      "upside": 13.2,
+      "rsi": 64.1,
       "ma20": 10.34,
       "ma50": 10.06,
       "signal": "VIGILAR ↓",
-      "signal_reason": "RSI=64.0 proper a zona de venda; per sobre MA20 i MA50",
-      "pnl_pct": 2.69,
-      "pnl_eur": 42.0,
-      "value_eur": 1605.0
+      "signal_reason": "RSI=64.1 proper a zona de venda; per sobre MA20 i MA50",
+      "pnl_pct": 2.78,
+      "pnl_eur": 43.5,
+      "value_eur": 1606.5
     }
   ],
   "alerts": [
@@ -155,22 +155,22 @@
     },
     {
       "tick": "AAPL",
-      "text": "This Tech Stock Is Trading Below Where It Was a Year Ago -- but Its Business Has Never Been Stronger",
+      "text": "Apple: Strong Execution, But Valuation Leaves Me Cautious",
       "date": "25/05/2026"
     },
     {
       "tick": "AAPL",
-      "text": "Analysis-Ferrari's Luce leads bold leap into uncertain electric era",
+      "text": "Why Apple and Microsoft’s Capex Wars Will Make or Break Your MGK Income This Year",
+      "date": "25/05/2026"
+    },
+    {
+      "tick": "MSFT",
+      "text": "Why Apple and Microsoft’s Capex Wars Will Make or Break Your MGK Income This Year",
       "date": "25/05/2026"
     },
     {
       "tick": "MSFT",
       "text": "NVIDIA Extends AI Story With Quantum Center And Alice And Bob Bet",
-      "date": "25/05/2026"
-    },
-    {
-      "tick": "MSFT",
-      "text": "This Tech Stock Is Trading Below Where It Was a Year Ago -- but Its Business Has Never Been Stronger",
       "date": "25/05/2026"
     },
     {
