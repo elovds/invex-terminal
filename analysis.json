@@ -1,15 +1,15 @@
 {
-  "generated": "28/05/2026",
-  "lastUpdate": "28/05/2026",
-  "eurusd": 1.1613,
+  "generated": "29/05/2026",
+  "lastUpdate": "29/05/2026",
+  "eurusd": 1.1647,
   "portfolio_summary": {
-    "total_value_eur": 7320.83,
+    "total_value_eur": 7407.43,
     "total_capital": 6500.0,
-    "total_pnl_eur": 820.83,
-    "total_pnl_pct": 12.63,
+    "total_pnl_eur": 907.43,
+    "total_pnl_pct": 13.96,
     "cash": 237.91,
-    "sp500_ytd": 9.65,
-    "ibex_ytd": 4.51
+    "sp500_ytd": 10.28,
+    "ibex_ytd": 5.49
   },
   "holdings": [
     {
@@ -17,7 +17,7 @@
       "name": "Alphabet Inc.",
       "qty": 6,
       "entrada": 307.53,
-      "price": 388.83,
+      "price": 390.13,
       "cur": "USD",
       "color": "4da6ff",
       "yf": "GOOGL",
@@ -27,29 +27,29 @@
       "lo52": 162.0,
       "hi52": 408.61,
       "rating": "Strong Buy",
-      "target": "$429",
+      "target": "$431",
       "analysts": 53,
       "buys": 61,
       "upside": 10.4,
-      "rsi": 42.3,
-      "ma20": 389.36,
-      "ma50": 344.54,
+      "rsi": 43.6,
+      "ma20": 391.37,
+      "ma50": 346.12,
       "signal": "MANTENIR",
       "signal_reason": "sense senyals especials",
-      "pnl_pct": 26.44,
-      "pnl_eur": 420.05,
-      "value_eur": 2008.94
+      "pnl_pct": 26.86,
+      "pnl_eur": 425.52,
+      "value_eur": 2009.77
     },
     {
       "tick": "AAPL",
       "name": "Apple Inc.",
       "qty": 5,
       "entrada": 248.795,
-      "price": 310.85,
+      "price": 312.51,
       "cur": "USD",
       "color": "8b95a8",
       "yf": "AAPL",
-      "pe": "32.4x",
+      "pe": "32.5x",
       "margin": "32.3%",
       "div": "35.0%",
       "lo52": 195.07,
@@ -58,129 +58,129 @@
       "target": "$311",
       "analysts": 43,
       "buys": 30,
-      "upside": -0.1,
-      "rsi": 87.4,
-      "ma20": 293.29,
-      "ma50": 272.69,
+      "upside": -0.6,
+      "rsi": 88.2,
+      "ma20": 295.42,
+      "ma50": 273.86,
       "signal": "VENDRE",
-      "signal_reason": "RSI=87.4 sobrecomprat; proper al màxim 52S; per sobre MA20 i MA50",
-      "pnl_pct": 24.94,
-      "pnl_eur": 267.18,
-      "value_eur": 1338.37
+      "signal_reason": "RSI=88.2 sobrecomprat; proper al màxim 52S; per sobre MA20 i MA50",
+      "pnl_pct": 25.61,
+      "pnl_eur": 273.53,
+      "value_eur": 1341.59
     },
     {
       "tick": "MSFT",
       "name": "Microsoft Corp.",
       "qty": 6,
       "entrada": 388.335,
-      "price": 412.67,
+      "price": 426.99,
       "cur": "USD",
       "color": "a78bfa",
       "yf": "MSFT",
-      "pe": "21.3x",
+      "pe": "22.1x",
       "margin": "46.3%",
-      "div": "88.0%",
+      "div": "85.0%",
       "lo52": 356.28,
       "hi52": 555.45,
       "rating": "Strong Buy",
       "target": "$561",
       "analysts": 54,
       "buys": 54,
-      "upside": 35.9,
-      "rsi": 49.7,
-      "ma20": 414.63,
-      "ma50": 400.31,
+      "upside": 31.3,
+      "rsi": 55.5,
+      "ma20": 414.8,
+      "ma50": 400.88,
       "signal": "VIGILAR ↑",
-      "signal_reason": "upside analistes +35.9%",
-      "pnl_pct": 6.27,
-      "pnl_eur": 125.73,
-      "value_eur": 2132.11
+      "signal_reason": "per sobre MA20 i MA50; upside analistes +31.3%",
+      "pnl_pct": 9.95,
+      "pnl_eur": 199.13,
+      "value_eur": 2199.66
     },
     {
       "tick": "SAN",
       "name": "Banco Santander",
       "qty": 150,
       "entrada": 10.42,
-      "price": 10.69,
+      "price": 10.79,
       "cur": "EUR",
       "color": "00e5a0",
       "yf": "SAN.MC",
-      "pe": "8.8x",
+      "pe": "8.9x",
       "margin": "43.3%",
-      "div": "230.0%",
+      "div": "234.0%",
       "lo52": 6.79,
       "hi52": 11.26,
       "rating": "Buy",
       "target": "€12",
       "analysts": 20,
       "buys": 16,
-      "upside": 13.7,
-      "rsi": 55.4,
-      "ma20": 10.42,
-      "ma50": 10.14,
+      "upside": 12.6,
+      "rsi": 59.0,
+      "ma20": 10.44,
+      "ma50": 10.17,
       "signal": "MANTENIR",
       "signal_reason": "per sobre MA20 i MA50",
-      "pnl_pct": 2.59,
-      "pnl_eur": 40.5,
-      "value_eur": 1603.5
+      "pnl_pct": 3.55,
+      "pnl_eur": 55.5,
+      "value_eur": 1618.5
     }
   ],
   "alerts": [
     {
       "tick": "AAPL",
       "priority": "ALTA",
-      "msg": "🔴 AAPL — Apple Inc. | ZONA DE SOBRECOMPRA\nRSI actual: 87.4 (per sobre de 70 = sobrecomprat tècnicament).\nPreu actual: $310.85 | MA20: $293.29 | MA50: $272.69\nP&L posició actual: +24.9%\nAcció suggerida: Considera reduir posició o posar stop-loss per protegir guanys."
+      "msg": "🔴 AAPL — Apple Inc. | ZONA DE SOBRECOMPRA\nRSI actual: 88.2 (per sobre de 70 = sobrecomprat tècnicament).\nPreu actual: $312.51 | MA20: $295.42 | MA50: $273.86\nP&L posició actual: +25.6%\nAcció suggerida: Considera reduir posició o posar stop-loss per protegir guanys."
     },
     {
       "tick": "AAPL",
       "priority": "MITJA",
-      "msg": "⚠️ AAPL — Apple Inc. | PROPER AL MÀXIM DE 52 SETMANES\nPreu: $310.85 | Màxim 52S: $313.26 (a 0.8% del màxim).\nAquesta zona és una resistència tècnica forta. El preu pot rebotar a la baixa.\nAcció suggerida: Vigila el volum. Si trenca el màxim amb força, pot continuar pujant. Si no, considera recollir beneficis parcialment."
+      "msg": "⚠️ AAPL — Apple Inc. | PROPER AL MÀXIM DE 52 SETMANES\nPreu: $312.51 | Màxim 52S: $313.26 (a 0.2% del màxim).\nAquesta zona és una resistència tècnica forta. El preu pot rebotar a la baixa.\nAcció suggerida: Vigila el volum. Si trenca el màxim amb força, pot continuar pujant. Si no, considera recollir beneficis parcialment."
     },
     {
       "tick": "MSFT",
       "priority": "MITJA",
-      "msg": "📈 MSFT — Microsoft Corp. | UPSIDE ELEVAT SEGONS ANALISTES\nObjectiu de preu consens: upside del +35.9% respecte al preu actual.\nPreu actual: $412.67 | Rating consens: Strong Buy (54 analistes)\nRSI: 49.7 | MA20: $414.63 | MA50: $400.31\nAcció suggerida: Considera augmentar posició si el RSI no és sobrecomprat i els fonamentals ho suporten."
+      "msg": "📈 MSFT — Microsoft Corp. | UPSIDE ELEVAT SEGONS ANALISTES\nObjectiu de preu consens: upside del +31.3% respecte al preu actual.\nPreu actual: $426.99 | Rating consens: Strong Buy (54 analistes)\nRSI: 55.5 | MA20: $414.80 | MA50: $400.88\nAcció suggerida: Considera augmentar posició si el RSI no és sobrecomprat i els fonamentals ho suporten."
     }
   ],
   "news": [
     {
       "tick": "GOOGL",
-      "text": "Why Android takes a bigger hit than Apple from AI memory shortages",
-      "date": "27/05/2026"
+      "text": "Anthropic releases new Claude Opus 4.8 AI model",
+      "date": "28/05/2026"
     },
     {
       "tick": "GOOGL",
-      "text": "A Big Wealth Manager Just Bought $22.4 Million Worth of This Small-Cap Value ETF",
-      "date": "28/05/2026"
+      "text": "Jim Cramer Explains “Why We’ve Stuck With Broadcom”",
+      "date": "29/05/2026"
     },
     {
       "tick": "AAPL",
-      "text": "Best Buy stock pops on stronger-than-expected earnings as MacBook Neo launch and higher tax refunds boost sales",
+      "text": "Best Buy stock gains as new gadgets and higher tax refunds boost sales",
       "date": "27/05/2026"
     },
     {
       "tick": "AAPL",
-      "text": "A Big Wealth Manager Just Bought $22.4 Million Worth of This Small-Cap Value ETF",
-      "date": "28/05/2026"
+      "text": "Jim Cramer Believes “Nothing Comes Out of Apple Unless It’s Near Perfect”",
+      "date": "29/05/2026"
     },
     {
       "tick": "MSFT",
-      "text": "A Big Wealth Manager Just Bought $22.4 Million Worth of This Small-Cap Value ETF",
-      "date": "28/05/2026"
+      "text": "Jim Cramer on Microsoft: “Terrific Cloud Business, But It’s Weighed Down By Enterprise Software”",
+      "date": "29/05/2026"
     },
     {
       "tick": "MSFT",
-      "text": "Jim Cramer has bold new take on Elon Musk's SpaceX IPO",
+      "text": "63% of the Bill Gates Foundation's Stock Portfolio Is Invested in Just 3 Large-Cap Stocks",
+      "date": "29/05/2026"
+    },
+    {
+      "tick": "SAN",
+      "text": "AT1 Market Is So Hot That Banks Are Locking In Rates for Decade",
       "date": "28/05/2026"
     },
     {
       "tick": "SAN",
       "text": "Sector Update: Financial Stocks Mixed Late Afternoon",
-      "date": "26/05/2026"
-    },
-    {
-      "tick": "SAN",
-      "text": "Sector Update: Financial Stocks Mixed Tuesday Afternoon",
       "date": "26/05/2026"
     }
   ],
@@ -188,22 +188,22 @@
     {
       "tick": "SAN",
       "date": "22/07/2026",
-      "days": 55
+      "days": 54
     },
     {
       "tick": "GOOGL",
       "date": "23/07/2026",
-      "days": 56
+      "days": 55
     },
     {
       "tick": "MSFT",
       "date": "29/07/2026",
-      "days": 62
+      "days": 61
     },
     {
       "tick": "AAPL",
       "date": "30/07/2026",
-      "days": 63
+      "days": 62
     }
   ]
 }
