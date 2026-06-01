@@ -1,15 +1,15 @@
 {
   "generated": "01/06/2026",
   "lastUpdate": "01/06/2026",
-  "eurusd": 1.1651,
+  "eurusd": 1.1631,
   "portfolio_summary": {
-    "total_value_eur": 7465.41,
+    "total_value_eur": 7479.56,
     "total_capital": 6500.0,
-    "total_pnl_eur": 965.41,
-    "total_pnl_pct": 14.85,
+    "total_pnl_eur": 979.56,
+    "total_pnl_pct": 15.07,
     "cash": 237.91,
     "sp500_ytd": 10.52,
-    "ibex_ytd": 4.83
+    "ibex_ytd": 4.88
   },
   "holdings": [
     {
@@ -37,8 +37,8 @@
       "signal": "VIGILAR ↑",
       "signal_reason": "RSI=35.0 proper a zona de compra",
       "pnl_pct": 23.68,
-      "pnl_eur": 374.95,
-      "value_eur": 1958.66
+      "pnl_eur": 375.6,
+      "value_eur": 1962.03
     },
     {
       "tick": "AAPL",
@@ -65,8 +65,8 @@
       "signal": "VENDRE",
       "signal_reason": "RSI=84.3 sobrecomprat; proper al màxim 52S; per sobre MA20 i MA50",
       "pnl_pct": 25.43,
-      "pnl_eur": 271.5,
-      "value_eur": 1339.2
+      "pnl_eur": 271.97,
+      "value_eur": 1341.5
     },
     {
       "tick": "MSFT",
@@ -93,15 +93,15 @@
       "signal": "VENDRE",
       "signal_reason": "RSI=71.7 sobrecomprat; per sobre MA20 i MA50",
       "pnl_pct": 15.94,
-      "pnl_eur": 318.8,
-      "value_eur": 2318.63
+      "pnl_eur": 319.34,
+      "value_eur": 2322.62
     },
     {
       "tick": "SAN",
       "name": "Banco Santander",
       "qty": 150,
       "entrada": 10.42,
-      "price": 10.74,
+      "price": 10.77,
       "cur": "EUR",
       "color": "00e5a0",
       "yf": "SAN.MC",
@@ -114,15 +114,15 @@
       "target": "€12",
       "analysts": 20,
       "buys": 16,
-      "upside": 13.1,
-      "rsi": 64.7,
+      "upside": 12.8,
+      "rsi": 65.3,
       "ma20": 10.48,
       "ma50": 10.19,
       "signal": "VIGILAR ↓",
-      "signal_reason": "RSI=64.7 proper a zona de venda; per sobre MA20 i MA50",
-      "pnl_pct": 3.07,
-      "pnl_eur": 48.0,
-      "value_eur": 1611.0
+      "signal_reason": "RSI=65.3 proper a zona de venda; per sobre MA20 i MA50",
+      "pnl_pct": 3.36,
+      "pnl_eur": 52.5,
+      "value_eur": 1615.5
     }
   ],
   "alerts": [
@@ -155,22 +155,22 @@
     },
     {
       "tick": "AAPL",
-      "text": "This Tech Stocks Rally Can Rage Into June But Markets Face 3 Big Obstacles",
+      "text": "Nvidia challenges Apple and Intel with AI chip for laptops",
       "date": "01/06/2026"
     },
     {
       "tick": "AAPL",
-      "text": "US stock futures rise as AI push eclipses US-Iran war; Nvidia, Microsoft up",
+      "text": "MP Materials vs. USA Rare Earth: Which Rare-Earth Stock Is a Better Buy in 2026?",
+      "date": "01/06/2026"
+    },
+    {
+      "tick": "MSFT",
+      "text": "Microsoft, Dell and HP stocks rise as Nvidia announces new AI chip for personal computers",
       "date": "01/06/2026"
     },
     {
       "tick": "MSFT",
       "text": "Nvidia debuts RTX Spark processor for Windows laptops, taking aim at Intel, AMD",
-      "date": "01/06/2026"
-    },
-    {
-      "tick": "MSFT",
-      "text": "Exclusive-EU cloud rules to curb Amazon, Google access to strategic tenders, draft document shows",
       "date": "01/06/2026"
     },
     {
