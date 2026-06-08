@@ -1,15 +1,15 @@
 {
-  "generated": "05/06/2026",
-  "lastUpdate": "05/06/2026",
-  "eurusd": 1.1644,
+  "generated": "08/06/2026",
+  "lastUpdate": "08/06/2026",
+  "eurusd": 1.1539,
   "portfolio_summary": {
-    "total_value_eur": 7325.38,
+    "total_value_eur": 7259.0,
     "total_capital": 6500.0,
-    "total_pnl_eur": 825.38,
-    "total_pnl_pct": 12.7,
+    "total_pnl_eur": 759.0,
+    "total_pnl_pct": 11.68,
     "cash": 237.91,
-    "sp500_ytd": 10.58,
-    "ibex_ytd": 5.71
+    "sp500_ytd": 7.66,
+    "ibex_ytd": 5.07
   },
   "holdings": [
     {
@@ -17,39 +17,39 @@
       "name": "Alphabet Inc.",
       "qty": 6,
       "entrada": 307.53,
-      "price": 372.19,
+      "price": 368.53,
       "cur": "USD",
       "color": "4da6ff",
       "yf": "GOOGL",
-      "pe": "25.7x",
+      "pe": "25.5x",
       "margin": "36.1%",
       "div": "24.0%",
       "lo52": 162.0,
       "hi52": 408.61,
       "rating": "Strong Buy",
-      "target": "$430",
-      "analysts": 52,
+      "target": "$431",
+      "analysts": 53,
       "buys": 63,
-      "upside": 15.5,
-      "rsi": 30.1,
-      "ma20": 386.85,
-      "ma50": 352.95,
+      "upside": 17.0,
+      "rsi": 30.4,
+      "ma20": 385.38,
+      "ma50": 354.5,
       "signal": "VIGILAR ↑",
-      "signal_reason": "RSI=30.1 proper a zona de compra",
-      "pnl_pct": 21.03,
-      "pnl_eur": 333.18,
-      "value_eur": 1917.85
+      "signal_reason": "RSI=30.4 proper a zona de compra",
+      "pnl_pct": 19.84,
+      "pnl_eur": 317.19,
+      "value_eur": 1916.27
     },
     {
       "tick": "AAPL",
       "name": "Apple Inc.",
       "qty": 5,
       "entrada": 248.795,
-      "price": 311.23,
+      "price": 307.34,
       "cur": "USD",
       "color": "8b95a8",
       "yf": "AAPL",
-      "pe": "32.4x",
+      "pe": "32.0x",
       "margin": "32.3%",
       "div": "35.0%",
       "lo52": 195.07,
@@ -58,147 +58,142 @@
       "target": "$311",
       "analysts": 43,
       "buys": 31,
-      "upside": -0.2,
-      "rsi": 65.9,
-      "ma20": 303.23,
-      "ma50": 279.99,
-      "signal": "VIGILAR ↓",
-      "signal_reason": "RSI=65.9 proper a zona de venda; proper al màxim 52S; per sobre MA20 i MA50",
-      "pnl_pct": 25.09,
-      "pnl_eur": 268.1,
-      "value_eur": 1336.44
+      "upside": 1.0,
+      "rsi": 58.3,
+      "ma20": 304.24,
+      "ma50": 281.08,
+      "signal": "MANTENIR",
+      "signal_reason": "per sobre MA20 i MA50",
+      "pnl_pct": 23.53,
+      "pnl_eur": 253.68,
+      "value_eur": 1331.74
     },
     {
       "tick": "MSFT",
       "name": "Microsoft Corp.",
       "qty": 6,
       "entrada": 388.335,
-      "price": 428.05,
+      "price": 416.67,
       "cur": "USD",
       "color": "a78bfa",
       "yf": "MSFT",
-      "pe": "22.1x",
+      "pe": "21.5x",
       "margin": "46.3%",
-      "div": "85.0%",
+      "div": "87.0%",
       "lo52": 356.28,
       "hi52": 555.45,
       "rating": "Strong Buy",
       "target": "$561",
       "analysts": 55,
       "buys": 55,
-      "upside": 31.0,
-      "rsi": 58.6,
-      "ma20": 422.34,
-      "ma50": 406.74,
+      "upside": 34.6,
+      "rsi": 48.1,
+      "ma20": 422.18,
+      "ma50": 407.67,
       "signal": "VIGILAR ↑",
-      "signal_reason": "per sobre MA20 i MA50; upside analistes +31.0%",
-      "pnl_pct": 10.23,
-      "pnl_eur": 204.65,
-      "value_eur": 2205.69
+      "signal_reason": "upside analistes +34.6%",
+      "pnl_pct": 7.3,
+      "pnl_eur": 147.34,
+      "value_eur": 2166.58
     },
     {
       "tick": "SAN",
       "name": "Banco Santander",
       "qty": 150,
       "entrada": 10.42,
-      "price": 10.85,
+      "price": 10.71,
       "cur": "EUR",
       "color": "00e5a0",
       "yf": "SAN.MC",
-      "pe": "8.9x",
+      "pe": "8.8x",
       "margin": "43.3%",
-      "div": "233.0%",
+      "div": "234.0%",
       "lo52": 6.79,
       "hi52": 11.26,
       "rating": "Buy",
       "target": "€12",
       "analysts": 20,
       "buys": 17,
-      "upside": 12.0,
-      "rsi": 64.9,
+      "upside": 13.4,
+      "rsi": 61.7,
       "ma20": 10.53,
-      "ma50": 10.3,
+      "ma50": 10.32,
       "signal": "VIGILAR ↓",
-      "signal_reason": "RSI=64.9 proper a zona de venda; per sobre MA20 i MA50",
-      "pnl_pct": 4.13,
-      "pnl_eur": 64.5,
-      "value_eur": 1627.5
+      "signal_reason": "RSI=61.7 proper a zona de venda; per sobre MA20 i MA50",
+      "pnl_pct": 2.78,
+      "pnl_eur": 43.5,
+      "value_eur": 1606.5
     }
   ],
   "alerts": [
     {
-      "tick": "AAPL",
-      "priority": "MITJA",
-      "msg": "⚠️ AAPL — Apple Inc. | PROPER AL MÀXIM DE 52 SETMANES\nPreu: $311.23 | Màxim 52S: $316.94 (a 1.8% del màxim).\nAquesta zona és una resistència tècnica forta. El preu pot rebotar a la baixa.\nAcció suggerida: Vigila el volum. Si trenca el màxim amb força, pot continuar pujant. Si no, considera recollir beneficis parcialment."
-    },
-    {
       "tick": "MSFT",
       "priority": "MITJA",
-      "msg": "📈 MSFT — Microsoft Corp. | UPSIDE ELEVAT SEGONS ANALISTES\nObjectiu de preu consens: upside del +31.0% respecte al preu actual.\nPreu actual: $428.05 | Rating consens: Strong Buy (55 analistes)\nRSI: 58.6 | MA20: $422.34 | MA50: $406.74\nAcció suggerida: Considera augmentar posició si el RSI no és sobrecomprat i els fonamentals ho suporten."
+      "msg": "📈 MSFT — Microsoft Corp. | UPSIDE ELEVAT SEGONS ANALISTES\nObjectiu de preu consens: upside del +34.6% respecte al preu actual.\nPreu actual: $416.67 | Rating consens: Strong Buy (55 analistes)\nRSI: 48.1 | MA20: $422.18 | MA50: $407.67\nAcció suggerida: Considera augmentar posició si el RSI no és sobrecomprat i els fonamentals ho suporten."
     }
   ],
   "news": [
     {
       "tick": "GOOGL",
-      "text": "Broadcom stock sinks 12% as AI chip forecast disappoints",
-      "date": "03/06/2026"
+      "text": "Alphabet Uses New Financing Playbook to Support AI Power Demand",
+      "date": "08/06/2026"
     },
     {
       "tick": "GOOGL",
-      "text": "Is OpenAI coming for Tesla's robotics business?",
-      "date": "04/06/2026"
+      "text": "Keir Starmer gives tech firms three months to stop children sending nude images",
+      "date": "08/06/2026"
     },
     {
       "tick": "AAPL",
-      "text": "Broadcom's sell-off just entered megacap history",
-      "date": "04/06/2026"
+      "text": "Apple WWDC preview: Apple gets a second shot at its AI rollout",
+      "date": "07/06/2026"
     },
     {
       "tick": "AAPL",
-      "text": "Apple's App Store generated $1.4 trillion in sales last year",
-      "date": "04/06/2026"
+      "text": "Apple's Siri Overhaul Takes Center Stage",
+      "date": "08/06/2026"
     },
     {
       "tick": "MSFT",
-      "text": "Broadcom's sell-off just entered megacap history",
-      "date": "04/06/2026"
+      "text": "Microsoft (MSFT) Is A Top AI Stock In Billionaire Ken Fisher’s Portfolio",
+      "date": "08/06/2026"
     },
     {
       "tick": "MSFT",
-      "text": "Nvidia's laptop chip is a bet that AI will need more than the cloud to flourish",
-      "date": "04/06/2026"
+      "text": "Oracle's cloud pivot remains a high-risk bet",
+      "date": "08/06/2026"
     },
     {
       "tick": "SAN",
-      "text": "European Equities Traded in the US as American Depositary Receipts Rise in Tuesday Trading",
-      "date": "02/06/2026"
+      "text": "Intesa counters Banco BPM’s proposal with Monte dei Paschi bid",
+      "date": "08/06/2026"
     },
     {
       "tick": "SAN",
-      "text": "AT1 Market Is So Hot That Banks Are Locking In Rates for Decade",
-      "date": "28/05/2026"
+      "text": "Cramer Backing Puts Santander Webster Deal And AI Spending In Focus",
+      "date": "08/06/2026"
     }
   ],
   "earnings": [
     {
       "tick": "SAN",
       "date": "22/07/2026",
-      "days": 47
+      "days": 44
     },
     {
       "tick": "GOOGL",
       "date": "23/07/2026",
-      "days": 48
+      "days": 45
     },
     {
       "tick": "MSFT",
       "date": "29/07/2026",
-      "days": 54
+      "days": 51
     },
     {
       "tick": "AAPL",
       "date": "30/07/2026",
-      "days": 55
+      "days": 52
     }
   ]
 }
