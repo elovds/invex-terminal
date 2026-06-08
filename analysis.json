@@ -1,15 +1,15 @@
 {
   "generated": "08/06/2026",
   "lastUpdate": "08/06/2026",
-  "eurusd": 1.1539,
+  "eurusd": 1.095,
   "portfolio_summary": {
-    "total_value_eur": 7259.0,
+    "total_value_eur": 7553.25,
     "total_capital": 6500.0,
-    "total_pnl_eur": 759.0,
-    "total_pnl_pct": 11.68,
+    "total_pnl_eur": 1053.25,
+    "total_pnl_pct": 16.2,
     "cash": 237.91,
     "sp500_ytd": 7.66,
-    "ibex_ytd": 5.07
+    "ibex_ytd": 5.1
   },
   "holdings": [
     {
@@ -37,8 +37,8 @@
       "signal": "VIGILAR ↑",
       "signal_reason": "RSI=30.4 proper a zona de compra",
       "pnl_pct": 19.84,
-      "pnl_eur": 317.19,
-      "value_eur": 1916.27
+      "pnl_eur": 334.25,
+      "value_eur": 2019.34
     },
     {
       "tick": "AAPL",
@@ -65,8 +65,8 @@
       "signal": "MANTENIR",
       "signal_reason": "per sobre MA20 i MA50",
       "pnl_pct": 23.53,
-      "pnl_eur": 253.68,
-      "value_eur": 1331.74
+      "pnl_eur": 267.33,
+      "value_eur": 1403.38
     },
     {
       "tick": "MSFT",
@@ -93,15 +93,15 @@
       "signal": "VIGILAR ↑",
       "signal_reason": "upside analistes +34.6%",
       "pnl_pct": 7.3,
-      "pnl_eur": 147.34,
-      "value_eur": 2166.58
+      "pnl_eur": 155.26,
+      "value_eur": 2283.12
     },
     {
       "tick": "SAN",
       "name": "Banco Santander",
       "qty": 150,
       "entrada": 10.42,
-      "price": 10.71,
+      "price": 10.73,
       "cur": "EUR",
       "color": "00e5a0",
       "yf": "SAN.MC",
@@ -114,15 +114,15 @@
       "target": "€12",
       "analysts": 20,
       "buys": 17,
-      "upside": 13.4,
-      "rsi": 61.7,
-      "ma20": 10.53,
+      "upside": 13.2,
+      "rsi": 61.9,
+      "ma20": 10.54,
       "ma50": 10.32,
       "signal": "VIGILAR ↓",
-      "signal_reason": "RSI=61.7 proper a zona de venda; per sobre MA20 i MA50",
-      "pnl_pct": 2.78,
-      "pnl_eur": 43.5,
-      "value_eur": 1606.5
+      "signal_reason": "RSI=61.9 proper a zona de venda; per sobre MA20 i MA50",
+      "pnl_pct": 2.98,
+      "pnl_eur": 46.5,
+      "value_eur": 1609.5
     }
   ],
   "alerts": [
@@ -145,22 +145,22 @@
     },
     {
       "tick": "AAPL",
+      "text": "Tech stocks today: Chip stocks rebound after Nvidia's Jensen Huang says investors should be 'very happy'",
+      "date": "08/06/2026"
+    },
+    {
+      "tick": "AAPL",
       "text": "Apple WWDC preview: Apple gets a second shot at its AI rollout",
       "date": "07/06/2026"
     },
     {
-      "tick": "AAPL",
-      "text": "Apple's Siri Overhaul Takes Center Stage",
+      "tick": "MSFT",
+      "text": "2 Software Stocks for Long-Term Investors and 1 Facing Challenges",
       "date": "08/06/2026"
     },
     {
       "tick": "MSFT",
       "text": "Microsoft (MSFT) Is A Top AI Stock In Billionaire Ken Fisher’s Portfolio",
-      "date": "08/06/2026"
-    },
-    {
-      "tick": "MSFT",
-      "text": "Oracle's cloud pivot remains a high-risk bet",
       "date": "08/06/2026"
     },
     {
