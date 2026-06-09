@@ -1,15 +1,15 @@
 {
-  "generated": "08/06/2026",
-  "lastUpdate": "08/06/2026",
-  "eurusd": 1.095,
+  "generated": "09/06/2026",
+  "lastUpdate": "09/06/2026",
+  "eurusd": 1.157,
   "portfolio_summary": {
-    "total_value_eur": 7553.25,
+    "total_value_eur": 7175.8,
     "total_capital": 6500.0,
-    "total_pnl_eur": 1053.25,
-    "total_pnl_pct": 16.2,
+    "total_pnl_eur": 675.8,
+    "total_pnl_pct": 10.4,
     "cash": 237.91,
-    "sp500_ytd": 7.66,
-    "ibex_ytd": 5.1
+    "sp500_ytd": 7.98,
+    "ibex_ytd": 5.38
   },
   "holdings": [
     {
@@ -17,11 +17,11 @@
       "name": "Alphabet Inc.",
       "qty": 6,
       "entrada": 307.53,
-      "price": 368.53,
+      "price": 363.31,
       "cur": "USD",
       "color": "4da6ff",
       "yf": "GOOGL",
-      "pe": "25.5x",
+      "pe": "25.1x",
       "margin": "36.1%",
       "div": "24.0%",
       "lo52": 162.0,
@@ -30,170 +30,175 @@
       "target": "$431",
       "analysts": 53,
       "buys": 63,
-      "upside": 17.0,
-      "rsi": 30.4,
-      "ma20": 385.38,
-      "ma50": 354.5,
-      "signal": "VIGILAR ↑",
-      "signal_reason": "RSI=30.4 proper a zona de compra",
-      "pnl_pct": 19.84,
-      "pnl_eur": 334.25,
-      "value_eur": 2019.34
+      "upside": 18.7,
+      "rsi": 28.2,
+      "ma20": 383.28,
+      "ma50": 355.94,
+      "signal": "COMPRAR",
+      "signal_reason": "RSI=28.2 sobrevenut",
+      "pnl_pct": 18.14,
+      "pnl_eur": 289.27,
+      "value_eur": 1884.06
     },
     {
       "tick": "AAPL",
       "name": "Apple Inc.",
       "qty": 5,
       "entrada": 248.795,
-      "price": 307.34,
+      "price": 301.54,
       "cur": "USD",
       "color": "8b95a8",
       "yf": "AAPL",
-      "pe": "32.0x",
+      "pe": "31.4x",
       "margin": "32.3%",
-      "div": "35.0%",
+      "div": "36.0%",
       "lo52": 195.07,
-      "hi52": 316.94,
+      "hi52": 317.4,
       "rating": "Buy",
       "target": "$311",
       "analysts": 43,
       "buys": 31,
-      "upside": 1.0,
-      "rsi": 58.3,
-      "ma20": 304.24,
-      "ma50": 281.08,
+      "upside": 3.0,
+      "rsi": 54.0,
+      "ma20": 304.67,
+      "ma50": 282.06,
       "signal": "MANTENIR",
-      "signal_reason": "per sobre MA20 i MA50",
-      "pnl_pct": 23.53,
-      "pnl_eur": 267.33,
-      "value_eur": 1403.38
+      "signal_reason": "sense senyals especials",
+      "pnl_pct": 21.2,
+      "pnl_eur": 227.94,
+      "value_eur": 1303.11
     },
     {
       "tick": "MSFT",
       "name": "Microsoft Corp.",
       "qty": 6,
       "entrada": 388.335,
-      "price": 416.67,
+      "price": 411.74,
       "cur": "USD",
       "color": "a78bfa",
       "yf": "MSFT",
-      "pe": "21.5x",
+      "pe": "21.3x",
       "margin": "46.3%",
-      "div": "87.0%",
+      "div": "88.0%",
       "lo52": 356.28,
       "hi52": 555.45,
       "rating": "Strong Buy",
       "target": "$561",
       "analysts": 55,
       "buys": 55,
-      "upside": 34.6,
-      "rsi": 48.1,
-      "ma20": 422.18,
-      "ma50": 407.67,
+      "upside": 36.2,
+      "rsi": 45.3,
+      "ma20": 422.05,
+      "ma50": 408.6,
       "signal": "VIGILAR ↑",
-      "signal_reason": "upside analistes +34.6%",
-      "pnl_pct": 7.3,
-      "pnl_eur": 155.26,
-      "value_eur": 2283.12
+      "signal_reason": "upside analistes +36.2%",
+      "pnl_pct": 6.03,
+      "pnl_eur": 121.37,
+      "value_eur": 2135.21
     },
     {
       "tick": "SAN",
       "name": "Banco Santander",
       "qty": 150,
       "entrada": 10.42,
-      "price": 10.73,
+      "price": 10.77,
       "cur": "EUR",
       "color": "00e5a0",
       "yf": "SAN.MC",
-      "pe": "8.8x",
+      "pe": "8.9x",
       "margin": "43.3%",
-      "div": "234.0%",
+      "div": "236.0%",
       "lo52": 6.79,
       "hi52": 11.26,
       "rating": "Buy",
       "target": "€12",
       "analysts": 20,
       "buys": 17,
-      "upside": 13.2,
-      "rsi": 61.9,
-      "ma20": 10.54,
-      "ma50": 10.32,
-      "signal": "VIGILAR ↓",
-      "signal_reason": "RSI=61.9 proper a zona de venda; per sobre MA20 i MA50",
-      "pnl_pct": 2.98,
-      "pnl_eur": 46.5,
-      "value_eur": 1609.5
+      "upside": 12.8,
+      "rsi": 53.9,
+      "ma20": 10.56,
+      "ma50": 10.35,
+      "signal": "MANTENIR",
+      "signal_reason": "per sobre MA20 i MA50",
+      "pnl_pct": 3.36,
+      "pnl_eur": 52.5,
+      "value_eur": 1615.5
     }
   ],
   "alerts": [
     {
+      "tick": "GOOGL",
+      "priority": "ALTA",
+      "msg": "🟢 GOOGL — Alphabet Inc. | OPORTUNITAT DE COMPRA\nRSI actual: 28.2 (per sota de 30 = sobrevenut tècnicament).\nPreu actual: $363.31 | MA20: $383.28 | MA50: $355.94\nRang 52S: $162.00 – $408.61\nConsens analistes: Strong Buy (53 analistes) | Upside: +18.7%\nAcció suggerida: Considera obrir o augmentar posició. RSI<30 sovint precedeix recuperació."
+    },
+    {
       "tick": "MSFT",
       "priority": "MITJA",
-      "msg": "📈 MSFT — Microsoft Corp. | UPSIDE ELEVAT SEGONS ANALISTES\nObjectiu de preu consens: upside del +34.6% respecte al preu actual.\nPreu actual: $416.67 | Rating consens: Strong Buy (55 analistes)\nRSI: 48.1 | MA20: $422.18 | MA50: $407.67\nAcció suggerida: Considera augmentar posició si el RSI no és sobrecomprat i els fonamentals ho suporten."
+      "msg": "📈 MSFT — Microsoft Corp. | UPSIDE ELEVAT SEGONS ANALISTES\nObjectiu de preu consens: upside del +36.2% respecte al preu actual.\nPreu actual: $411.74 | Rating consens: Strong Buy (55 analistes)\nRSI: 45.3 | MA20: $422.05 | MA50: $408.60\nAcció suggerida: Considera augmentar posició si el RSI no és sobrecomprat i els fonamentals ho suporten."
     }
   ],
   "news": [
     {
       "tick": "GOOGL",
-      "text": "Alphabet Uses New Financing Playbook to Support AI Power Demand",
+      "text": "Why Apple's AI pivot with new Siri is raising some red flags",
       "date": "08/06/2026"
     },
     {
       "tick": "GOOGL",
-      "text": "Keir Starmer gives tech firms three months to stop children sending nude images",
+      "text": "Jim Chanos Rejects SpaceX IPO Valuation Comparison To Amazon, Google, Meta's Early Days: 'Isn't Even Remotely True'",
+      "date": "09/06/2026"
+    },
+    {
+      "tick": "AAPL",
+      "text": "Apple pitches a more personal, easier-to-use AI",
       "date": "08/06/2026"
     },
     {
       "tick": "AAPL",
-      "text": "Tech stocks today: Chip stocks rebound after Nvidia's Jensen Huang says investors should be 'very happy'",
-      "date": "08/06/2026"
-    },
-    {
-      "tick": "AAPL",
-      "text": "Apple WWDC preview: Apple gets a second shot at its AI rollout",
-      "date": "07/06/2026"
-    },
-    {
-      "tick": "MSFT",
-      "text": "2 Software Stocks for Long-Term Investors and 1 Facing Challenges",
+      "text": "Why Apple's AI pivot with new Siri is raising some red flags",
       "date": "08/06/2026"
     },
     {
       "tick": "MSFT",
-      "text": "Microsoft (MSFT) Is A Top AI Stock In Billionaire Ken Fisher’s Portfolio",
+      "text": "AI is 'not existential' to Apple as it is for rest of Silicon Valley",
       "date": "08/06/2026"
     },
     {
-      "tick": "SAN",
-      "text": "Intesa counters Banco BPM’s proposal with Monte dei Paschi bid",
-      "date": "08/06/2026"
+      "tick": "MSFT",
+      "text": "CoreWeave Founders Have Dumped $2.3 Billion in Stock Since IPO",
+      "date": "09/06/2026"
     },
     {
       "tick": "SAN",
-      "text": "Cramer Backing Puts Santander Webster Deal And AI Spending In Focus",
-      "date": "08/06/2026"
+      "text": "Santander chair Ana Botín criticises UK bank tax policy",
+      "date": "09/06/2026"
+    },
+    {
+      "tick": "SAN",
+      "text": "FTSE 100 Live: London blue-chips in the red, GSK deal 'too big' for some",
+      "date": "09/06/2026"
     }
   ],
   "earnings": [
     {
       "tick": "SAN",
       "date": "22/07/2026",
-      "days": 44
+      "days": 43
     },
     {
       "tick": "GOOGL",
       "date": "23/07/2026",
-      "days": 45
+      "days": 44
     },
     {
       "tick": "MSFT",
       "date": "29/07/2026",
-      "days": 51
+      "days": 50
     },
     {
       "tick": "AAPL",
       "date": "30/07/2026",
-      "days": 52
+      "days": 51
     }
   ]
 }
