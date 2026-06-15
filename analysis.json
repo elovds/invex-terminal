@@ -1,15 +1,15 @@
 {
   "generated": "15/06/2026",
   "lastUpdate": "15/06/2026",
-  "eurusd": 1.162,
+  "eurusd": 1.1621,
   "portfolio_summary": {
-    "total_value_eur": 7079.92,
+    "total_value_eur": 7168.91,
     "total_capital": 6500.0,
-    "total_pnl_eur": 579.92,
-    "total_pnl_pct": 8.92,
+    "total_pnl_eur": 668.91,
+    "total_pnl_pct": 10.29,
     "cash": 237.91,
-    "sp500_ytd": 8.35,
-    "ibex_ytd": 8.93
+    "sp500_ytd": 9.97,
+    "ibex_ytd": 8.95
   },
   "holdings": [
     {
@@ -17,11 +17,11 @@
       "name": "Alphabet Inc.",
       "qty": 6,
       "entrada": 307.53,
-      "price": 359.68,
+      "price": 367.76,
       "cur": "USD",
       "color": "4da6ff",
       "yf": "GOOGL",
-      "pe": "24.8x",
+      "pe": "25.4x",
       "margin": "36.1%",
       "div": "24.0%",
       "lo52": 162.0,
@@ -30,26 +30,26 @@
       "target": "$433",
       "analysts": 53,
       "buys": 63,
-      "upside": 20.3,
-      "rsi": 34.1,
-      "ma20": 376.25,
-      "ma50": 362.06,
+      "upside": 17.7,
+      "rsi": 36.0,
+      "ma20": 374.81,
+      "ma50": 363.51,
       "signal": "VIGILAR ↑",
-      "signal_reason": "RSI=34.1 proper a zona de compra; per sota MA20 i MA50",
-      "pnl_pct": 16.96,
-      "pnl_eur": 269.28,
-      "value_eur": 1857.21
+      "signal_reason": "RSI=36.0 proper a zona de compra",
+      "pnl_pct": 19.59,
+      "pnl_eur": 310.97,
+      "value_eur": 1898.77
     },
     {
       "tick": "AAPL",
       "name": "Apple Inc.",
       "qty": 5,
       "entrada": 248.795,
-      "price": 291.13,
+      "price": 295.45,
       "cur": "USD",
       "color": "8b95a8",
       "yf": "AAPL",
-      "pe": "30.3x",
+      "pe": "30.8x",
       "margin": "32.3%",
       "div": "37.0%",
       "lo52": 195.07,
@@ -58,26 +58,26 @@
       "target": "$313",
       "analysts": 43,
       "buys": 31,
-      "upside": 7.4,
-      "rsi": 34.2,
-      "ma20": 303.88,
-      "ma50": 285.36,
+      "upside": 5.8,
+      "rsi": 38.9,
+      "ma20": 303.63,
+      "ma50": 286.15,
       "signal": "VIGILAR ↑",
-      "signal_reason": "RSI=34.2 proper a zona de compra",
-      "pnl_pct": 17.02,
-      "pnl_eur": 182.16,
-      "value_eur": 1252.71
+      "signal_reason": "RSI=38.9 proper a zona de compra",
+      "pnl_pct": 18.75,
+      "pnl_eur": 200.74,
+      "value_eur": 1271.19
     },
     {
       "tick": "MSFT",
       "name": "Microsoft Corp.",
       "qty": 6,
       "entrada": 388.335,
-      "price": 390.74,
+      "price": 396.38,
       "cur": "USD",
       "color": "a78bfa",
       "yf": "MSFT",
-      "pe": "20.2x",
+      "pe": "20.5x",
       "margin": "46.3%",
       "div": "93.0%",
       "lo52": 356.28,
@@ -86,15 +86,15 @@
       "target": "$561",
       "analysts": 55,
       "buys": 55,
-      "upside": 43.7,
-      "rsi": 38.9,
-      "ma20": 419.57,
-      "ma50": 411.2,
-      "signal": "VIGILAR ↑",
-      "signal_reason": "RSI=38.9 proper a zona de compra; per sota MA20 i MA50",
-      "pnl_pct": 0.62,
-      "pnl_eur": 12.42,
-      "value_eur": 2017.59
+      "upside": 41.6,
+      "rsi": 42.5,
+      "ma20": 418.35,
+      "ma50": 411.68,
+      "signal": "VIGILAR ↓",
+      "signal_reason": "per sota MA20 i MA50",
+      "pnl_pct": 2.07,
+      "pnl_eur": 41.54,
+      "value_eur": 2046.54
     },
     {
       "tick": "SAN",
@@ -115,11 +115,11 @@
       "analysts": 20,
       "buys": 17,
       "upside": 6.8,
-      "rsi": 67.4,
+      "rsi": 67.6,
       "ma20": 10.67,
       "ma50": 10.45,
       "signal": "VIGILAR ↓",
-      "signal_reason": "RSI=67.4 proper a zona de venda; proper al màxim 52S; per sobre MA20 i MA50",
+      "signal_reason": "RSI=67.6 proper a zona de venda; proper al màxim 52S; per sobre MA20 i MA50",
       "pnl_pct": 9.69,
       "pnl_eur": 151.5,
       "value_eur": 1714.5
@@ -129,7 +129,7 @@
     {
       "tick": "MSFT",
       "priority": "MITJA",
-      "msg": "📈 MSFT — Microsoft Corp. | UPSIDE ELEVAT SEGONS ANALISTES\nObjectiu de preu consens: upside del +43.7% respecte al preu actual.\nPreu actual: $390.74 | Rating consens: Strong Buy (55 analistes)\nRSI: 38.9 | MA20: $419.57 | MA50: $411.20\nAcció suggerida: Considera augmentar posició si el RSI no és sobrecomprat i els fonamentals ho suporten."
+      "msg": "📈 MSFT — Microsoft Corp. | UPSIDE ELEVAT SEGONS ANALISTES\nObjectiu de preu consens: upside del +41.6% respecte al preu actual.\nPreu actual: $396.38 | Rating consens: Strong Buy (55 analistes)\nRSI: 42.5 | MA20: $418.35 | MA50: $411.68\nAcció suggerida: Considera augmentar posició si el RSI no és sobrecomprat i els fonamentals ho suporten."
     },
     {
       "tick": "SAN",
@@ -140,12 +140,17 @@
   "news": [
     {
       "tick": "GOOGL",
-      "text": "Adobe’s Pivot: A Genius Bet Or A Costly Distraction?",
+      "text": "Hut 8 Appoints New Board Chair",
       "date": "15/06/2026"
     },
     {
       "tick": "GOOGL",
-      "text": "Nvidia plans to raise at least $20 billion in bond sale",
+      "text": "Adobe’s Pivot: A Genius Bet Or A Costly Distraction?",
+      "date": "15/06/2026"
+    },
+    {
+      "tick": "AAPL",
+      "text": "Apple (AAPL) Stock Fair Value Edges Higher As AI And Siri Plans Draw Split Views",
       "date": "15/06/2026"
     },
     {
@@ -154,18 +159,13 @@
       "date": "15/06/2026"
     },
     {
-      "tick": "AAPL",
-      "text": "Indian officials survey farms around Tata iPhone parts plant after water pollution warning",
+      "tick": "MSFT",
+      "text": "Microsoft's Xbox Business Faces a Cost Shock",
       "date": "15/06/2026"
     },
     {
       "tick": "MSFT",
       "text": "Adobe’s Pivot: A Genius Bet Or A Costly Distraction?",
-      "date": "15/06/2026"
-    },
-    {
-      "tick": "MSFT",
-      "text": "Microsoft: Falling Knife or Once-in-a-Decade Buying Opportunity?",
       "date": "15/06/2026"
     },
     {
