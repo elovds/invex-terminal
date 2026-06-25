@@ -1,15 +1,15 @@
 {
-  "generated": "24/06/2026",
-  "lastUpdate": "24/06/2026",
-  "eurusd": 1.1343,
+  "generated": "25/06/2026",
+  "lastUpdate": "25/06/2026",
+  "eurusd": 1.1357,
   "portfolio_summary": {
-    "total_value_eur": 7135.07,
+    "total_value_eur": 7054.67,
     "total_capital": 6500.0,
-    "total_pnl_eur": 635.07,
-    "total_pnl_pct": 9.77,
+    "total_pnl_eur": 554.67,
+    "total_pnl_pct": 8.53,
     "cash": 237.91,
-    "sp500_ytd": 7.39,
-    "ibex_ytd": 10.98
+    "sp500_ytd": 7.29,
+    "ibex_ytd": 11.15
   },
   "holdings": [
     {
@@ -17,39 +17,39 @@
       "name": "Alphabet Inc.",
       "qty": 6,
       "entrada": 307.53,
-      "price": 346.13,
+      "price": 345.29,
       "cur": "USD",
       "color": "4da6ff",
       "yf": "GOOGL",
-      "pe": "23.8x",
+      "pe": "23.7x",
       "margin": "36.1%",
       "div": "25.0%",
-      "lo52": 167.55,
+      "lo52": 169.94,
       "hi52": 408.61,
       "rating": "Strong Buy",
       "target": "$433",
       "analysts": 53,
       "buys": 63,
-      "upside": 25.0,
-      "rsi": 41.0,
-      "ma20": 367.79,
-      "ma50": 368.4,
+      "upside": 25.4,
+      "rsi": 42.0,
+      "ma20": 365.62,
+      "ma50": 368.89,
       "signal": "VIGILAR ↓",
       "signal_reason": "per sota MA20 i MA50",
-      "pnl_pct": 12.55,
-      "pnl_eur": 204.18,
-      "value_eur": 1830.89
+      "pnl_pct": 12.28,
+      "pnl_eur": 199.49,
+      "value_eur": 1824.2
     },
     {
       "tick": "AAPL",
       "name": "Apple Inc.",
       "qty": 5,
       "entrada": 248.795,
-      "price": 294.3,
+      "price": 293.08,
       "cur": "USD",
       "color": "8b95a8",
       "yf": "AAPL",
-      "pe": "30.7x",
+      "pe": "30.5x",
       "margin": "32.3%",
       "div": "37.0%",
       "lo52": 199.26,
@@ -58,157 +58,162 @@
       "target": "$314",
       "analysts": 42,
       "buys": 31,
-      "upside": 6.8,
-      "rsi": 30.4,
-      "ma20": 302.27,
-      "ma50": 290.05,
+      "upside": 7.3,
+      "rsi": 32.7,
+      "ma20": 301.51,
+      "ma50": 290.73,
       "signal": "VIGILAR ↑",
-      "signal_reason": "RSI=30.4 proper a zona de compra",
-      "pnl_pct": 18.29,
-      "pnl_eur": 200.59,
-      "value_eur": 1297.28
+      "signal_reason": "RSI=32.7 proper a zona de compra",
+      "pnl_pct": 17.8,
+      "pnl_eur": 194.97,
+      "value_eur": 1290.31
     },
     {
       "tick": "MSFT",
       "name": "Microsoft Corp.",
       "qty": 6,
       "entrada": 388.335,
-      "price": 373.94,
+      "price": 365.46,
       "cur": "USD",
       "color": "a78bfa",
       "yf": "MSFT",
-      "pe": "19.3x",
+      "pe": "18.9x",
       "margin": "46.3%",
-      "div": "97.0%",
+      "div": "100.0%",
       "lo52": 356.28,
       "hi52": 555.45,
       "rating": "Strong Buy",
       "target": "$561",
       "analysts": 55,
       "buys": 55,
-      "upside": 50.1,
-      "rsi": 16.9,
-      "ma20": 408.33,
-      "ma50": 412.42,
+      "upside": 53.6,
+      "rsi": 17.9,
+      "ma20": 405.8,
+      "ma50": 412.06,
       "signal": "COMPRAR",
-      "signal_reason": "RSI=16.9 sobrevenut; proper al mínim 52S; per sota MA20 i MA50",
-      "pnl_pct": -3.71,
-      "pnl_eur": -76.14,
-      "value_eur": 1978.0
+      "signal_reason": "RSI=17.9 sobrevenut; proper al mínim 52S; per sota MA20 i MA50",
+      "pnl_pct": -5.89,
+      "pnl_eur": -120.85,
+      "value_eur": 1930.76
     },
     {
       "tick": "SAN",
       "name": "Banco Santander",
       "qty": 150,
       "entrada": 10.42,
-      "price": 11.94,
+      "price": 11.81,
       "cur": "EUR",
       "color": "00e5a0",
       "yf": "SAN.MC",
-      "pe": "9.8x",
+      "pe": "9.7x",
       "margin": "43.3%",
-      "div": "210.0%",
+      "div": "211.0%",
       "lo52": 6.84,
       "hi52": 12.05,
       "rating": "Buy",
       "target": "€12",
       "analysts": 20,
       "buys": 17,
-      "upside": 2.3,
-      "rsi": 78.8,
-      "ma20": 11.12,
-      "ma50": 10.69,
+      "upside": 3.4,
+      "rsi": 76.2,
+      "ma20": 11.17,
+      "ma50": 10.71,
       "signal": "VENDRE",
-      "signal_reason": "RSI=78.8 sobrecomprat; proper al màxim 52S; per sobre MA20 i MA50",
-      "pnl_pct": 14.59,
-      "pnl_eur": 228.0,
-      "value_eur": 1791.0
+      "signal_reason": "RSI=76.2 sobrecomprat; proper al màxim 52S; per sobre MA20 i MA50",
+      "pnl_pct": 13.34,
+      "pnl_eur": 208.5,
+      "value_eur": 1771.5
     }
   ],
   "alerts": [
     {
       "tick": "MSFT",
       "priority": "ALTA",
-      "msg": "🟢 MSFT — Microsoft Corp. | OPORTUNITAT DE COMPRA\nRSI actual: 16.9 (per sota de 30 = sobrevenut tècnicament).\nPreu actual: $373.94 | MA20: $408.33 | MA50: $412.42\nRang 52S: $356.28 – $555.45\nConsens analistes: Strong Buy (55 analistes) | Upside: +50.1%\nAcció suggerida: Considera obrir o augmentar posició. RSI<30 sovint precedeix recuperació."
+      "msg": "🟢 MSFT — Microsoft Corp. | OPORTUNITAT DE COMPRA\nRSI actual: 17.9 (per sota de 30 = sobrevenut tècnicament).\nPreu actual: $365.46 | MA20: $405.80 | MA50: $412.06\nRang 52S: $356.28 – $555.45\nConsens analistes: Strong Buy (55 analistes) | Upside: +53.6%\nAcció suggerida: Considera obrir o augmentar posició. RSI<30 sovint precedeix recuperació."
+    },
+    {
+      "tick": "MSFT",
+      "priority": "ALTA",
+      "msg": "🟡 MSFT — Microsoft Corp. | PROPER AL MÍNIM DE 52 SETMANES\nPreu: $365.46 | Mínim 52S: $356.28 (a 2.6% del mínim).\nZona de suport clau. Si el preu la trenca a la baixa, podria caure més.\nAcció suggerida: Revisa la tesi d'inversió. Si els fonamentals segueixen forts, pot ser una oportunitat. Si no, considera tallar pèrdues."
     },
     {
       "tick": "SAN",
       "priority": "ALTA",
-      "msg": "🔴 SAN — Banco Santander | ZONA DE SOBRECOMPRA\nRSI actual: 78.8 (per sobre de 70 = sobrecomprat tècnicament).\nPreu actual: €11.94 | MA20: €11.12 | MA50: €10.69\nP&L posició actual: +14.6%\nAcció suggerida: Considera reduir posició o posar stop-loss per protegir guanys."
+      "msg": "🔴 SAN — Banco Santander | ZONA DE SOBRECOMPRA\nRSI actual: 76.2 (per sobre de 70 = sobrecomprat tècnicament).\nPreu actual: €11.81 | MA20: €11.17 | MA50: €10.71\nP&L posició actual: +13.3%\nAcció suggerida: Considera reduir posició o posar stop-loss per protegir guanys."
     },
     {
       "tick": "MSFT",
       "priority": "MITJA",
-      "msg": "📈 MSFT — Microsoft Corp. | UPSIDE ELEVAT SEGONS ANALISTES\nObjectiu de preu consens: upside del +50.1% respecte al preu actual.\nPreu actual: $373.94 | Rating consens: Strong Buy (55 analistes)\nRSI: 16.9 | MA20: $408.33 | MA50: $412.42\nAcció suggerida: Considera augmentar posició si el RSI no és sobrecomprat i els fonamentals ho suporten."
+      "msg": "📈 MSFT — Microsoft Corp. | UPSIDE ELEVAT SEGONS ANALISTES\nObjectiu de preu consens: upside del +53.6% respecte al preu actual.\nPreu actual: $365.46 | Rating consens: Strong Buy (55 analistes)\nRSI: 17.9 | MA20: $405.80 | MA50: $412.06\nAcció suggerida: Considera augmentar posició si el RSI no és sobrecomprat i els fonamentals ho suporten."
     },
     {
       "tick": "SAN",
       "priority": "MITJA",
-      "msg": "⚠️ SAN — Banco Santander | PROPER AL MÀXIM DE 52 SETMANES\nPreu: €11.94 | Màxim 52S: €12.05 (a 0.9% del màxim).\nAquesta zona és una resistència tècnica forta. El preu pot rebotar a la baixa.\nAcció suggerida: Vigila el volum. Si trenca el màxim amb força, pot continuar pujant. Si no, considera recollir beneficis parcialment."
+      "msg": "⚠️ SAN — Banco Santander | PROPER AL MÀXIM DE 52 SETMANES\nPreu: €11.81 | Màxim 52S: €12.05 (a 2.0% del màxim).\nAquesta zona és una resistència tècnica forta. El preu pot rebotar a la baixa.\nAcció suggerida: Vigila el volum. Si trenca el màxim amb força, pot continuar pujant. Si no, considera recollir beneficis parcialment."
     }
   ],
   "news": [
     {
       "tick": "GOOGL",
-      "text": "Big Tech's $2.7 trillion AI bill comes due: Chart of the Day",
+      "text": "Alphabet makes the Dow look more like the Nasdaq",
       "date": "24/06/2026"
     },
     {
       "tick": "GOOGL",
-      "text": "The lessons that wearable tech companies can learn from FitBit",
-      "date": "23/06/2026"
-    },
-    {
-      "tick": "AAPL",
-      "text": "Big Tech's $2.7 trillion AI bill comes due: Chart of the Day",
+      "text": "Short sellers are coming after SpaceX as it sheds post-IPO gains",
       "date": "24/06/2026"
     },
     {
       "tick": "AAPL",
-      "text": "2 Unpopular Stocks That Deserve a Second Chance and 1 Facing Headwinds",
+      "text": "Alphabet makes the Dow look more like the Nasdaq",
+      "date": "24/06/2026"
+    },
+    {
+      "tick": "AAPL",
+      "text": "Big Tech's AI cash cushion is plummeting: Chart of the Day",
       "date": "24/06/2026"
     },
     {
       "tick": "MSFT",
-      "text": "Big Tech's $2.7 trillion AI bill comes due: Chart of the Day",
+      "text": "Alphabet makes the Dow look more like the Nasdaq",
       "date": "24/06/2026"
     },
     {
       "tick": "MSFT",
-      "text": "SpaceX stock in focus: Why this strategist says to think like Woody — not Buzz Lightyear",
-      "date": "23/06/2026"
+      "text": "Qualcomm debuts line of AI data center chips and systems, increasing competition with Nvidia",
+      "date": "24/06/2026"
+    },
+    {
+      "tick": "SAN",
+      "text": "Banco Santander (BME:SAN) Stock After 72% Yearly Gain Is Upside Already Priced In",
+      "date": "24/06/2026"
     },
     {
       "tick": "SAN",
       "text": "Santander ponders 3,000 early retirements in Spain amid AI shift: report",
       "date": "24/06/2026"
-    },
-    {
-      "tick": "SAN",
-      "text": "European Equities Traded in the US as American Depositary Receipts Fall Sharply in Tuesday Trading",
-      "date": "23/06/2026"
     }
   ],
   "earnings": [
     {
       "tick": "SAN",
       "date": "22/07/2026",
-      "days": 28
+      "days": 27
     },
     {
       "tick": "GOOGL",
       "date": "23/07/2026",
-      "days": 29
+      "days": 28
     },
     {
       "tick": "MSFT",
       "date": "29/07/2026",
-      "days": 35
+      "days": 34
     },
     {
       "tick": "AAPL",
       "date": "30/07/2026",
-      "days": 36
+      "days": 35
     }
   ]
 }
