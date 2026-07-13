@@ -3,13 +3,13 @@
   "lastUpdate": "13/07/2026",
   "eurusd": 1.1432,
   "portfolio_summary": {
-    "total_value_eur": 7332.32,
+    "total_value_eur": 7330.82,
     "total_capital": 6500.0,
-    "total_pnl_eur": 832.32,
-    "total_pnl_pct": 12.8,
+    "total_pnl_eur": 830.82,
+    "total_pnl_pct": 12.78,
     "cash": 237.91,
     "sp500_ytd": 10.45,
-    "ibex_ytd": 10.99
+    "ibex_ytd": 10.85
   },
   "holdings": [
     {
@@ -101,7 +101,7 @@
       "name": "Banco Santander",
       "qty": 150,
       "entrada": 10.42,
-      "price": 12.13,
+      "price": 12.12,
       "cur": "EUR",
       "color": "00e5a0",
       "yf": "SAN.MC",
@@ -114,15 +114,15 @@
       "target": "€13",
       "analysts": 20,
       "buys": 17,
-      "upside": 3.4,
-      "rsi": 55.4,
+      "upside": 3.5,
+      "rsi": 55.0,
       "ma20": 12.04,
       "ma50": 11.15,
       "signal": "MANTENIR",
       "signal_reason": "per sobre MA20 i MA50",
-      "pnl_pct": 16.41,
-      "pnl_eur": 256.5,
-      "value_eur": 1819.5
+      "pnl_pct": 16.31,
+      "pnl_eur": 255.0,
+      "value_eur": 1818.0
     }
   ],
   "alerts": [
@@ -150,12 +150,12 @@
     },
     {
       "tick": "AAPL",
-      "text": "What Lindsey Graham’s Death Means for the Balance of Power on Capitol Hill",
+      "text": "TSMC posts record revenue in second quarter on AI demand",
       "date": "13/07/2026"
     },
     {
       "tick": "AAPL",
-      "text": "Ranking the \"Magnificent 7\" Stocks by Free-Cash-Flow Yield",
+      "text": "What Lindsey Graham’s Death Means for the Balance of Power on Capitol Hill",
       "date": "13/07/2026"
     },
     {
