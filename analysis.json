@@ -1,14 +1,14 @@
 {
-  "generated": "10/07/2026",
-  "lastUpdate": "10/07/2026",
-  "eurusd": 1.1435,
+  "generated": "13/07/2026",
+  "lastUpdate": "13/07/2026",
+  "eurusd": 1.1432,
   "portfolio_summary": {
-    "total_value_eur": 7345.96,
+    "total_value_eur": 7332.32,
     "total_capital": 6500.0,
-    "total_pnl_eur": 845.96,
-    "total_pnl_pct": 13.01,
+    "total_pnl_eur": 832.32,
+    "total_pnl_pct": 12.8,
     "cash": 237.91,
-    "sp500_ytd": 9.99,
+    "sp500_ytd": 10.45,
     "ibex_ytd": 10.99
   },
   "holdings": [
@@ -17,39 +17,39 @@
       "name": "Alphabet Inc.",
       "qty": 6,
       "entrada": 307.53,
-      "price": 358.89,
+      "price": 357.18,
       "cur": "USD",
       "color": "4da6ff",
       "yf": "GOOGL",
-      "pe": "24.6x",
+      "pe": "24.5x",
       "margin": "36.1%",
-      "div": "24.0%",
-      "lo52": 174.38,
+      "div": "25.0%",
+      "lo52": 179.68,
       "hi52": 408.61,
       "rating": "Strong Buy",
       "target": "$432",
       "analysts": 53,
       "buys": 59,
-      "upside": 20.4,
-      "rsi": 46.7,
-      "ma20": 357.85,
-      "ma50": 372.47,
-      "signal": "MANTENIR",
-      "signal_reason": "sense senyals especials",
-      "pnl_pct": 16.7,
-      "pnl_eur": 269.49,
-      "value_eur": 1883.11
+      "upside": 20.9,
+      "rsi": 42.5,
+      "ma20": 357.88,
+      "ma50": 372.62,
+      "signal": "VIGILAR ↓",
+      "signal_reason": "per sota MA20 i MA50",
+      "pnl_pct": 16.14,
+      "pnl_eur": 260.58,
+      "value_eur": 1874.63
     },
     {
       "tick": "AAPL",
       "name": "Apple Inc.",
       "qty": 5,
       "entrada": 248.795,
-      "price": 316.22,
+      "price": 315.32,
       "cur": "USD",
       "color": "8b95a8",
       "yf": "AAPL",
-      "pe": "32.9x",
+      "pe": "32.8x",
       "margin": "32.3%",
       "div": "34.0%",
       "lo52": 201.5,
@@ -58,22 +58,22 @@
       "target": "$316",
       "analysts": 42,
       "buys": 32,
-      "upside": -0.2,
-      "rsi": 63.7,
-      "ma20": 296.92,
-      "ma50": 296.83,
+      "upside": 0.1,
+      "rsi": 61.9,
+      "ma20": 298.1,
+      "ma50": 297.73,
       "signal": "VIGILAR ↓",
-      "signal_reason": "RSI=63.7 proper a zona de venda; proper al màxim 52S; per sobre MA20 i MA50",
-      "pnl_pct": 27.1,
-      "pnl_eur": 294.82,
-      "value_eur": 1382.68
+      "signal_reason": "RSI=61.9 proper a zona de venda; proper al màxim 52S; per sobre MA20 i MA50",
+      "pnl_pct": 26.74,
+      "pnl_eur": 290.96,
+      "value_eur": 1379.11
     },
     {
       "tick": "MSFT",
       "name": "Microsoft Corp.",
       "qty": 6,
       "entrada": 388.335,
-      "price": 384.36,
+      "price": 385.1,
       "cur": "USD",
       "color": "a78bfa",
       "yf": "MSFT",
@@ -86,119 +86,119 @@
       "target": "$560",
       "analysts": 55,
       "buys": 52,
-      "upside": 45.7,
-      "rsi": 52.8,
-      "ma20": 381.13,
-      "ma50": 404.19,
+      "upside": 45.4,
+      "rsi": 52.9,
+      "ma20": 380.51,
+      "ma50": 403.33,
       "signal": "VIGILAR ↑",
-      "signal_reason": "upside analistes +45.7%",
-      "pnl_pct": -1.02,
-      "pnl_eur": -20.86,
-      "value_eur": 2016.76
+      "signal_reason": "upside analistes +45.4%",
+      "pnl_pct": -0.83,
+      "pnl_eur": -16.98,
+      "value_eur": 2021.17
     },
     {
       "tick": "SAN",
       "name": "Banco Santander",
       "qty": 150,
       "entrada": 10.42,
-      "price": 12.17,
+      "price": 12.13,
       "cur": "EUR",
       "color": "00e5a0",
       "yf": "SAN.MC",
       "pe": "9.9x",
       "margin": "43.3%",
-      "div": "208.0%",
+      "div": "206.0%",
       "lo52": 7.09,
       "hi52": 12.59,
       "rating": "Buy",
-      "target": "€12",
+      "target": "€13",
       "analysts": 20,
       "buys": 17,
-      "upside": 2.6,
-      "rsi": 54.5,
-      "ma20": 12.01,
-      "ma50": 11.11,
+      "upside": 3.4,
+      "rsi": 55.4,
+      "ma20": 12.04,
+      "ma50": 11.15,
       "signal": "MANTENIR",
       "signal_reason": "per sobre MA20 i MA50",
-      "pnl_pct": 16.79,
-      "pnl_eur": 262.5,
-      "value_eur": 1825.5
+      "pnl_pct": 16.41,
+      "pnl_eur": 256.5,
+      "value_eur": 1819.5
     }
   ],
   "alerts": [
     {
       "tick": "AAPL",
       "priority": "MITJA",
-      "msg": "⚠️ AAPL — Apple Inc. | PROPER AL MÀXIM DE 52 SETMANES\nPreu: $316.22 | Màxim 52S: $317.40 (a 0.4% del màxim).\nAquesta zona és una resistència tècnica forta. El preu pot rebotar a la baixa.\nAcció suggerida: Vigila el volum. Si trenca el màxim amb força, pot continuar pujant. Si no, considera recollir beneficis parcialment."
+      "msg": "⚠️ AAPL — Apple Inc. | PROPER AL MÀXIM DE 52 SETMANES\nPreu: $315.32 | Màxim 52S: $317.40 (a 0.7% del màxim).\nAquesta zona és una resistència tècnica forta. El preu pot rebotar a la baixa.\nAcció suggerida: Vigila el volum. Si trenca el màxim amb força, pot continuar pujant. Si no, considera recollir beneficis parcialment."
     },
     {
       "tick": "MSFT",
       "priority": "MITJA",
-      "msg": "📈 MSFT — Microsoft Corp. | UPSIDE ELEVAT SEGONS ANALISTES\nObjectiu de preu consens: upside del +45.7% respecte al preu actual.\nPreu actual: $384.36 | Rating consens: Strong Buy (55 analistes)\nRSI: 52.8 | MA20: $381.13 | MA50: $404.19\nAcció suggerida: Considera augmentar posició si el RSI no és sobrecomprat i els fonamentals ho suporten."
+      "msg": "📈 MSFT — Microsoft Corp. | UPSIDE ELEVAT SEGONS ANALISTES\nObjectiu de preu consens: upside del +45.4% respecte al preu actual.\nPreu actual: $385.10 | Rating consens: Strong Buy (55 analistes)\nRSI: 52.9 | MA20: $380.51 | MA50: $403.33\nAcció suggerida: Considera augmentar posició si el RSI no és sobrecomprat i els fonamentals ho suporten."
     }
   ],
   "news": [
     {
       "tick": "GOOGL",
-      "text": "SK Hynix's US listing, Delta earnings, housing bill: What to Watch",
-      "date": "09/07/2026"
+      "text": "Elon Musk Says He Was \"Clearly Wrong\" About Anthropic's Artificial Intelligence (AI) Models. Here's Why That's Outstanding News for Amazon and Alphabet Investors.",
+      "date": "13/07/2026"
     },
     {
       "tick": "GOOGL",
-      "text": "The 'Magnificent 7' stocks are trading at their cheapest valuation in more than a decade",
-      "date": "09/07/2026"
+      "text": "‘Portfolios are becoming much riskier’: How to make defensive investments before the AI bubble pops",
+      "date": "13/07/2026"
     },
     {
       "tick": "AAPL",
-      "text": "Take Five: Chips, banks and volatility",
-      "date": "10/07/2026"
+      "text": "What Lindsey Graham’s Death Means for the Balance of Power on Capitol Hill",
+      "date": "13/07/2026"
     },
     {
       "tick": "AAPL",
-      "text": "The Zacks Analyst Blog Highlights Apple, KLA, Western Digital and Optex Systems",
-      "date": "10/07/2026"
+      "text": "Ranking the \"Magnificent 7\" Stocks by Free-Cash-Flow Yield",
+      "date": "13/07/2026"
     },
     {
       "tick": "MSFT",
-      "text": "SK Hynix's US listing, Delta earnings, housing bill: What to Watch",
-      "date": "09/07/2026"
+      "text": "Elon Musk Says He Was \"Clearly Wrong\" About Anthropic's Artificial Intelligence (AI) Models. Here's Why That's Outstanding News for Amazon and Alphabet Investors.",
+      "date": "13/07/2026"
     },
     {
       "tick": "MSFT",
-      "text": "Apollo's Sløk: The market faces big risks if hyperscalers' AI profits get delayed",
-      "date": "09/07/2026"
+      "text": "‘Portfolios are becoming much riskier’: How to make defensive investments before the AI bubble pops",
+      "date": "13/07/2026"
     },
     {
       "tick": "SAN",
-      "text": "Avantus Secures $525 Million to Support Major California Solar-Plus-Storage Project",
-      "date": "09/07/2026"
+      "text": "Is Realty Income (O) One of the Best Stocks to Invest in Under $100?",
+      "date": "11/07/2026"
     },
     {
       "tick": "SAN",
-      "text": "European Equities Traded in the US as American Depositary Receipts Decline Sharply in Wednesday Trading",
-      "date": "08/07/2026"
+      "text": "Banco Santander (BME:SAN) Buybacks Put Its Valuation Back In Focus",
+      "date": "11/07/2026"
     }
   ],
   "earnings": [
     {
       "tick": "GOOGL",
       "date": "22/07/2026",
-      "days": 12
+      "days": 9
     },
     {
       "tick": "SAN",
       "date": "22/07/2026",
-      "days": 12
+      "days": 9
     },
     {
       "tick": "MSFT",
       "date": "29/07/2026",
-      "days": 19
+      "days": 16
     },
     {
       "tick": "AAPL",
       "date": "30/07/2026",
-      "days": 20
+      "days": 17
     }
   ]
 }
