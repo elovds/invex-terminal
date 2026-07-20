@@ -1,15 +1,15 @@
 {
   "generated": "20/07/2026",
   "lastUpdate": "20/07/2026",
-  "eurusd": 1.1436,
+  "eurusd": 1.1438,
   "portfolio_summary": {
-    "total_value_eur": 7360.15,
+    "total_value_eur": 7351.71,
     "total_capital": 6500.0,
-    "total_pnl_eur": 860.15,
-    "total_pnl_pct": 13.23,
+    "total_pnl_eur": 851.71,
+    "total_pnl_pct": 13.1,
     "cash": 237.91,
     "sp500_ytd": 8.74,
-    "ibex_ytd": 10.15
+    "ibex_ytd": 9.96
   },
   "holdings": [
     {
@@ -37,8 +37,8 @@
       "signal": "VIGILAR ↓",
       "signal_reason": "per sota MA20 i MA50",
       "pnl_pct": 12.76,
-      "pnl_eur": 205.88,
-      "value_eur": 1819.36
+      "pnl_eur": 205.84,
+      "value_eur": 1819.04
     },
     {
       "tick": "AAPL",
@@ -65,8 +65,8 @@
       "signal": "VENDRE",
       "signal_reason": "RSI=88.6 sobrecomprat; proper al màxim 52S; per sobre MA20 i MA50",
       "pnl_pct": 34.14,
-      "pnl_eur": 371.39,
-      "value_eur": 1459.16
+      "pnl_eur": 371.33,
+      "value_eur": 1458.91
     },
     {
       "tick": "MSFT",
@@ -93,15 +93,15 @@
       "signal": "VIGILAR ↓",
       "signal_reason": "RSI=63.9 proper a zona de venda",
       "pnl_pct": 1.41,
-      "pnl_eur": 28.78,
-      "value_eur": 2066.21
+      "pnl_eur": 28.77,
+      "value_eur": 2065.85
     },
     {
       "tick": "SAN",
       "name": "Banco Santander",
       "qty": 150,
       "entrada": 10.42,
-      "price": 11.85,
+      "price": 11.8,
       "cur": "EUR",
       "color": "00e5a0",
       "yf": "SAN.MC",
@@ -114,15 +114,15 @@
       "target": "€13",
       "analysts": 20,
       "buys": 17,
-      "upside": 7.9,
-      "rsi": 43.1,
+      "upside": 8.4,
+      "rsi": 41.7,
       "ma20": 12.05,
       "ma50": 11.29,
       "signal": "MANTENIR",
       "signal_reason": "sense senyals especials",
-      "pnl_pct": 13.72,
-      "pnl_eur": 214.5,
-      "value_eur": 1777.5
+      "pnl_pct": 13.24,
+      "pnl_eur": 207.0,
+      "value_eur": 1770.0
     }
   ],
   "alerts": [
@@ -139,7 +139,7 @@
     {
       "tick": "SAN",
       "priority": "ALTA",
-      "msg": "📅 SAN — Banco Santander | RESULTATS TRIMESTRALS EN 2 DIES\nPreu actual: €11.85 | P&L posició: +13.7%\nEls earnings poden generar moviments bruscos del ±5-15%.\nAcció suggerida: Decideix si vols mantenir la posició sencera durant els resultats o reduir parcialment per gestionar el risc de volatilitat."
+      "msg": "📅 SAN — Banco Santander | RESULTATS TRIMESTRALS EN 2 DIES\nPreu actual: €11.80 | P&L posició: +13.2%\nEls earnings poden generar moviments bruscos del ±5-15%.\nAcció suggerida: Decideix si vols mantenir la posició sencera durant els resultats o reduir parcialment per gestionar el risc de volatilitat."
     },
     {
       "tick": "AAPL",
@@ -175,12 +175,12 @@
     },
     {
       "tick": "MSFT",
-      "text": "GOOGL, MSFT, AMZN Stocks Rise Premarket: Analyst Says China’s Kimi K3 AI Fears ‘Misplaced’",
+      "text": "Here’s When Amazon’s ROI Will Pull Ahead of Microsoft’s in the AI Cloud Spend War",
       "date": "20/07/2026"
     },
     {
       "tick": "MSFT",
-      "text": "Microsoft CEO’s Anthropic criticism reveals bigger AI power struggle",
+      "text": "Is Microsoft Stock Too Cheap to Ignore?",
       "date": "20/07/2026"
     },
     {
