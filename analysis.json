@@ -1,15 +1,15 @@
 {
-  "generated": "22/07/2026",
-  "lastUpdate": "22/07/2026",
-  "eurusd": 1.1405,
+  "generated": "23/07/2026",
+  "lastUpdate": "23/07/2026",
+  "eurusd": 1.1414,
   "portfolio_summary": {
-    "total_value_eur": 7398.04,
+    "total_value_eur": 7296.17,
     "total_capital": 6500.0,
-    "total_pnl_eur": 898.04,
-    "total_pnl_pct": 13.82,
+    "total_pnl_eur": 796.17,
+    "total_pnl_pct": 12.25,
     "cash": 237.91,
-    "sp500_ytd": 9.49,
-    "ibex_ytd": 11.56
+    "sp500_ytd": 9.34,
+    "ibex_ytd": 11.17
   },
   "holdings": [
     {
@@ -17,39 +17,39 @@
       "name": "Alphabet Inc.",
       "qty": 6,
       "entrada": 307.53,
-      "price": 347.15,
+      "price": 342.09,
       "cur": "USD",
       "color": "4da6ff",
       "yf": "GOOGL",
-      "pe": "23.7x",
+      "pe": "23.3x",
       "margin": "36.1%",
       "div": "25.0%",
-      "lo52": 187.46,
+      "lo52": 187.82,
       "hi52": 408.61,
       "rating": "Strong Buy",
       "target": "$434",
       "analysts": 53,
-      "buys": 59,
-      "upside": 24.9,
-      "rsi": 43.6,
-      "ma20": 354.97,
-      "ma50": 368.56,
-      "signal": "VIGILAR ↓",
-      "signal_reason": "per sota MA20 i MA50",
-      "pnl_pct": 12.88,
-      "pnl_eur": 208.43,
-      "value_eur": 1826.3
+      "buys": 60,
+      "upside": 26.7,
+      "rsi": 38.1,
+      "ma20": 354.77,
+      "ma50": 367.39,
+      "signal": "VIGILAR ↑",
+      "signal_reason": "RSI=38.1 proper a zona de compra; per sota MA20 i MA50",
+      "pnl_pct": 11.24,
+      "pnl_eur": 181.67,
+      "value_eur": 1798.27
     },
     {
       "tick": "AAPL",
       "name": "Apple Inc.",
       "qty": 5,
       "entrada": 248.795,
-      "price": 327.74,
+      "price": 325.89,
       "cur": "USD",
       "color": "8b95a8",
       "yf": "AAPL",
-      "pe": "34.0x",
+      "pe": "33.8x",
       "margin": "32.3%",
       "div": "33.0%",
       "lo52": 201.5,
@@ -58,162 +58,147 @@
       "target": "$318",
       "analysts": 43,
       "buys": 32,
-      "upside": -2.9,
-      "rsi": 80.3,
-      "ma20": 308.48,
-      "ma50": 304.23,
+      "upside": -2.3,
+      "rsi": 76.2,
+      "ma20": 310.06,
+      "ma50": 304.89,
       "signal": "VENDRE",
-      "signal_reason": "RSI=80.3 sobrecomprat; proper al màxim 52S; per sobre MA20 i MA50",
-      "pnl_pct": 31.73,
-      "pnl_eur": 346.1,
-      "value_eur": 1436.83
+      "signal_reason": "RSI=76.2 sobrecomprat; proper al màxim 52S; per sobre MA20 i MA50",
+      "pnl_pct": 30.99,
+      "pnl_eur": 337.72,
+      "value_eur": 1427.59
     },
     {
       "tick": "MSFT",
       "name": "Microsoft Corp.",
       "qty": 6,
       "entrada": 388.335,
-      "price": 397.75,
+      "price": 390.34,
       "cur": "USD",
       "color": "a78bfa",
       "yf": "MSFT",
-      "pe": "20.5x",
+      "pe": "20.1x",
       "margin": "46.3%",
-      "div": "90.0%",
+      "div": "93.0%",
       "lo52": 349.2,
       "hi52": 555.45,
       "rating": "Strong Buy",
-      "target": "$558",
-      "analysts": 56,
+      "target": "$557",
+      "analysts": 55,
       "buys": 52,
-      "upside": 40.2,
-      "rsi": 65.7,
-      "ma20": 383.82,
-      "ma50": 400.66,
-      "signal": "VIGILAR ↓",
-      "signal_reason": "RSI=65.7 proper a zona de venda",
-      "pnl_pct": 2.42,
-      "pnl_eur": 49.53,
-      "value_eur": 2092.5
+      "upside": 42.6,
+      "rsi": 54.0,
+      "ma20": 384.64,
+      "ma50": 400.18,
+      "signal": "VIGILAR ↑",
+      "signal_reason": "upside analistes +42.6%",
+      "pnl_pct": 0.52,
+      "pnl_eur": 10.54,
+      "value_eur": 2051.9
     },
     {
       "tick": "SAN",
       "name": "Banco Santander",
       "qty": 150,
       "entrada": 10.42,
-      "price": 12.03,
+      "price": 11.87,
       "cur": "EUR",
       "color": "00e5a0",
       "yf": "SAN.MC",
-      "pe": "9.8x",
+      "pe": "9.6x",
       "margin": "43.3%",
-      "div": "213.0%",
-      "lo52": 7.14,
+      "div": "210.0%",
+      "lo52": 7.16,
       "hi52": 12.59,
       "rating": "Buy",
       "target": "€13",
       "analysts": 20,
       "buys": 17,
-      "upside": 6.3,
-      "rsi": 42.0,
+      "upside": 7.8,
+      "rsi": 36.1,
       "ma20": 12.05,
-      "ma50": 11.36,
-      "signal": "MANTENIR",
-      "signal_reason": "sense senyals especials",
-      "pnl_pct": 15.45,
-      "pnl_eur": 241.5,
-      "value_eur": 1804.5
+      "ma50": 11.39,
+      "signal": "VIGILAR ↑",
+      "signal_reason": "RSI=36.1 proper a zona de compra",
+      "pnl_pct": 13.92,
+      "pnl_eur": 217.5,
+      "value_eur": 1780.5
     }
   ],
   "alerts": [
     {
-      "tick": "GOOGL",
+      "tick": "AAPL",
       "priority": "ALTA",
-      "msg": "📅 GOOGL — Alphabet Inc. | RESULTATS TRIMESTRALS EN 0 DIES\nPreu actual: $347.15 | P&L posició: +12.9%\nEls earnings poden generar moviments bruscos del ±5-15%.\nAcció suggerida: Decideix si vols mantenir la posició sencera durant els resultats o reduir parcialment per gestionar el risc de volatilitat."
+      "msg": "🔴 AAPL — Apple Inc. | ZONA DE SOBRECOMPRA\nRSI actual: 76.2 (per sobre de 70 = sobrecomprat tècnicament).\nPreu actual: $325.89 | MA20: $310.06 | MA50: $304.89\nP&L posició actual: +31.0%\nAcció suggerida: Considera reduir posició o posar stop-loss per protegir guanys."
     },
     {
       "tick": "AAPL",
       "priority": "ALTA",
-      "msg": "🔴 AAPL — Apple Inc. | ZONA DE SOBRECOMPRA\nRSI actual: 80.3 (per sobre de 70 = sobrecomprat tècnicament).\nPreu actual: $327.74 | MA20: $308.48 | MA50: $304.23\nP&L posició actual: +31.7%\nAcció suggerida: Considera reduir posició o posar stop-loss per protegir guanys."
+      "msg": "📅 AAPL — Apple Inc. | RESULTATS TRIMESTRALS EN 7 DIES\nPreu actual: $325.89 | P&L posició: +31.0%\nEls earnings poden generar moviments bruscos del ±5-15%.\nAcció suggerida: Decideix si vols mantenir la posició sencera durant els resultats o reduir parcialment per gestionar el risc de volatilitat."
     },
     {
       "tick": "MSFT",
       "priority": "ALTA",
-      "msg": "📅 MSFT — Microsoft Corp. | RESULTATS TRIMESTRALS EN 7 DIES\nPreu actual: $397.75 | P&L posició: +2.4%\nEls earnings poden generar moviments bruscos del ±5-15%.\nAcció suggerida: Decideix si vols mantenir la posició sencera durant els resultats o reduir parcialment per gestionar el risc de volatilitat."
-    },
-    {
-      "tick": "SAN",
-      "priority": "ALTA",
-      "msg": "📅 SAN — Banco Santander | RESULTATS TRIMESTRALS EN 0 DIES\nPreu actual: €12.03 | P&L posició: +15.4%\nEls earnings poden generar moviments bruscos del ±5-15%.\nAcció suggerida: Decideix si vols mantenir la posició sencera durant els resultats o reduir parcialment per gestionar el risc de volatilitat."
+      "msg": "📅 MSFT — Microsoft Corp. | RESULTATS TRIMESTRALS EN 6 DIES\nPreu actual: $390.34 | P&L posició: +0.5%\nEls earnings poden generar moviments bruscos del ±5-15%.\nAcció suggerida: Decideix si vols mantenir la posició sencera durant els resultats o reduir parcialment per gestionar el risc de volatilitat."
     },
     {
       "tick": "MSFT",
       "priority": "MITJA",
-      "msg": "📈 MSFT — Microsoft Corp. | UPSIDE ELEVAT SEGONS ANALISTES\nObjectiu de preu consens: upside del +40.2% respecte al preu actual.\nPreu actual: $397.75 | Rating consens: Strong Buy (56 analistes)\nRSI: 65.7 | MA20: $383.82 | MA50: $400.66\nAcció suggerida: Considera augmentar posició si el RSI no és sobrecomprat i els fonamentals ho suporten."
+      "msg": "📈 MSFT — Microsoft Corp. | UPSIDE ELEVAT SEGONS ANALISTES\nObjectiu de preu consens: upside del +42.6% respecte al preu actual.\nPreu actual: $390.34 | Rating consens: Strong Buy (55 analistes)\nRSI: 54.0 | MA20: $384.64 | MA50: $400.18\nAcció suggerida: Considera augmentar posició si el RSI no és sobrecomprat i els fonamentals ho suporten."
     }
   ],
   "news": [
     {
       "tick": "GOOGL",
-      "text": "Earnings live: Danaher stock plunges on trimmed forecast, 3M stock surges",
-      "date": "20/07/2026"
+      "text": "Google Cloud is becoming Alphabet's new profit engine: Chart of the Day",
+      "date": "23/07/2026"
     },
     {
       "tick": "GOOGL",
-      "text": "Big Tech's big AI spending is 'a good thing' right now",
-      "date": "21/07/2026"
+      "text": "Inside Alphabet's earnings call with Google CEO Sundar Pichai",
+      "date": "22/07/2026"
     },
     {
       "tick": "AAPL",
-      "text": "Big Tech's big AI spending is 'a good thing' right now",
-      "date": "21/07/2026"
+      "text": "Elon Musk is 'in denial' that Tesla is just an EV company: Ross Gerber",
+      "date": "22/07/2026"
     },
     {
       "tick": "AAPL",
-      "text": "Apple vs. Nvidia: Which Is the Better Megacap Stock to Buy?",
+      "text": "Alphabet earnings offer a moment of truth in this tech stock battle",
       "date": "22/07/2026"
     },
     {
       "tick": "MSFT",
-      "text": "3M turns to AI to fuel turnaround",
-      "date": "21/07/2026"
+      "text": "Anthropic and AMD are signing a major AI chip deal. What could this mean for Nvidia?",
+      "date": "22/07/2026"
     },
     {
       "tick": "MSFT",
-      "text": "Why Richtech Robotics Stock Dived by Nearly 35% in the First Half of 2026",
+      "text": "Alphabet earnings offer a moment of truth in this tech stock battle",
       "date": "22/07/2026"
     },
     {
       "tick": "SAN",
-      "text": "Santander Sees Targets on Track After Customer Gains, Lending Boost Profit",
-      "date": "22/07/2026"
+      "text": "Santander contacts almost 150,000 customers under strain from energy bills",
+      "date": "23/07/2026"
     },
     {
       "tick": "SAN",
-      "text": "Santander vows not to shut more branches before 2028",
-      "date": "22/07/2026"
+      "text": "Santander (SAN) Q2 2026 Earnings Call Transcript",
+      "date": "23/07/2026"
     }
   ],
   "earnings": [
     {
-      "tick": "GOOGL",
-      "date": "22/07/2026",
-      "days": 0
-    },
-    {
-      "tick": "SAN",
-      "date": "22/07/2026",
-      "days": 0
-    },
-    {
       "tick": "MSFT",
       "date": "29/07/2026",
-      "days": 7
+      "days": 6
     },
     {
       "tick": "AAPL",
       "date": "30/07/2026",
-      "days": 8
+      "days": 7
     }
   ]
 }
