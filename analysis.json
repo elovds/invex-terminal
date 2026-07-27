@@ -1,15 +1,15 @@
 {
-  "generated": "24/07/2026",
-  "lastUpdate": "24/07/2026",
-  "eurusd": 1.1391,
+  "generated": "27/07/2026",
+  "lastUpdate": "27/07/2026",
+  "eurusd": 1.1405,
   "portfolio_summary": {
-    "total_value_eur": 7116.59,
+    "total_value_eur": 7234.55,
     "total_capital": 6500.0,
-    "total_pnl_eur": 616.59,
-    "total_pnl_pct": 9.49,
+    "total_pnl_eur": 734.55,
+    "total_pnl_pct": 11.3,
     "cash": 237.91,
-    "sp500_ytd": 8.02,
-    "ibex_ytd": 11.32
+    "sp500_ytd": NaN,
+    "ibex_ytd": 13.44
   },
   "holdings": [
     {
@@ -17,63 +17,63 @@
       "name": "Alphabet Inc.",
       "qty": 6,
       "entrada": 307.53,
-      "price": 317.69,
+      "price": 319.74,
       "cur": "USD",
       "color": "4da6ff",
       "yf": "GOOGL",
-      "pe": "21.5x",
+      "pe": "21.7x",
       "margin": "34.0%",
-      "div": "26.0%",
+      "div": "28.0%",
       "lo52": 187.82,
       "hi52": 408.61,
       "rating": "Strong Buy",
-      "target": "$434",
-      "analysts": 53,
+      "target": "$428",
+      "analysts": 54,
       "buys": 60,
-      "upside": 36.5,
+      "upside": 33.9,
       "rsi": 29.6,
       "ma20": 353.39,
       "ma50": 365.97,
       "signal": "COMPRAR",
       "signal_reason": "RSI=29.6 sobrevenut; per sota MA20 i MA50",
-      "pnl_pct": 3.3,
-      "pnl_eur": 53.52,
-      "value_eur": 1673.37
+      "pnl_pct": 3.97,
+      "pnl_eur": 64.23,
+      "value_eur": 1682.1
     },
     {
       "tick": "AAPL",
       "name": "Apple Inc.",
       "qty": 5,
       "entrada": 248.795,
-      "price": 321.66,
+      "price": 333.02,
       "cur": "USD",
       "color": "8b95a8",
       "yf": "AAPL",
-      "pe": "33.4x",
+      "pe": "34.5x",
       "margin": "32.3%",
-      "div": "33.0%",
+      "div": "32.0%",
       "lo52": 201.5,
       "hi52": 334.99,
       "rating": "Buy",
-      "target": "$318",
+      "target": "$319",
       "analysts": 43,
       "buys": 32,
-      "upside": -1.1,
+      "upside": -4.3,
       "rsi": 63.0,
       "ma20": 311.49,
       "ma50": 305.47,
       "signal": "VIGILAR ↓",
-      "signal_reason": "RSI=63.0 proper a zona de venda; per sobre MA20 i MA50",
-      "pnl_pct": 29.29,
-      "pnl_eur": 319.84,
-      "value_eur": 1411.9
+      "signal_reason": "RSI=63.0 proper a zona de venda; proper al màxim 52S; per sobre MA20 i MA50",
+      "pnl_pct": 33.85,
+      "pnl_eur": 369.25,
+      "value_eur": 1459.97
     },
     {
       "tick": "MSFT",
       "name": "Microsoft Corp.",
       "qty": 6,
       "entrada": 388.335,
-      "price": 381.58,
+      "price": 381.7,
       "cur": "USD",
       "color": "a78bfa",
       "yf": "MSFT",
@@ -92,118 +92,123 @@
       "ma50": 399.57,
       "signal": "VIGILAR ↓",
       "signal_reason": "per sota MA20 i MA50",
-      "pnl_pct": -1.74,
-      "pnl_eur": -35.58,
-      "value_eur": 2009.9
+      "pnl_pct": -1.71,
+      "pnl_eur": -34.91,
+      "value_eur": 2008.07
     },
     {
       "tick": "SAN",
       "name": "Banco Santander",
       "qty": 150,
       "entrada": 10.42,
-      "price": 11.89,
+      "price": 12.31,
       "cur": "EUR",
       "color": "00e5a0",
       "yf": "SAN.MC",
-      "pe": "9.6x",
-      "margin": "43.3%",
-      "div": "210.0%",
+      "pe": "9.9x",
+      "margin": "43.4%",
+      "div": "209.0%",
       "lo52": 7.16,
       "hi52": 12.59,
       "rating": "Buy",
       "target": "€13",
       "analysts": 20,
       "buys": 17,
-      "upside": 7.6,
-      "rsi": 37.0,
-      "ma20": 12.04,
-      "ma50": 11.42,
-      "signal": "VIGILAR ↑",
-      "signal_reason": "RSI=37.0 proper a zona de compra",
-      "pnl_pct": 14.11,
-      "pnl_eur": 220.5,
-      "value_eur": 1783.5
+      "upside": 4.4,
+      "rsi": 47.0,
+      "ma20": 12.07,
+      "ma50": 11.47,
+      "signal": "VIGILAR ↓",
+      "signal_reason": "proper al màxim 52S; per sobre MA20 i MA50",
+      "pnl_pct": 18.14,
+      "pnl_eur": 283.5,
+      "value_eur": 1846.5
     }
   ],
   "alerts": [
     {
       "tick": "GOOGL",
       "priority": "ALTA",
-      "msg": "🟢 GOOGL — Alphabet Inc. | OPORTUNITAT DE COMPRA\nRSI actual: 29.6 (per sota de 30 = sobrevenut tècnicament).\nPreu actual: $317.69 | MA20: $353.39 | MA50: $365.97\nRang 52S: $187.82 – $408.61\nConsens analistes: Strong Buy (53 analistes) | Upside: +36.5%\nAcció suggerida: Considera obrir o augmentar posició. RSI<30 sovint precedeix recuperació."
+      "msg": "🟢 GOOGL — Alphabet Inc. | OPORTUNITAT DE COMPRA\nRSI actual: 29.6 (per sota de 30 = sobrevenut tècnicament).\nPreu actual: $319.74 | MA20: $353.39 | MA50: $365.97\nRang 52S: $187.82 – $408.61\nConsens analistes: Strong Buy (54 analistes) | Upside: +33.9%\nAcció suggerida: Considera obrir o augmentar posició. RSI<30 sovint precedeix recuperació."
     },
     {
       "tick": "AAPL",
       "priority": "ALTA",
-      "msg": "📅 AAPL — Apple Inc. | RESULTATS TRIMESTRALS EN 6 DIES\nPreu actual: $321.66 | P&L posició: +29.3%\nEls earnings poden generar moviments bruscos del ±5-15%.\nAcció suggerida: Decideix si vols mantenir la posició sencera durant els resultats o reduir parcialment per gestionar el risc de volatilitat."
+      "msg": "📅 AAPL — Apple Inc. | RESULTATS TRIMESTRALS EN 3 DIES\nPreu actual: $333.02 | P&L posició: +33.9%\nEls earnings poden generar moviments bruscos del ±5-15%.\nAcció suggerida: Decideix si vols mantenir la posició sencera durant els resultats o reduir parcialment per gestionar el risc de volatilitat."
     },
     {
       "tick": "MSFT",
       "priority": "ALTA",
-      "msg": "📅 MSFT — Microsoft Corp. | RESULTATS TRIMESTRALS EN 5 DIES\nPreu actual: $381.58 | P&L posició: -1.7%\nEls earnings poden generar moviments bruscos del ±5-15%.\nAcció suggerida: Decideix si vols mantenir la posició sencera durant els resultats o reduir parcialment per gestionar el risc de volatilitat."
+      "msg": "📅 MSFT — Microsoft Corp. | RESULTATS TRIMESTRALS EN 2 DIES\nPreu actual: $381.70 | P&L posició: -1.7%\nEls earnings poden generar moviments bruscos del ±5-15%.\nAcció suggerida: Decideix si vols mantenir la posició sencera durant els resultats o reduir parcialment per gestionar el risc de volatilitat."
     },
     {
       "tick": "GOOGL",
       "priority": "MITJA",
-      "msg": "📈 GOOGL — Alphabet Inc. | UPSIDE ELEVAT SEGONS ANALISTES\nObjectiu de preu consens: upside del +36.5% respecte al preu actual.\nPreu actual: $317.69 | Rating consens: Strong Buy (53 analistes)\nRSI: 29.6 | MA20: $353.39 | MA50: $365.97\nAcció suggerida: Considera augmentar posició si el RSI no és sobrecomprat i els fonamentals ho suporten."
+      "msg": "📈 GOOGL — Alphabet Inc. | UPSIDE ELEVAT SEGONS ANALISTES\nObjectiu de preu consens: upside del +33.9% respecte al preu actual.\nPreu actual: $319.74 | Rating consens: Strong Buy (54 analistes)\nRSI: 29.6 | MA20: $353.39 | MA50: $365.97\nAcció suggerida: Considera augmentar posició si el RSI no és sobrecomprat i els fonamentals ho suporten."
+    },
+    {
+      "tick": "AAPL",
+      "priority": "MITJA",
+      "msg": "⚠️ AAPL — Apple Inc. | PROPER AL MÀXIM DE 52 SETMANES\nPreu: $333.02 | Màxim 52S: $334.99 (a 0.6% del màxim).\nAquesta zona és una resistència tècnica forta. El preu pot rebotar a la baixa.\nAcció suggerida: Vigila el volum. Si trenca el màxim amb força, pot continuar pujant. Si no, considera recollir beneficis parcialment."
     },
     {
       "tick": "MSFT",
       "priority": "MITJA",
-      "msg": "📈 MSFT — Microsoft Corp. | UPSIDE ELEVAT SEGONS ANALISTES\nObjectiu de preu consens: upside del +45.9% respecte al preu actual.\nPreu actual: $381.58 | Rating consens: Strong Buy (55 analistes)\nRSI: 44.3 | MA20: $385.45 | MA50: $399.57\nAcció suggerida: Considera augmentar posició si el RSI no és sobrecomprat i els fonamentals ho suporten."
+      "msg": "📈 MSFT — Microsoft Corp. | UPSIDE ELEVAT SEGONS ANALISTES\nObjectiu de preu consens: upside del +45.9% respecte al preu actual.\nPreu actual: $381.70 | Rating consens: Strong Buy (55 analistes)\nRSI: 44.3 | MA20: $385.45 | MA50: $399.57\nAcció suggerida: Considera augmentar posició si el RSI no és sobrecomprat i els fonamentals ho suporten."
     }
   ],
   "news": [
     {
       "tick": "GOOGL",
-      "text": "Stock market today: Dow, S&P 500, Nasdaq futures rise after tech rout as new Trump tariffs take effect",
-      "date": "24/07/2026"
+      "text": "How Zynga changed gaming forever with FarmVille: Mark Pincus",
+      "date": "27/07/2026"
     },
     {
       "tick": "GOOGL",
-      "text": "2 reasons why Microsoft belongs in your portfolio: D.A. Davidson's Gil Luria",
-      "date": "23/07/2026"
+      "text": "Market Chatter: Alphabet's Waymo Robotaxis Face Parking Fines in Austin",
+      "date": "27/07/2026"
     },
     {
       "tick": "AAPL",
-      "text": "'Magnificent 7' stocks erase $797 billion in market value in worst day since April 2025",
-      "date": "23/07/2026"
+      "text": "4 Big Tech earnings reports, a Fed meeting, and $100 oil: It's the busiest week of the quarter",
+      "date": "26/07/2026"
     },
     {
       "tick": "AAPL",
-      "text": "Apple is 'standing out' from the pack: Does it represent the anti-AI trade?",
-      "date": "23/07/2026"
+      "text": "US Equity Investors to Focus on Mag-7 Earnings, Fed Policy Statements This Week as Halted Iran Strikes Make Way for Diplomacy",
+      "date": "27/07/2026"
     },
     {
       "tick": "MSFT",
-      "text": "2 reasons why Microsoft belongs in your portfolio: D.A. Davidson's Gil Luria",
-      "date": "23/07/2026"
+      "text": "4 Big Tech earnings reports, a Fed meeting, and $100 oil: It's the busiest week of the quarter",
+      "date": "26/07/2026"
     },
     {
       "tick": "MSFT",
-      "text": "Google, Amazon, Meta, & Microsoft will spend 'unprecedented' $1T on AI capex in 2027: Analyst",
-      "date": "23/07/2026"
+      "text": "Nebius Just Revealed the Biggest Problem Facing Neocloud Stocks",
+      "date": "27/07/2026"
     },
     {
       "tick": "SAN",
-      "text": "European Equities Traded in the US as American Depositary Receipts Fall in Thursday Trading",
-      "date": "23/07/2026"
+      "text": "Banco Santander (BME:SAN) Stock Still Looks Undervalued On Its 328% 5 Year Run",
+      "date": "24/07/2026"
     },
     {
       "tick": "SAN",
-      "text": "Cembra Money Bank AG (XSWX:CMBN) (Q2 2026) Earnings Call Highlights: Strong Net Income Growth ...",
-      "date": "23/07/2026"
+      "text": "European Equities Traded in the US as American Depositary Receipts Rise in Friday Trading",
+      "date": "24/07/2026"
     }
   ],
   "earnings": [
     {
       "tick": "MSFT",
       "date": "29/07/2026",
-      "days": 5
+      "days": 2
     },
     {
       "tick": "AAPL",
       "date": "30/07/2026",
-      "days": 6
+      "days": 3
     }
   ]
 }
