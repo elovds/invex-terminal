@@ -1,15 +1,15 @@
 {
   "generated": "03/08/2026",
   "lastUpdate": "03/08/2026",
-  "eurusd": 1.1525,
+  "eurusd": 1.1526,
   "portfolio_summary": {
-    "total_value_eur": 7726.49,
+    "total_value_eur": 7726.0,
     "total_capital": 6500.0,
-    "total_pnl_eur": 1226.49,
-    "total_pnl_pct": 18.87,
+    "total_pnl_eur": 1226.0,
+    "total_pnl_pct": 18.86,
     "cash": 237.91,
     "sp500_ytd": 9.2,
-    "ibex_ytd": 13.96
+    "ibex_ytd": 13.97
   },
   "holdings": [
     {
@@ -37,8 +37,8 @@
       "signal": "MANTENIR",
       "signal_reason": "sense senyals especials",
       "pnl_pct": 15.8,
-      "pnl_eur": 253.02,
-      "value_eur": 1854.04
+      "pnl_eur": 252.99,
+      "value_eur": 1853.88
     },
     {
       "tick": "AAPL",
@@ -65,8 +65,8 @@
       "signal": "VIGILAR ↓",
       "signal_reason": "per sota MA20 i MA50",
       "pnl_pct": 24.16,
-      "pnl_eur": 260.8,
-      "value_eur": 1340.17
+      "pnl_eur": 260.78,
+      "value_eur": 1340.06
     },
     {
       "tick": "MSFT",
@@ -93,8 +93,8 @@
       "signal": "VENDRE",
       "signal_reason": "RSI=75.0 sobrecomprat; per sobre MA20 i MA50",
       "pnl_pct": 19.67,
-      "pnl_eur": 397.67,
-      "value_eur": 2419.37
+      "pnl_eur": 397.63,
+      "value_eur": 2419.16
     },
     {
       "tick": "SAN",
@@ -140,12 +140,12 @@
   "news": [
     {
       "tick": "GOOGL",
-      "text": "Warren Buffett's Successor, Greg Abel, Started His Tenure With a Bang by Slashing Berkshire's Chevron Stake and Making a Virtual Monopoly the New No. 5 Holding",
+      "text": "Michael Saylor Says SpaceX, Google and Meta's AI Spending Is a 'Headwind' for Bitcoin",
       "date": "03/08/2026"
     },
     {
       "tick": "GOOGL",
-      "text": "Microsoft, Amazon and Alphabet's are part of Zacks Earnings Preview",
+      "text": "How to Play the Flood of AI Bonds",
       "date": "03/08/2026"
     },
     {
@@ -160,12 +160,12 @@
     },
     {
       "tick": "MSFT",
-      "text": "Mark Zuckerberg Just Explained Why Iren Has an Edge Over Other Neoclouds",
+      "text": "AMD to report Q2 earnings as chip stocks continue to waver",
       "date": "03/08/2026"
     },
     {
       "tick": "MSFT",
-      "text": "What Salesforce’s (CRM) $1.6 Billion VA Contract Signals for Its Government Cloud Strategy",
+      "text": "Mark Zuckerberg Just Explained Why Iren Has an Edge Over Other Neoclouds",
       "date": "03/08/2026"
     },
     {
