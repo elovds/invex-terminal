@@ -1,15 +1,15 @@
 {
-  "generated": "07/08/2026",
-  "lastUpdate": "07/08/2026",
-  "eurusd": 1.1526,
+  "generated": "10/08/2026",
+  "lastUpdate": "10/08/2026",
+  "eurusd": 1.1567,
   "portfolio_summary": {
-    "total_value_eur": 7968.54,
+    "total_value_eur": 7940.67,
     "total_capital": 6500.0,
-    "total_pnl_eur": 1468.54,
-    "total_pnl_pct": 22.59,
+    "total_pnl_eur": 1440.67,
+    "total_pnl_pct": 22.16,
     "cash": 237.91,
-    "sp500_ytd": 12.42,
-    "ibex_ytd": 14.82
+    "sp500_ytd": 13.11,
+    "ibex_ytd": 15.02
   },
   "holdings": [
     {
@@ -17,188 +17,188 @@
       "name": "Alphabet Inc.",
       "qty": 6,
       "entrada": 307.53,
-      "price": 357.75,
+      "price": 354.3,
       "cur": "USD",
       "color": "4da6ff",
       "yf": "GOOGL",
-      "pe": "24.3x",
+      "pe": "24.0x",
       "margin": "34.0%",
-      "div": "24.0%",
-      "lo52": 194.33,
+      "div": "25.0%",
+      "lo52": 196.6,
       "hi52": 408.61,
       "rating": "Strong Buy",
       "target": "$428",
       "analysts": 55,
       "buys": 58,
-      "upside": 19.6,
-      "rsi": 54.4,
-      "ma20": 348.91,
-      "ma50": 357.16,
+      "upside": 20.8,
+      "rsi": 50.9,
+      "ma20": 348.76,
+      "ma50": 356.47,
       "signal": "MANTENIR",
-      "signal_reason": "per sobre MA20 i MA50",
-      "pnl_pct": 16.33,
-      "pnl_eur": 261.43,
-      "value_eur": 1862.31
+      "signal_reason": "sense senyals especials",
+      "pnl_pct": 15.21,
+      "pnl_eur": 242.6,
+      "value_eur": 1837.81
     },
     {
       "tick": "AAPL",
       "name": "Apple Inc.",
       "qty": 5,
       "entrada": 248.795,
-      "price": 312.41,
+      "price": 313.33,
       "cur": "USD",
       "color": "8b95a8",
       "yf": "AAPL",
-      "pe": "32.8x",
+      "pe": "32.9x",
       "margin": "32.6%",
-      "div": "35.0%",
-      "lo52": 216.58,
+      "div": "34.0%",
+      "lo52": 223.78,
       "hi52": 344.57,
       "rating": "Buy",
-      "target": "$321",
-      "analysts": 40,
+      "target": "$323",
+      "analysts": 41,
       "buys": 30,
-      "upside": 2.7,
-      "rsi": 36.4,
-      "ma20": 323.53,
-      "ma50": 309.74,
-      "signal": "VIGILAR ↑",
-      "signal_reason": "RSI=36.4 proper a zona de compra",
-      "pnl_pct": 25.57,
-      "pnl_eur": 275.96,
-      "value_eur": 1355.24
+      "upside": 3.0,
+      "rsi": 40.8,
+      "ma20": 323.43,
+      "ma50": 309.79,
+      "signal": "MANTENIR",
+      "signal_reason": "sense senyals especials",
+      "pnl_pct": 25.94,
+      "pnl_eur": 278.96,
+      "value_eur": 1354.41
     },
     {
       "tick": "MSFT",
       "name": "Microsoft Corp.",
       "qty": 6,
       "entrada": 388.335,
-      "price": 499.86,
+      "price": 499.99,
       "cur": "USD",
       "color": "a78bfa",
       "yf": "MSFT",
       "pe": "21.3x",
       "margin": "45.1%",
-      "div": "75.0%",
+      "div": "73.0%",
       "lo52": 349.2,
       "hi52": 553.72,
       "rating": "Strong Buy",
-      "target": "$563",
+      "target": "$564",
       "analysts": 53,
       "buys": 53,
-      "upside": 12.7,
-      "rsi": 82.4,
-      "ma20": 418.09,
-      "ma50": 405.27,
+      "upside": 12.8,
+      "rsi": 81.4,
+      "ma20": 423.83,
+      "ma50": 407.01,
       "signal": "VENDRE",
-      "signal_reason": "RSI=82.4 sobrecomprat; per sobre MA20 i MA50",
-      "pnl_pct": 28.72,
-      "pnl_eur": 580.56,
-      "value_eur": 2602.08
+      "signal_reason": "RSI=81.4 sobrecomprat; per sobre MA20 i MA50",
+      "pnl_pct": 28.75,
+      "pnl_eur": 579.17,
+      "value_eur": 2593.53
     },
     {
       "tick": "SAN",
       "name": "Banco Santander",
       "qty": 150,
       "entrada": 10.42,
-      "price": 12.74,
+      "price": 12.78,
       "cur": "EUR",
       "color": "00e5a0",
       "yf": "SAN.MC",
       "pe": "10.3x",
       "margin": "43.4%",
-      "div": "196.0%",
-      "lo52": 7.62,
-      "hi52": 12.86,
+      "div": "194.0%",
+      "lo52": 7.81,
+      "hi52": 13.03,
       "rating": "Buy",
       "target": "€13",
       "analysts": 20,
       "buys": 17,
-      "upside": 2.9,
-      "rsi": 67.8,
-      "ma20": 12.18,
-      "ma50": 11.8,
+      "upside": 2.6,
+      "rsi": 66.8,
+      "ma20": 12.23,
+      "ma50": 11.85,
       "signal": "VIGILAR ↓",
-      "signal_reason": "RSI=67.8 proper a zona de venda; proper al màxim 52S; per sobre MA20 i MA50",
-      "pnl_pct": 22.26,
-      "pnl_eur": 348.0,
-      "value_eur": 1911.0
+      "signal_reason": "RSI=66.8 proper a zona de venda; proper al màxim 52S; per sobre MA20 i MA50",
+      "pnl_pct": 22.65,
+      "pnl_eur": 354.0,
+      "value_eur": 1917.0
     }
   ],
   "alerts": [
     {
       "tick": "MSFT",
       "priority": "ALTA",
-      "msg": "🔴 MSFT — Microsoft Corp. | ZONA DE SOBRECOMPRA\nRSI actual: 82.4 (per sobre de 70 = sobrecomprat tècnicament).\nPreu actual: $499.86 | MA20: $418.09 | MA50: $405.27\nP&L posició actual: +28.7%\nAcció suggerida: Considera reduir posició o posar stop-loss per protegir guanys."
+      "msg": "🔴 MSFT — Microsoft Corp. | ZONA DE SOBRECOMPRA\nRSI actual: 81.4 (per sobre de 70 = sobrecomprat tècnicament).\nPreu actual: $499.99 | MA20: $423.83 | MA50: $407.01\nP&L posició actual: +28.8%\nAcció suggerida: Considera reduir posició o posar stop-loss per protegir guanys."
     },
     {
       "tick": "SAN",
       "priority": "MITJA",
-      "msg": "⚠️ SAN — Banco Santander | PROPER AL MÀXIM DE 52 SETMANES\nPreu: €12.74 | Màxim 52S: €12.86 (a 0.9% del màxim).\nAquesta zona és una resistència tècnica forta. El preu pot rebotar a la baixa.\nAcció suggerida: Vigila el volum. Si trenca el màxim amb força, pot continuar pujant. Si no, considera recollir beneficis parcialment."
+      "msg": "⚠️ SAN — Banco Santander | PROPER AL MÀXIM DE 52 SETMANES\nPreu: €12.78 | Màxim 52S: €13.03 (a 1.9% del màxim).\nAquesta zona és una resistència tècnica forta. El preu pot rebotar a la baixa.\nAcció suggerida: Vigila el volum. Si trenca el màxim amb força, pot continuar pujant. Si no, considera recollir beneficis parcialment."
     }
   ],
   "news": [
     {
       "tick": "GOOGL",
-      "text": "Tech stocks today: SpaceX lockup ends, Google faces AI leadership shakeup",
-      "date": "03/08/2026"
+      "text": "Ross Gerber Cites Data to Make a Point: Take Out Alphabet and Amazon, S&P 500 Earnings Growth Looks Far Less Impressive",
+      "date": "10/08/2026"
     },
     {
       "tick": "GOOGL",
-      "text": "What the bond market is signaling for SpaceX's hopes to ramp up debt sales",
-      "date": "06/08/2026"
+      "text": "Apple’s Foldable Phone, Whoop-Like Band, CXMT Memory Tests Buzz Keep Traders Hooked",
+      "date": "10/08/2026"
     },
     {
       "tick": "AAPL",
-      "text": "Snap’s 2 Big Problems That Scream ‘Stay Away From the Stock’",
-      "date": "07/08/2026"
+      "text": "Apple Tests China's CXMT Memory Chips for iPhones and Macbooks Amid AI-Fueled Supply Crunch: Report",
+      "date": "10/08/2026"
     },
     {
       "tick": "AAPL",
-      "text": "Apple’s Capex Strategy Worked But Other Pressures Are Mounting Now",
-      "date": "07/08/2026"
+      "text": "Apple’s Foldable Phone, Whoop-Like Band, CXMT Memory Tests Buzz Keep Traders Hooked",
+      "date": "10/08/2026"
     },
     {
       "tick": "MSFT",
-      "text": "Microsoft is starting to show its payoff on major AI plays",
-      "date": "06/08/2026"
+      "text": "'Very little to like': Wall Street assesses surprise July jobs report as stocks jump",
+      "date": "09/08/2026"
     },
     {
       "tick": "MSFT",
-      "text": "Michael Burry Shares 'Three Great Charts' That Show Big AI Capex Could Unwind As Badly As Housing Did In 2008",
+      "text": "Can Microsoft Out-AI OpenAI And Anthropic? SemiAnalysis Says Yes,  Points To $100B-Per-GW Inference Opportunity",
+      "date": "10/08/2026"
+    },
+    {
+      "tick": "SAN",
+      "text": "Banco Santander (BME:SAN) Wins Webster Approval, Is The Stock Fully Valued?",
+      "date": "08/08/2026"
+    },
+    {
+      "tick": "SAN",
+      "text": "Banco Santander (BME:SAN) Stock May Be 31% Undervalued On Fed Deal Approval",
       "date": "07/08/2026"
-    },
-    {
-      "tick": "SAN",
-      "text": "US Fed clears Santander’s $12.2bn purchase of Webster",
-      "date": "06/08/2026"
-    },
-    {
-      "tick": "SAN",
-      "text": "European Stocks Close Mostly Higher in Wednesday Trading as Investors Monitor Middle East Developments",
-      "date": "05/08/2026"
     }
   ],
   "earnings": [
     {
       "tick": "GOOGL",
       "date": "28/10/2026",
-      "days": 82
+      "days": 79
     },
     {
       "tick": "MSFT",
       "date": "28/10/2026",
-      "days": 82
+      "days": 79
     },
     {
       "tick": "SAN",
       "date": "28/10/2026",
-      "days": 82
+      "days": 79
     },
     {
       "tick": "AAPL",
       "date": "29/10/2026",
-      "days": 83
+      "days": 80
     }
   ]
 }
