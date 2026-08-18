@@ -1,15 +1,15 @@
 {
-  "generated": "17/08/2026",
-  "lastUpdate": "17/08/2026",
-  "eurusd": 1.1616,
+  "generated": "18/08/2026",
+  "lastUpdate": "18/08/2026",
+  "eurusd": 1.1575,
   "portfolio_summary": {
-    "total_value_eur": 7827.82,
+    "total_value_eur": 7724.04,
     "total_capital": 6500.0,
-    "total_pnl_eur": 1327.82,
-    "total_pnl_pct": 20.43,
+    "total_pnl_eur": 1224.04,
+    "total_pnl_pct": 18.83,
     "cash": 237.91,
-    "sp500_ytd": 13.52,
-    "ibex_ytd": 15.0
+    "sp500_ytd": NaN,
+    "ibex_ytd": 14.23
   },
   "holdings": [
     {
@@ -17,11 +17,11 @@
       "name": "Alphabet Inc.",
       "qty": 6,
       "entrada": 307.53,
-      "price": 345.9,
+      "price": 344.0,
       "cur": "USD",
       "color": "4da6ff",
       "yf": "GOOGL",
-      "pe": "23.5x",
+      "pe": "23.3x",
       "margin": "34.0%",
       "div": "25.0%",
       "lo52": 196.6,
@@ -30,54 +30,54 @@
       "target": "$428",
       "analysts": 55,
       "buys": 58,
-      "upside": 23.6,
+      "upside": 24.3,
       "rsi": 59.6,
       "ma20": 346.41,
       "ma50": 353.89,
       "signal": "VIGILAR ↓",
       "signal_reason": "per sota MA20 i MA50",
-      "pnl_pct": 12.48,
-      "pnl_eur": 198.19,
-      "value_eur": 1786.67
+      "pnl_pct": 11.86,
+      "pnl_eur": 189.05,
+      "value_eur": 1783.15
     },
     {
       "tick": "AAPL",
       "name": "Apple Inc.",
       "qty": 5,
       "entrada": 248.795,
-      "price": 305.93,
+      "price": 305.59,
       "cur": "USD",
       "color": "8b95a8",
       "yf": "AAPL",
-      "pe": "32.2x",
+      "pe": "32.1x",
       "margin": "32.6%",
       "div": "35.0%",
       "lo52": 223.78,
       "hi52": 344.57,
       "rating": "Buy",
-      "target": "$322",
+      "target": "$326",
       "analysts": 41,
       "buys": 30,
-      "upside": 5.3,
+      "upside": 6.6,
       "rsi": 26.1,
       "ma20": 318.22,
       "ma50": 308.95,
       "signal": "COMPRAR",
       "signal_reason": "RSI=26.1 sobrevenut; per sota MA20 i MA50",
-      "pnl_pct": 22.96,
-      "pnl_eur": 245.93,
-      "value_eur": 1316.85
+      "pnl_pct": 22.83,
+      "pnl_eur": 245.33,
+      "value_eur": 1320.04
     },
     {
       "tick": "MSFT",
       "name": "Microsoft Corp.",
       "qty": 6,
       "entrada": 388.335,
-      "price": 495.4,
+      "price": 480.35,
       "cur": "USD",
       "color": "a78bfa",
       "yf": "MSFT",
-      "pe": "21.0x",
+      "pe": "20.4x",
       "margin": "45.1%",
       "div": "73.0%",
       "lo52": 349.2,
@@ -86,26 +86,26 @@
       "target": "$570",
       "analysts": 53,
       "buys": 53,
-      "upside": 15.0,
+      "upside": 18.6,
       "rsi": 84.8,
       "ma20": 450.24,
       "ma50": 412.78,
       "signal": "VENDRE",
       "signal_reason": "RSI=84.8 sobrecomprat; per sobre MA20 i MA50",
-      "pnl_pct": 27.57,
-      "pnl_eur": 553.02,
-      "value_eur": 2558.88
+      "pnl_pct": 23.69,
+      "pnl_eur": 476.97,
+      "value_eur": 2489.94
     },
     {
       "tick": "SAN",
       "name": "Banco Santander",
       "qty": 150,
       "entrada": 10.42,
-      "price": 12.85,
+      "price": 12.62,
       "cur": "EUR",
       "color": "00e5a0",
       "yf": "SAN.MC",
-      "pe": "10.3x",
+      "pe": "10.1x",
       "margin": "43.4%",
       "div": "194.0%",
       "lo52": 12.38,
@@ -114,64 +114,64 @@
       "target": "€13",
       "analysts": 20,
       "buys": 17,
-      "upside": 2.3,
+      "upside": 4.1,
       "rsi": 50.0,
-      "ma20": 12.85,
-      "ma50": 12.85,
-      "signal": "VIGILAR ↓",
-      "signal_reason": "proper al màxim 52S; proper al mínim 52S",
-      "pnl_pct": 23.32,
-      "pnl_eur": 364.5,
-      "value_eur": 1927.5
+      "ma20": 12.62,
+      "ma50": 12.62,
+      "signal": "VIGILAR ↑",
+      "signal_reason": "proper al mínim 52S",
+      "pnl_pct": 21.11,
+      "pnl_eur": 330.0,
+      "value_eur": 1893.0
     }
   ],
   "alerts": [
     {
       "tick": "AAPL",
       "priority": "ALTA",
-      "msg": "🟢 AAPL — Apple Inc. | OPORTUNITAT DE COMPRA\nRSI actual: 26.1 (per sota de 30 = sobrevenut tècnicament).\nPreu actual: $305.93 | MA20: $318.22 | MA50: $308.95\nRang 52S: $223.78 – $344.57\nConsens analistes: Buy (41 analistes) | Upside: +5.3%\nAcció suggerida: Considera obrir o augmentar posició. RSI<30 sovint precedeix recuperació."
+      "msg": "🟢 AAPL — Apple Inc. | OPORTUNITAT DE COMPRA\nRSI actual: 26.1 (per sota de 30 = sobrevenut tècnicament).\nPreu actual: $305.59 | MA20: $318.22 | MA50: $308.95\nRang 52S: $223.78 – $344.57\nConsens analistes: Buy (41 analistes) | Upside: +6.6%\nAcció suggerida: Considera obrir o augmentar posició. RSI<30 sovint precedeix recuperació."
     },
     {
       "tick": "MSFT",
       "priority": "ALTA",
-      "msg": "🔴 MSFT — Microsoft Corp. | ZONA DE SOBRECOMPRA\nRSI actual: 84.8 (per sobre de 70 = sobrecomprat tècnicament).\nPreu actual: $495.40 | MA20: $450.24 | MA50: $412.78\nP&L posició actual: +27.6%\nAcció suggerida: Considera reduir posició o posar stop-loss per protegir guanys."
+      "msg": "🔴 MSFT — Microsoft Corp. | ZONA DE SOBRECOMPRA\nRSI actual: 84.8 (per sobre de 70 = sobrecomprat tècnicament).\nPreu actual: $480.35 | MA20: $450.24 | MA50: $412.78\nP&L posició actual: +23.7%\nAcció suggerida: Considera reduir posició o posar stop-loss per protegir guanys."
     },
     {
       "tick": "SAN",
-      "priority": "MITJA",
-      "msg": "⚠️ SAN — Banco Santander | PROPER AL MÀXIM DE 52 SETMANES\nPreu: €12.85 | Màxim 52S: €13.03 (a 1.4% del màxim).\nAquesta zona és una resistència tècnica forta. El preu pot rebotar a la baixa.\nAcció suggerida: Vigila el volum. Si trenca el màxim amb força, pot continuar pujant. Si no, considera recollir beneficis parcialment."
+      "priority": "ALTA",
+      "msg": "🟡 SAN — Banco Santander | PROPER AL MÍNIM DE 52 SETMANES\nPreu: €12.62 | Mínim 52S: €12.38 (a 1.9% del mínim).\nZona de suport clau. Si el preu la trenca a la baixa, podria caure més.\nAcció suggerida: Revisa la tesi d'inversió. Si els fonamentals segueixen forts, pot ser una oportunitat. Si no, considera tallar pèrdues."
     }
   ],
   "news": [
     {
       "tick": "GOOGL",
-      "text": "Payments processing firm Stripe to acquire OpenRouter for over $7bn – report",
+      "text": "SpaceX's biggest investors are finally visible — just as millions more shares unlock: Chart of the Day",
       "date": "17/08/2026"
     },
     {
       "tick": "GOOGL",
-      "text": "Alphabet's Reported $112 Billion Profit Included a $94 Billion Paper Gain From SpaceX. Here's What the Company Actually Earned.",
+      "text": "Why indie games are the next big tech investment: Gaming CEO",
       "date": "17/08/2026"
     },
     {
       "tick": "AAPL",
-      "text": "Ross Gerber Says 'Now Is a Good Time' to Buy iPhone 17 as Apple Prepares for Potential Price Hike With Next Model: 'If You're Looking…'",
+      "text": "Trump admin. urges Apple not to purchase Chinese memory chips, but this presents a problem",
       "date": "17/08/2026"
     },
     {
       "tick": "AAPL",
-      "text": "Micron Nears $1,000 – And Apple Could Be The Next Catalyst",
+      "text": "Apple vs. CoreWeave: Comparing Revenue Trends Between a Stable Tech Giant and a Rapidly Growing AI Neocloud",
+      "date": "18/08/2026"
+    },
+    {
+      "tick": "MSFT",
+      "text": "Could Microsoft spin off Xbox? Why it might be worth billions",
       "date": "17/08/2026"
     },
     {
       "tick": "MSFT",
-      "text": "Market Chatter: Nvidia Discussing $3 Billion Investment SB Energy's OpenAI Ohio Data Center",
-      "date": "17/08/2026"
-    },
-    {
-      "tick": "MSFT",
-      "text": "Michael Burry Says ‘You Could Have Heard It First’ — As Big Tech’s $3T AI Spending Risk Comes Into Focus",
-      "date": "17/08/2026"
+      "text": "CRWV vs NBIS vs IREN: Which Neocloud Operator To Bet On Right Now?",
+      "date": "18/08/2026"
     },
     {
       "tick": "SAN",
@@ -188,22 +188,22 @@
     {
       "tick": "GOOGL",
       "date": "28/10/2026",
-      "days": 72
+      "days": 71
     },
     {
       "tick": "MSFT",
       "date": "28/10/2026",
-      "days": 72
+      "days": 71
     },
     {
       "tick": "SAN",
       "date": "28/10/2026",
-      "days": 72
+      "days": 71
     },
     {
       "tick": "AAPL",
       "date": "29/10/2026",
-      "days": 73
+      "days": 72
     }
   ]
 }
