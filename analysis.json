@@ -1,15 +1,15 @@
 {
-  "generated": "24/08/2026",
-  "lastUpdate": "24/08/2026",
-  "eurusd": 1.1665,
+  "generated": "25/08/2026",
+  "lastUpdate": "25/08/2026",
+  "eurusd": 1.1666,
   "portfolio_summary": {
-    "total_value_eur": 7705.59,
+    "total_value_eur": 7770.95,
     "total_capital": 6500.0,
-    "total_pnl_eur": 1205.59,
-    "total_pnl_pct": 18.55,
+    "total_pnl_eur": 1270.95,
+    "total_pnl_pct": 19.55,
     "cash": 237.91,
-    "sp500_ytd": 11.9,
-    "ibex_ytd": 14.31
+    "sp500_ytd": 11.58,
+    "ibex_ytd": 15.09
   },
   "holdings": [
     {
@@ -17,39 +17,39 @@
       "name": "Alphabet Inc.",
       "qty": 6,
       "entrada": 307.53,
-      "price": 344.82,
+      "price": 348.06,
       "cur": "USD",
       "color": "4da6ff",
       "yf": "GOOGL",
-      "pe": "23.3x",
+      "pe": "23.5x",
       "margin": "34.0%",
       "div": "26.0%",
-      "lo52": 205.28,
+      "lo52": 205.65,
       "hi52": 408.61,
       "rating": "Strong Buy",
       "target": "$428",
       "analysts": 54,
       "buys": 58,
-      "upside": 24.1,
-      "rsi": 25.6,
-      "ma20": 348.4,
-      "ma50": 351.77,
+      "upside": 23.0,
+      "rsi": 24.4,
+      "ma20": 349.47,
+      "ma50": 351.57,
       "signal": "COMPRAR",
-      "signal_reason": "RSI=25.6 sobrevenut; per sota MA20 i MA50",
-      "pnl_pct": 12.13,
-      "pnl_eur": 191.8,
-      "value_eur": 1773.61
+      "signal_reason": "RSI=24.4 sobrevenut; per sota MA20 i MA50",
+      "pnl_pct": 13.18,
+      "pnl_eur": 208.45,
+      "value_eur": 1790.13
     },
     {
       "tick": "AAPL",
       "name": "Apple Inc.",
       "qty": 5,
       "entrada": 248.795,
-      "price": 309.35,
+      "price": 310.34,
       "cur": "USD",
       "color": "8b95a8",
       "yf": "AAPL",
-      "pe": "32.4x",
+      "pe": "32.5x",
       "margin": "32.6%",
       "div": "35.0%",
       "lo52": 224.69,
@@ -58,26 +58,26 @@
       "target": "$324",
       "analysts": 39,
       "buys": 30,
-      "upside": 4.9,
-      "rsi": 57.1,
-      "ma20": 314.2,
-      "ma50": 309.99,
-      "signal": "VIGILAR ↓",
-      "signal_reason": "per sota MA20 i MA50",
-      "pnl_pct": 24.34,
-      "pnl_eur": 259.56,
-      "value_eur": 1325.98
+      "upside": 4.5,
+      "rsi": 51.6,
+      "ma20": 312.89,
+      "ma50": 310.29,
+      "signal": "MANTENIR",
+      "signal_reason": "sense senyals especials",
+      "pnl_pct": 24.74,
+      "pnl_eur": 263.78,
+      "value_eur": 1330.1
     },
     {
       "tick": "MSFT",
       "name": "Microsoft Corp.",
       "qty": 6,
       "entrada": 388.335,
-      "price": 483.24,
+      "price": 487.31,
       "cur": "USD",
       "color": "a78bfa",
       "yf": "MSFT",
-      "pe": "20.5x",
+      "pe": "20.7x",
       "margin": "45.1%",
       "div": "75.0%",
       "lo52": 349.2,
@@ -86,26 +86,26 @@
       "target": "$569",
       "analysts": 52,
       "buys": 53,
-      "upside": 17.8,
-      "rsi": 47.6,
-      "ma20": 472.29,
-      "ma50": 419.09,
+      "upside": 16.9,
+      "rsi": 46.8,
+      "ma20": 477.24,
+      "ma50": 421.05,
       "signal": "MANTENIR",
       "signal_reason": "per sobre MA20 i MA50",
-      "pnl_pct": 24.44,
-      "pnl_eur": 488.15,
-      "value_eur": 2485.59
+      "pnl_pct": 25.49,
+      "pnl_eur": 509.04,
+      "value_eur": 2506.31
     },
     {
       "tick": "SAN",
       "name": "Banco Santander",
       "qty": 150,
       "entrada": 10.42,
-      "price": 12.55,
+      "price": 12.71,
       "cur": "EUR",
       "color": "00e5a0",
       "yf": "SAN.MC",
-      "pe": "10.0x",
+      "pe": "10.2x",
       "margin": "43.4%",
       "div": "199.0%",
       "lo52": 7.99,
@@ -114,43 +114,43 @@
       "target": "€13",
       "analysts": 20,
       "buys": 17,
-      "upside": 4.7,
-      "rsi": 46.5,
-      "ma20": 12.58,
+      "upside": 3.4,
+      "rsi": 52.2,
+      "ma20": 12.59,
       "ma50": 12.23,
       "signal": "MANTENIR",
-      "signal_reason": "sense senyals especials",
-      "pnl_pct": 20.44,
-      "pnl_eur": 319.5,
-      "value_eur": 1882.5
+      "signal_reason": "per sobre MA20 i MA50",
+      "pnl_pct": 21.98,
+      "pnl_eur": 343.5,
+      "value_eur": 1906.5
     }
   ],
   "alerts": [
     {
       "tick": "GOOGL",
       "priority": "ALTA",
-      "msg": "🟢 GOOGL — Alphabet Inc. | OPORTUNITAT DE COMPRA\nRSI actual: 25.6 (per sota de 30 = sobrevenut tècnicament).\nPreu actual: $344.82 | MA20: $348.40 | MA50: $351.77\nRang 52S: $205.28 – $408.61\nConsens analistes: Strong Buy (54 analistes) | Upside: +24.1%\nAcció suggerida: Considera obrir o augmentar posició. RSI<30 sovint precedeix recuperació."
+      "msg": "🟢 GOOGL — Alphabet Inc. | OPORTUNITAT DE COMPRA\nRSI actual: 24.4 (per sota de 30 = sobrevenut tècnicament).\nPreu actual: $348.06 | MA20: $349.47 | MA50: $351.57\nRang 52S: $205.65 – $408.61\nConsens analistes: Strong Buy (54 analistes) | Upside: +23.0%\nAcció suggerida: Considera obrir o augmentar posició. RSI<30 sovint precedeix recuperació."
     }
   ],
   "news": [
     {
       "tick": "GOOGL",
-      "text": "Nvidia's Q2 earnings to test resurgent AI trade",
-      "date": "23/08/2026"
+      "text": "Tesla to launch Cybercabs in Austin starting Sept. 3",
+      "date": "24/08/2026"
     },
     {
       "tick": "GOOGL",
-      "text": "I've Covered Semiconductors for Years. Nvidia Is My No. 1 Pick Heading Into 2027.",
+      "text": "Alibaba Is Selling $10.2 Billion of Stock to Fund AI. Alphabet and Intel Went First.",
+      "date": "25/08/2026"
+    },
+    {
+      "tick": "AAPL",
+      "text": "What's at stake for Paramount, the Ellisons in Warner Bros. takeover bid",
       "date": "24/08/2026"
     },
     {
       "tick": "AAPL",
-      "text": "Xiaomi launches new Xring chip, partners with TSMC for production, sources say",
-      "date": "24/08/2026"
-    },
-    {
-      "tick": "AAPL",
-      "text": "A $650 smartphone takes aim at Apple and Samsung’s surging repair costs",
+      "text": "Semiconductor stocks drag S&P 500, Nasdaq lower: AlphaCheck",
       "date": "24/08/2026"
     },
     {
@@ -160,40 +160,40 @@
     },
     {
       "tick": "MSFT",
-      "text": "I've Covered Semiconductors for Years. Nvidia Is My No. 1 Pick Heading Into 2027.",
+      "text": "Alibaba’s $10.2 billion AI bet could reach far beyond investors",
+      "date": "25/08/2026"
+    },
+    {
+      "tick": "SAN",
+      "text": "JPMorgan and Santander Lead $15 Billion Financing Push for Argentina LNG",
+      "date": "25/08/2026"
+    },
+    {
+      "tick": "SAN",
+      "text": "General Motors Company (GM) Spends $4.5B on Chips: Is Ford Motor Company (F) Betting Bigger on America?",
       "date": "24/08/2026"
-    },
-    {
-      "tick": "SAN",
-      "text": "SAN Completes Webster Buyout: A Bold Push for Scale & Diversification",
-      "date": "21/08/2026"
-    },
-    {
-      "tick": "SAN",
-      "text": "European Equities Traded in the US as American Depositary Receipts Track Higher in Friday Trading",
-      "date": "21/08/2026"
     }
   ],
   "earnings": [
     {
       "tick": "GOOGL",
       "date": "28/10/2026",
-      "days": 65
+      "days": 64
     },
     {
       "tick": "MSFT",
       "date": "28/10/2026",
-      "days": 65
+      "days": 64
     },
     {
       "tick": "SAN",
       "date": "28/10/2026",
-      "days": 65
+      "days": 64
     },
     {
       "tick": "AAPL",
       "date": "29/10/2026",
-      "days": 66
+      "days": 65
     }
   ]
 }
