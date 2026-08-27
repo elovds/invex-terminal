@@ -1,15 +1,15 @@
 {
-  "generated": "26/08/2026",
-  "lastUpdate": "26/08/2026",
-  "eurusd": 1.168,
+  "generated": "27/08/2026",
+  "lastUpdate": "27/08/2026",
+  "eurusd": 1.1651,
   "portfolio_summary": {
-    "total_value_eur": 7771.77,
+    "total_value_eur": 7809.98,
     "total_capital": 6500.0,
-    "total_pnl_eur": 1271.77,
-    "total_pnl_pct": 19.57,
+    "total_pnl_eur": 1309.98,
+    "total_pnl_pct": 20.15,
     "cash": 237.91,
-    "sp500_ytd": 11.94,
-    "ibex_ytd": 14.82
+    "sp500_ytd": 12.52,
+    "ibex_ytd": 13.66
   },
   "holdings": [
     {
@@ -17,95 +17,95 @@
       "name": "Alphabet Inc.",
       "qty": 6,
       "entrada": 307.53,
-      "price": 346.96,
+      "price": 340.54,
       "cur": "USD",
       "color": "4da6ff",
       "yf": "GOOGL",
-      "pe": "23.4x",
+      "pe": "23.0x",
       "margin": "34.0%",
-      "div": "25.0%",
-      "lo52": 205.65,
+      "div": "26.0%",
+      "lo52": 206.2,
       "hi52": 408.61,
       "rating": "Strong Buy",
       "target": "$428",
       "analysts": 54,
       "buys": 58,
-      "upside": 23.4,
-      "rsi": 32.3,
-      "ma20": 350.13,
-      "ma50": 351.32,
+      "upside": 25.7,
+      "rsi": 33.6,
+      "ma20": 350.74,
+      "ma50": 350.12,
       "signal": "VIGILAR ↑",
-      "signal_reason": "RSI=32.3 proper a zona de compra; per sota MA20 i MA50",
-      "pnl_pct": 12.82,
-      "pnl_eur": 202.55,
-      "value_eur": 1782.33
+      "signal_reason": "RSI=33.6 proper a zona de compra; per sota MA20 i MA50",
+      "pnl_pct": 10.73,
+      "pnl_eur": 169.99,
+      "value_eur": 1753.7
     },
     {
       "tick": "AAPL",
       "name": "Apple Inc.",
       "qty": 5,
       "entrada": 248.795,
-      "price": 309.9,
+      "price": 314.16,
       "cur": "USD",
       "color": "8b95a8",
       "yf": "AAPL",
-      "pe": "32.5x",
+      "pe": "32.9x",
       "margin": "32.6%",
-      "div": "35.0%",
-      "lo52": 224.69,
+      "div": "34.0%",
+      "lo52": 225.95,
       "hi52": 344.57,
       "rating": "Buy",
       "target": "$324",
       "analysts": 39,
       "buys": 30,
-      "upside": 4.7,
-      "rsi": 48.9,
-      "ma20": 311.39,
-      "ma50": 310.67,
-      "signal": "VIGILAR ↓",
-      "signal_reason": "per sota MA20 i MA50",
-      "pnl_pct": 24.56,
-      "pnl_eur": 261.58,
-      "value_eur": 1326.63
+      "upside": 3.3,
+      "rsi": 51.4,
+      "ma20": 309.22,
+      "ma50": 311.32,
+      "signal": "MANTENIR",
+      "signal_reason": "per sobre MA20 i MA50",
+      "pnl_pct": 26.27,
+      "pnl_eur": 280.51,
+      "value_eur": 1348.21
     },
     {
       "tick": "MSFT",
       "name": "Microsoft Corp.",
       "qty": 6,
       "entrada": 388.335,
-      "price": 491.71,
+      "price": 502.77,
       "cur": "USD",
       "color": "a78bfa",
       "yf": "MSFT",
-      "pe": "20.9x",
+      "pe": "21.3x",
       "margin": "45.1%",
-      "div": "75.0%",
+      "div": "73.0%",
       "lo52": 349.2,
       "hi52": 553.72,
       "rating": "Strong Buy",
       "target": "$569",
       "analysts": 52,
       "buys": 53,
-      "upside": 15.8,
-      "rsi": 53.7,
-      "ma20": 482.2,
-      "ma50": 423.08,
+      "upside": 13.3,
+      "rsi": 52.7,
+      "ma20": 490.15,
+      "ma50": 427.22,
       "signal": "MANTENIR",
       "signal_reason": "per sobre MA20 i MA50",
-      "pnl_pct": 26.62,
-      "pnl_eur": 531.04,
-      "value_eur": 2525.91
+      "pnl_pct": 29.47,
+      "pnl_eur": 589.31,
+      "value_eur": 2589.15
     },
     {
       "tick": "SAN",
       "name": "Banco Santander",
       "qty": 150,
       "entrada": 10.42,
-      "price": 12.66,
+      "price": 12.54,
       "cur": "EUR",
       "color": "00e5a0",
       "yf": "SAN.MC",
-      "pe": "10.1x",
+      "pe": "10.0x",
       "margin": "43.4%",
       "div": "197.0%",
       "lo52": 7.99,
@@ -114,80 +114,80 @@
       "target": "€13",
       "analysts": 20,
       "buys": 17,
-      "upside": 3.8,
-      "rsi": 46.3,
-      "ma20": 12.61,
-      "ma50": 12.25,
+      "upside": 5.0,
+      "rsi": 40.6,
+      "ma20": 12.66,
+      "ma50": 12.28,
       "signal": "MANTENIR",
-      "signal_reason": "per sobre MA20 i MA50",
-      "pnl_pct": 21.5,
-      "pnl_eur": 336.0,
-      "value_eur": 1899.0
+      "signal_reason": "sense senyals especials",
+      "pnl_pct": 20.35,
+      "pnl_eur": 318.0,
+      "value_eur": 1881.0
     }
   ],
   "alerts": [],
   "news": [
     {
       "tick": "GOOGL",
-      "text": "Nvidia's Q2 earnings to test resurgent AI trade",
-      "date": "23/08/2026"
+      "text": "How tokenization benefits SpaceX stock 'without taking crypto risk'",
+      "date": "27/08/2026"
     },
     {
       "tick": "GOOGL",
-      "text": "Exclusive-China's Moonshot in talks with Microsoft, Amazon, Google over K3 revenue sharing, sources say",
+      "text": "Nvidia crushed earnings but one analyst is rating it a \"sell\"",
       "date": "26/08/2026"
     },
     {
       "tick": "AAPL",
-      "text": "Tech stocks today: All eyes on Nvidia earnings, as Apple debuts new Mac Mini, Mac Studio aimed at AI developers",
-      "date": "24/08/2026"
+      "text": "Here are the launches John Ternus needs to nail as Apple's next CEO",
+      "date": "27/08/2026"
     },
     {
       "tick": "AAPL",
-      "text": "New disclosure: Trump owns SpaceX, Disney shares — and is reaping profits from oil & gas stocks",
-      "date": "25/08/2026"
+      "text": "Nvidia Leads the AI Boom as Microsoft, Amazon and Apple Stocks Fall Behind",
+      "date": "27/08/2026"
     },
     {
       "tick": "MSFT",
-      "text": "The real question investors should be asking ahead of Nvidia earnings",
-      "date": "25/08/2026"
+      "text": "Why Nvidia probably just lit a new fire under these once-hot trades",
+      "date": "27/08/2026"
     },
     {
       "tick": "MSFT",
-      "text": "Market Chatter: SoftBank Considering Up to $20 Billion Bond Offering to Refinance OpenAI Investment Loan",
+      "text": "ServiceNow, IBD Stock Of The Day, Clears Early Buy Point As 'SaaSpocalypse' Fears Fade",
+      "date": "27/08/2026"
+    },
+    {
+      "tick": "SAN",
+      "text": "Banco Santander (BME:SAN) Stock Looks Cheap Relative To Fair Value",
       "date": "26/08/2026"
     },
     {
       "tick": "SAN",
-      "text": "Will IBKR's Daol Collaboration Expand Its Reach Across South Korea?",
-      "date": "25/08/2026"
-    },
-    {
-      "tick": "SAN",
-      "text": "Avantus secures $300m in tax equity for Aratina 2 solar storage project",
-      "date": "25/08/2026"
+      "text": "Will VLY's Providence Buyout Accelerate Growth in Chicago Franchise?",
+      "date": "26/08/2026"
     }
   ],
   "earnings": [
     {
       "tick": "GOOGL",
       "date": "28/10/2026",
-      "days": 63
+      "days": 62
     },
     {
       "tick": "MSFT",
       "date": "28/10/2026",
-      "days": 63
+      "days": 62
     },
     {
       "tick": "SAN",
       "date": "28/10/2026",
-      "days": 63
+      "days": 62
     },
     {
       "tick": "AAPL",
       "date": "29/10/2026",
-      "days": 64
+      "days": 63
     }
   ]
 }
