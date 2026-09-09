@@ -1,15 +1,15 @@
 {
-  "generated": "08/09/2026",
-  "lastUpdate": "08/09/2026",
-  "eurusd": 1.1614,
+  "generated": "09/09/2026",
+  "lastUpdate": "09/09/2026",
+  "eurusd": 1.1651,
   "portfolio_summary": {
-    "total_value_eur": 7874.51,
+    "total_value_eur": 7754.67,
     "total_capital": 6500.0,
-    "total_pnl_eur": 1374.51,
-    "total_pnl_pct": 21.15,
+    "total_pnl_eur": 1254.67,
+    "total_pnl_pct": 19.3,
     "cash": 237.91,
-    "sp500_ytd": 12.54,
-    "ibex_ytd": 14.02
+    "sp500_ytd": 11.88,
+    "ibex_ytd": 11.51
   },
   "holdings": [
     {
@@ -17,39 +17,39 @@
       "name": "Alphabet Inc.",
       "qty": 6,
       "entrada": 307.53,
-      "price": 338.46,
+      "price": 338.36,
       "cur": "USD",
       "color": "4da6ff",
       "yf": "GOOGL",
       "pe": "22.8x",
       "margin": "34.0%",
       "div": "26.0%",
-      "lo52": 233.23,
+      "lo52": 235.84,
       "hi52": 408.61,
       "rating": "Strong Buy",
       "target": "$428",
       "analysts": 54,
       "buys": 58,
       "upside": 26.5,
-      "rsi": 44.5,
-      "ma20": 343.4,
-      "ma50": 348.35,
+      "rsi": 44.2,
+      "ma20": 342.45,
+      "ma50": 348.37,
       "signal": "VIGILAR ↓",
       "signal_reason": "per sota MA20 i MA50",
-      "pnl_pct": 10.06,
-      "pnl_eur": 159.79,
-      "value_eur": 1748.54
+      "pnl_pct": 10.03,
+      "pnl_eur": 158.77,
+      "value_eur": 1742.48
     },
     {
       "tick": "AAPL",
       "name": "Apple Inc.",
       "qty": 5,
       "entrada": 248.795,
-      "price": 319.97,
+      "price": 316.22,
       "cur": "USD",
       "color": "8b95a8",
       "yf": "AAPL",
-      "pe": "33.4x",
+      "pe": "33.0x",
       "margin": "32.6%",
       "div": "34.0%",
       "lo52": 225.95,
@@ -58,110 +58,104 @@
       "target": "$324",
       "analysts": 38,
       "buys": 28,
-      "upside": 1.2,
-      "rsi": 63.6,
-      "ma20": 313.14,
-      "ma50": 314.99,
-      "signal": "VIGILAR ↓",
-      "signal_reason": "RSI=63.6 proper a zona de venda; per sobre MA20 i MA50",
-      "pnl_pct": 28.61,
-      "pnl_eur": 306.42,
-      "value_eur": 1377.52
+      "upside": 2.4,
+      "rsi": 55.9,
+      "ma20": 313.54,
+      "ma50": 315.64,
+      "signal": "MANTENIR",
+      "signal_reason": "per sobre MA20 i MA50",
+      "pnl_pct": 27.1,
+      "pnl_eur": 289.35,
+      "value_eur": 1357.05
     },
     {
       "tick": "MSFT",
       "name": "Microsoft Corp.",
       "qty": 6,
       "entrada": 388.335,
-      "price": 499.7,
+      "price": 493.95,
       "cur": "USD",
       "color": "a78bfa",
       "yf": "MSFT",
-      "pe": "21.2x",
+      "pe": "21.0x",
       "margin": "45.1%",
-      "div": "73.0%",
+      "div": "74.0%",
       "lo52": 349.2,
       "hi52": 553.72,
       "rating": "Strong Buy",
       "target": "$573",
       "analysts": 52,
       "buys": 54,
-      "upside": 14.7,
-      "rsi": 62.8,
-      "ma20": 495.34,
-      "ma50": 443.56,
-      "signal": "VIGILAR ↓",
-      "signal_reason": "RSI=62.8 proper a zona de venda; per sobre MA20 i MA50",
-      "pnl_pct": 28.68,
-      "pnl_eur": 575.33,
-      "value_eur": 2581.54
+      "upside": 16.0,
+      "rsi": 57.9,
+      "ma20": 494.78,
+      "ma50": 446.0,
+      "signal": "MANTENIR",
+      "signal_reason": "sense senyals especials",
+      "pnl_pct": 27.2,
+      "pnl_eur": 543.89,
+      "value_eur": 2543.73
     },
     {
       "tick": "SAN",
       "name": "Banco Santander",
       "qty": 150,
       "entrada": 10.42,
-      "price": 12.86,
+      "price": 12.49,
       "cur": "EUR",
       "color": "00e5a0",
       "yf": "SAN.MC",
-      "pe": "10.1x",
+      "pe": "9.8x",
       "margin": "43.4%",
-      "div": "194.0%",
+      "div": "193.0%",
       "lo52": 8.1,
       "hi52": 13.12,
       "rating": "Buy",
       "target": "€13",
       "analysts": 20,
       "buys": 17,
-      "upside": 4.7,
-      "rsi": 66.5,
-      "ma20": 12.68,
-      "ma50": 12.42,
-      "signal": "VIGILAR ↓",
-      "signal_reason": "RSI=66.5 proper a zona de venda; proper al màxim 52S; per sobre MA20 i MA50",
-      "pnl_pct": 23.42,
-      "pnl_eur": 366.0,
-      "value_eur": 1929.0
+      "upside": 7.8,
+      "rsi": 56.5,
+      "ma20": 12.66,
+      "ma50": 12.43,
+      "signal": "MANTENIR",
+      "signal_reason": "sense senyals especials",
+      "pnl_pct": 19.87,
+      "pnl_eur": 310.5,
+      "value_eur": 1873.5
     }
   ],
-  "alerts": [
-    {
-      "tick": "SAN",
-      "priority": "MITJA",
-      "msg": "⚠️ SAN — Banco Santander | PROPER AL MÀXIM DE 52 SETMANES\nPreu: €12.86 | Màxim 52S: €13.12 (a 2.0% del màxim).\nAquesta zona és una resistència tècnica forta. El preu pot rebotar a la baixa.\nAcció suggerida: Vigila el volum. Si trenca el màxim amb força, pot continuar pujant. Si no, considera recollir beneficis parcialment."
-    }
-  ],
+  "alerts": [],
   "news": [
     {
       "tick": "GOOGL",
-      "text": "TSMC, Samsung and Intel Just Gave ASML a Powerful Endorsement",
+      "text": "What investors 'really' need to see from Oracle earnings this week",
       "date": "08/09/2026"
     },
     {
       "tick": "GOOGL",
-      "text": "AI Stocks: OpenAI Declares The 'AGI Era' Is Here Amid IPO Fervor",
-      "date": "08/09/2026"
+      "text": "Google unveils 13 bn euro AI expansion in Finland",
+      "date": "09/09/2026"
     },
     {
       "tick": "AAPL",
-      "text": "Apple's Biggest Product Reveal of the Year Is Coming Sept. 9",
-      "date": "08/09/2026"
+      "text": "Apple event live updates: Foldable iPhone and watches expected",
+      "date": "09/09/2026"
     },
     {
       "tick": "AAPL",
-      "text": "Will Wireless Firms Foot The Bill For Higher-Price Apple iPhones?",
+      "text": "How Apple stock usually reacts to big iPhone reveal events",
       "date": "08/09/2026"
     },
     {
       "tick": "MSFT",
-      "text": "Oracle Stock Keeps Falling While Wall Street Holds Firm—Who’s Right?",
+      "text": "What investors 'really' need to see from Oracle earnings this week",
       "date": "08/09/2026"
     },
     {
       "tick": "MSFT",
-      "text": "IREN Limited Has Cratered Over 3 Months: A Top-Ranked Wall Street Name Says It’s Due to Double",
-      "date": "08/09/2026"
+      "text": "Google Has a Cool $15 Billion Fix to the AI Energy Problem",
+      "date": "09/09/2026"
     },
     {
       "tick": "SAN",
@@ -178,22 +172,22 @@
     {
       "tick": "GOOGL",
       "date": "28/10/2026",
-      "days": 50
+      "days": 49
     },
     {
       "tick": "MSFT",
       "date": "28/10/2026",
-      "days": 50
+      "days": 49
     },
     {
       "tick": "SAN",
       "date": "28/10/2026",
-      "days": 50
+      "days": 49
     },
     {
       "tick": "AAPL",
       "date": "29/10/2026",
-      "days": 51
+      "days": 50
     }
   ]
 }
