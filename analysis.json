@@ -1,15 +1,15 @@
 {
-  "generated": "11/09/2026",
-  "lastUpdate": "11/09/2026",
-  "eurusd": 1.1597,
+  "generated": "14/09/2026",
+  "lastUpdate": "14/09/2026",
+  "eurusd": 1.1537,
   "portfolio_summary": {
-    "total_value_eur": 7831.46,
+    "total_value_eur": 7967.8,
     "total_capital": 6500.0,
-    "total_pnl_eur": 1331.46,
-    "total_pnl_pct": 20.48,
+    "total_pnl_eur": 1467.8,
+    "total_pnl_pct": 22.58,
     "cash": 237.91,
-    "sp500_ytd": 10.69,
-    "ibex_ytd": 13.03
+    "sp500_ytd": 10.89,
+    "ibex_ytd": 12.2
   },
   "holdings": [
     {
@@ -17,11 +17,11 @@
       "name": "Alphabet Inc.",
       "qty": 6,
       "entrada": 307.53,
-      "price": 332.6,
+      "price": 343.93,
       "cur": "USD",
       "color": "4da6ff",
       "yf": "GOOGL",
-      "pe": "22.4x",
+      "pe": "23.1x",
       "margin": "34.0%",
       "div": "26.0%",
       "lo52": 235.84,
@@ -30,164 +30,170 @@
       "target": "$428",
       "analysts": 54,
       "buys": 58,
-      "upside": 28.7,
-      "rsi": 42.6,
-      "ma20": 341.27,
-      "ma50": 347.43,
-      "signal": "VIGILAR ↓",
-      "signal_reason": "per sota MA20 i MA50",
-      "pnl_pct": 8.15,
-      "pnl_eur": 129.71,
-      "value_eur": 1720.79
+      "upside": 24.5,
+      "rsi": 46.6,
+      "ma20": 340.8,
+      "ma50": 346.66,
+      "signal": "MANTENIR",
+      "signal_reason": "sense senyals especials",
+      "pnl_pct": 11.84,
+      "pnl_eur": 189.3,
+      "value_eur": 1788.66
     },
     {
       "tick": "AAPL",
       "name": "Apple Inc.",
       "qty": 5,
       "entrada": 248.795,
-      "price": 326.57,
+      "price": 333.65,
       "cur": "USD",
       "color": "8b95a8",
       "yf": "AAPL",
-      "pe": "34.1x",
+      "pe": "34.8x",
       "margin": "32.6%",
-      "div": "34.0%",
-      "lo52": 229.02,
+      "div": "33.0%",
+      "lo52": 235.03,
       "hi52": 344.57,
       "rating": "Buy",
-      "target": "$324",
+      "target": "$326",
       "analysts": 39,
       "buys": 28,
-      "upside": -0.7,
-      "rsi": 64.7,
-      "ma20": 315.27,
-      "ma50": 317.07,
-      "signal": "VIGILAR ↓",
-      "signal_reason": "RSI=64.7 proper a zona de venda; per sobre MA20 i MA50",
-      "pnl_pct": 31.26,
-      "pnl_eur": 335.32,
-      "value_eur": 1407.99
+      "upside": -2.4,
+      "rsi": 70.7,
+      "ma20": 318.0,
+      "ma50": 318.33,
+      "signal": "VENDRE",
+      "signal_reason": "RSI=70.7 sobrecomprat; per sobre MA20 i MA50",
+      "pnl_pct": 34.11,
+      "pnl_eur": 367.75,
+      "value_eur": 1446.0
     },
     {
       "tick": "MSFT",
       "name": "Microsoft Corp.",
       "qty": 6,
       "entrada": 388.335,
-      "price": 492.44,
+      "price": 497.48,
       "cur": "USD",
       "color": "a78bfa",
       "yf": "MSFT",
-      "pe": "20.9x",
+      "pe": "21.1x",
       "margin": "45.1%",
-      "div": "74.0%",
+      "div": "73.0%",
       "lo52": 349.2,
       "hi52": 553.72,
       "rating": "Strong Buy",
       "target": "$573",
       "analysts": 52,
       "buys": 54,
-      "upside": 16.3,
-      "rsi": 56.9,
-      "ma20": 494.27,
-      "ma50": 450.87,
+      "upside": 15.2,
+      "rsi": 56.2,
+      "ma20": 494.39,
+      "ma50": 455.26,
       "signal": "MANTENIR",
-      "signal_reason": "sense senyals especials",
-      "pnl_pct": 26.81,
-      "pnl_eur": 538.61,
-      "value_eur": 2547.76
+      "signal_reason": "per sobre MA20 i MA50",
+      "pnl_pct": 28.11,
+      "pnl_eur": 567.63,
+      "value_eur": 2587.22
     },
     {
       "tick": "SAN",
       "name": "Banco Santander",
       "qty": 150,
       "entrada": 10.42,
-      "price": 12.78,
+      "price": 12.72,
       "cur": "EUR",
       "color": "00e5a0",
       "yf": "SAN.MC",
-      "pe": "10.1x",
+      "pe": "10.0x",
       "margin": "43.4%",
-      "div": "198.0%",
+      "div": "194.0%",
       "lo52": 8.1,
       "hi52": 13.12,
       "rating": "Buy",
       "target": "€13",
       "analysts": 20,
       "buys": 17,
-      "upside": 5.4,
-      "rsi": 52.4,
+      "upside": 5.9,
+      "rsi": 54.1,
       "ma20": 12.66,
       "ma50": 12.45,
-      "signal": "VIGILAR ↓",
-      "signal_reason": "proper al màxim 52S; per sobre MA20 i MA50",
-      "pnl_pct": 22.65,
-      "pnl_eur": 354.0,
-      "value_eur": 1917.0
+      "signal": "MANTENIR",
+      "signal_reason": "per sobre MA20 i MA50",
+      "pnl_pct": 22.07,
+      "pnl_eur": 345.0,
+      "value_eur": 1908.0
     }
   ],
-  "alerts": [],
+  "alerts": [
+    {
+      "tick": "AAPL",
+      "priority": "ALTA",
+      "msg": "🔴 AAPL — Apple Inc. | ZONA DE SOBRECOMPRA\nRSI actual: 70.7 (per sobre de 70 = sobrecomprat tècnicament).\nPreu actual: $333.65 | MA20: $318.00 | MA50: $318.33\nP&L posició actual: +34.1%\nAcció suggerida: Considera reduir posició o posar stop-loss per protegir guanys."
+    }
+  ],
   "news": [
     {
       "tick": "GOOGL",
-      "text": "What a Republican 'wipeout' in the midterm elections means for investors",
-      "date": "11/09/2026"
+      "text": "Tesla Could Be Building Its Next Trillion-Dollar Opportunity. Here’s Where Its Headed",
+      "date": "14/09/2026"
     },
     {
       "tick": "GOOGL",
-      "text": "Oracle earnings: Do concentration risks fall on Oracle or the big AI firms?",
-      "date": "10/09/2026"
+      "text": "This Analyst Says A Full Reversion to the Mean Would Take the S&P 500 From 7,000 to 2,500",
+      "date": "14/09/2026"
     },
     {
       "tick": "AAPL",
-      "text": "What a Republican 'wipeout' in the midterm elections means for investors",
-      "date": "11/09/2026"
+      "text": "This Analyst Says A Full Reversion to the Mean Would Take the S&P 500 From 7,000 to 2,500",
+      "date": "14/09/2026"
     },
     {
       "tick": "AAPL",
-      "text": "Apple dips its toe into AI, but will AI companies compete in hardware?",
-      "date": "10/09/2026"
+      "text": "Apple vs. Microsoft: This Is the Magnificent Seven Stock I’d Buy Today",
+      "date": "14/09/2026"
     },
     {
       "tick": "MSFT",
-      "text": "People Inc. CEO on rebranding, AI challenges",
-      "date": "10/09/2026"
+      "text": "This Analyst Says A Full Reversion to the Mean Would Take the S&P 500 From 7,000 to 2,500",
+      "date": "14/09/2026"
     },
     {
       "tick": "MSFT",
-      "text": "Piper Sandler Says Marvell Could Be a Major AI Chip Winner",
+      "text": "Apple vs. Microsoft: This Is the Magnificent Seven Stock I’d Buy Today",
+      "date": "14/09/2026"
+    },
+    {
+      "tick": "SAN",
+      "text": "Property magnate sues law firm for £180m over Spanish deal",
       "date": "11/09/2026"
     },
     {
       "tick": "SAN",
-      "text": "Top Funds Aren't Fooling Around. Witness Massive Bets On CrowdStrike And Beyond.",
+      "text": "European Equities Traded in the US as American Depositary Receipts Rise in Friday Trading",
       "date": "11/09/2026"
-    },
-    {
-      "tick": "SAN",
-      "text": "Financial Services Roundup: Market Talk",
-      "date": "09/09/2026"
     }
   ],
   "earnings": [
     {
       "tick": "GOOGL",
       "date": "28/10/2026",
-      "days": 47
+      "days": 44
     },
     {
       "tick": "MSFT",
       "date": "28/10/2026",
-      "days": 47
+      "days": 44
     },
     {
       "tick": "SAN",
       "date": "28/10/2026",
-      "days": 47
+      "days": 44
     },
     {
       "tick": "AAPL",
       "date": "29/10/2026",
-      "days": 48
+      "days": 45
     }
   ]
 }
