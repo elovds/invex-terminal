@@ -1,15 +1,15 @@
 {
-  "generated": "15/09/2026",
-  "lastUpdate": "15/09/2026",
-  "eurusd": 1.1551,
+  "generated": "16/09/2026",
+  "lastUpdate": "16/09/2026",
+  "eurusd": 1.1542,
   "portfolio_summary": {
-    "total_value_eur": 8027.82,
+    "total_value_eur": 7955.85,
     "total_capital": 6500.0,
-    "total_pnl_eur": 1527.82,
-    "total_pnl_pct": 23.5,
+    "total_pnl_eur": 1455.85,
+    "total_pnl_pct": 22.4,
     "cash": 237.91,
-    "sp500_ytd": 11.1,
-    "ibex_ytd": 12.01
+    "sp500_ytd": 10.6,
+    "ibex_ytd": 12.28
   },
   "holdings": [
     {
@@ -17,91 +17,91 @@
       "name": "Alphabet Inc.",
       "qty": 6,
       "entrada": 307.53,
-      "price": 349.39,
+      "price": 344.98,
       "cur": "USD",
       "color": "4da6ff",
       "yf": "GOOGL",
-      "pe": "23.5x",
+      "pe": "23.2x",
       "margin": "34.0%",
-      "div": "25.0%",
+      "div": "26.0%",
       "lo52": 235.84,
       "hi52": 408.61,
       "rating": "Strong Buy",
       "target": "$428",
       "analysts": 54,
       "buys": 58,
-      "upside": 22.5,
-      "rsi": 51.2,
-      "ma20": 341.08,
-      "ma50": 346.77,
+      "upside": 24.1,
+      "rsi": 48.7,
+      "ma20": 341.14,
+      "ma50": 346.35,
       "signal": "MANTENIR",
-      "signal_reason": "per sobre MA20 i MA50",
-      "pnl_pct": 13.61,
-      "pnl_eur": 217.44,
-      "value_eur": 1814.86
+      "signal_reason": "sense senyals especials",
+      "pnl_pct": 12.18,
+      "pnl_eur": 194.68,
+      "value_eur": 1793.35
     },
     {
       "tick": "AAPL",
       "name": "Apple Inc.",
       "qty": 5,
       "entrada": 248.795,
-      "price": 333.08,
+      "price": 331.34,
       "cur": "USD",
       "color": "8b95a8",
       "yf": "AAPL",
-      "pe": "34.8x",
+      "pe": "34.6x",
       "margin": "32.6%",
-      "div": "32.0%",
-      "lo52": 236.32,
+      "div": "33.0%",
+      "lo52": 236.65,
       "hi52": 344.57,
       "rating": "Buy",
-      "target": "$326",
+      "target": "$327",
       "analysts": 39,
       "buys": 28,
-      "upside": -2.2,
-      "rsi": 70.5,
-      "ma20": 317.98,
-      "ma50": 318.32,
-      "signal": "VENDRE",
-      "signal_reason": "RSI=70.5 sobrecomprat; per sobre MA20 i MA50",
-      "pnl_pct": 33.88,
-      "pnl_eur": 364.84,
-      "value_eur": 1441.78
+      "upside": -1.2,
+      "rsi": 68.9,
+      "ma20": 319.27,
+      "ma50": 318.7,
+      "signal": "VIGILAR ↓",
+      "signal_reason": "RSI=68.9 proper a zona de venda; per sobre MA20 i MA50",
+      "pnl_pct": 33.18,
+      "pnl_eur": 357.59,
+      "value_eur": 1435.37
     },
     {
       "tick": "MSFT",
       "name": "Microsoft Corp.",
       "qty": 6,
       "entrada": 388.335,
-      "price": 505.41,
+      "price": 497.12,
       "cur": "USD",
       "color": "a78bfa",
       "yf": "MSFT",
-      "pe": "21.4x",
+      "pe": "21.1x",
       "margin": "45.1%",
-      "div": "72.0%",
+      "div": "73.0%",
       "lo52": 349.2,
       "hi52": 553.72,
       "rating": "Strong Buy",
       "target": "$573",
       "analysts": 52,
       "buys": 54,
-      "upside": 13.4,
-      "rsi": 60.2,
-      "ma20": 494.8,
-      "ma50": 455.43,
-      "signal": "VIGILAR ↓",
-      "signal_reason": "RSI=60.2 proper a zona de venda; per sobre MA20 i MA50",
-      "pnl_pct": 30.15,
-      "pnl_eur": 608.13,
-      "value_eur": 2625.28
+      "upside": 15.2,
+      "rsi": 52.9,
+      "ma20": 495.68,
+      "ma50": 457.65,
+      "signal": "MANTENIR",
+      "signal_reason": "per sobre MA20 i MA50",
+      "pnl_pct": 28.01,
+      "pnl_eur": 565.51,
+      "value_eur": 2584.23
     },
     {
       "tick": "SAN",
       "name": "Banco Santander",
       "qty": 150,
       "entrada": 10.42,
-      "price": 12.72,
+      "price": 12.7,
       "cur": "EUR",
       "color": "00e5a0",
       "yf": "SAN.MC",
@@ -114,86 +114,80 @@
       "target": "€13",
       "analysts": 20,
       "buys": 17,
-      "upside": 5.9,
-      "rsi": 50.3,
-      "ma20": 12.68,
-      "ma50": 12.46,
+      "upside": 6.1,
+      "rsi": 55.3,
+      "ma20": 12.7,
+      "ma50": 12.47,
       "signal": "MANTENIR",
       "signal_reason": "per sobre MA20 i MA50",
-      "pnl_pct": 22.07,
-      "pnl_eur": 345.0,
-      "value_eur": 1908.0
+      "pnl_pct": 21.88,
+      "pnl_eur": 342.0,
+      "value_eur": 1905.0
     }
   ],
-  "alerts": [
-    {
-      "tick": "AAPL",
-      "priority": "ALTA",
-      "msg": "🔴 AAPL — Apple Inc. | ZONA DE SOBRECOMPRA\nRSI actual: 70.5 (per sobre de 70 = sobrecomprat tècnicament).\nPreu actual: $333.08 | MA20: $317.98 | MA50: $318.32\nP&L posició actual: +33.9%\nAcció suggerida: Considera reduir posició o posar stop-loss per protegir guanys."
-    }
-  ],
+  "alerts": [],
   "news": [
     {
       "tick": "GOOGL",
-      "text": "Wall Street pushes back on Anthropic's warning as AI spending expected to roll on: Chart of the Day",
-      "date": "15/09/2026"
+      "text": "Alphabet, Exelon, and Patterson-UTI Just Paid Shareholders. Here’s What They Got.",
+      "date": "16/09/2026"
     },
     {
       "tick": "GOOGL",
-      "text": "Latest News In Cloud AI - Bitdeer AI Expands With New AI Cloud Data Center",
-      "date": "15/09/2026"
+      "text": "LyondellBasell (LYB) Retraces Amid Shifting Commodity Sentiment",
+      "date": "16/09/2026"
     },
     {
       "tick": "AAPL",
-      "text": "Exclusive-Indian consumer regulator escalates probe into Apple's software warranty terms",
-      "date": "15/09/2026"
+      "text": "Alphabet Vs. Apple: Heavy Regulatory Pressure Threatens Cash Flows More At This Firm",
+      "date": "16/09/2026"
     },
     {
       "tick": "AAPL",
-      "text": "Gene Munster Says iPhone 18 Pre-Order Wait Times Are Climbing, Calls It a 'Favorable Sign for Demand'",
-      "date": "15/09/2026"
+      "text": "Tim Cook's Most Defining Move at Apple Has Nothing to Do With AI",
+      "date": "16/09/2026"
     },
     {
       "tick": "MSFT",
-      "text": "Wall Street pushes back on Anthropic's warning as AI spending expected to roll on: Chart of the Day",
-      "date": "15/09/2026"
+      "text": "Death of software 'greatly overstated' as sector flips the script on chip stocks: Chart of the Day",
+      "date": "16/09/2026"
     },
     {
       "tick": "MSFT",
-      "text": "Tech pulls back on AI concerns, cybersecurity takes a step up",
-      "date": "14/09/2026"
+      "text": "Arista Networks highlighted as Zacks Bull and Yum! Brands Bear of the Day",
+      "date": "16/09/2026"
     },
     {
       "tick": "SAN",
       "text": "Update: Market Chatter: Banco Santander, BBVA, Deutsche Bank Working on Several Significant Risk Transfer Deals",
-      "date": "14/09/2026"
+      "date": "15/09/2026"
     },
     {
       "tick": "SAN",
-      "text": "European Equities Traded in the US as American Depositary Receipts Drop in Monday Trading",
-      "date": "14/09/2026"
+      "text": "Sector Update: Financial Stocks Decline Premarket Tuesday",
+      "date": "15/09/2026"
     }
   ],
   "earnings": [
     {
       "tick": "GOOGL",
       "date": "28/10/2026",
-      "days": 43
+      "days": 42
     },
     {
       "tick": "MSFT",
       "date": "28/10/2026",
-      "days": 43
+      "days": 42
     },
     {
       "tick": "SAN",
       "date": "28/10/2026",
-      "days": 43
+      "days": 42
     },
     {
       "tick": "AAPL",
       "date": "29/10/2026",
-      "days": 44
+      "days": 43
     }
   ]
 }
