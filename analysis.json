@@ -1,15 +1,15 @@
 {
-  "generated": "24/09/2026",
-  "lastUpdate": "24/09/2026",
-  "eurusd": 1.1374,
+  "generated": "25/09/2026",
+  "lastUpdate": "25/09/2026",
+  "eurusd": 1.1403,
   "portfolio_summary": {
-    "total_value_eur": 8030.77,
+    "total_value_eur": 8035.77,
     "total_capital": 6500.0,
-    "total_pnl_eur": 1530.77,
-    "total_pnl_pct": 23.55,
+    "total_pnl_eur": 1535.77,
+    "total_pnl_pct": 23.63,
     "cash": 237.91,
-    "sp500_ytd": 12.36,
-    "ibex_ytd": 12.47
+    "sp500_ytd": 12.33,
+    "ibex_ytd": 13.01
   },
   "holdings": [
     {
@@ -17,11 +17,11 @@
       "name": "Alphabet Inc.",
       "qty": 6,
       "entrada": 307.53,
-      "price": 337.83,
+      "price": 342.36,
       "cur": "USD",
       "color": "4da6ff",
       "yf": "GOOGL",
-      "pe": "22.7x",
+      "pe": "23.0x",
       "margin": "34.0%",
       "div": "26.0%",
       "lo52": 235.84,
@@ -30,26 +30,26 @@
       "target": "$429",
       "analysts": 54,
       "buys": 57,
-      "upside": 27.1,
-      "rsi": 50.6,
-      "ma20": 341.92,
-      "ma50": 344.91,
-      "signal": "VIGILAR ↓",
-      "signal_reason": "per sota MA20 i MA50",
-      "pnl_pct": 9.85,
-      "pnl_eur": 159.84,
-      "value_eur": 1782.12
+      "upside": 25.4,
+      "rsi": 50.1,
+      "ma20": 341.94,
+      "ma50": 344.34,
+      "signal": "VIGILAR ↑",
+      "signal_reason": "upside analistes +25.4%",
+      "pnl_pct": 11.33,
+      "pnl_eur": 183.27,
+      "value_eur": 1801.42
     },
     {
       "tick": "AAPL",
       "name": "Apple Inc.",
       "qty": 5,
       "entrada": 248.795,
-      "price": 337.02,
+      "price": 335.92,
       "cur": "USD",
       "color": "8b95a8",
       "yf": "AAPL",
-      "pe": "35.1x",
+      "pe": "35.0x",
       "margin": "32.6%",
       "div": "32.0%",
       "lo52": 243.42,
@@ -58,136 +58,136 @@
       "target": "$328",
       "analysts": 39,
       "buys": 28,
-      "upside": -2.6,
-      "rsi": 62.4,
-      "ma20": 326.95,
-      "ma50": 321.41,
+      "upside": -2.3,
+      "rsi": 58.3,
+      "ma20": 328.07,
+      "ma50": 321.58,
       "signal": "VIGILAR ↓",
-      "signal_reason": "RSI=62.4 proper a zona de venda; proper al màxim 52S; per sobre MA20 i MA50",
-      "pnl_pct": 35.46,
-      "pnl_eur": 387.84,
-      "value_eur": 1481.54
+      "signal_reason": "proper al màxim 52S; per sobre MA20 i MA50",
+      "pnl_pct": 35.02,
+      "pnl_eur": 382.03,
+      "value_eur": 1472.95
     },
     {
       "tick": "MSFT",
       "name": "Microsoft Corp.",
       "qty": 6,
       "entrada": 388.335,
-      "price": 500.59,
+      "price": 497.93,
       "cur": "USD",
       "color": "a78bfa",
       "yf": "MSFT",
-      "pe": "21.1x",
+      "pe": "21.0x",
       "margin": "45.1%",
-      "div": "78.0%",
+      "div": "79.0%",
       "lo52": 349.2,
       "hi52": 553.72,
       "rating": "Strong Buy",
       "target": "$577",
       "analysts": 52,
       "buys": 54,
-      "upside": 15.3,
-      "rsi": 52.2,
-      "ma20": 499.41,
-      "ma50": 471.03,
+      "upside": 15.9,
+      "rsi": 41.9,
+      "ma20": 499.49,
+      "ma50": 473.09,
       "signal": "MANTENIR",
-      "signal_reason": "per sobre MA20 i MA50",
-      "pnl_pct": 28.91,
-      "pnl_eur": 592.17,
-      "value_eur": 2640.71
+      "signal_reason": "sense senyals especials",
+      "pnl_pct": 28.22,
+      "pnl_eur": 576.66,
+      "value_eur": 2619.99
     },
     {
       "tick": "SAN",
       "name": "Banco Santander",
       "qty": 150,
       "entrada": 10.42,
-      "price": 12.59,
+      "price": 12.69,
       "cur": "EUR",
       "color": "00e5a0",
       "yf": "SAN.MC",
-      "pe": "9.9x",
+      "pe": "10.0x",
       "margin": "43.4%",
-      "div": "198.0%",
+      "div": "200.0%",
       "lo52": 8.1,
       "hi52": 13.12,
       "rating": "Buy",
       "target": "€13",
       "analysts": 20,
       "buys": 17,
-      "upside": 7.1,
-      "rsi": 42.9,
-      "ma20": 12.74,
-      "ma50": 12.55,
+      "upside": 6.3,
+      "rsi": 45.4,
+      "ma20": 12.73,
+      "ma50": 12.57,
       "signal": "MANTENIR",
       "signal_reason": "sense senyals especials",
-      "pnl_pct": 20.83,
-      "pnl_eur": 325.5,
-      "value_eur": 1888.5
+      "pnl_pct": 21.79,
+      "pnl_eur": 340.5,
+      "value_eur": 1903.5
     }
   ],
   "alerts": [],
   "news": [
     {
       "tick": "GOOGL",
-      "text": "This is Humanity's Last Decision",
-      "date": "23/09/2026"
+      "text": "Meta's stock surges as it moves from AI laggard to leader",
+      "date": "24/09/2026"
     },
     {
       "tick": "GOOGL",
-      "text": "Netflix has a big YouTube problem — and it's only getting worse",
-      "date": "23/09/2026"
-    },
-    {
-      "tick": "AAPL",
-      "text": "Here's what Wall Street thinks of Meta's new smartglass lineup and first Muse 'holdable'",
+      "text": "How Muse AI is expanding Meta's moat, & why you shouldn't bring iced coffee to job interviews",
       "date": "24/09/2026"
     },
     {
       "tick": "AAPL",
-      "text": "Gary Cohn on Meta's Muse: 'I'm not comfortable giving up my personal data'",
-      "date": "23/09/2026"
+      "text": "The era of AI wearables focused on listening is here",
+      "date": "24/09/2026"
+    },
+    {
+      "tick": "AAPL",
+      "text": "'Muse over Metaverse is a good thing for Meta investors': A look at the new product lineup",
+      "date": "24/09/2026"
     },
     {
       "tick": "MSFT",
-      "text": "Nasdaq climbs higher, McDonald's investor day updates",
-      "date": "23/09/2026"
+      "text": "Goldman Sachs just gave AI stock fans a cold, hard reality check",
+      "date": "25/09/2026"
     },
     {
       "tick": "MSFT",
-      "text": "Prediction: Microsoft’s Best Growth Opportunity May Still Be Ahead",
+      "text": "Nvidia leads tech stocks lower as Treasury yields surge: AlphaCheck",
       "date": "24/09/2026"
     },
     {
       "tick": "SAN",
-      "text": "Oracle’s Project Jupiter Loans Are Trading at 90 Cents. Here’s What the Q1 Numbers Say",
-      "date": "23/09/2026"
+      "text": "This Bank Stock Has Remained A Jim Cramer Favorite For More Than A Year",
+      "date": "25/09/2026"
     },
     {
       "tick": "SAN",
-      "text": "ECB Pontes Settlement System Goes Live With Ripple’s XRPL-Based Platform Axiology",
-      "date": "22/09/2026"
+      "text": "The Clearing House Just Picked Its Vendor for Tokenized Deposits. That’s the Institutional Layer Stablecoins Haven’t Built.",
+      "date": "25/09/2026"
     }
   ],
   "earnings": [
     {
       "tick": "GOOGL",
       "date": "28/10/2026",
-      "days": 34
+      "days": 33
     },
     {
       "tick": "MSFT",
       "date": "28/10/2026",
-      "days": 34
+      "days": 33
     },
     {
       "tick": "SAN",
       "date": "28/10/2026",
-      "days": 34
+      "days": 33
     },
     {
       "tick": "AAPL",
       "date": "29/10/2026",
-      "days": 35
+      "days": 34
     }
   ]
 }
