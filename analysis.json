@@ -1,15 +1,15 @@
 {
   "generated": "28/09/2026",
   "lastUpdate": "28/09/2026",
-  "eurusd": 1.1366,
+  "eurusd": 1.137,
   "portfolio_summary": {
-    "total_value_eur": 8087.73,
+    "total_value_eur": 8098.32,
     "total_capital": 6500.0,
-    "total_pnl_eur": 1587.73,
-    "total_pnl_pct": 24.43,
+    "total_pnl_eur": 1598.32,
+    "total_pnl_pct": 24.59,
     "cash": 237.91,
-    "sp500_ytd": 11.9,
-    "ibex_ytd": 12.46
+    "sp500_ytd": 12.02,
+    "ibex_ytd": 12.05
   },
   "holdings": [
     {
@@ -17,7 +17,7 @@
       "name": "Alphabet Inc.",
       "qty": 6,
       "entrada": 307.53,
-      "price": 340.55,
+      "price": 340.21,
       "cur": "USD",
       "color": "4da6ff",
       "yf": "GOOGL",
@@ -30,26 +30,26 @@
       "target": "$430",
       "analysts": 54,
       "buys": 57,
-      "upside": 26.1,
-      "rsi": 51.5,
-      "ma20": 341.83,
+      "upside": 26.3,
+      "rsi": 51.3,
+      "ma20": 341.81,
       "ma50": 344.01,
       "signal": "VIGILAR ↓",
       "signal_reason": "per sota MA20 i MA50",
-      "pnl_pct": 10.74,
-      "pnl_eur": 174.31,
-      "value_eur": 1797.73
+      "pnl_pct": 10.63,
+      "pnl_eur": 172.45,
+      "value_eur": 1795.3
     },
     {
       "tick": "AAPL",
       "name": "Apple Inc.",
       "qty": 5,
       "entrada": 248.795,
-      "price": 339.73,
+      "price": 340.47,
       "cur": "USD",
       "color": "8b95a8",
       "yf": "AAPL",
-      "pe": "35.4x",
+      "pe": "35.5x",
       "margin": "32.6%",
       "div": "32.0%",
       "lo52": 243.42,
@@ -58,26 +58,26 @@
       "target": "$328",
       "analysts": 39,
       "buys": 28,
-      "upside": -3.4,
-      "rsi": 78.7,
-      "ma20": 330.39,
-      "ma50": 321.87,
+      "upside": -3.6,
+      "rsi": 80.2,
+      "ma20": 330.43,
+      "ma50": 321.88,
       "signal": "VENDRE",
-      "signal_reason": "RSI=78.7 sobrecomprat; proper al màxim 52S; per sobre MA20 i MA50",
-      "pnl_pct": 36.55,
-      "pnl_eur": 400.03,
-      "value_eur": 1494.5
+      "signal_reason": "RSI=80.2 sobrecomprat; proper al màxim 52S; per sobre MA20 i MA50",
+      "pnl_pct": 36.85,
+      "pnl_eur": 403.14,
+      "value_eur": 1497.23
     },
     {
       "tick": "MSFT",
       "name": "Microsoft Corp.",
       "qty": 6,
       "entrada": 388.335,
-      "price": 507.32,
+      "price": 510.3,
       "cur": "USD",
       "color": "a78bfa",
       "yf": "MSFT",
-      "pe": "21.4x",
+      "pe": "21.6x",
       "margin": "45.1%",
       "div": "76.0%",
       "lo52": 349.2,
@@ -86,22 +86,22 @@
       "target": "$577",
       "analysts": 52,
       "buys": 54,
-      "upside": 13.8,
-      "rsi": 57.7,
-      "ma20": 499.73,
-      "ma50": 477.69,
+      "upside": 13.1,
+      "rsi": 59.8,
+      "ma20": 499.88,
+      "ma50": 477.75,
       "signal": "MANTENIR",
       "signal_reason": "per sobre MA20 i MA50",
-      "pnl_pct": 30.64,
-      "pnl_eur": 628.11,
-      "value_eur": 2678.09
+      "pnl_pct": 31.41,
+      "pnl_eur": 643.61,
+      "value_eur": 2692.88
     },
     {
       "tick": "SAN",
       "name": "Banco Santander",
       "qty": 150,
       "entrada": 10.42,
-      "price": 12.53,
+      "price": 12.5,
       "cur": "EUR",
       "color": "00e5a0",
       "yf": "SAN.MC",
@@ -114,27 +114,27 @@
       "target": "€14",
       "analysts": 20,
       "buys": 17,
-      "upside": 8.0,
-      "rsi": 39.8,
+      "upside": 8.2,
+      "rsi": 39.3,
       "ma20": 12.72,
       "ma50": 12.58,
       "signal": "VIGILAR ↑",
-      "signal_reason": "RSI=39.8 proper a zona de compra; per sota MA20 i MA50",
-      "pnl_pct": 20.25,
-      "pnl_eur": 316.5,
-      "value_eur": 1879.5
+      "signal_reason": "RSI=39.3 proper a zona de compra; per sota MA20 i MA50",
+      "pnl_pct": 19.96,
+      "pnl_eur": 312.0,
+      "value_eur": 1875.0
     }
   ],
   "alerts": [
     {
       "tick": "AAPL",
       "priority": "ALTA",
-      "msg": "🔴 AAPL — Apple Inc. | ZONA DE SOBRECOMPRA\nRSI actual: 78.7 (per sobre de 70 = sobrecomprat tècnicament).\nPreu actual: $339.73 | MA20: $330.39 | MA50: $321.87\nP&L posició actual: +36.5%\nAcció suggerida: Considera reduir posició o posar stop-loss per protegir guanys."
+      "msg": "🔴 AAPL — Apple Inc. | ZONA DE SOBRECOMPRA\nRSI actual: 80.2 (per sobre de 70 = sobrecomprat tècnicament).\nPreu actual: $340.47 | MA20: $330.43 | MA50: $321.88\nP&L posició actual: +36.9%\nAcció suggerida: Considera reduir posició o posar stop-loss per protegir guanys."
     },
     {
       "tick": "AAPL",
       "priority": "MITJA",
-      "msg": "⚠️ AAPL — Apple Inc. | PROPER AL MÀXIM DE 52 SETMANES\nPreu: $339.73 | Màxim 52S: $345.34 (a 1.6% del màxim).\nAquesta zona és una resistència tècnica forta. El preu pot rebotar a la baixa.\nAcció suggerida: Vigila el volum. Si trenca el màxim amb força, pot continuar pujant. Si no, considera recollir beneficis parcialment."
+      "msg": "⚠️ AAPL — Apple Inc. | PROPER AL MÀXIM DE 52 SETMANES\nPreu: $340.47 | Màxim 52S: $345.34 (a 1.4% del màxim).\nAquesta zona és una resistència tècnica forta. El preu pot rebotar a la baixa.\nAcció suggerida: Vigila el volum. Si trenca el màxim amb força, pot continuar pujant. Si no, considera recollir beneficis parcialment."
     }
   ],
   "news": [
@@ -145,17 +145,17 @@
     },
     {
       "tick": "GOOGL",
-      "text": "Claude and Gemini hacks bring agentic AI risks into underwriting",
+      "text": "Marvell Likely to Lift Fiscal 2029 AI Revenue Estimate by at Least $2 Billion Largely Due to Google Deal, RBC Says",
+      "date": "28/09/2026"
+    },
+    {
+      "tick": "AAPL",
+      "text": "'So much cash': Nvidia stock jumps after largest share buyback ever",
       "date": "28/09/2026"
     },
     {
       "tick": "AAPL",
       "text": "The impact that AI will have on advertising, according to Sir Martin Sorrell",
-      "date": "28/09/2026"
-    },
-    {
-      "tick": "AAPL",
-      "text": "Nvidia stock jumps after largest share buyback ever",
       "date": "28/09/2026"
     },
     {
@@ -170,12 +170,12 @@
     },
     {
       "tick": "SAN",
-      "text": "This Bank Stock Has Remained A Jim Cramer Favorite For More Than A Year",
-      "date": "25/09/2026"
+      "text": "3 Trade Finance Stocks Retail Investors Should Watch As WTO Rules Shift",
+      "date": "28/09/2026"
     },
     {
       "tick": "SAN",
-      "text": "The Clearing House Just Picked Its Vendor for Tokenized Deposits. That’s the Institutional Layer Stablecoins Haven’t Built.",
+      "text": "Santander online banking outage leaves customers unable to log on",
       "date": "25/09/2026"
     }
   ],
