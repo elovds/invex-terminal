@@ -1,15 +1,15 @@
 {
-  "generated": "28/09/2026",
-  "lastUpdate": "28/09/2026",
-  "eurusd": 1.137,
+  "generated": "29/09/2026",
+  "lastUpdate": "29/09/2026",
+  "eurusd": 1.1346,
   "portfolio_summary": {
-    "total_value_eur": 8098.32,
+    "total_value_eur": 8061.08,
     "total_capital": 6500.0,
-    "total_pnl_eur": 1598.32,
-    "total_pnl_pct": 24.59,
+    "total_pnl_eur": 1561.08,
+    "total_pnl_pct": 24.02,
     "cash": 237.91,
-    "sp500_ytd": 12.02,
-    "ibex_ytd": 12.05
+    "sp500_ytd": 12.04,
+    "ibex_ytd": 12.03
   },
   "holdings": [
     {
@@ -17,11 +17,11 @@
       "name": "Alphabet Inc.",
       "qty": 6,
       "entrada": 307.53,
-      "price": 340.21,
+      "price": 338.78,
       "cur": "USD",
       "color": "4da6ff",
       "yf": "GOOGL",
-      "pe": "22.6x",
+      "pe": "22.5x",
       "margin": "34.0%",
       "div": "26.0%",
       "lo52": 235.84,
@@ -30,26 +30,26 @@
       "target": "$430",
       "analysts": 54,
       "buys": 57,
-      "upside": 26.3,
-      "rsi": 51.3,
-      "ma20": 341.81,
-      "ma50": 344.01,
+      "upside": 26.8,
+      "rsi": 56.1,
+      "ma20": 341.92,
+      "ma50": 343.8,
       "signal": "VIGILAR ↓",
       "signal_reason": "per sota MA20 i MA50",
-      "pnl_pct": 10.63,
-      "pnl_eur": 172.45,
-      "value_eur": 1795.3
+      "pnl_pct": 10.16,
+      "pnl_eur": 165.26,
+      "value_eur": 1791.54
     },
     {
       "tick": "AAPL",
       "name": "Apple Inc.",
       "qty": 5,
       "entrada": 248.795,
-      "price": 340.47,
+      "price": 332.83,
       "cur": "USD",
       "color": "8b95a8",
       "yf": "AAPL",
-      "pe": "35.5x",
+      "pe": "34.7x",
       "margin": "32.6%",
       "div": "32.0%",
       "lo52": 243.42,
@@ -58,147 +58,95 @@
       "target": "$328",
       "analysts": 39,
       "buys": 28,
-      "upside": -3.6,
-      "rsi": 80.2,
-      "ma20": 330.43,
-      "ma50": 321.88,
-      "signal": "VENDRE",
-      "signal_reason": "RSI=80.2 sobrecomprat; proper al màxim 52S; per sobre MA20 i MA50",
-      "pnl_pct": 36.85,
-      "pnl_eur": 403.14,
-      "value_eur": 1497.23
+      "upside": -1.4,
+      "rsi": 68.6,
+      "ma20": 331.13,
+      "ma50": 321.97,
+      "signal": "VIGILAR ↓",
+      "signal_reason": "RSI=68.6 proper a zona de venda; per sobre MA20 i MA50",
+      "pnl_pct": 33.78,
+      "pnl_eur": 370.33,
+      "value_eur": 1466.73
     },
     {
       "tick": "MSFT",
       "name": "Microsoft Corp.",
       "qty": 6,
       "entrada": 388.335,
-      "price": 510.3,
+      "price": 507.81,
       "cur": "USD",
       "color": "a78bfa",
       "yf": "MSFT",
-      "pe": "21.6x",
+      "pe": "21.4x",
       "margin": "45.1%",
-      "div": "76.0%",
+      "div": "77.0%",
       "lo52": 349.2,
       "hi52": 553.72,
       "rating": "Strong Buy",
       "target": "$577",
       "analysts": 52,
       "buys": 54,
-      "upside": 13.1,
-      "rsi": 59.8,
-      "ma20": 499.88,
-      "ma50": 477.75,
+      "upside": 13.7,
+      "rsi": 59.6,
+      "ma20": 499.85,
+      "ma50": 479.85,
       "signal": "MANTENIR",
       "signal_reason": "per sobre MA20 i MA50",
-      "pnl_pct": 31.41,
-      "pnl_eur": 643.61,
-      "value_eur": 2692.88
+      "pnl_pct": 30.77,
+      "pnl_eur": 631.81,
+      "value_eur": 2685.4
     },
     {
       "tick": "SAN",
       "name": "Banco Santander",
       "qty": 150,
       "entrada": 10.42,
-      "price": 12.5,
+      "price": 12.53,
       "cur": "EUR",
       "color": "00e5a0",
       "yf": "SAN.MC",
-      "pe": "9.8x",
+      "pe": "9.9x",
       "margin": "43.4%",
-      "div": "199.0%",
+      "div": "200.0%",
       "lo52": 8.1,
       "hi52": 13.12,
       "rating": "Buy",
       "target": "€14",
       "analysts": 20,
       "buys": 17,
-      "upside": 8.2,
-      "rsi": 39.3,
+      "upside": 8.0,
+      "rsi": 45.5,
       "ma20": 12.72,
-      "ma50": 12.58,
-      "signal": "VIGILAR ↑",
-      "signal_reason": "RSI=39.3 proper a zona de compra; per sota MA20 i MA50",
-      "pnl_pct": 19.96,
-      "pnl_eur": 312.0,
-      "value_eur": 1875.0
+      "ma50": 12.6,
+      "signal": "VIGILAR ↓",
+      "signal_reason": "per sota MA20 i MA50",
+      "pnl_pct": 20.25,
+      "pnl_eur": 316.5,
+      "value_eur": 1879.5
     }
   ],
-  "alerts": [
-    {
-      "tick": "AAPL",
-      "priority": "ALTA",
-      "msg": "🔴 AAPL — Apple Inc. | ZONA DE SOBRECOMPRA\nRSI actual: 80.2 (per sobre de 70 = sobrecomprat tècnicament).\nPreu actual: $340.47 | MA20: $330.43 | MA50: $321.88\nP&L posició actual: +36.9%\nAcció suggerida: Considera reduir posició o posar stop-loss per protegir guanys."
-    },
-    {
-      "tick": "AAPL",
-      "priority": "MITJA",
-      "msg": "⚠️ AAPL — Apple Inc. | PROPER AL MÀXIM DE 52 SETMANES\nPreu: $340.47 | Màxim 52S: $345.34 (a 1.4% del màxim).\nAquesta zona és una resistència tècnica forta. El preu pot rebotar a la baixa.\nAcció suggerida: Vigila el volum. Si trenca el màxim amb força, pot continuar pujant. Si no, considera recollir beneficis parcialment."
-    }
-  ],
-  "news": [
-    {
-      "tick": "GOOGL",
-      "text": "The impact that AI will have on advertising, according to Sir Martin Sorrell",
-      "date": "28/09/2026"
-    },
-    {
-      "tick": "GOOGL",
-      "text": "Marvell Likely to Lift Fiscal 2029 AI Revenue Estimate by at Least $2 Billion Largely Due to Google Deal, RBC Says",
-      "date": "28/09/2026"
-    },
-    {
-      "tick": "AAPL",
-      "text": "'So much cash': Nvidia stock jumps after largest share buyback ever",
-      "date": "28/09/2026"
-    },
-    {
-      "tick": "AAPL",
-      "text": "The impact that AI will have on advertising, according to Sir Martin Sorrell",
-      "date": "28/09/2026"
-    },
-    {
-      "tick": "MSFT",
-      "text": "The impact that AI will have on advertising, according to Sir Martin Sorrell",
-      "date": "28/09/2026"
-    },
-    {
-      "tick": "MSFT",
-      "text": "Why most ads are terrible: Former Microsoft CSO",
-      "date": "28/09/2026"
-    },
-    {
-      "tick": "SAN",
-      "text": "3 Trade Finance Stocks Retail Investors Should Watch As WTO Rules Shift",
-      "date": "28/09/2026"
-    },
-    {
-      "tick": "SAN",
-      "text": "Santander online banking outage leaves customers unable to log on",
-      "date": "25/09/2026"
-    }
-  ],
+  "alerts": [],
+  "news": [],
   "earnings": [
     {
       "tick": "GOOGL",
       "date": "28/10/2026",
-      "days": 30
+      "days": 29
     },
     {
       "tick": "MSFT",
       "date": "28/10/2026",
-      "days": 30
+      "days": 29
     },
     {
       "tick": "SAN",
       "date": "28/10/2026",
-      "days": 30
+      "days": 29
     },
     {
       "tick": "AAPL",
       "date": "29/10/2026",
-      "days": 31
+      "days": 30
     }
   ]
 }
