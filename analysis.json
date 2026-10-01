@@ -1,15 +1,15 @@
 {
-  "generated": "30/09/2026",
-  "lastUpdate": "30/09/2026",
-  "eurusd": 1.1361,
+  "generated": "01/10/2026",
+  "lastUpdate": "01/10/2026",
+  "eurusd": 1.1269,
   "portfolio_summary": {
-    "total_value_eur": 8166.38,
+    "total_value_eur": 8052.23,
     "total_capital": 6500.0,
-    "total_pnl_eur": 1666.38,
-    "total_pnl_pct": 25.64,
+    "total_pnl_eur": 1552.23,
+    "total_pnl_pct": 23.88,
     "cash": 237.91,
-    "sp500_ytd": 12.46,
-    "ibex_ytd": 11.4
+    "sp500_ytd": 11.41,
+    "ibex_ytd": 9.21
   },
   "holdings": [
     {
@@ -17,11 +17,11 @@
       "name": "Alphabet Inc.",
       "qty": 6,
       "entrada": 307.53,
-      "price": 351.24,
+      "price": 341.27,
       "cur": "USD",
       "color": "4da6ff",
       "yf": "GOOGL",
-      "pe": "23.3x",
+      "pe": "22.6x",
       "margin": "34.0%",
       "div": "26.0%",
       "lo52": 235.84,
@@ -30,132 +30,138 @@
       "target": "$429",
       "analysts": 54,
       "buys": 57,
-      "upside": 22.2,
-      "rsi": 62.9,
-      "ma20": 342.84,
-      "ma50": 343.93,
+      "upside": 25.8,
+      "rsi": 52.3,
+      "ma20": 342.71,
+      "ma50": 343.77,
       "signal": "VIGILAR ↓",
-      "signal_reason": "RSI=62.9 proper a zona de venda; per sobre MA20 i MA50",
-      "pnl_pct": 14.21,
-      "pnl_eur": 230.84,
-      "value_eur": 1854.98
+      "signal_reason": "per sota MA20 i MA50",
+      "pnl_pct": 10.97,
+      "pnl_eur": 179.64,
+      "value_eur": 1817.04
     },
     {
       "tick": "AAPL",
       "name": "Apple Inc.",
       "qty": 5,
       "entrada": 248.795,
-      "price": 337.22,
+      "price": 330.54,
       "cur": "USD",
       "color": "8b95a8",
       "yf": "AAPL",
-      "pe": "35.2x",
+      "pe": "34.5x",
       "margin": "32.6%",
-      "div": "33.0%",
+      "div": "32.0%",
       "lo52": 243.42,
       "hi52": 345.34,
       "rating": "Buy",
       "target": "$328",
       "analysts": 39,
       "buys": 28,
-      "upside": -2.7,
-      "rsi": 61.4,
-      "ma20": 331.56,
-      "ma50": 322.1,
-      "signal": "VIGILAR ↓",
-      "signal_reason": "RSI=61.4 proper a zona de venda; proper al màxim 52S; per sobre MA20 i MA50",
-      "pnl_pct": 35.54,
-      "pnl_eur": 389.16,
-      "value_eur": 1484.11
+      "upside": -0.7,
+      "rsi": 47.9,
+      "ma20": 331.63,
+      "ma50": 322.11,
+      "signal": "MANTENIR",
+      "signal_reason": "sense senyals especials",
+      "pnl_pct": 32.86,
+      "pnl_eur": 362.7,
+      "value_eur": 1466.59
     },
     {
       "tick": "MSFT",
       "name": "Microsoft Corp.",
       "qty": 6,
       "entrada": 388.335,
-      "price": 517.66,
+      "price": 514.56,
       "cur": "USD",
       "color": "a78bfa",
       "yf": "MSFT",
-      "pe": "21.9x",
+      "pe": "21.8x",
       "margin": "45.1%",
-      "div": "77.0%",
+      "div": "76.0%",
       "lo52": 349.2,
       "hi52": 553.72,
       "rating": "Strong Buy",
       "target": "$578",
       "analysts": 52,
       "buys": 54,
-      "upside": 11.7,
-      "rsi": 64.0,
-      "ma20": 500.75,
-      "ma50": 482.29,
+      "upside": 12.4,
+      "rsi": 61.2,
+      "ma20": 501.38,
+      "ma50": 484.69,
       "signal": "VIGILAR ↓",
-      "signal_reason": "RSI=64.0 proper a zona de venda; per sobre MA20 i MA50",
-      "pnl_pct": 33.3,
-      "pnl_eur": 682.99,
-      "value_eur": 2733.88
+      "signal_reason": "RSI=61.2 proper a zona de venda; per sobre MA20 i MA50",
+      "pnl_pct": 32.5,
+      "pnl_eur": 672.06,
+      "value_eur": 2739.69
     },
     {
       "tick": "SAN",
       "name": "Banco Santander",
       "qty": 150,
       "entrada": 10.42,
-      "price": 12.37,
+      "price": 11.94,
       "cur": "EUR",
       "color": "00e5a0",
       "yf": "SAN.MC",
-      "pe": "9.7x",
+      "pe": "9.4x",
       "margin": "43.4%",
-      "div": "200.0%",
+      "div": "206.0%",
       "lo52": 8.1,
       "hi52": 13.12,
       "rating": "Buy",
       "target": "€14",
       "analysts": 20,
       "buys": 17,
-      "upside": 10.1,
-      "rsi": 42.8,
-      "ma20": 12.7,
-      "ma50": 12.6,
-      "signal": "VIGILAR ↓",
-      "signal_reason": "per sota MA20 i MA50",
-      "pnl_pct": 18.71,
-      "pnl_eur": 292.5,
-      "value_eur": 1855.5
+      "upside": 13.9,
+      "rsi": 27.0,
+      "ma20": 12.65,
+      "ma50": 12.61,
+      "signal": "COMPRAR",
+      "signal_reason": "RSI=27.0 sobrevenut; per sota MA20 i MA50",
+      "pnl_pct": 14.59,
+      "pnl_eur": 228.0,
+      "value_eur": 1791.0
     }
   ],
-  "alerts": [],
+  "alerts": [
+    {
+      "tick": "SAN",
+      "priority": "ALTA",
+      "msg": "🟢 SAN — Banco Santander | OPORTUNITAT DE COMPRA\nRSI actual: 27.0 (per sota de 30 = sobrevenut tècnicament).\nPreu actual: €11.94 | MA20: €12.65 | MA50: €12.61\nRang 52S: €8.10 – €13.12\nConsens analistes: Buy (20 analistes) | Upside: +13.9%\nAcció suggerida: Considera obrir o augmentar posició. RSI<30 sovint precedeix recuperació."
+    }
+  ],
   "news": [
     {
       "tick": "GOOGL",
-      "text": "Big Tech's equally big debt pile is raising concerns about the AI boom",
-      "date": "30/09/2026"
+      "text": "Will Google Turn The Tables In AI Race? Wall Street Reacts To Gemini 4.",
+      "date": "01/10/2026"
     },
     {
       "tick": "GOOGL",
-      "text": "AI companies just signed a White House accord, and tech folks can't get enough of the signatures",
-      "date": "30/09/2026"
+      "text": "Accenture, IBM, Micron, Google, Synopsys,  Constellation Energy, and More Stocks That Explain Today’s Market",
+      "date": "01/10/2026"
     },
     {
       "tick": "AAPL",
-      "text": "Apple’s new CEO John Ternus plans on making some changes",
-      "date": "30/09/2026"
+      "text": "Stock Market Today: Nasdaq Sees Red As Micron Drops; Alphabet Tests Key Level (Live Coverage)",
+      "date": "01/10/2026"
     },
     {
       "tick": "AAPL",
-      "text": "Wall St climbs as cooling inflation tempers Fed rate-hike concerns",
-      "date": "30/09/2026"
+      "text": "Apple Stock’s Upside May Be Limited as AI Agents Could Disrupt Business",
+      "date": "01/10/2026"
     },
     {
       "tick": "MSFT",
-      "text": "Nvidia CEO Jensen Huang: AI data center build-out could create 1 million jobs and reshape the US economy",
-      "date": "30/09/2026"
+      "text": "Tokenized Assets Hit $34 Billion As Stocks Move Onchain",
+      "date": "01/10/2026"
     },
     {
       "tick": "MSFT",
-      "text": "AI in America has a huge 1.7 million job shortage problem",
-      "date": "30/09/2026"
+      "text": "Oracle’s Negative Free Cash Flow Exposes the Uncomfortable Truth About AI’s Financing Game",
+      "date": "01/10/2026"
     },
     {
       "tick": "SAN",
@@ -172,22 +178,22 @@
     {
       "tick": "GOOGL",
       "date": "28/10/2026",
-      "days": 28
+      "days": 27
     },
     {
       "tick": "MSFT",
       "date": "28/10/2026",
-      "days": 28
+      "days": 27
     },
     {
       "tick": "SAN",
       "date": "28/10/2026",
-      "days": 28
+      "days": 27
     },
     {
       "tick": "AAPL",
       "date": "29/10/2026",
-      "days": 29
+      "days": 28
     }
   ]
 }
