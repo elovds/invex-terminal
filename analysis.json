@@ -1,15 +1,15 @@
 {
-  "generated": "13/10/2026",
-  "lastUpdate": "13/10/2026",
-  "eurusd": 1.1198,
+  "generated": "14/10/2026",
+  "lastUpdate": "14/10/2026",
+  "eurusd": 1.1123,
   "portfolio_summary": {
-    "total_value_eur": 8452.32,
+    "total_value_eur": 8437.35,
     "total_capital": 6500.0,
-    "total_pnl_eur": 1952.32,
-    "total_pnl_pct": 30.04,
+    "total_pnl_eur": 1937.35,
+    "total_pnl_pct": 29.81,
     "cash": 237.91,
-    "sp500_ytd": 13.69,
-    "ibex_ytd": 9.87
+    "sp500_ytd": 13.81,
+    "ibex_ytd": 10.06
   },
   "holdings": [
     {
@@ -17,39 +17,39 @@
       "name": "Alphabet Inc.",
       "qty": 6,
       "entrada": 307.53,
-      "price": 356.05,
+      "price": 353.78,
       "cur": "USD",
       "color": "4da6ff",
       "yf": "GOOGL",
-      "pe": "23.4x",
+      "pe": "23.1x",
       "margin": "34.0%",
       "div": "25.0%",
-      "lo52": 240.51,
+      "lo52": 244.15,
       "hi52": 408.61,
       "rating": "Strong Buy",
       "target": "$430",
       "analysts": 54,
       "buys": 58,
-      "upside": 20.9,
-      "rsi": 72.7,
-      "ma20": 346.65,
-      "ma50": 345.73,
+      "upside": 21.7,
+      "rsi": 71.0,
+      "ma20": 346.53,
+      "ma50": 345.69,
       "signal": "VENDRE",
-      "signal_reason": "RSI=72.7 sobrecomprat; per sobre MA20 i MA50",
-      "pnl_pct": 15.78,
-      "pnl_eur": 259.97,
-      "value_eur": 1907.75
+      "signal_reason": "RSI=71.0 sobrecomprat; per sobre MA20 i MA50",
+      "pnl_pct": 15.04,
+      "pnl_eur": 249.48,
+      "value_eur": 1908.37
     },
     {
       "tick": "AAPL",
       "name": "Apple Inc.",
       "qty": 5,
       "entrada": 248.795,
-      "price": 346.3,
+      "price": 341.27,
       "cur": "USD",
       "color": "8b95a8",
       "yf": "AAPL",
-      "pe": "36.1x",
+      "pe": "35.6x",
       "margin": "32.6%",
       "div": "32.0%",
       "lo52": 243.42,
@@ -58,26 +58,26 @@
       "target": "$329",
       "analysts": 39,
       "buys": 28,
-      "upside": -5.1,
-      "rsi": 59.4,
-      "ma20": 336.53,
-      "ma50": 323.87,
+      "upside": -3.5,
+      "rsi": 54.8,
+      "ma20": 336.28,
+      "ma50": 323.76,
       "signal": "VIGILAR ↓",
       "signal_reason": "proper al màxim 52S; per sobre MA20 i MA50",
-      "pnl_pct": 39.19,
-      "pnl_eur": 435.37,
-      "value_eur": 1546.26
+      "pnl_pct": 37.17,
+      "pnl_eur": 415.69,
+      "value_eur": 1534.07
     },
     {
       "tick": "MSFT",
       "name": "Microsoft Corp.",
       "qty": 6,
       "entrada": 388.335,
-      "price": 547.19,
+      "price": 543.45,
       "cur": "USD",
       "color": "a78bfa",
       "yf": "MSFT",
-      "pe": "23.1x",
+      "pe": "23.0x",
       "margin": "45.1%",
       "div": "72.0%",
       "lo52": 349.2,
@@ -86,65 +86,65 @@
       "target": "$590",
       "analysts": 53,
       "buys": 54,
-      "upside": 7.8,
-      "rsi": 78.8,
-      "ma20": 514.39,
-      "ma50": 502.94,
+      "upside": 8.5,
+      "rsi": 77.8,
+      "ma20": 514.2,
+      "ma50": 502.87,
       "signal": "VENDRE",
-      "signal_reason": "RSI=78.8 sobrecomprat; proper al màxim 52S; per sobre MA20 i MA50",
-      "pnl_pct": 40.91,
-      "pnl_eur": 851.16,
-      "value_eur": 2931.9
+      "signal_reason": "RSI=77.8 sobrecomprat; proper al màxim 52S; per sobre MA20 i MA50",
+      "pnl_pct": 39.94,
+      "pnl_eur": 836.73,
+      "value_eur": 2931.49
     },
     {
       "tick": "SAN",
       "name": "Banco Santander",
       "qty": 150,
       "entrada": 10.42,
-      "price": 12.19,
+      "price": 12.17,
       "cur": "EUR",
       "color": "00e5a0",
       "yf": "SAN.MC",
       "pe": "9.7x",
       "margin": "43.4%",
-      "div": "207.0%",
+      "div": "209.0%",
       "lo52": 8.1,
       "hi52": 13.12,
       "rating": "Buy",
       "target": "€14",
       "analysts": 21,
       "buys": 17,
-      "upside": 12.3,
-      "rsi": 40.3,
-      "ma20": 12.41,
-      "ma50": 12.59,
+      "upside": 12.7,
+      "rsi": 43.0,
+      "ma20": 12.36,
+      "ma50": 12.57,
       "signal": "VIGILAR ↓",
       "signal_reason": "per sota MA20 i MA50",
-      "pnl_pct": 16.99,
-      "pnl_eur": 265.5,
-      "value_eur": 1828.5
+      "pnl_pct": 16.79,
+      "pnl_eur": 262.5,
+      "value_eur": 1825.5
     }
   ],
   "alerts": [
     {
       "tick": "GOOGL",
       "priority": "ALTA",
-      "msg": "🔴 GOOGL — Alphabet Inc. | ZONA DE SOBRECOMPRA\nRSI actual: 72.7 (per sobre de 70 = sobrecomprat tècnicament).\nPreu actual: $356.05 | MA20: $346.65 | MA50: $345.73\nP&L posició actual: +15.8%\nAcció suggerida: Considera reduir posició o posar stop-loss per protegir guanys."
+      "msg": "🔴 GOOGL — Alphabet Inc. | ZONA DE SOBRECOMPRA\nRSI actual: 71.0 (per sobre de 70 = sobrecomprat tècnicament).\nPreu actual: $353.78 | MA20: $346.53 | MA50: $345.69\nP&L posició actual: +15.0%\nAcció suggerida: Considera reduir posició o posar stop-loss per protegir guanys."
     },
     {
       "tick": "MSFT",
       "priority": "ALTA",
-      "msg": "🔴 MSFT — Microsoft Corp. | ZONA DE SOBRECOMPRA\nRSI actual: 78.8 (per sobre de 70 = sobrecomprat tècnicament).\nPreu actual: $547.19 | MA20: $514.39 | MA50: $502.94\nP&L posició actual: +40.9%\nAcció suggerida: Considera reduir posició o posar stop-loss per protegir guanys."
+      "msg": "🔴 MSFT — Microsoft Corp. | ZONA DE SOBRECOMPRA\nRSI actual: 77.8 (per sobre de 70 = sobrecomprat tècnicament).\nPreu actual: $543.45 | MA20: $514.20 | MA50: $502.87\nP&L posició actual: +39.9%\nAcció suggerida: Considera reduir posició o posar stop-loss per protegir guanys."
     },
     {
       "tick": "AAPL",
       "priority": "MITJA",
-      "msg": "⚠️ AAPL — Apple Inc. | PROPER AL MÀXIM DE 52 SETMANES\nPreu: $346.30 | Màxim 52S: $348.15 (a 0.5% del màxim).\nAquesta zona és una resistència tècnica forta. El preu pot rebotar a la baixa.\nAcció suggerida: Vigila el volum. Si trenca el màxim amb força, pot continuar pujant. Si no, considera recollir beneficis parcialment."
+      "msg": "⚠️ AAPL — Apple Inc. | PROPER AL MÀXIM DE 52 SETMANES\nPreu: $341.27 | Màxim 52S: $348.15 (a 2.0% del màxim).\nAquesta zona és una resistència tècnica forta. El preu pot rebotar a la baixa.\nAcció suggerida: Vigila el volum. Si trenca el màxim amb força, pot continuar pujant. Si no, considera recollir beneficis parcialment."
     },
     {
       "tick": "MSFT",
       "priority": "MITJA",
-      "msg": "⚠️ MSFT — Microsoft Corp. | PROPER AL MÀXIM DE 52 SETMANES\nPreu: $547.19 | Màxim 52S: $553.72 (a 1.2% del màxim).\nAquesta zona és una resistència tècnica forta. El preu pot rebotar a la baixa.\nAcció suggerida: Vigila el volum. Si trenca el màxim amb força, pot continuar pujant. Si no, considera recollir beneficis parcialment."
+      "msg": "⚠️ MSFT — Microsoft Corp. | PROPER AL MÀXIM DE 52 SETMANES\nPreu: $543.45 | Màxim 52S: $553.72 (a 1.9% del màxim).\nAquesta zona és una resistència tècnica forta. El preu pot rebotar a la baixa.\nAcció suggerida: Vigila el volum. Si trenca el màxim amb força, pot continuar pujant. Si no, considera recollir beneficis parcialment."
     }
   ],
   "news": [],
@@ -152,22 +152,22 @@
     {
       "tick": "GOOGL",
       "date": "28/10/2026",
-      "days": 15
+      "days": 14
     },
     {
       "tick": "MSFT",
       "date": "28/10/2026",
-      "days": 15
+      "days": 14
     },
     {
       "tick": "SAN",
       "date": "28/10/2026",
-      "days": 15
+      "days": 14
     },
     {
       "tick": "AAPL",
       "date": "02/11/2026",
-      "days": 20
+      "days": 19
     }
   ]
 }
