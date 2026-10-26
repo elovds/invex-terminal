@@ -1,15 +1,15 @@
 {
   "generated": "26/10/2026",
   "lastUpdate": "26/10/2026",
-  "eurusd": 1.1179,
+  "eurusd": 1.1186,
   "portfolio_summary": {
-    "total_value_eur": 7956.12,
+    "total_value_eur": 7990.91,
     "total_capital": 6500.0,
-    "total_pnl_eur": 1456.12,
-    "total_pnl_pct": 22.4,
+    "total_pnl_eur": 1490.91,
+    "total_pnl_pct": 22.94,
     "cash": 237.91,
-    "sp500_ytd": 11.62,
-    "ibex_ytd": 8.58
+    "sp500_ytd": 11.86,
+    "ibex_ytd": 8.77
   },
   "holdings": [
     {
@@ -17,11 +17,11 @@
       "name": "Alphabet Inc.",
       "qty": 6,
       "entrada": 307.53,
-      "price": 318.23,
+      "price": 319.63,
       "cur": "USD",
       "color": "4da6ff",
       "yf": "GOOGL",
-      "pe": "20.7x",
+      "pe": "20.8x",
       "margin": "34.0%",
       "div": "27.0%",
       "lo52": 264.28,
@@ -30,26 +30,26 @@
       "target": "$429",
       "analysts": 54,
       "buys": 58,
-      "upside": 34.8,
-      "rsi": 23.8,
-      "ma20": 341.85,
-      "ma50": 342.32,
+      "upside": 34.3,
+      "rsi": 24.5,
+      "ma20": 341.93,
+      "ma50": 342.36,
       "signal": "COMPRAR",
-      "signal_reason": "RSI=23.8 sobrevenut; per sota MA20 i MA50",
-      "pnl_pct": 3.48,
-      "pnl_eur": 57.43,
-      "value_eur": 1708.01
+      "signal_reason": "RSI=24.5 sobrevenut; per sota MA20 i MA50",
+      "pnl_pct": 3.93,
+      "pnl_eur": 64.9,
+      "value_eur": 1714.45
     },
     {
       "tick": "AAPL",
       "name": "Apple Inc.",
       "qty": 5,
       "entrada": 248.795,
-      "price": 343.12,
+      "price": 345.38,
       "cur": "USD",
       "color": "8b95a8",
       "yf": "AAPL",
-      "pe": "35.9x",
+      "pe": "36.1x",
       "margin": "32.6%",
       "div": "31.0%",
       "lo52": 243.42,
@@ -58,26 +58,26 @@
       "target": "$329",
       "analysts": 39,
       "buys": 28,
-      "upside": -4.0,
-      "rsi": 63.1,
-      "ma20": 339.15,
-      "ma50": 330.21,
+      "upside": -4.7,
+      "rsi": 66.9,
+      "ma20": 339.26,
+      "ma50": 330.26,
       "signal": "VIGILAR ↓",
-      "signal_reason": "RSI=63.1 proper a zona de venda; proper al màxim 52S; per sobre MA20 i MA50",
-      "pnl_pct": 37.91,
-      "pnl_eur": 421.88,
-      "value_eur": 1534.66
+      "signal_reason": "RSI=66.9 proper a zona de venda; proper al màxim 52S; per sobre MA20 i MA50",
+      "pnl_pct": 38.82,
+      "pnl_eur": 431.72,
+      "value_eur": 1543.8
     },
     {
       "tick": "MSFT",
       "name": "Microsoft Corp.",
       "qty": 6,
       "entrada": 388.335,
-      "price": 524.21,
+      "price": 527.56,
       "cur": "USD",
       "color": "a78bfa",
       "yf": "MSFT",
-      "pe": "22.1x",
+      "pe": "22.3x",
       "margin": "45.1%",
       "div": "75.0%",
       "lo52": 349.2,
@@ -86,22 +86,22 @@
       "target": "$602",
       "analysts": 53,
       "buys": 54,
-      "upside": 14.8,
-      "rsi": 46.7,
-      "ma20": 527.45,
-      "ma50": 508.95,
+      "upside": 14.1,
+      "rsi": 48.8,
+      "ma20": 527.61,
+      "ma50": 509.01,
       "signal": "MANTENIR",
       "signal_reason": "sense senyals especials",
-      "pnl_pct": 34.99,
-      "pnl_eur": 729.27,
-      "value_eur": 2813.54
+      "pnl_pct": 35.85,
+      "pnl_eur": 746.78,
+      "value_eur": 2829.75
     },
     {
       "tick": "SAN",
       "name": "Banco Santander",
       "qty": 150,
       "entrada": 10.42,
-      "price": 11.08,
+      "price": 11.1,
       "cur": "EUR",
       "color": "00e5a0",
       "yf": "SAN.MC",
@@ -114,52 +114,57 @@
       "target": "€14",
       "analysts": 21,
       "buys": 17,
-      "upside": 25.0,
-      "rsi": 23.8,
+      "upside": 24.8,
+      "rsi": 24.0,
       "ma20": 11.98,
       "ma50": 12.39,
       "signal": "COMPRAR",
-      "signal_reason": "RSI=23.8 sobrevenut; per sota MA20 i MA50",
-      "pnl_pct": 6.33,
-      "pnl_eur": 99.0,
-      "value_eur": 1662.0
+      "signal_reason": "RSI=24.0 sobrevenut; per sota MA20 i MA50",
+      "pnl_pct": 6.53,
+      "pnl_eur": 102.0,
+      "value_eur": 1665.0
     }
   ],
   "alerts": [
     {
       "tick": "GOOGL",
       "priority": "ALTA",
-      "msg": "🟢 GOOGL — Alphabet Inc. | OPORTUNITAT DE COMPRA\nRSI actual: 23.8 (per sota de 30 = sobrevenut tècnicament).\nPreu actual: $318.23 | MA20: $341.85 | MA50: $342.32\nRang 52S: $264.28 – $408.61\nConsens analistes: Strong Buy (54 analistes) | Upside: +34.8%\nAcció suggerida: Considera obrir o augmentar posició. RSI<30 sovint precedeix recuperació."
+      "msg": "🟢 GOOGL — Alphabet Inc. | OPORTUNITAT DE COMPRA\nRSI actual: 24.5 (per sota de 30 = sobrevenut tècnicament).\nPreu actual: $319.63 | MA20: $341.93 | MA50: $342.36\nRang 52S: $264.28 – $408.61\nConsens analistes: Strong Buy (54 analistes) | Upside: +34.3%\nAcció suggerida: Considera obrir o augmentar posició. RSI<30 sovint precedeix recuperació."
     },
     {
       "tick": "GOOGL",
       "priority": "ALTA",
-      "msg": "📅 GOOGL — Alphabet Inc. | RESULTATS TRIMESTRALS EN 2 DIES\nPreu actual: $318.23 | P&L posició: +3.5%\nEls earnings poden generar moviments bruscos del ±5-15%.\nAcció suggerida: Decideix si vols mantenir la posició sencera durant els resultats o reduir parcialment per gestionar el risc de volatilitat."
+      "msg": "📅 GOOGL — Alphabet Inc. | RESULTATS TRIMESTRALS EN 2 DIES\nPreu actual: $319.63 | P&L posició: +3.9%\nEls earnings poden generar moviments bruscos del ±5-15%.\nAcció suggerida: Decideix si vols mantenir la posició sencera durant els resultats o reduir parcialment per gestionar el risc de volatilitat."
     },
     {
       "tick": "AAPL",
       "priority": "ALTA",
-      "msg": "📅 AAPL — Apple Inc. | RESULTATS TRIMESTRALS EN 7 DIES\nPreu actual: $343.12 | P&L posició: +37.9%\nEls earnings poden generar moviments bruscos del ±5-15%.\nAcció suggerida: Decideix si vols mantenir la posició sencera durant els resultats o reduir parcialment per gestionar el risc de volatilitat."
+      "msg": "📅 AAPL — Apple Inc. | RESULTATS TRIMESTRALS EN 7 DIES\nPreu actual: $345.38 | P&L posició: +38.8%\nEls earnings poden generar moviments bruscos del ±5-15%.\nAcció suggerida: Decideix si vols mantenir la posició sencera durant els resultats o reduir parcialment per gestionar el risc de volatilitat."
     },
     {
       "tick": "MSFT",
       "priority": "ALTA",
-      "msg": "📅 MSFT — Microsoft Corp. | RESULTATS TRIMESTRALS EN 2 DIES\nPreu actual: $524.21 | P&L posició: +35.0%\nEls earnings poden generar moviments bruscos del ±5-15%.\nAcció suggerida: Decideix si vols mantenir la posició sencera durant els resultats o reduir parcialment per gestionar el risc de volatilitat."
+      "msg": "📅 MSFT — Microsoft Corp. | RESULTATS TRIMESTRALS EN 2 DIES\nPreu actual: $527.56 | P&L posició: +35.9%\nEls earnings poden generar moviments bruscos del ±5-15%.\nAcció suggerida: Decideix si vols mantenir la posició sencera durant els resultats o reduir parcialment per gestionar el risc de volatilitat."
     },
     {
       "tick": "SAN",
       "priority": "ALTA",
-      "msg": "🟢 SAN — Banco Santander | OPORTUNITAT DE COMPRA\nRSI actual: 23.8 (per sota de 30 = sobrevenut tècnicament).\nPreu actual: €11.08 | MA20: €11.98 | MA50: €12.39\nRang 52S: €8.41 – €13.12\nConsens analistes: Buy (21 analistes) | Upside: +25.0%\nAcció suggerida: Considera obrir o augmentar posició. RSI<30 sovint precedeix recuperació."
+      "msg": "🟢 SAN — Banco Santander | OPORTUNITAT DE COMPRA\nRSI actual: 24.0 (per sota de 30 = sobrevenut tècnicament).\nPreu actual: €11.10 | MA20: €11.98 | MA50: €12.39\nRang 52S: €8.41 – €13.12\nConsens analistes: Buy (21 analistes) | Upside: +24.8%\nAcció suggerida: Considera obrir o augmentar posició. RSI<30 sovint precedeix recuperació."
     },
     {
       "tick": "SAN",
       "priority": "ALTA",
-      "msg": "📅 SAN — Banco Santander | RESULTATS TRIMESTRALS EN 2 DIES\nPreu actual: €11.08 | P&L posició: +6.3%\nEls earnings poden generar moviments bruscos del ±5-15%.\nAcció suggerida: Decideix si vols mantenir la posició sencera durant els resultats o reduir parcialment per gestionar el risc de volatilitat."
+      "msg": "📅 SAN — Banco Santander | RESULTATS TRIMESTRALS EN 2 DIES\nPreu actual: €11.10 | P&L posició: +6.5%\nEls earnings poden generar moviments bruscos del ±5-15%.\nAcció suggerida: Decideix si vols mantenir la posició sencera durant els resultats o reduir parcialment per gestionar el risc de volatilitat."
     },
     {
       "tick": "GOOGL",
       "priority": "MITJA",
-      "msg": "📈 GOOGL — Alphabet Inc. | UPSIDE ELEVAT SEGONS ANALISTES\nObjectiu de preu consens: upside del +34.8% respecte al preu actual.\nPreu actual: $318.23 | Rating consens: Strong Buy (54 analistes)\nRSI: 23.8 | MA20: $341.85 | MA50: $342.32\nAcció suggerida: Considera augmentar posició si el RSI no és sobrecomprat i els fonamentals ho suporten."
+      "msg": "📈 GOOGL — Alphabet Inc. | UPSIDE ELEVAT SEGONS ANALISTES\nObjectiu de preu consens: upside del +34.3% respecte al preu actual.\nPreu actual: $319.63 | Rating consens: Strong Buy (54 analistes)\nRSI: 24.5 | MA20: $341.93 | MA50: $342.36\nAcció suggerida: Considera augmentar posició si el RSI no és sobrecomprat i els fonamentals ho suporten."
+    },
+    {
+      "tick": "AAPL",
+      "priority": "MITJA",
+      "msg": "⚠️ AAPL — Apple Inc. | PROPER AL MÀXIM DE 52 SETMANES\nPreu: $345.38 | Màxim 52S: $351.73 (a 1.8% del màxim).\nAquesta zona és una resistència tècnica forta. El preu pot rebotar a la baixa.\nAcció suggerida: Vigila el volum. Si trenca el màxim amb força, pot continuar pujant. Si no, considera recollir beneficis parcialment."
     }
   ],
   "news": [],
