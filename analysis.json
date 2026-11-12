@@ -1,15 +1,15 @@
 {
-  "generated": "11/11/2026",
-  "lastUpdate": "11/11/2026",
-  "eurusd": 1.1096,
+  "generated": "12/11/2026",
+  "lastUpdate": "12/11/2026",
+  "eurusd": 1.1062,
   "portfolio_summary": {
-    "total_value_eur": 7915.11,
+    "total_value_eur": 8017.79,
     "total_capital": 6500.0,
-    "total_pnl_eur": 1415.11,
-    "total_pnl_pct": 21.77,
+    "total_pnl_eur": 1517.79,
+    "total_pnl_pct": 23.35,
     "cash": 237.91,
-    "sp500_ytd": 10.69,
-    "ibex_ytd": 14.01
+    "sp500_ytd": 11.53,
+    "ibex_ytd": 14.33
   },
   "holdings": [
     {
@@ -17,178 +17,178 @@
       "name": "Alphabet Inc.",
       "qty": 6,
       "entrada": 307.53,
-      "price": 290.96,
+      "price": 299.88,
       "cur": "USD",
       "color": "4da6ff",
       "yf": "GOOGL",
-      "pe": "18.8x",
+      "pe": "19.4x",
       "margin": "33.3%",
-      "div": "31.0%",
+      "div": "30.0%",
       "lo52": 270.7,
       "hi52": 408.61,
       "rating": "Strong Buy",
       "target": "$400",
       "analysts": 53,
       "buys": 58,
-      "upside": 37.6,
-      "rsi": 31.0,
-      "ma20": 308.06,
-      "ma50": 329.83,
+      "upside": 33.5,
+      "rsi": 39.0,
+      "ma20": 305.72,
+      "ma50": 329.14,
       "signal": "VIGILAR ↑",
-      "signal_reason": "RSI=31.0 proper a zona de compra; per sota MA20 i MA50",
-      "pnl_pct": -5.39,
-      "pnl_eur": -89.6,
-      "value_eur": 1573.32
+      "signal_reason": "RSI=39.0 proper a zona de compra; per sota MA20 i MA50",
+      "pnl_pct": -2.49,
+      "pnl_eur": -41.49,
+      "value_eur": 1626.54
     },
     {
       "tick": "AAPL",
       "name": "Apple Inc.",
       "qty": 5,
       "entrada": 248.795,
-      "price": 353.35,
+      "price": 358.02,
       "cur": "USD",
       "color": "8b95a8",
       "yf": "AAPL",
-      "pe": "33.5x",
+      "pe": "34.0x",
       "margin": "33.0%",
-      "div": "31.0%",
+      "div": "30.0%",
       "lo52": 243.42,
-      "hi52": 355.38,
+      "hi52": 359.37,
       "rating": "Buy",
-      "target": "$341",
+      "target": "$345",
       "analysts": 40,
       "buys": 25,
-      "upside": -3.6,
-      "rsi": 53.5,
-      "ma20": 344.75,
-      "ma50": 337.83,
+      "upside": -3.7,
+      "rsi": 56.7,
+      "ma20": 345.67,
+      "ma50": 338.54,
       "signal": "VIGILAR ↓",
       "signal_reason": "proper al màxim 52S; per sobre MA20 i MA50",
-      "pnl_pct": 42.02,
-      "pnl_eur": 471.14,
-      "value_eur": 1592.24
+      "pnl_pct": 43.9,
+      "pnl_eur": 493.69,
+      "value_eur": 1618.24
     },
     {
       "tick": "MSFT",
       "name": "Microsoft Corp.",
       "qty": 6,
       "entrada": 388.335,
-      "price": 522.0,
+      "price": 528.32,
       "cur": "USD",
       "color": "a78bfa",
       "yf": "MSFT",
-      "pe": "21.6x",
+      "pe": "21.8x",
       "margin": "47.1%",
-      "div": "74.0%",
+      "div": "75.0%",
       "lo52": 349.2,
       "hi52": 559.15,
       "rating": "Strong Buy",
       "target": "$636",
       "analysts": 54,
       "buys": 52,
-      "upside": 21.9,
-      "rsi": 50.3,
-      "ma20": 530.51,
-      "ma50": 518.22,
+      "upside": 20.4,
+      "rsi": 51.3,
+      "ma20": 529.91,
+      "ma50": 518.83,
       "signal": "MANTENIR",
       "signal_reason": "sense senyals especials",
-      "pnl_pct": 34.42,
-      "pnl_eur": 722.77,
-      "value_eur": 2822.64
+      "pnl_pct": 36.05,
+      "pnl_eur": 759.27,
+      "value_eur": 2865.59
     },
     {
       "tick": "SAN",
       "name": "Banco Santander",
       "qty": 150,
       "entrada": 10.42,
-      "price": 11.26,
+      "price": 11.13,
       "cur": "EUR",
       "color": "00e5a0",
       "yf": "SAN.MC",
-      "pe": "9.1x",
+      "pe": "9.0x",
       "margin": "42.1%",
-      "div": "226.0%",
+      "div": "225.0%",
       "lo52": 8.72,
       "hi52": 13.12,
       "rating": "Buy",
       "target": "€14",
       "analysts": 21,
       "buys": 17,
-      "upside": 21.5,
-      "rsi": 48.6,
-      "ma20": 11.06,
-      "ma50": 11.84,
+      "upside": 22.9,
+      "rsi": 46.4,
+      "ma20": 11.03,
+      "ma50": 11.81,
       "signal": "MANTENIR",
       "signal_reason": "sense senyals especials",
-      "pnl_pct": 8.06,
-      "pnl_eur": 126.0,
-      "value_eur": 1689.0
+      "pnl_pct": 6.81,
+      "pnl_eur": 106.5,
+      "value_eur": 1669.5
     }
   ],
   "alerts": [
     {
       "tick": "GOOGL",
       "priority": "MITJA",
-      "msg": "📈 GOOGL — Alphabet Inc. | UPSIDE ELEVAT SEGONS ANALISTES\nObjectiu de preu consens: upside del +37.6% respecte al preu actual.\nPreu actual: $290.96 | Rating consens: Strong Buy (53 analistes)\nRSI: 31.0 | MA20: $308.06 | MA50: $329.83\nAcció suggerida: Considera augmentar posició si el RSI no és sobrecomprat i els fonamentals ho suporten."
+      "msg": "📈 GOOGL — Alphabet Inc. | UPSIDE ELEVAT SEGONS ANALISTES\nObjectiu de preu consens: upside del +33.5% respecte al preu actual.\nPreu actual: $299.88 | Rating consens: Strong Buy (53 analistes)\nRSI: 39.0 | MA20: $305.72 | MA50: $329.14\nAcció suggerida: Considera augmentar posició si el RSI no és sobrecomprat i els fonamentals ho suporten."
     },
     {
       "tick": "AAPL",
       "priority": "MITJA",
-      "msg": "⚠️ AAPL — Apple Inc. | PROPER AL MÀXIM DE 52 SETMANES\nPreu: $353.35 | Màxim 52S: $355.38 (a 0.6% del màxim).\nAquesta zona és una resistència tècnica forta. El preu pot rebotar a la baixa.\nAcció suggerida: Vigila el volum. Si trenca el màxim amb força, pot continuar pujant. Si no, considera recollir beneficis parcialment."
+      "msg": "⚠️ AAPL — Apple Inc. | PROPER AL MÀXIM DE 52 SETMANES\nPreu: $358.02 | Màxim 52S: $359.37 (a 0.4% del màxim).\nAquesta zona és una resistència tècnica forta. El preu pot rebotar a la baixa.\nAcció suggerida: Vigila el volum. Si trenca el màxim amb força, pot continuar pujant. Si no, considera recollir beneficis parcialment."
     }
   ],
   "news": [
     {
       "tick": "GOOGL",
-      "text": "Alphabet explores first Hong Kong and Singapore dollar bond sales worth up to $3 billion",
-      "date": "11/11/2026"
+      "text": "Broadcom Rallies 5% as Traders Bet on Chip Rivals After Jensen Huang’s Exit; NVIDIA Falls 5%, AMD Climbs 2%",
+      "date": "12/11/2026"
     },
     {
       "tick": "GOOGL",
-      "text": "3 Artificial Intelligence (AI) Stocks to Buy on the Post-Election Dip and Hold for 5 Years",
-      "date": "11/11/2026"
+      "text": "How Low Can Alphabet Stock Go?",
+      "date": "12/11/2026"
     },
     {
       "tick": "AAPL",
-      "text": "3 Artificial Intelligence (AI) Stocks to Buy on the Post-Election Dip and Hold for 5 Years",
-      "date": "11/11/2026"
+      "text": "Jensen Huang vs. Steve Jobs: Can Nvidia also thrive without its visionary?",
+      "date": "12/11/2026"
     },
     {
       "tick": "AAPL",
-      "text": "Apple Slides 4% as Ternus Calls Memory Pricing “Unprecedented” Despite a Record $114.5 Billion Quarter",
-      "date": "11/11/2026"
+      "text": "Tony Robbins: How to make yourself irreplaceable in the AI era",
+      "date": "12/11/2026"
     },
     {
       "tick": "MSFT",
-      "text": "Anthropic's new Claude tools put software stocks on notice",
-      "date": "11/11/2026"
+      "text": "How Low Can Alphabet Stock Go?",
+      "date": "12/11/2026"
     },
     {
       "tick": "MSFT",
-      "text": "3 Artificial Intelligence (AI) Stocks to Buy on the Post-Election Dip and Hold for 5 Years",
-      "date": "11/11/2026"
+      "text": "Jensen Huang Resigns, Leaving CFO Colette Kress to Run Nvidia",
+      "date": "12/11/2026"
     },
     {
       "tick": "SAN",
-      "text": "Banks pledge $270m to Project Faro stablecoin venture- report",
-      "date": "11/11/2026"
+      "text": "Sector Update: Financial Stocks Advance Premarket Thursday",
+      "date": "12/11/2026"
     },
     {
       "tick": "SAN",
-      "text": "Goldman, Citi and Other Banks Reportedly Fund $270 Million Stablecoin Initiative",
-      "date": "10/11/2026"
+      "text": "Allica Bank pays £100m in interest to business depositors",
+      "date": "12/11/2026"
     }
   ],
   "earnings": [
     {
       "tick": "MSFT",
       "date": "27/01/2027",
-      "days": 77
+      "days": 76
     },
     {
       "tick": "AAPL",
       "date": "28/01/2027",
-      "days": 78
+      "days": 77
     }
   ]
 }
