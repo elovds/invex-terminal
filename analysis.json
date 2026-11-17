@@ -1,15 +1,15 @@
 {
-  "generated": "16/11/2026",
-  "lastUpdate": "16/11/2026",
-  "eurusd": 1.1013,
+  "generated": "17/11/2026",
+  "lastUpdate": "17/11/2026",
+  "eurusd": 1.1017,
   "portfolio_summary": {
-    "total_value_eur": 7899.35,
+    "total_value_eur": 7718.3,
     "total_capital": 6500.0,
-    "total_pnl_eur": 1399.35,
-    "total_pnl_pct": 21.53,
+    "total_pnl_eur": 1218.3,
+    "total_pnl_pct": 18.74,
     "cash": 237.91,
-    "sp500_ytd": 8.65,
-    "ibex_ytd": 14.03
+    "sp500_ytd": 7.08,
+    "ibex_ytd": 12.19
   },
   "holdings": [
     {
@@ -17,173 +17,178 @@
       "name": "Alphabet Inc.",
       "qty": 6,
       "entrada": 307.53,
-      "price": 286.49,
+      "price": 281.32,
       "cur": "USD",
       "color": "4da6ff",
       "yf": "GOOGL",
-      "pe": "18.9x",
+      "pe": "18.5x",
       "margin": "33.3%",
-      "div": "30.0%",
+      "div": "31.0%",
       "lo52": 272.11,
       "hi52": 408.61,
       "rating": "Strong Buy",
       "target": "$400",
       "analysts": 53,
       "buys": 58,
-      "upside": 39.8,
-      "rsi": 32.3,
-      "ma20": 300.53,
-      "ma50": 327.15,
-      "signal": "VIGILAR ↑",
-      "signal_reason": "RSI=32.3 proper a zona de compra; per sota MA20 i MA50",
-      "pnl_pct": -6.84,
-      "pnl_eur": -114.63,
-      "value_eur": 1560.83
+      "upside": 42.3,
+      "rsi": 27.6,
+      "ma20": 297.45,
+      "ma50": 325.95,
+      "signal": "COMPRAR",
+      "signal_reason": "RSI=27.6 sobrevenut; proper al mínim 52S; per sota MA20 i MA50",
+      "pnl_pct": -8.52,
+      "pnl_eur": -142.74,
+      "value_eur": 1532.1
     },
     {
       "tick": "AAPL",
       "name": "Apple Inc.",
       "qty": 5,
       "entrada": 248.795,
-      "price": 352.87,
+      "price": 351.81,
       "cur": "USD",
       "color": "8b95a8",
       "yf": "AAPL",
-      "pe": "33.4x",
+      "pe": "33.3x",
       "margin": "33.0%",
-      "div": "30.0%",
+      "div": "31.0%",
       "lo52": 243.42,
       "hi52": 360.83,
       "rating": "Buy",
       "target": "$346",
       "analysts": 39,
       "buys": 25,
-      "upside": -2.1,
-      "rsi": 54.1,
-      "ma20": 346.43,
-      "ma50": 339.45,
+      "upside": -1.8,
+      "rsi": 55.9,
+      "ma20": 347.05,
+      "ma50": 340.17,
       "signal": "VIGILAR ↓",
       "signal_reason": "proper al màxim 52S; per sobre MA20 i MA50",
-      "pnl_pct": 41.83,
-      "pnl_eur": 472.51,
-      "value_eur": 1602.06
+      "pnl_pct": 41.41,
+      "pnl_eur": 467.53,
+      "value_eur": 1596.67
     },
     {
       "tick": "MSFT",
       "name": "Microsoft Corp.",
       "qty": 6,
       "entrada": 388.335,
-      "price": 522.3,
+      "price": 501.57,
       "cur": "USD",
       "color": "a78bfa",
       "yf": "MSFT",
-      "pe": "21.6x",
+      "pe": "20.7x",
       "margin": "47.1%",
-      "div": "75.0%",
+      "div": "76.0%",
       "lo52": 349.2,
       "hi52": 559.15,
       "rating": "Strong Buy",
       "target": "$636",
       "analysts": 54,
       "buys": 52,
-      "upside": 21.8,
-      "rsi": 46.8,
-      "ma20": 528.83,
-      "ma50": 519.45,
-      "signal": "MANTENIR",
-      "signal_reason": "sense senyals especials",
-      "pnl_pct": 34.5,
-      "pnl_eur": 729.86,
-      "value_eur": 2845.55
+      "upside": 26.8,
+      "rsi": 40.9,
+      "ma20": 527.1,
+      "ma50": 519.51,
+      "signal": "VIGILAR ↓",
+      "signal_reason": "per sota MA20 i MA50",
+      "pnl_pct": 29.16,
+      "pnl_eur": 616.69,
+      "value_eur": 2731.61
     },
     {
       "tick": "SAN",
       "name": "Banco Santander",
       "qty": 150,
       "entrada": 10.42,
-      "price": 11.02,
+      "price": 10.8,
       "cur": "EUR",
       "color": "00e5a0",
       "yf": "SAN.MC",
-      "pe": "8.9x",
+      "pe": "8.7x",
       "margin": "42.1%",
-      "div": "229.0%",
+      "div": "230.0%",
       "lo52": 8.72,
       "hi52": 13.12,
       "rating": "Buy",
       "target": "€14",
       "analysts": 21,
       "buys": 17,
-      "upside": 24.0,
-      "rsi": 48.2,
-      "ma20": 10.96,
-      "ma50": 11.74,
-      "signal": "MANTENIR",
-      "signal_reason": "sense senyals especials",
-      "pnl_pct": 5.76,
-      "pnl_eur": 90.0,
-      "value_eur": 1653.0
+      "upside": 26.6,
+      "rsi": 55.4,
+      "ma20": 10.92,
+      "ma50": 11.7,
+      "signal": "VIGILAR ↓",
+      "signal_reason": "per sota MA20 i MA50",
+      "pnl_pct": 3.65,
+      "pnl_eur": 57.0,
+      "value_eur": 1620.0
     }
   ],
   "alerts": [
     {
       "tick": "GOOGL",
+      "priority": "ALTA",
+      "msg": "🟢 GOOGL — Alphabet Inc. | OPORTUNITAT DE COMPRA\nRSI actual: 27.6 (per sota de 30 = sobrevenut tècnicament).\nPreu actual: $281.32 | MA20: $297.45 | MA50: $325.95\nRang 52S: $272.11 – $408.61\nConsens analistes: Strong Buy (53 analistes) | Upside: +42.3%\nAcció suggerida: Considera obrir o augmentar posició. RSI<30 sovint precedeix recuperació."
+    },
+    {
+      "tick": "GOOGL",
       "priority": "MITJA",
-      "msg": "📈 GOOGL — Alphabet Inc. | UPSIDE ELEVAT SEGONS ANALISTES\nObjectiu de preu consens: upside del +39.8% respecte al preu actual.\nPreu actual: $286.49 | Rating consens: Strong Buy (53 analistes)\nRSI: 32.3 | MA20: $300.53 | MA50: $327.15\nAcció suggerida: Considera augmentar posició si el RSI no és sobrecomprat i els fonamentals ho suporten."
+      "msg": "📈 GOOGL — Alphabet Inc. | UPSIDE ELEVAT SEGONS ANALISTES\nObjectiu de preu consens: upside del +42.3% respecte al preu actual.\nPreu actual: $281.32 | Rating consens: Strong Buy (53 analistes)\nRSI: 27.6 | MA20: $297.45 | MA50: $325.95\nAcció suggerida: Considera augmentar posició si el RSI no és sobrecomprat i els fonamentals ho suporten."
     }
   ],
   "news": [
     {
       "tick": "GOOGL",
-      "text": "Eli Lilly is trouncing Nvidia — and the weight-loss drug trade is beating AI again",
-      "date": "16/11/2026"
+      "text": "Colette Kress is exactly who Nvidia needs — not Jensen Huang: Kevin O'Leary explains",
+      "date": "17/11/2026"
     },
     {
       "tick": "GOOGL",
-      "text": "Nvidia’s Bull Case: AI Labs Must “Quadruple Their R&D Compute” Yearly per Dwarkesh Patel",
-      "date": "16/11/2026"
+      "text": "Factbox-From Amazon to Google, the deep-pocketed investors in Anthropic",
+      "date": "17/11/2026"
     },
     {
       "tick": "AAPL",
-      "text": "Eli Lilly is trouncing Nvidia — and the weight-loss drug trade is beating AI again",
-      "date": "16/11/2026"
+      "text": "Nvidia's Huang signals willingness to return as CEO; board creates national security panel",
+      "date": "17/11/2026"
     },
     {
       "tick": "AAPL",
-      "text": "Apple Is “Literally the Trade of the Year” Says Josh Brown, for a Very Simple Reason",
-      "date": "16/11/2026"
+      "text": "Apple moves towards rare long-term Samsung memory deal as AI boom tightens supply",
+      "date": "17/11/2026"
     },
     {
       "tick": "MSFT",
-      "text": "Microsoft Reveals Hidden Bug Behind Massive Global Outage",
-      "date": "16/11/2026"
+      "text": "What far cheaper AI compute in space could mean for Elon Musk",
+      "date": "17/11/2026"
     },
     {
       "tick": "MSFT",
-      "text": "Alithya Group Inc (ALYAF) (Q2 2027) Earnings Call Highlights: Margin Expansion and Bookings ...",
+      "text": "JPMorgan, Microsoft, United, FAA service outages: What exactly is going on?",
+      "date": "17/11/2026"
+    },
+    {
+      "tick": "SAN",
+      "text": "3 Eurozone Bank Stocks Worth Watching After UniCredit Commerzbank Approval",
       "date": "16/11/2026"
     },
     {
       "tick": "SAN",
-      "text": "How Wall Street Is Racing to Claim the Onchain Dollar",
-      "date": "15/11/2026"
-    },
-    {
-      "tick": "SAN",
-      "text": "ECB cannot replace sound fiscal policy, presidential contender Knot warns",
-      "date": "15/11/2026"
+      "text": "Sector Update: Financial Stocks Softer Monday Afternoon",
+      "date": "16/11/2026"
     }
   ],
   "earnings": [
     {
       "tick": "MSFT",
       "date": "27/01/2027",
-      "days": 72
+      "days": 71
     },
     {
       "tick": "AAPL",
       "date": "28/01/2027",
-      "days": 73
+      "days": 72
     }
   ]
 }
